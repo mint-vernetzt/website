@@ -1,14 +1,16 @@
+require("dotenv").config();
+
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-    title: ``,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "MINTvernetzt",
+    siteUrl: `${process.env.SITE_URL}`,
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "https://stage.cms.mint-vernetzt.de/wp/graphql",
+        url: `${process.env.CMS_API}`,
       },
     },
   ],
