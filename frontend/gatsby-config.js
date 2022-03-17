@@ -4,9 +4,23 @@ require("dotenv").config();
 module.exports = {
   siteMetadata: {
     title: "MINTvernetzt",
+    description:
+      "MINTvernetzt ist die Service- und Anlaufstelle für die Community der MINT-Akteur:innen in Deutschland.",
     siteUrl: `${process.env.SITE_URL}`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "MINTvernetzt",
+        short_name: "MINTvernetzt",
+        start_url: "/",
+        background_color: "#154194",
+        theme_color: "#154194",
+        display: "minimal-ui",
+        icon: "src/images/logo-mint.svg",
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
