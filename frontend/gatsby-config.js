@@ -12,6 +12,13 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        svgo: false,
+        ref: true,
+      },
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         url: `${process.env.CMS_API}`,
