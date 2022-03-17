@@ -23,11 +23,6 @@ Object.keys(fontSizes).forEach((fontsize) => {
 
 module.exports = {
   mode: "jit",
-  purge: {
-    content: ["../**/*.ts", "../**/*.tsx", "../../apps/website/**/*.tsx"],
-    safelist: [...colorSafelist, ...fontSizeSafelist],
-  },
-  darkMode: false, // or 'media' or 'class'
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
