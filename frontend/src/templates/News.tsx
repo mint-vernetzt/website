@@ -1,5 +1,6 @@
 import { graphql, Link, navigate } from "gatsby";
 import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Chip from "../components/Chip/Chip";
 import { H1, H4 } from "../components/Heading/Heading";
@@ -85,9 +86,12 @@ function News({ data }) {
           }
         </div>
 
-        <Img
-          fluid={props.featuredImage.node.localFile.childImageSharp.fluid}
+        <GatsbyImage
+          image={
+            props.featuredImage.node.localFile.childImageSharp.gatsbyImageData
+          }
           className="rounded-3xl w-100 h-auto"
+          alt=""
         />
 
         <div className="flex flex-wrap mt-4 md:mt-10 lg:mt-20 mb-8 md:-mx-2 lg:-mx-6 ">
@@ -173,9 +177,7 @@ export const query = graphql`
         node {
           localFile {
             childImageSharp {
-              fluid(maxWidth: 1488, quality: 80) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 1488)
             }
             publicURL
           }

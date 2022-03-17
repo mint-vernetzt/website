@@ -4,7 +4,7 @@ module.exports = {
   extensions: {
     endpoints: {
       default: {
-        url: "http://localhost:8000/___graphql",
+        url: "http://localhost:4200/___graphql",
         headers: {
           "user-agent": "JS GraphQL",
         },

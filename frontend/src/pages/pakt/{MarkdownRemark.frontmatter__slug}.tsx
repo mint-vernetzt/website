@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import Icon, { IconType } from "../../components/Icon/Icon";
@@ -46,7 +46,10 @@ export default function Template({ data }) {
         <div className="flex flex-wrap items-center md:-mx-4 lg:-mx-6 ">
           <div className="flex-100 md:flex-1/3 pb-8 md:pb-0 md:px-4 lg:px-6 md:order-2">
             {frontmatter.logo && (
-              <Img fluid={frontmatter.logo.childImageSharp.fluid} />
+              <GatsbyImage
+                image={frontmatter.logo.childImageSharp.gatsbyImageData}
+                alt=""
+              />
             )}
           </div>
           <div className="flex-100 md:flex-2/3 pb-8 md:pb-0 md:px-4 lg:px-6 md:order-1">
@@ -90,9 +93,7 @@ export const pageQuery = graphql`
         citeQuote
         logo {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 80) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 600)
           }
         }
       }

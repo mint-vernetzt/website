@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ReactComponent as Header } from "../images/mintvernetzt_header.svg";
 import { H1, H2 } from "../components/Heading/Heading";
 import Icon, { IconType } from "../components/Icon/Icon";
@@ -55,7 +55,8 @@ export function Mintvernetzt({
                 phone={pageContact.phone}
                 email={pageContact.email}
                 avatar={{
-                  src: pageContact.photo.localFile.childImageSharp.fluid.src,
+                  src: pageContact?.photo?.localFile?.childImageSharp
+                    ?.gatsbyImageData,
                   alt: `${pageContact.firstName} ${pageContact.lastName}`,
                 }}
               />
@@ -67,10 +68,13 @@ export function Mintvernetzt({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4 lg:-mx-20">
           <div className="flex-100 pb-8 md:pb-0 md:flex-1/2 md:px-4 lg:px-20">
-            <Img
-              fluid={data.NewsImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md mb-6"
-            />
+            {data.NewsImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+              <GatsbyImage
+                image={data.NewsImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md mb-6"
+                alt="null"
+              />
+            ) : null}
 
             <H2 like="h1">MINTnews</H2>
             <p className="lg:text-3xl font-bold mb-2">Der MINTvernetzt-Blog</p>
@@ -89,10 +93,13 @@ export function Mintvernetzt({
           </div>
 
           <div className="flex-100 md:flex-1/2 md:px-4 lg:px-20">
-            <Img
-              fluid={data.BlogImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md mb-6"
-            />
+            {data.BlogImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+              <GatsbyImage
+                image={data.BlogImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md mb-6"
+                alt="null"
+              />
+            ) : null}
 
             <H2 like="h1">Community Blog</H2>
             <p className="lg:text-3xl font-bold mb-2">
@@ -112,10 +119,14 @@ export function Mintvernetzt({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4 lg:-mx-20">
           <div className="flex-100 pb-8 md:pb-0 md:flex-1/2 md:px-4 lg:px-20">
-            <Img
-              fluid={data.SocialmediaImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md mb-6"
-            />
+            {data.SocialmediaImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.SocialmediaImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md mb-6"
+                alt="null"
+              />
+            ) : null}
 
             <H2 like="h1">#SocialMedia</H2>
             <p className="lg:text-xl">
@@ -181,10 +192,14 @@ export function Mintvernetzt({
             id="newsletter"
             className="flex-100 md:flex-1/2 md:px-4 lg:px-20"
           >
-            <Img
-              fluid={data.NewsletterImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md mb-6"
-            />
+            {data.NewsletterImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.NewsletterImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md mb-6"
+                alt="null"
+              />
+            ) : null}
 
             <H2 like="h1">#Newsletter</H2>
             <p className="lg:text-xl">
@@ -233,41 +248,30 @@ export const pageQuery = graphql`
         photo {
           localFile {
             childImageSharp {
-              fluid {
-                src
-              }
+              gatsbyImageData(width: 144)
             }
           }
         }
       }
     }
-
     NewsImage: file(relativePath: { eq: "mood_news.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 664, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 664)
       }
     }
     BlogImage: file(relativePath: { eq: "mood_wuerfel.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 664, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 664)
       }
     }
     SocialmediaImage: file(relativePath: { eq: "mood_social-media.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 664, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 664)
       }
     }
     NewsletterImage: file(relativePath: { eq: "mood_newsletter.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 664, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 664)
       }
     }
   }

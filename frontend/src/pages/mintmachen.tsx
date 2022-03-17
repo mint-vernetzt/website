@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ReactComponent as Header } from "../images/mintmachen_header.svg";
 import { H1, H2 } from "../components/Heading/Heading";
 import ContactCard from "../components/ContactCard/ContactCard";
@@ -52,7 +52,8 @@ export function Mintmachen({
                 phone={pageContact.phone}
                 email={pageContact.email}
                 avatar={{
-                  src: pageContact.photo.localFile.childImageSharp.fluid.src,
+                  src: pageContact?.photo?.localFile?.childImageSharp
+                    ?.gatsbyImageData,
                   alt: `${pageContact.firstName} ${pageContact.lastName}`,
                 }}
               />
@@ -64,10 +65,14 @@ export function Mintmachen({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4">
           <div className="flex-100 pb-4 md:pb-0 md:flex-1/2 md:px-4 md:order-2">
-            <Img
-              fluid={data.RocketImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md"
-            />
+            {data.RocketImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.RocketImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md"
+                alt=""
+              />
+            ) : null}
           </div>
           <div className="flex-100 md:flex-1/2 md:px-4 md:self-center md:text-right md:order-1">
             <H2>
@@ -95,10 +100,14 @@ export function Mintmachen({
       <section id="survey" className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4">
           <div className="flex-100 pb-4 md:pb-0 md:flex-1/2 md:px-4">
-            <Img
-              fluid={data.SurveyImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md"
-            />
+            {data.SurveyImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.SurveyImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md"
+                alt=""
+              />
+            ) : null}
           </div>
           <div className="flex-100 md:flex-1/2 md:px-4 md:self-center">
             <H2>Anmeldung zum MINTvernetzt-Verteiler</H2>
@@ -128,10 +137,14 @@ export function Mintmachen({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4">
           <div className="flex-100 pb-4 md:pb-0 md:flex-1/2 md:px-4 md:order-2">
-            <Img
-              fluid={data.PlatformImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md"
-            />
+            {data.PlatformImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.PlatformImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md"
+                alt=""
+              />
+            ) : null}
           </div>
           <div className="flex-100 md:flex-1/2 md:px-4 md:order-1 md:text-right">
             <H2>Die Erstellung der MINTvernetzt-Plattform</H2>
@@ -163,23 +176,17 @@ export const pageQuery = graphql`
   query MintmachenPage {
     RocketImage: file(relativePath: { eq: "badge_rocket.png" }) {
       childImageSharp {
-        fluid(maxWidth: 728, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 728)
       }
     }
     SurveyImage: file(relativePath: { eq: "mintmachen_survey.png" }) {
       childImageSharp {
-        fluid(maxWidth: 728, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 728)
       }
     }
     PlatformImage: file(relativePath: { eq: "mintmachen_platform.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 728, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 728)
       }
     }
     PageContact: wpContact(
@@ -194,9 +201,7 @@ export const pageQuery = graphql`
         photo {
           localFile {
             childImageSharp {
-              fluid {
-                src
-              }
+              gatsbyImageData(width: 144)
             }
           }
         }

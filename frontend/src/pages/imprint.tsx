@@ -43,7 +43,7 @@ export function Imprint(props: ImprintProps) {
             href="https://www.koerber-stiftung.de"
             className="text-lilac-500 hover:underline"
             target="_blank"
-            noreferrer
+            rel="noreferrer noopener"
           >
             www.koerber-stiftung.de
           </a>
@@ -77,7 +77,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.claudiahoehne.com"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               claudiahoehne.com
             </a>
@@ -88,7 +88,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/blick-auf-gesch%C3%A4ftsleute-rund-um-den-schreibtisch-gm1138843871-304196636"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Blick Auf Geschäftsleute Rund Um Den Schreibtisch Stockfoto und
               mehr Bilder von Lernen - iStock (istockphoto.com)
@@ -100,7 +100,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/fotografenarbeitsplatz-gm639695818-115447955"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Fotografenarbeitsplatz Stockfoto und mehr Bilder von Fotograf -
               iStock (istockphoto.com)
@@ -112,7 +112,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/collage-von-einem-l%C3%A4chelnden-menschen-gm855021852-141009663?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Collage Von Einem Lächelnden Menschen Stockfoto und mehr Bilder
               von Menschliches Gesicht - iStock (istockphoto.com)
@@ -124,7 +124,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/nichts-verbindet-uns-wie-ein-gemeinsames-ziel-gm1282344506-380104873?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Nichts Verbindet Uns Wie Ein Gemeinsames Ziel Stockfoto und mehr
               Bilder von Demonstration - iStock (istockphoto.com)
@@ -136,7 +136,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/rakete-an-wand-und-hand-mit-pinsel-gm1190862983-337741044?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Rakete An Wand Und Hand Mit Pinsel Stockfoto und mehr Bilder von
               Abheben - Aktivität - iStock (istockphoto.com)
@@ -148,7 +148,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/internationales-team-von-mitarbeitern-die-bunte-r%C3%A4tsel-zusammensetzen-gm1201193769-344377835?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Internationales Team Von Mitarbeitern Die Bunte Rätsel
               Zusammensetzen Stockfoto und mehr Bilder von Zusammenarbeit -
@@ -161,7 +161,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/aktionswort-auf-holzbl%C3%B6cken-geschrieben-mit-einer-menschlichen-hand-dr%C3%BCcken-den-knopf-gm1264143420-370173089?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Aktionswort Auf Holzblöcken Geschrieben Mit Einer Menschlichen
               Hand Drücken Den Knopf Aktionswort Auf Holzblöcken Geschrieben Mit
@@ -175,7 +175,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/bleiben-sie-in-verbindung-gm1267194556-371722796?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Bleiben Sie In Verbindung Stockfoto und mehr Bilder von Soziales
               Netzwerk - iStock (istockphoto.com)
@@ -187,7 +187,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/game-changer-gm1285792890-382497484?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Game Changer Stockfoto und mehr Bilder von Newsletter - iStock
               (istockphoto.com)
@@ -199,7 +199,7 @@ export function Imprint(props: ImprintProps) {
               href="https://www.istockphoto.com/de/foto/ein-computer-und-w%C3%BCrfeln-mit-den-fragen-wer-war-wie-wo-gm1007247568-271793117?clarity=false"
               className="text-lilac-500 hover:underline"
               target="_blank"
-              noreferrer
+              rel="noreferrer noopener"
             >
               Ein Computer Und Würfeln Mit Den Fragen Wer War Wie Wo Stockfoto
               und mehr Bilder von Informationssymbol - iStock (istockphoto.com)
@@ -229,7 +229,7 @@ export function Imprint(props: ImprintProps) {
             href="https://matrix-gmbh.de/matrix-ggmbh/"
             className="text-lilac-500 hover:underline"
             target="_blank"
-            noreferrer
+            rel="noreferrer noopener"
           >
             matrix-ggmbh.de
           </a>

@@ -9,7 +9,16 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          placeholder: "blurred",
+          quality: 80,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     {

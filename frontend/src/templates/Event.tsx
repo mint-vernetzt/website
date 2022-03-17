@@ -1,5 +1,5 @@
 import { graphql, Link, navigate } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Chip from "../components/Chip/Chip";
 import ContactCard from "../components/ContactCard/ContactCard";
@@ -14,12 +14,13 @@ import { getRelatedEvents } from "../utils/dataTransformer";
 const getImage = (data: GatsbyTypes.EventQuery) => {
   if (data.event.parent === null) {
     return (
-      data.event.featuredImage?.node?.localFile?.childImageSharp?.fluid ?? null
+      data.event.featuredImage?.node?.localFile?.childImageSharp
+        ?.gatsbyImageData ?? null
     );
   } else {
     return (
       data.event.parent?.node?.featuredImage?.node?.localFile?.childImageSharp
-        ?.fluid ?? null
+        ?.gatsbyImageData ?? null
     );
   }
 };
@@ -140,7 +141,11 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
         {EventHeader(event)}
 
         {image !== null && (
-          <Img fluid={image} className="rounded-3xl w-100 h-auto lg:mb-20" />
+          <GatsbyImage
+            image={image}
+            className="rounded-3xl w-100 h-auto lg:mb-20"
+            alt=""
+          />
         )}
 
         {event.parent && (
@@ -240,7 +245,7 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                 email={contactPerson[0].contactInformations.email}
                 avatar={{
                   src: contactPerson[0].contactInformations.photo.localFile
-                    .childImageSharp.fluid.src,
+                    .childImageSharp.gatsbyImageData,
                   alt: `${contactPerson[0].contactInformations.firstName} ${contactPerson[0].contactInformations.lastName}`,
                 }}
               />
@@ -283,9 +288,7 @@ export const query = graphql`
         node {
           localFile {
             childImageSharp {
-              fluid(maxWidth: 1488, maxHeight: 400, quality: 80) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 1488, height: 400)
             }
             publicURL
           }
@@ -313,9 +316,7 @@ export const query = graphql`
               node {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1200, maxHeight: 250, quality: 80) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(width: 1200, height: 250)
                   }
                   publicURL
                 }
@@ -340,10 +341,7 @@ export const query = graphql`
                       altText
                       localFile {
                         childImageSharp {
-                          fluid(maxWidth: 100, maxHeight: 100) {
-                            ...GatsbyImageSharpFluid
-                            src
-                          }
+                          gatsbyImageData(width: 144)
                         }
                       }
                     }
@@ -406,10 +404,7 @@ export const query = graphql`
                 altText
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 100, maxHeight: 100) {
-                      ...GatsbyImageSharpFluid
-                      src
-                    }
+                    gatsbyImageData(width: 144)
                   }
                 }
               }

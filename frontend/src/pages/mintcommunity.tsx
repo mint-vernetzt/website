@@ -1,11 +1,11 @@
-import React from "react";
 import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import ContactCard from "../components/ContactCard/ContactCard";
+import { H1, H2, H3 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Img from "gatsby-image";
 import { ReactComponent as Header } from "../images/mintcommunity_header.svg";
-import { H1, H2, H3 } from "../components/Heading/Heading";
-import ContactCard from "../components/ContactCard/ContactCard";
 
 export function Mintcommunity({
   data,
@@ -64,26 +64,35 @@ export function Mintcommunity({
         <div className="flex flex-wrap md:-mx-4">
           <div className="flex-100 pb-4 md:pb-0 md:flex-1/2 lg:flex-5/12 md:px-4 md:order-2 relative">
             <div className="raketeimage md:absolute md:left-4 md:top-0">
-              <Img
-                fixed={data.RaketeImage.childImageSharp.fixed}
-                className="rounded-2xl shadow-md"
-                alt=""
-              />
+              {data.RaketeImage?.childImageSharp?.gatsbyImageData !==
+              undefined ? (
+                <GatsbyImage
+                  image={data.RaketeImage.childImageSharp.gatsbyImageData}
+                  className="rounded-2xl shadow-md"
+                  alt=""
+                />
+              ) : null}
             </div>
 
             <div className="zoomimage md:absolute ml-auto text-right -mt-8 md:m-0">
-              <Img
-                fixed={data.ZoomImage.childImageSharp.fixed}
-                className="rounded-2xl shadow-md"
-                alt=""
-              />
+              {data.ZoomImage?.childImageSharp?.gatsbyImageData !==
+              undefined ? (
+                <GatsbyImage
+                  image={data.ZoomImage.childImageSharp.gatsbyImageData}
+                  className="rounded-2xl shadow-md"
+                  alt=""
+                />
+              ) : null}
             </div>
             <div className="puzzleimage md:absolute -mt-8 md:m-0">
-              <Img
-                fixed={data.PuzzleImage.childImageSharp.fixed}
-                className="rounded-2xl shadow-md absolute"
-                alt=""
-              />
+              {data.PuzzleImage?.childImageSharp?.gatsbyImageData !==
+              undefined ? (
+                <GatsbyImage
+                  image={data.PuzzleImage.childImageSharp.gatsbyImageData}
+                  className="rounded-2xl shadow-md absolute"
+                  alt=""
+                />
+              ) : null}
             </div>
           </div>
           <div className="flex-100 md:flex-1/2 lg:flex-7/12 md:px-4 md:self-center md:order-1">
@@ -112,7 +121,8 @@ export function Mintcommunity({
                 phone={pageContact.phone}
                 email={pageContact.email}
                 avatar={{
-                  src: pageContact.photo.localFile.childImageSharp.fluid.src,
+                  src: pageContact?.photo?.localFile?.childImageSharp
+                    ?.gatsbyImageData,
                   alt: `${pageContact.firstName} ${pageContact.lastName}`,
                 }}
               />
@@ -159,10 +169,14 @@ export function Mintcommunity({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-4">
           <div className="flex-100 pb-4 md:pb-0 md:flex-1/2 md:px-4">
-            <Img
-              fluid={data.HackathonImage.childImageSharp.fluid}
-              className="w-full h-auto rounded-2xl shadow-md"
-            />
+            {data.HackathonImage?.childImageSharp?.gatsbyImageData !==
+            undefined ? (
+              <GatsbyImage
+                image={data.HackathonImage.childImageSharp.gatsbyImageData}
+                className="w-full h-auto rounded-2xl shadow-md"
+                alt=""
+              />
+            ) : null}
           </div>
           <div className="flex-100 md:flex-1/2 md:px-4 md:self-center">
             <p className="lg:text-xl">
@@ -197,33 +211,24 @@ export const pageQuery = graphql`
   query MintCommunityPage {
     HackathonImage: file(relativePath: { eq: "mintcommunity_hackathon.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 728, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 728)
       }
     }
     PuzzleImage: file(relativePath: { eq: "mintcommunity_puzzle.jpg" }) {
       childImageSharp {
-        fixed(width: 280, height: 200, quality: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 280, height: 200)
       }
     }
     RaketeImage: file(relativePath: { eq: "mintcommunity_rakete.jpg" }) {
       childImageSharp {
-        fixed(width: 280, height: 200, quality: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 280, height: 200)
       }
     }
     ZoomImage: file(relativePath: { eq: "mintcommunity_zoom.png" }) {
       childImageSharp {
-        fixed(width: 280, height: 200, quality: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 280, height: 200)
       }
     }
-
     PageContact: wpContact(
       contactInformations: { lastName: { eq: "Klauke" } }
     ) {
@@ -236,9 +241,7 @@ export const pageQuery = graphql`
         photo {
           localFile {
             childImageSharp {
-              fluid {
-                src
-              }
+              gatsbyImageData(width: 144)
             }
           }
         }
