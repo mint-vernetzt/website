@@ -1,4 +1,5 @@
 import { Chip, ChipClickHandler, ChipProps } from "../Chip/Chip";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as React from "react";
 import { H4 } from "../Heading/Heading";
 import { Image } from "../types";
@@ -29,8 +30,8 @@ export function NewsFeedItem({
     <div className="flex flex-wrap md:flex-nowrap md:items-stretch relative">
       {image !== undefined ? (
         <div className="flex-100 mb-2 md:mb-0 md:mr-4 lg:mr-8 md:flex-1/3 lg:min-h-12.5">
-          <img
-            src={image.src}
+          <GatsbyImage
+            image={image.src as unknown as IGatsbyImageData}
             alt={image.alt}
             className="w-full h-auto md:h-full md:object-cover rounded-lg"
           />

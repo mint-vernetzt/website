@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import * as Popover from "@radix-ui/react-popover";
 import Icon, { IconType } from "../../components/Icon/Icon";
 import { H2, H3, H4, H6 } from "../../components/Heading/Heading";
@@ -18,7 +18,7 @@ export function DossierWettbewerbe({
         title="Naturwissenschaftliche Wettbewerbe sind für Mädchen weniger attraktiv als für Jungen – über Stereotype und Strukturen"
         slug="/mint-bildungsforschung/themenspezial-artikel-maedchen-wettbewerb"
         description=""
-        image={data.HeroImage.publicURL}
+        image={data?.HeroImage?.publicURL}
         children=""
       />
       <section className="container py-4 md:py-8">
@@ -33,11 +33,13 @@ export function DossierWettbewerbe({
             zur Übersicht
           </span>
         </Link>
-
-        <Img
-          fluid={data.HeroImage.childImageSharp.fluid}
-          className="w-full h-auto rounded-2xl shadow-md"
-        />
+        {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+          <GatsbyImage
+            image={data.HeroImage.childImageSharp.gatsbyImageData}
+            className="w-full h-auto rounded-2xl shadow-md"
+            alt=""
+          />
+        ) : null}
       </section>
 
       <section className="container my-4 md:my-8 lg:my-8">
@@ -547,9 +549,7 @@ export const pageQuery = graphql`
     ) {
       publicURL
       childImageSharp {
-        fluid(maxWidth: 1488, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1488)
       }
     }
   }

@@ -7,7 +7,7 @@ import {
   getOrganizationsData,
   getTeasersData,
 } from "../utils/dataTransformer";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import EventTeaser from "../components/EventTeaser/EventTeaser";
 import NewsFeed from "../components/NewsFeed/NewsFeed";
 import SocialBar from "../components/SocialBar/SocialBar";
@@ -37,9 +37,10 @@ export function Index({
       : [
           {
             image: (
-              <Img
-                fluid={data.HeroImage.childImageSharp.fluid}
+              <GatsbyImage
+                image={data?.HeroImage?.childImageSharp?.gatsbyImageData}
                 className="w-full h-3/4 md:h-full"
+                alt=""
               />
             ),
 
@@ -127,19 +128,19 @@ export function Index({
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-3">
           {[
             {
-              image: data.MintmachenImage.childImageSharp.fluid,
+              image: data?.MintmachenImage?.childImageSharp?.gatsbyImageData,
               title: `MI(N)Tmachen`,
               text: `Wir machen die MINT-Akteur:innen Deutschlands sichtbar und vernetzen Euch. Aber dafür brauchen wir Eure Hilfe! Bringt Euch jetzt aktiv ein und helft einander mehr und bessere MINT-Angebote zu schaffen.`,
               link: `/mintmachen/`,
             },
             {
-              image: data.MintvernetztImage.childImageSharp.fluid,
+              image: data?.MintvernetztImage?.childImageSharp?.gatsbyImageData,
               title: `MINTvernetzt informiert`,
               text: `Informieren, inspirieren, Emotionen wecken: Wir geben Euch Einblicke in die MINT-Welt und schauen auch über den Tellerrand: Hier findet Ihr Newsletter, MINTNews & Co.`,
               link: `/mintvernetzt/`,
             },
             {
-              image: data.MintcommunityImage.childImageSharp.fluid,
+              image: data?.MintcommunityImage?.childImageSharp?.gatsbyImageData,
               title: `Werde Teil der MINTcommunity`,
               text: `Wir bauen einen Marktplatz für die MINTcommunity Deutschlands: die MINTvernetzt-Plattform. Und zwar mit Euch! Bringt Euch jetzt aktiv ein und werdet BETA-Tester:in.`,
               link: `/mintcommunity/`,
@@ -151,7 +152,11 @@ export function Index({
             >
               <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
                 <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                  <Img fluid={teaserbox.image} className="w-full h-auto" />
+                  <GatsbyImage
+                    image={teaserbox.image}
+                    className="w-full h-auto"
+                    alt=""
+                  />
                 </div>
                 <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
                 <p className="lg:mx-2">{teaserbox.text}</p>
@@ -221,41 +226,26 @@ export const pageQuery = graphql`
   query LandingPage {
     HeroImage: file(relativePath: { eq: "home_hero_large.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1488, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    MaedchenImage: file(relativePath: { eq: "MINT_fuer_Maedchen.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1488, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1488)
       }
     }
     MintmachenImage: file(relativePath: { eq: "landingpage_mintmachen.png" }) {
       childImageSharp {
-        fluid(maxWidth: 560, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 560)
       }
     }
     MintvernetztImage: file(
       relativePath: { eq: "landingpage_mintvernetzt.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 560, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 560)
       }
     }
     MintcommunityImage: file(
       relativePath: { eq: "landingpage_mintcommunity.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 560, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 560)
       }
     }
     newsItems: allWpNewsItem(sort: { fields: [date], order: DESC }, limit: 3) {
@@ -314,9 +304,7 @@ export const pageQuery = graphql`
           image {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 1488, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 1488)
               }
             }
           }
@@ -330,9 +318,7 @@ export const pageQuery = graphql`
                 node {
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 1488, quality: 80) {
-                        ...GatsbyImageSharpFluid
-                      }
+                      gatsbyImageData(width: 1488)
                     }
                   }
                 }
@@ -345,9 +331,7 @@ export const pageQuery = graphql`
                 node {
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 1488, quality: 80) {
-                        ...GatsbyImageSharpFluid
-                      }
+                      gatsbyImageData(width: 1488)
                     }
                   }
                 }

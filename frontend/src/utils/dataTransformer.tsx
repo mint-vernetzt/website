@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { NewsFeedItemProps } from "../components/NewsFeed/NewsFeedItem";
 import { EventFeedItemProps } from "../components/EventFeed/EventFeedItem";
 import { OrganizationBoxProps } from "../components/OrganizationBox/OrganizationBox";
@@ -46,8 +46,8 @@ export const getUserCardsProps = (
       position: user.contactInformations.position,
       avatar: {
         src:
-          user.contactInformations.photo.localFile.childImageSharp.fluid.src ??
-          "",
+          user.contactInformations.photo.localFile.childImageSharp
+            .gatsbyImageData ?? "",
         alt: fullName,
       },
       organizationUrl: organisation.organizationInformations.url,
@@ -75,7 +75,8 @@ export const getNewsItems = (
       newsItem.featuredImage !== null
     ) {
       image = {
-        src: newsItem.featuredImage.node.localFile.childImageSharp.fluid.src,
+        src: newsItem.featuredImage.node.localFile.childImageSharp
+          .gatsbyImageData,
         alt: newsItem.featuredImage.node.altText,
       };
     }
@@ -182,15 +183,19 @@ export const getTeasersData = (data: GatsbyTypes.LandingPageQuery) => {
 
     let image;
     if (teaser.teaserInformations.image !== null) {
-      image = teaser.teaserInformations.image.localFile.childImageSharp.fluid;
+      image =
+        teaser.teaserInformations.image.localFile.childImageSharp
+          .gatsbyImageData;
     } else {
       image =
         teaser.teaserInformations.post[0].featuredImage.node.localFile
-          .childImageSharp.fluid;
+          .childImageSharp.gatsbyImageData;
     }
 
     return {
-      image: <Img fluid={image} className="w-full h-3/4 md:h-full" />,
+      image: (
+        <GatsbyImage image={image} className="w-full h-3/4 md:h-full" alt="" />
+      ),
       headline: teaser.title,
       excerpt: teaser.excerpt.replace(/<[^>]*>/g, ""),
       url: (

@@ -1,3 +1,4 @@
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as React from "react";
 import { Image } from "../types";
 
@@ -18,10 +19,10 @@ const UserInfo = ({
   name: UserCardProps["name"];
 }) => (
   <>
-    <img
+    <GatsbyImage
       data-testid="avatar"
       className="mb-4 w-20 h-20 object-cover rounded-full"
-      src={avatar.src}
+      image={avatar.src as unknown as IGatsbyImageData}
       alt={avatar.alt}
     />
 

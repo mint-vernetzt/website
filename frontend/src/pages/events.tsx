@@ -5,7 +5,7 @@ import ChipFilter from "../components/ChipFilter/ChipFilter";
 import EventFeed from "../components/EventFeed/EventFeed";
 import { H1 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import SEO from "../components/SEO";
 import { useTagFilter } from "../hooks/useTagFilter";
 import { ReactComponent as EventsOverview } from "../images/events_overview.svg";
 import { getParentEventItems } from "../utils/dataTransformer";

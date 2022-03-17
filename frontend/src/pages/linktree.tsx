@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "../components/SEO";
 import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { H4 } from "../components/Heading/Heading";
 
 /* eslint-disable-next-line */
@@ -17,9 +17,13 @@ export function LinkTree({ data }) {
   const linkTreeItems = data.items.nodes.map((item) => {
     return {
       image: (
-        <Img
-          fluid={item.featuredImage.node.localFile.childrenImageSharp[0].fluid}
+        <GatsbyImage
+          image={
+            item.featuredImage.node.localFile.childrenImageSharp[0]
+              .gatsbyImageData
+          }
           className="w-20 h-full object-cover rounded-lg"
+          alt=""
         />
       ),
       category:
@@ -400,9 +404,7 @@ export const pageQuery = graphql`
           node {
             localFile {
               childrenImageSharp {
-                fluid(maxWidth: 280, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 280)
               }
             }
           }

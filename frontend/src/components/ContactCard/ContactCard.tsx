@@ -2,6 +2,7 @@ import * as React from "react";
 import { H4 } from "../Heading/Heading";
 import { Icon, IconType } from "../Icon/Icon";
 import { Image } from "../types.d";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 export interface ContactCardProps {
   headline: string;
@@ -25,10 +26,10 @@ export function ContactCard({
       <H4>{headline}</H4>
       <div className="flex items-center mb-2">
         <div className="flex-18 mr-4">
-          <img
+          <GatsbyImage
             data-testid="avatar"
-            className="w-18 h-18 object-cover rounded-full"
-            src={avatar.src}
+            className="w-18 h-18 object-fill rounded-full"
+            image={avatar.src as unknown as IGatsbyImageData}
             alt={avatar.alt}
           />
         </div>

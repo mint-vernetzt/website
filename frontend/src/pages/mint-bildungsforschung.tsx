@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H4 } from "../components/Heading/Heading";
 
 export function MintForschung({
@@ -16,16 +16,18 @@ export function MintForschung({
         title="MINT-Bildungsforschung"
         slug="/mint-bildungsforschung"
         description="Wissenschaftliche Untersuchungen und aktuelle Erkenntnisse, die die Bildungsarbeit konkret unterstützen."
-        image={data.HeroImage.publicURL}
+        image={data?.HeroImage?.publicURL}
         children=""
       />
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
-          <Img
-            fluid={data.HeroImage.childImageSharp.fluid}
-            className="w-full h-full"
-            alt="MINTnews: Informieren, inspirieren und Emotionen wecken mit MINT"
-          />
+          {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+            <GatsbyImage
+              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              className="w-full h-full"
+              alt="MINTnews: Informieren, inspirieren und Emotionen wecken mit MINT"
+            />
+          ) : null}
 
           <div className="hero-text absolute top-0 left-0 h-full right-0 pt-12 px-4 md:px-12 md:flex md:items-center lg:px-20">
             <div className="md:flex-100">
@@ -57,13 +59,14 @@ export function MintForschung({
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {[
             {
-              image: data.Dossier1TeaserImage.childImageSharp.fluid,
+              image:
+                data?.Dossier1TeaserImage?.childImageSharp?.gatsbyImageData,
               title: `Wie können Mädchen fürs Programmieren begeistert werden?`,
               text: `Welche didaktischen Maßnahmen sind besonders wirksam, um das Interesse von Mädchen an Informatik, Programmieren und Computern nachhaltig zu fördern? Der folgende Artikel bietet Euch konkrete Handlungsempfehlungen aus der Forschung.`,
               link: `/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-programmieren-begeistern/`,
             },
             {
-              image: data.Dossier2TeaserImage.childImageSharp.fluid,
+              image: data?.Dossier2TeaserImage?.childImageSharp?.fluid,
               title: `Wettbewerbe sind für Mädchen weniger attraktiv als für Jungen – über Stereotype und Strukturen`,
               text: `Mathematik- und Wissenschaftsolympiaden sind für die Teilnehmenden oft ein Sprungbrett für die Zulassung zu Spitzenuniversitäten und für künftige Karrieren im MINT-Bereich. Wie Geschlechterstereotype die Teilnahme von Mädchen beeinflussen und warum man als Anbieter:in die eigenen Wettbewerbsstrukturen kritisch reflektieren sollte, lest Ihr hier.`,
               link: `/mint-bildungsforschung/themenspezial-artikel-maedchen-wettbewerb/`,
@@ -75,7 +78,11 @@ export function MintForschung({
             >
               <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
                 <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                  <Img fluid={teaserbox.image} className="w-full h-auto" />
+                  <GatsbyImage
+                    image={teaserbox.image}
+                    className="w-full h-auto"
+                    alt=""
+                  />
                 </div>
                 <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
                 <p className="lg:mx-2">{teaserbox.text}</p>
@@ -141,9 +148,7 @@ export const pageQuery = graphql`
     HeroImage: file(relativePath: { eq: "mint-bildungsforschung.jpg" }) {
       publicURL
       childImageSharp {
-        fluid(maxWidth: 1488, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1488)
       }
     }
     Dossier1TeaserImage: file(
@@ -152,36 +157,28 @@ export const pageQuery = graphql`
       }
     ) {
       childImageSharp {
-        fluid(maxWidth: 744, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 744)
       }
     }
     Dossier2TeaserImage: file(
       relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 744, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 744)
       }
     }
     MintvernetztImage: file(
       relativePath: { eq: "landingpage_mintvernetzt.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 560, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 560)
       }
     }
     MintcommunityImage: file(
       relativePath: { eq: "landingpage_mintcommunity.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 560, quality: 80) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 560)
       }
     }
   }

@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export interface SEOProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   slug: string;
   children: React.ReactNode;
 }
