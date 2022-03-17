@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  NewsFeedItemProps,
-  UserCardProps,
-  OrganizationBoxProps,
-  EventNavigationItemProps,
-  EventFeedItemProps,
-  ChipProps,
-} from "@mint-vernetzt/react-components";
 import { Link } from "gatsby";
-
 import Img from "gatsby-image";
+import { NewsFeedItemProps } from "../components/NewsFeed/NewsFeedItem";
+import { EventFeedItemProps } from "../components/EventFeed/EventFeedItem";
+import { OrganizationBoxProps } from "../components/OrganizationBox/OrganizationBox";
+import { EventNavigationItemProps } from "../components/EventNavigation/EventNavigation";
+import { UserCardProps } from "../components/UserCard/UserCard";
 
 export type PaktDataByCategory = {
   [key: string]: {

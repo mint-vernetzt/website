@@ -11,6 +11,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-svgr",
       options: {
@@ -25,9 +26,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
@@ -41,6 +42,13 @@ module.exports = {
         emitPluginDocuments: {
           "src/__generated__/gatsby-plugin-documents.graphql": true,
         },
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pakt",
+        path: "src/data/pakt/",
       },
     },
   ],
