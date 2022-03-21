@@ -1,4 +1,3 @@
-import * as React from "react";
 import { H2 } from "../Heading/Heading";
 import { OrganizationBox, OrganizationBoxProps } from "./OrganizationBox";
 

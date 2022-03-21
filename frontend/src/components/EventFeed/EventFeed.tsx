@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { EventFeedItem, EventFeedItemProps } from "./EventFeedItem";
 import { ChipClickHandler } from "../Chip/Chip";
 

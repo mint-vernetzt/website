@@ -1,6 +1,6 @@
 import { formatDate } from "../NewsFeed/utils";
 import { Icon, IconType } from "../Icon/Icon";
-import * as React from "react";
+import React from "react";
 import { defaultLinkWrapper } from "../EventTeaser/defaultLinkWrapper";
 import { H2, H3 } from "../Heading/Heading";
 export interface EventNavigationItemProps {

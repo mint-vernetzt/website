@@ -1,4 +1,3 @@
-import * as React from "react";
 import { H4 } from "../Heading/Heading";
 
 export interface SocialBarProps {

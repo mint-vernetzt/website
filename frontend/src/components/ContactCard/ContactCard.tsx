@@ -1,4 +1,3 @@
-import * as React from "react";
 import { H4 } from "../Heading/Heading";
 import { Icon, IconType } from "../Icon/Icon";
 import { Image } from "../types.d";

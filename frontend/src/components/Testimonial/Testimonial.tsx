@@ -1,5 +1,3 @@
-/* eslint-disable-next-line */
-import * as React from "react";
 import { H2 } from "../Heading/Heading";
 import { Icon, IconType } from "../Icon/Icon";
 export interface TestimonialProps {

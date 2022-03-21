@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import React from "react";
 import { defaultLinkWrapper } from "./defaultLinkWrapper";
 import EventTeaserItem, { EventTeaserItemProps } from "./EventTeaserItem";
 

@@ -1,6 +1,3 @@
-import * as React from "react";
-/* eslint-disable-next-line */
-
 export type ChipClickHandler = (slug: ChipProps["slug"]) => void;
 
 export interface ChipProps {

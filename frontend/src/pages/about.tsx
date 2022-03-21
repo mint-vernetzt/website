@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import React from "react";
 import { H1, H2, H3 } from "../components/Heading/Heading";
 import Icon, { IconType } from "../components/Icon/Icon";
 import Layout from "../components/Layout";

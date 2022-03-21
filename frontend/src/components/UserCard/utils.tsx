@@ -1,4 +1,4 @@
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 
 export function getUserCardProps() {
   const name = faker.name.findName();

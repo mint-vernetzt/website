@@ -2,6 +2,7 @@ require("dotenv").config();
 
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
+  jsxRuntime: "automatic",
   siteMetadata: {
     title: "MINTvernetzt",
     description:
