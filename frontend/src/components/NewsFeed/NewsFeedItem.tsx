@@ -1,6 +1,6 @@
 import { Chip, ChipClickHandler, ChipProps } from "../Chip/Chip";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import * as React from "react";
+import React from "react";
 import { H4 } from "../Heading/Heading";
 import { Image } from "../types";
 import { formatDate } from "./utils";

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Image } from "../types";
 
 export interface OrganizationBoxProps {

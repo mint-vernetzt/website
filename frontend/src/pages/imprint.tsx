@@ -1,4 +1,3 @@
-import React from "react";
 import { H1, H2, H3 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";

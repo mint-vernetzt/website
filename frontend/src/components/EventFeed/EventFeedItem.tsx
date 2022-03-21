@@ -1,4 +1,3 @@
-import * as React from "react";
 import Chip, { ChipClickHandler, ChipProps } from "../Chip/Chip";
 import { H4 } from "../Heading/Heading";
 import { Icon, IconType } from "../Icon/Icon";

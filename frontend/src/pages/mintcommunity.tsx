@@ -1,6 +1,5 @@
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import React from "react";
 import ContactCard from "../components/ContactCard/ContactCard";
 import { H1, H2, H3 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";

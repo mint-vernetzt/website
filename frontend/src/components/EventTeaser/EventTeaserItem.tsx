@@ -1,11 +1,8 @@
-import * as React from "react";
-
+import React from "react";
 import { formatDate } from "../EventFeed/utils";
 import { H3 } from "../Heading/Heading";
 import Icon, { IconType } from "../Icon/Icon";
 import { defaultLinkWrapper } from "./defaultLinkWrapper";
-
-/* eslint-disable-next-line */
 export interface EventTeaserItemProps {
   headline: string;
   body: React.ReactNode | string;

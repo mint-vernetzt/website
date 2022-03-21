@@ -1,4 +1,3 @@
-import React from "react";
 import SEO from "../components/SEO";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
