@@ -9,3 +9,6 @@ src/__generated__
 
 # tailwind
 src/styles/styles.css
+
+# storybook
+storybook-static

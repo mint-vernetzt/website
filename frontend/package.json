@@ -15,8 +15,9 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "build:styles": "tailwindcss -i src/styles/tailwind.css -o src/styles/styles.css",
-    "storybook": "npm run build:styles -- -w | start-storybook -p 6006",
-    "build-storybook": "npm run build:styles && build-storybook"
+    "start:storybook": "npm run build:styles -- -w | start-storybook -p 6006",
+    "build:storybook": "npm run build:styles && build-storybook",
+    "serve:storybook": "npx serve storybook-static/"
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^4.5.4",
