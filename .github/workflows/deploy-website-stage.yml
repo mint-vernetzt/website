@@ -50,5 +50,5 @@ jobs:
           password: ${{ secrets.CMS_HOST_PASSWORD_STAGE }}
           port: ${{ secrets.CMS_HOST_PORT_STAGE }}
           source: "frontend/public/"
-          strip_components: 3
+          strip_components: 2
           target: ${{ secrets.CMS_HOST_TARGET_STAGE }}
