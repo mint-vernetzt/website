@@ -20,6 +20,7 @@ Component.args = {
     src: faker.image.image(),
     alt: faker.lorem.words(),
   },
+  forceImg: true,
 };
 
 Component.storyName = "component";

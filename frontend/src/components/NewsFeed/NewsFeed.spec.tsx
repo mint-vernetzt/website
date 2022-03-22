@@ -1,8 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { faker } from "@faker-js/faker";
 import NewsFeed, { NewsFeedProps } from "./NewsFeed";
-import { TagProps } from "./NewsFeedItem";
-import { formatDate, getNewsFeedItemProps } from "./utils";
+import { getNewsFeedItemProps } from "./utils";
 
 const headline = faker.lorem.words();
 const body = faker.lorem.paragraph();

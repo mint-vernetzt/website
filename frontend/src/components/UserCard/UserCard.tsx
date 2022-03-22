@@ -1,36 +1,42 @@
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as React from "react";
-import { Image } from "../types";
+import Image from "../Image";
+import { type Image as ImageType } from "../types";
 
 export interface UserCardProps {
   name: string;
   email?: string;
   position: string;
-  avatar: Image;
+  avatar: ImageType;
   organizationUrl: string;
-  organizationLogo: Image;
+  organizationLogo: ImageType;
+  forceImg?: boolean;
 }
 
 const UserInfo = ({
   avatar,
   name,
+  forceImg = false,
 }: {
   avatar: UserCardProps["avatar"];
   name: UserCardProps["name"];
-}) => (
-  <>
-    <GatsbyImage
-      data-testid="avatar"
-      className="mb-4 w-20 h-20 object-cover rounded-full"
-      image={avatar.src as unknown as IGatsbyImageData}
-      alt={avatar.alt}
-    />
+  forceImg: boolean;
+}) => {
+  return (
+    <>
+      <Image
+        data-testid="avatar"
+        className="mb-4 w-20 h-20 object-cover rounded-full"
+        src={avatar.src}
+        alt={avatar.alt}
+        forceImg={forceImg}
+      />
 
-    <p data-testid="name" className="mb-1 font-semibold text-neutral-800">
-      {name}
-    </p>
-  </>
-);
+      <p data-testid="name" className="mb-1 font-semibold text-neutral-800">
+        {name}
+      </p>
+    </>
+  );
+};
 
 const linkWithEmail = (
   email: UserCardProps["email"],
@@ -52,11 +58,21 @@ const linkWithEmail = (
 };
 
 export function UserCard(props: UserCardProps) {
-  const { name, email, position, avatar, organizationUrl, organizationLogo } =
-    props;
+  const {
+    name,
+    email,
+    position,
+    avatar,
+    organizationUrl,
+    organizationLogo,
+    forceImg = false,
+  } = props;
   return (
     <div className="flex flex-col justify-center items-center text-center">
-      {linkWithEmail(email, <UserInfo avatar={avatar} name={name} />)}
+      {linkWithEmail(
+        email,
+        <UserInfo avatar={avatar} name={name} forceImg={forceImg} />
+      )}
 
       <p className="mb-2" data-testid="position">
         {position}
@@ -64,11 +80,11 @@ export function UserCard(props: UserCardProps) {
 
       <div className="h-10 flex flex-wrap content-end">
         <a href={organizationUrl} data-testid="organizationUrl" target="_blank">
-          <img
+          <Image
             data-testid="organizationLogo"
             className="max-h-10 w-20"
-            src={organizationLogo.src}
-            alt={organizationLogo.alt}
+            forceImg={forceImg}
+            {...organizationLogo}
           />
         </a>
       </div>

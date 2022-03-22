@@ -1,7 +1,8 @@
 import { H4 } from "../Heading/Heading";
 import { Icon, IconType } from "../Icon/Icon";
-import { Image } from "../types.d";
+import { type Image as ImageType } from "../types.d";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import Image from "../Image";
 
 export interface ContactCardProps {
   headline: string;
@@ -9,7 +10,8 @@ export interface ContactCardProps {
   position: string;
   phone?: string | null;
   email?: string | null;
-  avatar: Image;
+  avatar: ImageType;
+  forceImg?: boolean;
 }
 
 export function ContactCard({
@@ -19,17 +21,19 @@ export function ContactCard({
   phone = null,
   email = null,
   avatar,
+  forceImg = false,
 }: ContactCardProps) {
   return (
     <div className="contact-card lg:px-8">
       <H4>{headline}</H4>
       <div className="flex items-center mb-2">
         <div className="flex-18 mr-4">
-          <GatsbyImage
+          <Image
             data-testid="avatar"
             className="w-18 h-18 object-fill rounded-full"
-            image={avatar.src as unknown as IGatsbyImageData}
+            src={avatar.src as unknown as IGatsbyImageData}
             alt={avatar.alt}
+            forceImg={forceImg}
           />
         </div>
         <div className="flex-auto">
