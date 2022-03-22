@@ -52,6 +52,16 @@ exports.createPages = async (props) => {
       },
     });
   });
+
+  const { createRedirect } = actions;
+
+  createRedirect({
+    fromPath:
+      "/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-programmieren-begeistern/",
+    toPath: `/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-informatik-begeistern/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {

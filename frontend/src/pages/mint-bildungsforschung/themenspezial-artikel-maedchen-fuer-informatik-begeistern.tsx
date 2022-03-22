@@ -15,7 +15,7 @@ export function DossierMeta({
     <Layout>
       <SEO
         title="Wie können Mädchen für Programmieren begeistert werden?"
-        slug="/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-programmieren-begeistern"
+        slug="/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-informatik-begeistern"
         description=""
         image={data?.HeroImage?.publicURL}
         children=""
@@ -45,7 +45,7 @@ export function DossierMeta({
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
           <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-4">
-              Wie können Mädchen für Programmieren begeistert werden?
+              Wie können Mädchen für Informatik begeistert werden?
             </H2>
             <p className="font-bold text-xl mb-12 text-neutral-900">
               Ein Überblick zu konkreten Handlungsempfehlungen aus der Forschung
@@ -578,7 +578,7 @@ export function DossierMeta({
               <div className="ml-auto">
                 <svg
                   width="24px"
-                  height="auto"
+                  height="100%"
                   viewBox="0 0 12 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >

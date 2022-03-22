@@ -60,12 +60,13 @@ export function MintForschung({
             {
               image:
                 data?.Dossier1TeaserImage?.childImageSharp?.gatsbyImageData,
-              title: `Wie können Mädchen fürs Programmieren begeistert werden?`,
+              title: `Wie können Mädchen für Informatik begeistert werden?`,
               text: `Welche didaktischen Maßnahmen sind besonders wirksam, um das Interesse von Mädchen an Informatik, Programmieren und Computern nachhaltig zu fördern? Der folgende Artikel bietet Euch konkrete Handlungsempfehlungen aus der Forschung.`,
               link: `/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-programmieren-begeistern/`,
             },
             {
-              image: data?.Dossier2TeaserImage?.childImageSharp?.fluid,
+              image:
+                data?.Dossier2TeaserImage?.childImageSharp?.gatsbyImageData,
               title: `Wettbewerbe sind für Mädchen weniger attraktiv als für Jungen – über Stereotype und Strukturen`,
               text: `Mathematik- und Wissenschaftsolympiaden sind für die Teilnehmenden oft ein Sprungbrett für die Zulassung zu Spitzenuniversitäten und für künftige Karrieren im MINT-Bereich. Wie Geschlechterstereotype die Teilnahme von Mädchen beeinflussen und warum man als Anbieter:in die eigenen Wettbewerbsstrukturen kritisch reflektieren sollte, lest Ihr hier.`,
               link: `/mint-bildungsforschung/themenspezial-artikel-maedchen-wettbewerb/`,
