@@ -11,7 +11,6 @@ export interface ContactCardProps {
   phone?: string | null;
   email?: string | null;
   avatar: ImageType;
-  forceImg?: boolean;
 }
 
 export function ContactCard({
@@ -21,7 +20,6 @@ export function ContactCard({
   phone = null,
   email = null,
   avatar,
-  forceImg = false,
 }: ContactCardProps) {
   return (
     <div className="contact-card lg:px-8">
@@ -33,7 +31,6 @@ export function ContactCard({
             className="w-18 h-18 object-fill rounded-full"
             src={avatar.src as unknown as IGatsbyImageData}
             alt={avatar.alt}
-            forceImg={forceImg}
           />
         </div>
         <div className="flex-auto">

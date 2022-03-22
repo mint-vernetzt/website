@@ -35,7 +35,6 @@ describe("UserCard", () => {
         src: "https://placekitten.com/400/300",
         alt: "Cute Kitten Corp.",
       },
-      forceImg: true,
     };
     render(<UserCard {...props} />);
 

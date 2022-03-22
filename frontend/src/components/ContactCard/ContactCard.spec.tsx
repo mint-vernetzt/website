@@ -12,7 +12,6 @@ const props: ContactCardProps = {
     src: faker.image.image(),
     alt: faker.lorem.words(),
   },
-  forceImg: true,
 };
 
 test("render props", () => {

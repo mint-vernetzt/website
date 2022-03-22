@@ -35,8 +35,8 @@ jobs:
             ${{ runner.os }}-public-gatsby
       - name: "install dependencies"
         run: cd frontend/ && npm install
-      # - name: "run tests"
-      #   run: npx nx test website
+      - name: "run tests"
+        run: cd frontend/ && npm test
       - name: "build website"
         run: cd frontend/ && npm run build
         env:

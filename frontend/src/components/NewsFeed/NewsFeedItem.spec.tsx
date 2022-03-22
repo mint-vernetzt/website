@@ -52,7 +52,6 @@ test("show image", () => {
       src: faker.image.image(),
       alt: faker.lorem.words(),
     },
-    forceImg: true,
   };
 
   const { container } = render(<NewsFeedItem {...props} />);

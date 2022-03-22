@@ -14,7 +14,6 @@ export interface NewsFeedItemProps {
   tags?: ChipProps[];
   onChipClick?: ChipClickHandler;
   image?: ImageType;
-  forceImg?: boolean;
 }
 
 export function NewsFeedItem({
@@ -24,7 +23,6 @@ export function NewsFeedItem({
   slug,
   tags = [],
   image,
-  forceImg = false,
   onChipClick,
 }: NewsFeedItemProps) {
   const formattedDate = formatDate(date);
@@ -37,7 +35,6 @@ export function NewsFeedItem({
             src={image.src as unknown as IGatsbyImageData}
             alt={image.alt}
             className="w-full h-auto md:h-full md:object-cover rounded-lg"
-            forceImg={forceImg}
           />
         </div>
       ) : null}
