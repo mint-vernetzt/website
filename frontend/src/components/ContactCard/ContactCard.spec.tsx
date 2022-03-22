@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 import ContactCard, { ContactCardProps } from "./ContactCard";
 
 const props: ContactCardProps = {
@@ -12,6 +12,7 @@ const props: ContactCardProps = {
     src: faker.image.image(),
     alt: faker.lorem.words(),
   },
+  forceImg: true,
 };
 
 test("render props", () => {

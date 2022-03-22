@@ -2,8 +2,9 @@ import { Chip, ChipClickHandler, ChipProps } from "../Chip/Chip";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 import { H4 } from "../Heading/Heading";
-import { Image } from "../types";
+import { type Image as ImageType } from "../types";
 import { formatDate } from "./utils";
+import Image from "../Image";
 
 export interface NewsFeedItemProps {
   headline: string;
@@ -12,7 +13,8 @@ export interface NewsFeedItemProps {
   slug: string;
   tags?: ChipProps[];
   onChipClick?: ChipClickHandler;
-  image?: Image;
+  image?: ImageType;
+  forceImg?: boolean;
 }
 
 export function NewsFeedItem({
@@ -22,6 +24,7 @@ export function NewsFeedItem({
   slug,
   tags = [],
   image,
+  forceImg = false,
   onChipClick,
 }: NewsFeedItemProps) {
   const formattedDate = formatDate(date);
@@ -30,10 +33,11 @@ export function NewsFeedItem({
     <div className="flex flex-wrap md:flex-nowrap md:items-stretch relative">
       {image !== undefined ? (
         <div className="flex-100 mb-2 md:mb-0 md:mr-4 lg:mr-8 md:flex-1/3 lg:min-h-12.5">
-          <GatsbyImage
-            image={image.src as unknown as IGatsbyImageData}
+          <Image
+            src={image.src as unknown as IGatsbyImageData}
             alt={image.alt}
             className="w-full h-auto md:h-full md:object-cover rounded-lg"
+            forceImg={forceImg}
           />
         </div>
       ) : null}

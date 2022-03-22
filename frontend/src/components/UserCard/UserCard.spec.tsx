@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-
 import UserCard, { UserCardProps } from "./UserCard";
 
 describe("UserCard", () => {
@@ -36,6 +35,7 @@ describe("UserCard", () => {
         src: "https://placekitten.com/400/300",
         alt: "Cute Kitten Corp.",
       },
+      forceImg: true,
     };
     render(<UserCard {...props} />);
 

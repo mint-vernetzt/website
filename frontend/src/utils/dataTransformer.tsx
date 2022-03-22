@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { NewsFeedItemProps } from "../components/NewsFeed/NewsFeedItem";

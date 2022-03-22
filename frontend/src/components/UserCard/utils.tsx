@@ -21,5 +21,6 @@ export function getUserCardProps() {
     avatar,
     organizationUrl,
     organizationLogo,
+    forceImg: true,
   };
 }

@@ -1,8 +1,6 @@
-import {
-  formatDate,
-  NewsFeedItemProps,
-  OrganizationBoxProps,
-} from "@mint-vernetzt/react-components";
+import { formatDate } from "../components/NewsFeed/utils";
+import { NewsFeedItemProps } from "../components/NewsFeed/NewsFeedItem";
+import { OrganizationBoxProps } from "../components/OrganizationBox/OrganizationBox";
 
 import { faker } from "@faker-js/faker";
 
@@ -12,7 +10,6 @@ import {
   getPaktDataByCategory,
   getUserCardsProps,
   getParentEventItems,
-  getRelatedEvents,
   createDateTimeFrom,
 } from "./dataTransformer";
 
@@ -92,9 +89,7 @@ describe("getUserCardsProps", () => {
               altText: "MyFirstname MyLastname",
               localFile: {
                 childImageSharp: {
-                  fluid: {
-                    src: "users-image.jpg",
-                  },
+                  gatsbyImageData: "users-image.jpg",
                 },
               },
             },
@@ -153,9 +148,7 @@ describe("getUserCardsProps", () => {
               altText: "MyFirstname MyLastname",
               localFile: {
                 childImageSharp: {
-                  fluid: {
-                    src: "users-image.jpg",
-                  },
+                  gatsbyImageData: "users-image.jpg",
                 },
               },
             },
@@ -271,9 +264,7 @@ test("transform news items", () => {
             altText: image.alt,
             localFile: {
               childImageSharp: {
-                fluid: {
-                  src: image.src,
-                },
+                gatsbyImageData: image.src,
               },
             },
           },

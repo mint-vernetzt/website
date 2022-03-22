@@ -1,5 +1,3 @@
-import { EventFeedItemProps } from "@mint-vernetzt/react-components";
-
 export function isBeforeOneDayAfterDate(referenceDate: Date, date: Date) {
   let dayAfterEndDate = theDayAfter(date);
 

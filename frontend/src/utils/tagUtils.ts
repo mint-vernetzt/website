@@ -1,4 +1,4 @@
-import { ChipProps } from "@mint-vernetzt/react-components";
+import { ChipProps } from "../components/Chip/Chip";
 
 export function getUniqueTags(tags: ChipProps[][]): ChipProps[] {
   if (tags.length === 0) {

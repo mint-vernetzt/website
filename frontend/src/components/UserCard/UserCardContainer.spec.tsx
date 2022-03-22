@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 import UserCardContainer, { UserCardContainerProps } from "./UserCardContainer";
 import { getUserCardProps } from "./utils";
 

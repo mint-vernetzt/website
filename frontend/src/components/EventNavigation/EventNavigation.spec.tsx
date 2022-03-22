@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 import EventNavigation, { EventNavigationProps } from "./EventNavigation";
 
 describe("Event Navigation", () => {

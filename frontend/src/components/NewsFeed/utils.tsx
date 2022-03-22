@@ -47,5 +47,5 @@ export function getNewsFeedItemProps(
     image = { src: faker.image.image(), alt: faker.lorem.words() };
   }
 
-  return { headline, body, date, slug, tags, image };
+  return { headline, body, date, slug, tags, image, forceImg: true };
 }
