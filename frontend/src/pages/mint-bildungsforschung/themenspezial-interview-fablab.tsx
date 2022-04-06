@@ -237,6 +237,10 @@ export function DossierFablab({
               Motivation.
             </p>
 
+            <H4 className="font-semibold mt-10 mb-6">
+              Vielen Dank für das Gespräch.
+            </H4>
+
             <p className="font-semibold text-primary mt-10 mb-6"></p>
           </div>
 

@@ -50,8 +50,8 @@ export function MintForschung({
             Mädchen für einzelne MINT-Disziplinen begeistern kann und wie
             wichtige Formate der Begabtenförderung immer noch von Stereotypen
             beeinflusst werden. Diese Themenseiten sind ein stetig wachsender
-            Wissensschatz, der sich immer wieder um weitere Artikel und
-            Interviews erweitern wird.
+            Wissensschatz, der sich immer wieder um weitere Artikel erweitern
+            wird.
           </p>
         </header>
 
