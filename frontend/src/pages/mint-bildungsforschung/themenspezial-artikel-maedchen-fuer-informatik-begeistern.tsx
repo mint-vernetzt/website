@@ -405,7 +405,6 @@ export function DossierMeta({
           <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4">
             <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
               <div className="study_details mb-6">
-                <H3 className="font-semibold mb-2">Details</H3>
                 <p className="font-bold text-sm mb-2 text-neutral-900">
                   Veröffentlicht am 16.03.2022
                 </p>
