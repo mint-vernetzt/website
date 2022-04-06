@@ -97,6 +97,45 @@ export function MintForschung({
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
+          <H2 like="h1">Interviews</H2>
+          <p className="text-xl md:px-8 lg:px-20 ">
+            Lorem ipsum dolor sit amet, consetetur sed sadipscing elitr dolor sit amet,, 
+            sed diam nonumy Lorem ipsum dolor sit amet, consetetur sed sadipscing elitr, 
+            sed diam nonumy 
+          </p>
+        </header>
+
+        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
+          {[
+            {
+              title: `„Es geht darum, Mädchen in der Informatik zu sehen“`,
+              text: `Wie kann man Mädchen und Frauen für MINT-Fächer – insbesondere Informatik – begeistern, und das möglichst nachhaltig? Professor Ingo Wagner hat mit Kolleg:innen dazu eine Übersichtsarbeit erstellt, in der Erkenntnisse aus über 800 Studien zusammengeführt wurden. Über die Kernelemente und was sowohl MINT-Akteur:innen als auch Eltern richtig machen können, sprach er mit uns im Interview`,
+              link: `/mint-bildungsforschung/themenspezial-interview-ingo-wagner`,
+            },
+            {
+              title: `Eine offene Werkstatt für alle`,
+              text: `Auf dem Campus der Hochschule Flensburg gibt es einen außerschulischen Lernort der in verschiedenen Angeboten dazu ermächtigt, eigene Ideen umzusetzen. Das FabLab IDEENREICH versteht sich als offene Werkstatt für alle. Wie das geht und besonders Mädchen erreicht werden, lest ihr im Interview.`,
+              link: `/mint-bildungsforschung/themenspezial-interview-fablab`,
+            },            
+          ].map((teaserbox, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 rounded-lg bg-neutral-200 shadow-lg"
+            >
+              <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
+                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
+                <p className="lg:mx-2">{teaserbox.text}</p>
+                <p>
+                  <button className="btn-primary">Jetzt lesen</button>
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>      
+
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <header>
           <H2 like="h1">Blogbeiträge und Events zum Thema</H2>
           <p className="text-xl md:px-8 lg:px-20 ">
             Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie
