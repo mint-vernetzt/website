@@ -99,9 +99,10 @@ export function MintForschung({
         <header>
           <H2 like="h1">Interviews</H2>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Lorem ipsum dolor sit amet, consetetur sed sadipscing elitr dolor sit amet,, 
-            sed diam nonumy Lorem ipsum dolor sit amet, consetetur sed sadipscing elitr, 
-            sed diam nonumy 
+            Wir sprechen mit unterschiedlichen Akteur:innen aus Wissenschaft,
+            Praxis und Zivilgesellschaft und wollen in verschiedenen
+            Perspektiven Gemeinsamkeiten aufzeigen – immer mit der Idee,
+            Inspiration für die Berufspraxis von MINT-Akteur:innen zu geben.
           </p>
         </header>
 
@@ -116,7 +117,7 @@ export function MintForschung({
               title: `Eine offene Werkstatt für alle`,
               text: `Auf dem Campus der Hochschule Flensburg gibt es einen außerschulischen Lernort der in verschiedenen Angeboten dazu ermächtigt, eigene Ideen umzusetzen. Das FabLab IDEENREICH versteht sich als offene Werkstatt für alle. Wie das geht und besonders Mädchen erreicht werden, lest ihr im Interview.`,
               link: `/mint-bildungsforschung/themenspezial-interview-fablab`,
-            },            
+            },
           ].map((teaserbox, index) => (
             <div
               key={`teaserbox-${index}`}
@@ -132,7 +133,7 @@ export function MintForschung({
             </div>
           ))}
         </div>
-      </section>      
+      </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>

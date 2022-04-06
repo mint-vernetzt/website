@@ -53,12 +53,15 @@ export function DossierWagner({
               Übersichtsarbeit erstellt, in der Erkenntnisse aus über 800
               Studien zusammengeführt wurden. Über die Kernelemente und was
               sowohl MINT-Akteur:innen als auch Eltern richtig machen können,
-              sprach er mit uns im Interview. Eine Zusammenfassung der Arbeit
-              ist ebenfalls auf unserer Website unter{" "}
-              <Link className="text-secondary" to="/mint-bildungsforschung">
-                MINT-Bildungsforschung
+              sprach er mit uns im Interview. Eine{" "}
+              <Link
+                className="text-secondary"
+                to="/mint-bildungsforschung/themenspezial-artikel-maedchen-fuer-informatik-begeistern"
+              >
+                Zusammenfassung der Arbeit
               </Link>{" "}
-              zu finden.
+              ist ebenfalls auf unserer Website unter MINT-Bildungsforschung zu
+              finden.
             </p>
 
             <H4 className="font-semibold mt-10 mb-6">
@@ -255,7 +258,7 @@ export function DossierWagner({
             <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
               <div className="study_details mb-6">
                 <p className="font-bold text-sm mb-0 text-neutral-900">
-                  Interview vom 05.04.2022
+                  Veröffentlicht am 06.04.2022
                 </p>
               </div>
 
@@ -264,7 +267,7 @@ export function DossierWagner({
               <div className="">
                 <H4 className="font-semibold mb-4">Interviewpartner</H4>
                 <p>
-                  <span className="font-bold">Ingo Wagner, 40,</span> ist seit
+                  <span className="font-bold">Ingo Wagner</span>, 40, ist seit
                   2018 Professor für interdisziplinäre Didaktik der MINT-Fächer
                   und des Sports am Karlsruher Institut für Technologie (KIT).
                   Er studierte Mathematik, Sport, Philosophie und
