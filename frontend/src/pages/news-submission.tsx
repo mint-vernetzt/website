@@ -111,10 +111,13 @@ export function Submission() {
     handleSubmit,
     reset,
     control,
+    watch,
   } = useForm<NewsFormData>({
     mode: "onChange",
     resolver: yupResolver(yupSchema),
   });
+
+  const termsAccepted = watch("terms_accepted");
 
   const onSubmit: SubmitHandler<NewsFormData> = async (data) => {
     await new Promise((resolve) => {
@@ -126,10 +129,13 @@ export function Submission() {
       formData.append(key, value);
     });
 
-    let response = await fetch(process.env.NEWSSUBMISSION_URL as string, {
-      method: "POST",
-      body: formData,
-    }).catch((error) => {
+    let response = await fetch(
+      process.env.GATSBY_NEWSSUBMISSION_URL as string,
+      {
+        method: "POST",
+        body: formData,
+      }
+    ).catch((error) => {
       throw new Error(error);
     });
 
@@ -174,7 +180,7 @@ export function Submission() {
                 <button
                   className="btn-primary"
                   onClick={() => {
-                    reset({}, { keepValues: true });
+                    reset({ terms_accepted: "true" }, { keepValues: true });
                   }}
                 >
                   Zurück zum Formular
@@ -217,6 +223,7 @@ export function Submission() {
                     control={control}
                     render={({ field }) => (
                       <Textarea
+                        defaultValue=""
                         {...field}
                         errorMessage={errors.text?.message}
                       />
@@ -282,7 +289,10 @@ export function Submission() {
                       <Checkbox
                         {...field}
                         errorMessage={errors.terms_accepted?.message}
-                        value="true"
+                        value={"true"}
+                        checked={
+                          termsAccepted === true || termsAccepted === "true"
+                        }
                       />
                     )}
                   />
@@ -291,8 +301,8 @@ export function Submission() {
                 <div className="flex gap-6 justify-end">
                   <button
                     type="reset"
-                    onClick={() => {
-                      reset();
+                    onClick={(e) => {
+                      reset({}, { keepValues: false });
                     }}
                   >
                     Abbrechen
