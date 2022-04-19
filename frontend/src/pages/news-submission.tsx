@@ -22,7 +22,7 @@ export interface NewsFormData {
 type InputProps<T> = React.HTMLProps<T> & {
   errorMessage?: string;
 };
-const Input = function (props: InputProps<HTMLInputElement>) {
+const Input = React.forwardRef((props: InputProps<HTMLInputElement>, ref) => {
   const { errorMessage, name, ...restProps } = props;
   const errorClass = errorMessage ? "border-rose-500" : "";
   return (
@@ -35,38 +35,42 @@ const Input = function (props: InputProps<HTMLInputElement>) {
       {errorMessage && <span>{errorMessage}</span>}
     </>
   );
-};
+});
 
-const Textarea = function (props: InputProps<HTMLTextAreaElement>) {
-  const { errorMessage, name, ...restProps } = props;
-  const errorClass = errorMessage ? "border-rose-500" : "";
-  return (
-    <>
-      <textarea
-        id={name}
-        className={`shadow appearance-none border roun ded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errorClass}`}
-        {...restProps}
-      />
-      {errorMessage && <span>{errorMessage}</span>}
-    </>
-  );
-};
+const Textarea = React.forwardRef(
+  (props: InputProps<HTMLTextAreaElement>, ref) => {
+    const { errorMessage, name, ...restProps } = props;
+    const errorClass = errorMessage ? "border-rose-500" : "";
+    return (
+      <>
+        <textarea
+          id={name}
+          className={`shadow appearance-none border roun ded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errorClass}`}
+          {...restProps}
+        />
+        {errorMessage && <span>{errorMessage}</span>}
+      </>
+    );
+  }
+);
 
-const Checkbox = function (props: InputProps<HTMLInputElement>) {
-  const { errorMessage, name, ...generalProps } = props;
-  const errorClass = errorMessage ? "border-rose-500" : "";
-  return (
-    <>
-      <input
-        id={name}
-        type="checkbox"
-        className={`${errorClass}`}
-        {...generalProps}
-      />
-      {errorMessage && <span>{errorMessage}</span>}
-    </>
-  );
-};
+const Checkbox = React.forwardRef(
+  (props: InputProps<HTMLInputElement>, ref) => {
+    const { errorMessage, name, ...generalProps } = props;
+    const errorClass = errorMessage ? "border-rose-500" : "";
+    return (
+      <>
+        <input
+          id={name}
+          type="checkbox"
+          className={`${errorClass}`}
+          {...generalProps}
+        />
+        {errorMessage && <span>{errorMessage}</span>}
+      </>
+    );
+  }
+);
 
 type FormLabelProps = React.HTMLProps<HTMLLabelElement> & {
   children: React.ReactNode;
@@ -223,7 +227,6 @@ export function Submission() {
                     control={control}
                     render={({ field }) => (
                       <Textarea
-                        defaultValue=""
                         {...field}
                         errorMessage={errors.text?.message}
                       />
@@ -291,7 +294,7 @@ export function Submission() {
                         errorMessage={errors.terms_accepted?.message}
                         value={"true"}
                         checked={
-                          termsAccepted === true || termsAccepted === "true"
+                          termsAccepted === "true" || termsAccepted === true
                         }
                       />
                     )}
@@ -301,8 +304,15 @@ export function Submission() {
                 <div className="flex gap-6 justify-end">
                   <button
                     type="reset"
-                    onClick={(e) => {
-                      reset({}, { keepValues: false });
+                    onClick={() => {
+                      reset({
+                        title: "",
+                        text: "",
+                        source: "",
+                        contact_name: "",
+                        contact_email: "",
+                        terms_accepted: "true",
+                      });
                     }}
                   >
                     Abbrechen
