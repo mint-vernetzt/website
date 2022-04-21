@@ -17,6 +17,7 @@ export interface NewsFormData {
   contact_name: string;
   contact_email: string;
   terms_accepted: string;
+  serverError?: string;
 }
 
 type InputProps<T> = React.HTMLProps<T> & {
@@ -112,6 +113,7 @@ export function Submission() {
       isSubmitSuccessful,
       isSubmitted,
     },
+    setError,
     handleSubmit,
     reset,
     control,
@@ -124,28 +126,31 @@ export function Submission() {
   const termsAccepted = watch("terms_accepted");
 
   const onSubmit: SubmitHandler<NewsFormData> = async (data) => {
-    await new Promise((resolve) => {
-      setTimeout(() => resolve(undefined), 1000);
-    });
-
     let formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
       formData.append(key, value);
     });
 
-    let response = await fetch(
+    let response = (await fetch(
       process.env.GATSBY_NEWSSUBMISSION_URL as string,
       {
         method: "POST",
         body: formData,
       }
     ).catch((error) => {
-      throw new Error(error);
-    });
+      setError("serverError", {
+        type: "custom",
+        message: error.message,
+      });
+    })) as Response;
 
     // Bad Request -> response text with errors
-    if (response.status === 400) {
-      throw new Error(await response.text());
+    if (response.status !== 200) {
+      let message = await response.text();
+      setError("serverError", {
+        type: "custom",
+        message,
+      });
     }
   };
 
@@ -172,7 +177,7 @@ export function Submission() {
               </p>
             </header>
 
-            {isSubmitted && !isSubmitSuccessful && (
+            {isSubmitted && errors.serverError && (
               <>
                 <H2 like="h4">Leider gab es einen Fehler bei der Versendung</H2>
                 <p>
@@ -206,7 +211,7 @@ export function Submission() {
               </>
             )}
 
-            {isSubmitted !== true && (
+            {!errors.serverError && !isSubmitSuccessful && (
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FormRow>
                   <FormLabel htmlFor="title">Titel</FormLabel>
@@ -294,6 +299,7 @@ export function Submission() {
                         errorMessage={errors.terms_accepted?.message}
                         value={"true"}
                         checked={
+                          // @ts-ignore
                           termsAccepted === "true" || termsAccepted === true
                         }
                       />
