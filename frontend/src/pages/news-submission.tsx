@@ -362,16 +362,28 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                 <H3 className="font-bold mb-6">Ansprechpartner:in</H3>
                 <div className="flex mb-8">
                   <div className="flex-16 mr-4">
-                    <img
-                      className="w-16 h-16 object-cover rounded-md"
-                      src="/static/c2bc73869320ff95a2a35901a6b5169d/8670d/210913_MINTvernetzt_Anna_matrix_1.jpg"
-                      alt="Anna Schröter"
-                    />
+                    {data?.PageContact?.contactInformations?.photo?.localFile
+                      ?.childImageSharp?.gatsbyImageData !== undefined ? (
+                      <GatsbyImage
+                        image={
+                          data.PageContact.contactInformations.photo.localFile
+                            .childImageSharp.gatsbyImageData
+                        }
+                        className="w-16 h-16 object-cover rounded-md"
+                        alt={
+                          data.PageContact.contactInformations
+                            .lastName as string
+                        }
+                      />
+                    ) : null}
                   </div>
                   <div className="flex-auto">
-                    <H4 className="mb-1 font-semibold">Anna Schröter</H4>
+                    <H4 className="mb-1 font-semibold">
+                      {data?.PageContact?.contactInformations?.firstName}{" "}
+                      {data?.PageContact?.contactInformations?.lastName}
+                    </H4>
                     <p className="mb-0 font-bold text-sm">
-                      Community-Management MINTvernetzt
+                      {data?.PageContact?.contactInformations?.position}
                     </p>
                   </div>
                 </div>
@@ -380,24 +392,28 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                 <div className="">
                   <p className="text-mb text-neutral-800 mb-2">
                     <a
-                      href="anna.schroeter@mint-vernetzt.de"
+                      href={`mailto:${data?.PageContact?.contactInformations?.email}`}
                       className="flex items-center px-4 py-3 bg-neutral-300"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Envelope} />
                       </span>
-                      <span>anna.schroeter@mint-vernetzt.de</span>
+                      <span>
+                        {data?.PageContact?.contactInformations?.email}
+                      </span>
                     </a>
                   </p>
                   <p className="text-md text-neutral-800 mb-2">
                     <a
-                      href="492117570762"
+                      href={`tel:${data?.PageContact?.contactInformations?.phone}`}
                       className="flex items-center px-4 py-3 bg-neutral-300"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Telephone} />
                       </span>
-                      <span>+49 211 7570762</span>
+                      <span>
+                        {data?.PageContact?.contactInformations?.phone}
+                      </span>
                     </a>
                   </p>
                 </div>
@@ -415,6 +431,24 @@ export const pageQuery = graphql`
     HeroImage: file(relativePath: { eq: "news_submit_large.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1488, quality: 80)
+      }
+    }
+    PageContact: wpContact(
+      contactInformations: { lastName: { eq: "Kellner" } }
+    ) {
+      contactInformations {
+        firstName
+        lastName
+        position
+        email
+        phone
+        photo {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 64)
+            }
+          }
+        }
       }
     }
   }
