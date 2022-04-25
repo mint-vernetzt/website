@@ -9,13 +9,14 @@
     },
     "text": {
       "type": "string",
-      "minLength": 5,
-      "maxLength": 300
+      "minLength": 100
     },
     "source": {
+      "minLength": 5,
       "type": "string"
     },
     "contact_name": {
+      "minLength": 5,
       "type": "string"
     },
     "contact_email": {
