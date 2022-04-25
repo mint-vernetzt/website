@@ -11,8 +11,6 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { ContactCard } from "../components/ContactCard/ContactCard";
-import { type Image as ImageType } from "../components/types.d";
 import Icon, { IconType } from "../components/Icon/Icon";
 
 export interface NewsFormData {
