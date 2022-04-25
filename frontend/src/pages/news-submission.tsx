@@ -274,7 +274,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                   Nur für das MINTvernetzt Team sichtbar
                 </H5>
                 <FormRow>
-                  <div className="grid gap-8 grid-cols-2">
+                  <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
                     <div>
                       <FormLabel>Kontaktpersonen für Rückfragen</FormLabel>
                       <Controller
@@ -402,18 +402,6 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                   </p>
                 </div>
               </div>
-              {/*
-              <ContactCard
-                headline="Ansprechpartner:in"
-                name="Anna Schröter"
-                position="Community-Management MINTvernetzt"
-                phone="+49 211 7570762"
-                email="anna.schroeter@mint-vernetzt.de"
-                avatar={{
-                  src: "/static/c2bc73869320ff95a2a35901a6b5169d/8670d/210913_MINTvernetzt_Anna_matrix_1.jpg",
-                  alt: "Anna Schröter",
-                }}
-              /> */}
             </div>
           </div>
         </div>
