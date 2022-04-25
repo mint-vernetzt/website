@@ -1,14 +1,19 @@
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react";
 
 import * as schema from "../data/submission/newsvalidation.schema.json";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { buildYup } from "schema-to-yup";
 
-import { H1, H2, H3 } from "../components/Heading/Heading";
+import { H1, H2, H3, H4, H5 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { ContactCard } from "../components/ContactCard/ContactCard";
+import { type Image as ImageType } from "../components/types.d";
+import Icon, { IconType } from "../components/Icon/Icon";
 
 export interface NewsFormData {
   title: string;
@@ -30,7 +35,8 @@ const Input = React.forwardRef((props: InputProps<HTMLInputElement>, ref) => {
     <>
       <input
         id={name}
-        className={`shadow appearance-none border roun ded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errorClass}`}
+        className={`input ${errorClass}`}
+        placeholder=" "
         {...restProps}
       />
       {errorMessage && <span>{errorMessage}</span>}
@@ -46,7 +52,8 @@ const Textarea = React.forwardRef(
       <>
         <textarea
           id={name}
-          className={`shadow appearance-none border roun ded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errorClass}`}
+          className={`textarea ${errorClass}`}
+          placeholder=" "
           {...restProps}
         />
         {errorMessage && <span>{errorMessage}</span>}
@@ -64,10 +71,10 @@ const Checkbox = React.forwardRef(
         <input
           id={name}
           type="checkbox"
-          className={`${errorClass}`}
+          className={`checkbox ${errorClass}`}
           {...generalProps}
         />
-        {errorMessage && <span>{errorMessage}</span>}
+        {errorMessage && <span className="error-message">{errorMessage}</span>}
       </>
     );
   }
@@ -79,17 +86,18 @@ type FormLabelProps = React.HTMLProps<HTMLLabelElement> & {
 const FormLabel = function (props: FormLabelProps) {
   const { children, className: additionalClassName, ...generalProps } = props;
   return (
-    <label
-      {...generalProps}
-      className="block text-gray-700 text-sm font-bold mb-2 ${additionalClassName}"
-    >
+    <label {...generalProps} className={`label ${additionalClassName}`}>
       {children}
     </label>
   );
 };
 
 const FormRow = function ({ children }: { children: React.ReactNode }) {
-  return <div className="mb-5">{children}</div>;
+  return <div className="form-control w-full">{children}</div>;
+};
+
+const FormRowCheckbox = function ({ children }: { children: React.ReactNode }) {
+  return <div className="form-control checkbox w-full">{children}</div>;
 };
 
 const yupSchema = buildYup(schema, {
@@ -104,7 +112,7 @@ const yupSchema = buildYup(schema, {
   },
 });
 
-export function Submission() {
+export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
   const {
     formState: {
       isValid,
@@ -163,12 +171,24 @@ export function Submission() {
         image=""
         children=""
       />
-
+      <section className="container my-8 md:my-10 lg:my-20 hidden md:flex">
+        <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
+          {data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+            <GatsbyImage
+              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              className="w-full h-full"
+              alt="MINTnews: Informieren, inspirieren und Emotionen wecken mit MINT"
+            />
+          ) : null}
+        </div>
+      </section>
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 lg:mb-20">
-        <div className="flex flex-row">
-          <div className="basis-2/3 p-12">
+        <div className="flex flex-wrap md:flex-nowrap md:-mx-4 my-10">
+          <div className="order-2 md:order-1 flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
             <header className="text-left">
-              <H1 like="h3">News eintragen</H1>
+              <H1 like="h2" className="font-bold">
+                News eintragen
+              </H1>
               <p className="text-md">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad
                 dicta, nulla consequuntur error fugiat amet accusamus quae
@@ -250,11 +270,13 @@ export function Submission() {
                   />
                 </FormRow>
 
-                <hr className="mt-5 mb-5" />
+                <hr className="mt-6 mb-6 border-neutral-400" />
 
-                <H2 like="h4">Nur für das MINTvernetzt Team sichtbar</H2>
+                <H5 className="font-bold mb-4">
+                  Nur für das MINTvernetzt Team sichtbar
+                </H5>
                 <FormRow>
-                  <div className="grid gap-4 grid-cols-2">
+                  <div className="grid gap-8 grid-cols-2">
                     <div>
                       <FormLabel>Kontaktpersonen für Rückfragen</FormLabel>
                       <Controller
@@ -285,29 +307,30 @@ export function Submission() {
                   </div>
                 </FormRow>
 
-                <FormRow>
+                <FormRowCheckbox>
                   <FormLabel htmlFor="terms_accepted">
-                    Ich stimme der Verwendung meiner eingegebnenen Daten
-                    entsprechend der Datenschutzerklärung zu
+                    <Controller
+                      name="terms_accepted"
+                      control={control}
+                      render={({ field }) => (
+                        <Checkbox
+                          {...field}
+                          errorMessage={errors.terms_accepted?.message}
+                          value={"true"}
+                          checked={
+                            termsAccepted === "true" || termsAccepted === true
+                          }
+                        />
+                      )}
+                    />
+                    <span className="label-text">
+                      Ich stimme der Verwendung meiner eingegebnenen Daten
+                      entsprechend der Datenschutzerklärung zu
+                    </span>
                   </FormLabel>
-                  <Controller
-                    name="terms_accepted"
-                    control={control}
-                    render={({ field }) => (
-                      <Checkbox
-                        {...field}
-                        errorMessage={errors.terms_accepted?.message}
-                        value={"true"}
-                        checked={
-                          // @ts-ignore
-                          termsAccepted === "true" || termsAccepted === true
-                        }
-                      />
-                    )}
-                  />
-                </FormRow>
+                </FormRowCheckbox>
 
-                <div className="flex gap-6 justify-end">
+                <div className="flex gap-6 justify-end mt-10">
                   <button
                     type="reset"
                     onClick={() => {
@@ -335,10 +358,64 @@ export function Submission() {
               </form>
             )}
           </div>
+          <div className="flex-100 md:flex-1/2 lg:flex-1/3 pb-8 md:pb-0 md:px-4 order-1 md:order-2">
+            <div className="p-8 rounded-lg bg-neutral-200 shadow-lg">
+              <div className="contact-card">
+                <H3 className="font-bold mb-6">Ansprechpartner:in</H3>
+                <div className="flex mb-8">
+                  <div className="flex-16 mr-4">
+                    <img
+                      className="w-16 h-16 object-cover rounded-md"
+                      src="/static/c2bc73869320ff95a2a35901a6b5169d/8670d/210913_MINTvernetzt_Anna_matrix_1.jpg"
+                      alt="Anna Schröter"
+                    />
+                  </div>
+                  <div className="flex-auto">
+                    <H4 className="mb-1 font-semibold">Anna Schröter</H4>
+                    <p className="mb-0 font-bold text-sm">
+                      Community-Management MINTvernetzt
+                    </p>
+                  </div>
+                </div>
 
-          <div className="basis-1/3 p-4">
-            <div className="bg-slate-300 h-96 flex justify-center p-6 rounded-xl">
-              <h5>Kontaktperson</h5>
+                <H5 className="font-bold mb-6">Kontakt</H5>
+                <div className="">
+                  <p className="text-mb text-neutral-800 mb-2">
+                    <a
+                      href="anna.schroeter@mint-vernetzt.de"
+                      className="flex items-center px-4 py-3 bg-neutral-300"
+                    >
+                      <span className="icon w-4 h-4 mr-3">
+                        <Icon type={IconType.Envelope} />
+                      </span>
+                      <span>anna.schroeter@mint-vernetzt.de</span>
+                    </a>
+                  </p>
+                  <p className="text-md text-neutral-800 mb-2">
+                    <a
+                      href="492117570762"
+                      className="flex items-center px-4 py-3 bg-neutral-300"
+                    >
+                      <span className="icon w-4 h-4 mr-3">
+                        <Icon type={IconType.Telephone} />
+                      </span>
+                      <span>+49 211 7570762</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              {/*
+              <ContactCard
+                headline="Ansprechpartner:in"
+                name="Anna Schröter"
+                position="Community-Management MINTvernetzt"
+                phone="+49 211 7570762"
+                email="anna.schroeter@mint-vernetzt.de"
+                avatar={{
+                  src: "/static/c2bc73869320ff95a2a35901a6b5169d/8670d/210913_MINTvernetzt_Anna_matrix_1.jpg",
+                  alt: "Anna Schröter",
+                }}
+              /> */}
             </div>
           </div>
         </div>
@@ -346,5 +423,15 @@ export function Submission() {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query Submission {
+    HeroImage: file(relativePath: { eq: "news_submit_large.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 1488, quality: 80)
+      }
+    }
+  }
+`;
 
 export default Submission;
