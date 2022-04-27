@@ -86,7 +86,7 @@ export function Header() {
                 },
                 {
                   route: `/pakt/`,
-                  title: `Pakt`,
+                  title: `Pakt für Frauen`,
                 },
               ].map((link, index) => (
                 <li
