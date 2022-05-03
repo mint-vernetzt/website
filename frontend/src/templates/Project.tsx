@@ -145,12 +145,12 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
           </div>
           <div className="flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
             <H1>{project.title}</H1>
-            <p
-              className="italic"
+            <div
+              className="italic mb-6"
               dangerouslySetInnerHTML={{
                 __html: project.excerpt,
               }}
-            ></p>
+            ></div>
 
             {project.targetGroups.nodes.length > 0 ? (
               <div className="flex mb-6 font-semibold flex-col lg:flex-row">
