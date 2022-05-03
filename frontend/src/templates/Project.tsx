@@ -20,7 +20,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
         children=""
       />
 
-      <section className="container my-4 md:my-8">
+      {/* <section className="container my-4 md:my-8">
         <Link
           className="inline-block border border-neutral-400 py-3 px-4 mb-4 text-neutral-800 text-semibold uppercase rounded-lg"
           to="/"
@@ -41,8 +41,8 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
             Zur Raketenübersicht
           </span>
         </Link>        
-      </section>
-      
+      </section> */}
+
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 lg:mb-20">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-4 my-10">
           <div className="flex-100 md:flex-1/2 lg:flex-1/3 pb-8 md:pb-0 md:px-4">
@@ -50,13 +50,16 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
               <div className="contact-card">
                 <div className="flex items-center flex-col text-center">
                   <div>
-                    <Link to={project.projectInformations.projectWebsite} isExternal>
+                    <Link
+                      to={project.projectInformations.projectWebsite}
+                      isExternal
+                    >
                       <GatsbyImage
                         image={
                           project.projectInformations.projectLogo.localFile
                             .childImageSharp.gatsbyImageData
                         }
-                        alt="{project.title}"
+                        alt={`${project.title}`}
                       />
                     </Link>
                   </div>
@@ -68,10 +71,12 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                     <p className="font-bold text-sm">
                       {project.projectInformations.initiative}
                     </p>
-                  ) : null}  
+                  ) : null}
                 </div>
-                                
-                <H5 className="font-bold mt-8 mb-6">{project.projectInformations.contactPersonFullName}</H5>
+
+                <H5 className="font-bold mt-8 mb-6">
+                  {project.projectInformations.contactPersonFullName}
+                </H5>
                 <div className="">
                   <p className="text-mb text-neutral-800 mb-2">
                     <a
@@ -81,9 +86,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Envelope} />
                       </span>
-                      <span>
-                        {project.projectInformations.email}
-                      </span>
+                      <span>{project.projectInformations.email}</span>
                     </a>
                   </p>
                   {project.projectInformations.phone !== null ? (
@@ -95,41 +98,49 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                         <span className="icon w-4 h-4 mr-3">
                           <Icon type={IconType.Telephone} />
                         </span>
-                        <span>
-                          {project.projectInformations.phone}
-                        </span>
+                        <span>{project.projectInformations.phone}</span>
                       </a>
                     </p>
-                  ) : null}  
+                  ) : null}
                   <p className="text-md text-neutral-800 mb-2">
-                    <Link to={project.projectInformations.projectWebsite} isExternal
+                    <Link
+                      to={project.projectInformations.projectWebsite}
+                      isExternal
                       className="flex items-center px-4 py-3 bg-neutral-300 hover:bg-neutral-400"
                     >
                       <span className="icon w-4 h-4 mr-3">
-                        <Icon type={IconType.Website} width="20" height="20" className="w-4 h-4" />
+                        <Icon
+                          type={IconType.Website}
+                          width="20"
+                          height="20"
+                          className="w-4 h-4"
+                        />
                       </span>
-                      <span>
+                      <span className="break-all">
                         {project.projectInformations.projectWebsite}
                       </span>
                     </Link>
                   </p>
-                  
+
                   {project.projectInformations.address !== null ? (
                     <>
                       <H5 className="font-semibold mb-6 mt-8">Anschrift</H5>
                       <p className="text-md text-neutral-600 mb-2 flex px-4 py-3 bg-neutral-300 rounded-lg text-neutral-600">
                         <span className="icon w-4 h-4 mr-3 mt-1">
-                          <Icon type={IconType.Location} width="12" height="20" />
+                          <Icon
+                            type={IconType.Location}
+                            width="12"
+                            height="20"
+                          />
                         </span>
-                        <span>
+                        <span className="text-ellipsis">
                           {project.projectInformations.address}
                         </span>
                       </p>
-                    </>  
+                    </>
                   ) : null}
                 </div>
-                
-              </div>  
+              </div>
             </div>
           </div>
           <div className="flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
@@ -148,10 +159,15 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                 </div>
                 <div className="lg:flex-auto">
                   {project.targetGroups.nodes.map((node, index) => {
-                    return <span key={`targetGroup${index}`}>{node.name}</span>;
+                    return (
+                      <>
+                        {index > 0 ? ", " : ""}{" "}
+                        <span key={`targetGroup${index}`}>{node.name}</span>
+                      </>
+                    );
                   })}
                 </div>
-              </div>  
+              </div>
             ) : null}
 
             {project.disciplines.nodes.length > 0 ? (
@@ -161,20 +177,25 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                 </div>
                 <div className="lg:flex-auto">
                   {project.disciplines.nodes.map((node, index) => {
-                    return <span key={`targetGroup${index}`}>{node.name}</span>;
+                    return (
+                      <>
+                        {index > 0 ? ", " : ""}{" "}
+                        <span key={`targetGroup${index}`}>{node.name}</span>
+                      </>
+                    );
                   })}
                 </div>
-              </div>  
+              </div>
             ) : null}
 
-            <p
+            <div
+              className="content"
               dangerouslySetInnerHTML={{
                 __html: project.content,
               }}
-            ></p>
+            ></div>
           </div>
         </div>
-        
       </section>
     </Layout>
   );
