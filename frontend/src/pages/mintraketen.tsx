@@ -5,6 +5,25 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { ReactComponent as BadgeRocket } from "../images/Badge_02Rocket.svg";
 
+// TODO: Get rocket data from cms
+function getTemporaryRocketData() {
+  let tempRocketData = [];
+
+  for (let i=0; i < 9; i++) {
+    tempRocketData[i] = {
+      image: undefined, // TODO
+      subimage: undefined, // TODO
+      title: `Aus die Maus`,
+      subtitle: 'Noctalis - Welt der Fledermäuse',
+      text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht ...`,
+      link: `/mintvernetzt/`, // TODO
+      externalLink: 'www.noctalis.de',
+    }
+  }
+
+  return tempRocketData;
+}
+
 export function Mintraketen() {
   return (
     <Layout>
@@ -116,6 +135,42 @@ export function Mintraketen() {
             Die MINTraketen gehören dazu und laden zur Inspiration ein.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <div className="grid gap-4 lg:gap-8 grid-cols-3 md:grid-cols-3">
+          { // TODO: Build array with cms data
+          getTemporaryRocketData().map((teaserbox, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+            >
+              <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                  <GatsbyImage
+                    image={teaserbox.image}
+                    className="w-full h-auto"
+                    alt=""
+                  />
+                </div>
+                {/* TODO: Positioning the subimage */}
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                  <GatsbyImage
+                    image={teaserbox.subimage}
+                    className="w-full h-auto"
+                    alt=""
+                  />
+                </div>
+                {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
+                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
+                <p className="lg:leading-snug lg:mx-2">{teaserbox.subtitle}</p>
+                <p className="lg:mx-2">{teaserbox.text}</p>
+              </Link>
+              {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
+              <a href={teaserbox.externalLink} className="lg:leading-snug lg:mx-2">{teaserbox.externalLink}</a>
+            </div>
+          ))}
         </div>
       </section>
     </Layout>
