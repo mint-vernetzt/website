@@ -18,7 +18,7 @@ function getTemporaryRocketData() {
       subtitle: 'Noctalis - Welt der Fledermäuse',
       text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht ...`,
       link: `/mintvernetzt/`, // TODO
-      externalLink: 'www.noctalis.de',
+      externalLink: 'https://www.noctalis.de',
     }
   }
 
@@ -66,14 +66,14 @@ export function Mintraketen() {
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
           <p className="text-base md:px-8 lg:px-20 ">
-          Die MINTrakete ist eine Auszeichnung für außergewöhnliche Gute-Praxis-Beispiele 
-          in der MINT-Bildung. Mithilfe regelmäßiger Ausschreibungen rufen wir zu wechselnden 
-          Themen zur Bewerbung auf und bieten so verschiedenen Bildungsangeboten eine Bühne. 
-          Es können sich also alle außerschulischen Lernorte bewerben, 
-          die ein gutes Umsetzungsbeispiel zum aktuellen Ausschreibungsthema präsentieren können. 
-          Die Gewinnerprojekte stellen wir Euch nach jeder Ausschreibung vor: Schaut gerne vorbei. 
-          Also lernt andere und neue Projektansätze kennen und tauscht Euch in verschiedenen 
-          Community-Formaten darüber aus. Im Fokus steht das gemeinschaftliche Von- und Miteinanderlernen.
+            Die MINTrakete ist eine Auszeichnung für außergewöhnliche Gute-Praxis-Beispiele 
+            in der MINT-Bildung. Mithilfe regelmäßiger Ausschreibungen rufen wir zu wechselnden 
+            Themen zur Bewerbung auf und bieten so verschiedenen Bildungsangeboten eine Bühne. 
+            Es können sich also alle außerschulischen Lernorte bewerben, 
+            die ein gutes Umsetzungsbeispiel zum aktuellen Ausschreibungsthema präsentieren können. 
+            Die Gewinnerprojekte stellen wir Euch nach jeder Ausschreibung vor: Schaut gerne vorbei. 
+            Also lernt andere und neue Projektansätze kennen und tauscht Euch in verschiedenen 
+            Community-Formaten darüber aus. Im Fokus steht das gemeinschaftliche Von- und Miteinanderlernen.
           </p>
         </header>
       </section>
@@ -134,8 +134,8 @@ export function Mintraketen() {
               <strong>Ausgezeichnete MINT</strong>raketen
             </H2>
             <p>
-            Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung. 
-            Die MINTraketen gehören dazu und laden zur Inspiration ein.
+              Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung. 
+              Die MINTraketen gehören dazu und laden zur Inspiration ein.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ export function Mintraketen() {
                 <p className="lg:mx-2">{teaserbox.text}</p>
               </Link>
               {/* TODO: Styling the link element */}
-              <a href={teaserbox.externalLink} className="lg:leading-snug lg:mx-2">{teaserbox.externalLink}</a>
+              <a href={teaserbox.externalLink} className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold">{teaserbox.externalLink}</a>
             </div>
           ))}
         </div>
