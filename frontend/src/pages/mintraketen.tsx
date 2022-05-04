@@ -4,6 +4,7 @@ import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { ReactComponent as BadgeRocket } from "../images/Badge_02Rocket.svg";
+import { Chip } from "../components/Chip/Chip";
 
 // TODO: Get rocket data from cms
 function getTemporaryRocketData() {
@@ -169,6 +170,79 @@ export function Mintraketen() {
               </Link>
               {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
               <a href={teaserbox.externalLink} className="lg:leading-snug lg:mx-2">{teaserbox.externalLink}</a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
+        <H2 like="h1">
+          <strong>MINT</strong>news
+        </H2>
+        {/* TODO: Spacing between header and grid is not equal to the MINTraketen.pdf template */}
+        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
+          { // TODO: Get data from cms
+          [
+            {
+              image: undefined,
+              title: `Gesucht und gefunden:`,
+              text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ac mi nunc volutpat gravida malesuada eu massa vestibulum.`,
+              link: `/mintmachen/`, // TODO
+              tags: [
+                {
+                  title: 'Didaktik',
+                  slug: '',
+                },
+                {
+                  title: 'MINTrakete',
+                  slug: '',
+                }
+              ],
+            },
+            {
+              image: undefined,
+              title: `MINTrakete „Didaktik als Schlüssel“`,
+              text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ac mi nunc volutpat gravida malesuada eu massa vestibulum.`,
+              link: `/mintvernetzt/`, // TODO
+              tags: [
+                {
+                  title: 'Chip',
+                  slug: '',
+                },
+                {
+                  title: 'Chip',
+                  slug: '',
+                }
+              ],
+            },
+          ].map((teaserbox, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+            >
+              <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                  <GatsbyImage
+                    image={teaserbox.image}
+                    className="w-full h-auto"
+                    alt=""
+                  />
+                </div>
+                {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
+                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
+                <p className="lg:mx-2">{teaserbox.text}</p>
+                <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
+                  {/* TODO: Get tags from cms */}
+                  {teaserbox.tags.map((tag, index) => {
+                    return (
+                      <li key={`tag-${index}`}>
+                        <Chip {...tag} onClick={function(){}} />
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Link>
             </div>
           ))}
         </div>
