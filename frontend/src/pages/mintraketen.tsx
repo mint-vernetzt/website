@@ -1,8 +1,9 @@
-import { H1, H4 } from "../components/Heading/Heading";
+import { H1, H2, H4 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { ReactComponent as BadgeRocket } from "../images/Badge_02Rocket.svg";
 
 export function Mintraketen() {
   return (
@@ -14,6 +15,7 @@ export function Mintraketen() {
         image=""
         children=""
       />
+
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
           {/*data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
@@ -29,7 +31,7 @@ export function Mintraketen() {
           {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
           <div className="hero-text absolute top-0 left-0 h-full right-0 pt-12 px-4 md:px-12 md:flex md:items-center lg:px-20">
             <div className="md:flex-100">
-              <H1 like="h0">
+              <H1 like="h0"> {/* Question: Why can't we use H0 here instead of H1 like="h0" */}
                 MINT<span className="font-normal">raketen</span>
               </H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
@@ -39,6 +41,7 @@ export function Mintraketen() {
           </div>
         </div>
       </section>
+
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
           <p className="text-base md:px-8 lg:px-20 ">{/* TODO: Text style is not equal to the MINTraketen.pdf template */}
@@ -53,6 +56,7 @@ export function Mintraketen() {
           </p>
         </header>
       </section>
+
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {[
@@ -86,6 +90,32 @@ export function Mintraketen() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="container my-8 md:my-10 lg:my-20">
+        <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
+          <div className="flex-100 pb-6 md:pb-0 md:flex-1/3 lg:flex-1/4 md:px-6 lg:px-10">
+            <BadgeRocket />
+            {/* <img
+              className="w-full h-auto"
+              src="/images/Badge_02Rocket.svg"
+              alt="MINTrakete"
+            /> */}
+          </div>
+          {/* TODO: Text style is not equal to the MINTraketen.pdf template */}
+          <div className="flex-100 md:flex-2/3 md:px-6 lg:px-10">
+            <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
+              Lerne hier unsere MINTraketen näher kennen
+            </p>
+            <H2 like="h1">
+              <strong>Ausgezeichnete MINT</strong>raketen
+            </H2>
+            <p>
+            Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung. 
+            Die MINTraketen gehören dazu und laden zur Inspiration ein.
+            </p>
+          </div>
         </div>
       </section>
     </Layout>
