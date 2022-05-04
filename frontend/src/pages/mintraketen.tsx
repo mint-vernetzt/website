@@ -258,32 +258,25 @@ export function Mintraketen() {
           Dann findet Ihr auf unserer Seite MINT-Bildungsforschung weitere spannende Einblicke.
         </p>
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
-          {
-          [
-            {
-              image: undefined,
-              title: `Gendersensible MINT-Didaktik`,
-              text: `Erfahrt hier, mit welchen didaktischen Maßnahmen man Mädchen für einzelne MINT- Disziplinen begeistern kann und wie wichtige Formate der Begabtenförderung immer noch von Stereotypen beeinflusst werden.`,
-              link: `/mint-bildungsforschung/`,
-            },
-          ].map((teaserbox, index) => (
-            <div
-              key={`teaserbox-${index}`}
-              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
-            >
-              <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                  <GatsbyImage
-                    image={teaserbox.image}
-                    className="w-full h-auto"
-                    alt=""
-                  />
-                </div>
-                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
-                <p className="lg:mx-2">{teaserbox.text}</p>
-              </Link>
-            </div>
-          ))}
+          <div
+            key={`teaserbox-0`}
+            className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+          >
+            <Link to={`/mint-bildungsforschung/`} className="flex flex-col h-100">
+              <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                <GatsbyImage
+                  image={undefined} // TODO
+                  className="w-full h-auto"
+                  alt=""
+                />
+              </div>
+              <H4 className="lg:leading-snug lg:mx-2">Gendersensible MINT-Didaktik</H4>
+              <p className="lg:mx-2">
+                Erfahrt hier, mit welchen didaktischen Maßnahmen man Mädchen für einzelne MINT- Disziplinen 
+                begeistern kann und wie wichtige Formate der Begabtenförderung immer noch von Stereotypen beeinflusst werden.
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
