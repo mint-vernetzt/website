@@ -61,22 +61,41 @@ export function Mintraketen({ data }) {
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
+          {/**currentTender: allWpNewsItem(
+      filter: {title: {eq: "„Es geht darum, Mädchen in der Informatik zu sehen“"}}
+    ) {
+      nodes {
+        slug
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 500, quality: 80)
+              }
+            }
+          }
+        }
+      }
+    } */}
           {[
             {
               image:
-                data.aktuelleAusschreibungenImage.childImageSharp
-                  .gatsbyImageData,
+                data.currentTender.nodes[0].featuredImage.node.localFile
+                  .childImageSharp.gatsbyImageData,
+              altText: data.currentTender.nodes[0].featuredImage.node.altText,
               title: `Aktuelle Ausschreibung`,
               text: `Erfahrt hier alles zur aktuellen Ausschreibung und zu den Teilnahmebedingungen. Wir sind gespannt auf Eure Projekte.`,
-              link: `//`, // TODO
+              link: `/news/${data.currentTender.nodes[0].slug}`,
             },
             {
               image:
-                data.vergangeneAusschreibungenImage.childImageSharp
-                  .gatsbyImageData,
+                data.previousTender.nodes[0].featuredImage.node.localFile
+                  .childImageSharp.gatsbyImageData,
+              altText: data.previousTender.nodes[0].featuredImage.node.altText,
               title: `Vergangene Ausschreibungen`,
               text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht haben? Dann hier entlang!`,
-              link: `//`, // TODO
+              link: `/news/${data.previousTender.nodes[0].slug}`,
             },
           ].map((teaserbox, index) => (
             <div
@@ -88,7 +107,7 @@ export function Mintraketen({ data }) {
                   <GatsbyImage
                     image={teaserbox.image}
                     className="w-full h-auto"
-                    alt=""
+                    alt={teaserbox.altText}
                   />
                 </div>
                 <H2 like="h4" className="lg:leading-snug lg:mx-2">
@@ -143,22 +162,30 @@ export function Mintraketen({ data }) {
                   to={`/project/${project.slug}`}
                   className="flex flex-col h-100"
                 >
-                  {/* TODO: Positioning the subimage */}
-                  <div className="overflow-hidden mb-2 lg:mb-4">
-                    <GatsbyImage
-                      image={
-                        project.projectInformations.projectLogo.localFile
-                          .childImageSharp.gatsbyImageData
-                      }
-                      className="w-20 h-auto"
-                      alt=""
-                    />
-                    <H3 like="h5" className="lg:leading-snug lg:mx-2">
-                      {project.title}
-                    </H3>
-                    <p className="lg:leading-snug lg:mx-2 text-xs">
-                      <strong>{project.projectInformations.institution}</strong>
-                    </p>
+                  <div className="flex flex-nowrap content-center items-center">
+                    <div className="flex-1/4 overflow-hidden mb-2 lg:mb-4 lg:leading-snug lg:mx-2">
+                      <GatsbyImage
+                        image={
+                          project.projectInformations.projectLogo.localFile
+                            .childImageSharp.gatsbyImageData
+                        }
+                        className="w-fit h-auto"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex-3/4 mb-4">
+                      <H3
+                        like="h5"
+                        className="line-clamp-2 lg:leading-snug lg:mx-2"
+                      >
+                        {project.title}
+                      </H3>
+                      <p className="lg:leading-snug lg:mx-2 text-xs">
+                        <strong>
+                          {project.projectInformations.institution}
+                        </strong>
+                      </p>
+                    </div>
                   </div>
                   <p className="line-clamp-2 lg:mx-2">
                     <span
@@ -168,15 +195,16 @@ export function Mintraketen({ data }) {
                     />
                   </p>
                 </Link>
-                {/* TODO: Styling the link element (margin) */}
-                <a
-                  href={project.projectInformations.projectWebsite}
-                  className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
-                >
-                  {projectHostname === null
-                    ? project.projectInformations.projectWebsite
-                    : projectHostname}
-                </a>
+                <div className="mt-2">
+                  <a
+                    href={project.projectInformations.projectWebsite}
+                    className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
+                  >
+                    {projectHostname === null
+                      ? project.projectInformations.projectWebsite
+                      : projectHostname}
+                  </a>
+                </div>
               </div>
             );
           })}
@@ -338,6 +366,42 @@ export const pageQuery = graphql`
         title
         slug
         excerpt
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 500, quality: 80)
+              }
+            }
+          }
+        }
+      }
+    }
+    currentTender: allWpNewsItem(
+      filter: {
+        title: { eq: "„Es geht darum, Mädchen in der Informatik zu sehen“" }
+      }
+    ) {
+      nodes {
+        slug
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 500, quality: 80)
+              }
+            }
+          }
+        }
+      }
+    }
+    previousTender: allWpNewsItem(
+      filter: { title: { eq: "MINTrakete „Didaktik als Schlüssel“" } }
+    ) {
+      nodes {
+        slug
         featuredImage {
           node {
             altText
