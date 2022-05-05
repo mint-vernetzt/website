@@ -20,9 +20,9 @@ export function Mintraketen({ data }) {
       {/* TODO: Text style and spacing is not equal to the MINTraketen.pdf template in this <section> */}
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
-          {data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+          {data?.heroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
             <GatsbyImage
-              image={undefined /* TODO */}
+              image={data.heroImage.childImageSharp.gatsbyImageData}
               className="w-full h-full"
               alt="Konkrete Gute-Praxis-Beispiele von MINT- Bildungsanbieter:innen."
             />
@@ -31,7 +31,6 @@ export function Mintraketen({ data }) {
             <div className="md:flex-100">
               <H1 like="h0">
                 {" "}
-                {/* Question: Why can't we use H0 here instead of H1 like="h0" */}
                 MINT<span className="font-normal">raketen</span>
               </H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
@@ -66,16 +65,20 @@ export function Mintraketen({ data }) {
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {[
             {
-              image: undefined, // TODO
+              image:
+                data.aktuelleAusschreibungenImage.childImageSharp
+                  .gatsbyImageData,
               title: `Aktuelle Ausschreibung`,
               text: `Erfahrt hier alles zur aktuellen Ausschreibung und zu den Teilnahmebedingungen. Wir sind gespannt auf Eure Projekte.`,
-              link: `/mintmachen/`, // TODO
+              link: `//`, // TODO
             },
             {
-              image: undefined, // TODO
+              image:
+                data.vergangeneAusschreibungenImage.childImageSharp
+                  .gatsbyImageData,
               title: `Vergangene Ausschreibungen`,
               text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht haben? Dann hier entlang!`,
-              link: `/mintvernetzt/`, // TODO
+              link: `//`, // TODO
             },
           ].map((teaserbox, index) => (
             <div
@@ -126,46 +129,45 @@ export function Mintraketen({ data }) {
 
       {/* TODO: Text style and spacing is not equal to the MINTraketen.pdf template in this <section> */}
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <div className="grid gap-4 lg:gap-8 grid-cols-3 md:grid-cols-3">
-          {
-            // TODO: Build array with cms data
-            data.projects.nodes.map((project, index) => (
-              <div
-                key={`teaserbox-${index}`}
-                className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+        {/* The number of rows in the grid are set automatically, which makes the class "grid-cols-3" obsolete in this context. */}
+        <div className="grid gap-4 lg:gap-8 md:grid-cols-3">
+          {data.projects.nodes.map((project, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+            >
+              {/* /project/ does not exist in this environment */}
+              <Link
+                to={`/project/${project.slug}`}
+                className="flex flex-col h-100"
               >
-                <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                  <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                    <GatsbyImage
-                      image={teaserbox.image}
-                      className="w-full h-auto"
-                      alt=""
-                    />
-                  </div>
-                  {/* TODO: Positioning the subimage */}
-                  <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                    <GatsbyImage
-                      image={teaserbox.subimage}
-                      className="w-full h-auto"
-                      alt=""
-                    />
-                  </div>
-                  <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
-                  <p className="lg:leading-snug lg:mx-2">
-                    {teaserbox.subtitle}
-                  </p>
-                  <p className="lg:mx-2">{teaserbox.text}</p>
-                </Link>
-                {/* TODO: Styling the link element */}
-                <a
-                  href={teaserbox.externalLink}
-                  className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold"
-                >
-                  {teaserbox.externalLink}
-                </a>
-              </div>
-            ))
-          }
+                {/* TODO: Positioning the subimage */}
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                  <GatsbyImage
+                    image={
+                      project.projectInformations.projectLogo.localFile
+                        .childImageSharp.gatsbyImageData
+                    }
+                    className="w-full h-auto"
+                    alt=""
+                  />
+                </div>
+                <H4 className="lg:leading-snug lg:mx-2">{project.title}</H4>
+                <p className="lg:leading-snug lg:mx-2">
+                  {project.projectInformations.institution}
+                </p>
+                <p className="lg:mx-2">{project.excerpt}</p>
+              </Link>
+              {/* TODO: Styling the link element */}
+              <a
+                href={project.projectInformations.projectWebsite}
+                className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold"
+              >
+                {/* TODO: Shortening the displayed link */}
+                {project.projectInformations.projectWebsite}
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -176,66 +178,66 @@ export function Mintraketen({ data }) {
         </H2>
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {
-            // TODO: Get data from cms
-            [
-              {
-                image: undefined,
-                title: `Gesucht und gefunden:`,
-                text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ac mi nunc volutpat gravida malesuada eu massa vestibulum.`,
-                link: `/mintmachen/`, // TODO
-                tags: [
-                  {
-                    title: "Didaktik",
-                    slug: "",
-                  },
-                  {
-                    title: "MINTrakete",
-                    slug: "",
-                  },
-                ],
-              },
-              {
-                image: undefined,
-                title: `MINTrakete „Didaktik als Schlüssel“`,
-                text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ac mi nunc volutpat gravida malesuada eu massa vestibulum.`,
-                link: `/mintvernetzt/`, // TODO
-                tags: [
-                  {
-                    title: "Chip",
-                    slug: "",
-                  },
-                  {
-                    title: "Chip",
-                    slug: "",
-                  },
-                ],
-              },
-            ].map((teaserbox, index) => (
+            /*
+            news: allWpNewsItem(
+              filter: { tags: { nodes: { elemMatch: { name: { eq: "MINTrakete" } } } } }
+            ) {
+              nodes {
+                tags {
+                  nodes {
+                    slug
+                    name
+                  }
+                }
+                title
+                slug
+                excerpt
+                featuredImage {
+                  node {
+                    altText
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData(width: 500, quality: 80)
+                      }
+                    }
+                  }
+                }
+              }
+            } */
+            data.news.nodes.map((news, index) => (
               <div
                 key={`teaserbox-${index}`}
                 className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
               >
-                <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
+                <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
                   <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
                     <GatsbyImage
-                      image={teaserbox.image}
+                      image={
+                        news.featuredImage.node.localFile.childImageSharp
+                          .gatsbyImageData
+                      }
                       className="w-full h-auto"
-                      alt=""
+                      alt={news.featuredImage.node.altText}
                     />
                   </div>
-                  <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
-                  <p className="lg:mx-2">{teaserbox.text}</p>
-                  <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
-                    {/* TODO: Get tags from cms */}
-                    {teaserbox.tags.map((tag, index) => {
-                      return (
-                        <li key={`tag-${index}`}>
-                          <Chip {...tag} onClick={function () {}} />
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
+                  <p className="lg:mx-2">{news.excerpt}</p>
                 </Link>
+                <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
+                  {news.tags.nodes.map((tag, index) => {
+                    return (
+                      <li key={`tag-${index}`}>
+                        <Chip
+                          title={tag.name}
+                          slug={tag.slug}
+                          onClick={() =>
+                            (document.location.href = `/news/?tags=${tag.slug}`)
+                          }
+                        />
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             ))
           }
@@ -290,7 +292,7 @@ export function Mintraketen({ data }) {
 export default Mintraketen;
 // TODO: Update heroImage, aktuelleAusschreibungenImage, vergangeneAusschreibungenImage
 export const pageQuery = graphql`
-  query MintraketenQuery {
+  query MintraketenPage {
     heroImage: file(relativePath: { eq: "news_overview_large.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1488, quality: 80)
@@ -342,11 +344,22 @@ export const pageQuery = graphql`
         tags {
           nodes {
             slug
+            name
           }
         }
         title
         slug
         excerpt
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 500, quality: 80)
+              }
+            }
+          }
+        }
       }
     }
   }
