@@ -5,6 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 import { ReactComponent as BadgeRocket } from "../images/Badge_02Rocket.svg";
 import { Chip } from "../components/Chip/Chip";
+import { getHostnameFromURL } from "../utils/dataTransformer";
 
 export function Mintraketen({ data }) {
   return (
@@ -130,6 +131,9 @@ export function Mintraketen({ data }) {
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {data.projects.nodes.map((project, index) => {
+            let projectHostname = getHostnameFromURL(
+              project.projectInformations.projectWebsite
+            );
             return (
               <div
                 key={`teaserbox-${index}`}
@@ -169,18 +173,9 @@ export function Mintraketen({ data }) {
                   href={project.projectInformations.projectWebsite}
                   className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
                 >
-                  {/* 
-                    TODO: Put this inside a function "getShortenedUrl()" and add "www." if !string.includes("www.")
-                    shortenedUrl === null ? project.projectInformations.projectWebsite : shortenedUrl
-                    */}
-                  {project.projectInformations.projectWebsite
-                    .match(/\/\/[^\/]+\//g)[0]
-                    .substring(
-                      2,
-                      project.projectInformations.projectWebsite.match(
-                        /\/\/[^\/]+\//g
-                      )[0].length - 1
-                    )}
+                  {projectHostname === null
+                    ? project.projectInformations.projectWebsite
+                    : projectHostname}
                 </a>
               </div>
             );
