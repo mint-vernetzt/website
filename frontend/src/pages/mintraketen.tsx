@@ -17,7 +17,6 @@ export function Mintraketen({ data }) {
         children=""
       />
 
-      {/* TODO: Text style and spacing is not equal to the MINTraketen.pdf template in this <section> */}
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
           {data?.heroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
@@ -60,7 +59,6 @@ export function Mintraketen({ data }) {
         </header>
       </section>
 
-      {/* TODO: Text style and spacing is not equal to the MINTraketen.pdf template in this <section> */}
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {[
@@ -101,7 +99,6 @@ export function Mintraketen({ data }) {
         </div>
       </section>
 
-      {/* TODO: Text style and spacing is not equal to the MINTraketen.pdf template in this <section> */}
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
           <div className="flex-100 pb-6 md:pb-0 md:flex-1/3 lg:flex-1/4 md:px-6 lg:px-10">
@@ -114,14 +111,16 @@ export function Mintraketen({ data }) {
           </div>
           <div className="flex-100 md:flex-2/3 md:px-6 lg:px-10">
             <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
-              Lerne hier unsere MINTraketen näher kennen
+              Lerne hier unsere MINT
+              <span className="font-light">raketen</span> näher kennen
             </p>
             <H2 like="h1">
               <strong>Ausgezeichnete MINT</strong>raketen
             </H2>
             <p>
-              Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung. Die
-              MINTraketen gehören dazu und laden zur Inspiration ein.
+              Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung.
+              <br></br>
+              Die MINTraketen gehören dazu und laden zur Inspiration ein.
             </p>
           </div>
         </div>
