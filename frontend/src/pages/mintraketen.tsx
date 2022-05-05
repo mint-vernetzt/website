@@ -1,4 +1,4 @@
-import { H1, H2, H4 } from "../components/Heading/Heading";
+import { H1, H2, H3, H4 } from "../components/Heading/Heading";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -91,7 +91,9 @@ export function Mintraketen({ data }) {
                     alt=""
                   />
                 </div>
-                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
+                <H2 like="h4" className="lg:leading-snug lg:mx-2">
+                  {teaserbox.title}
+                </H2>
                 <p className="lg:mx-2">{teaserbox.text}</p>
               </Link>
             </div>
@@ -114,9 +116,9 @@ export function Mintraketen({ data }) {
               Lerne hier unsere MINT
               <span className="font-light">raketen</span> näher kennen
             </p>
-            <H2 like="h1">
+            <H3 like="h1">
               <strong>Ausgezeichnete MINT</strong>raketen
-            </H2>
+            </H3>
             <p>
               Es gibt schon viele Gute-Praxis-Beispiele in der MINT-Bildung.
               <br></br>
@@ -141,29 +143,46 @@ export function Mintraketen({ data }) {
                 className="flex flex-col h-100"
               >
                 {/* TODO: Positioning the subimage */}
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                <div className="overflow-hidden mb-2 lg:mb-4">
                   <GatsbyImage
                     image={
                       project.projectInformations.projectLogo.localFile
                         .childImageSharp.gatsbyImageData
                     }
-                    className="w-full h-auto"
+                    className="w-20 h-auto"
                     alt=""
                   />
+                  <H3 like="h5" className="lg:leading-snug lg:mx-2">
+                    {project.title}
+                  </H3>
+                  <p className="lg:leading-snug lg:mx-2 text-xs">
+                    <strong>{project.projectInformations.institution}</strong>
+                  </p>
                 </div>
-                <H4 className="lg:leading-snug lg:mx-2">{project.title}</H4>
-                <p className="lg:leading-snug lg:mx-2">
-                  {project.projectInformations.institution}
+                <p className="line-clamp-2 lg:mx-2">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: project.excerpt as string,
+                    }}
+                  />
                 </p>
-                <p className="lg:mx-2">{project.excerpt}</p>
               </Link>
               {/* TODO: Styling the link element */}
               <a
                 href={project.projectInformations.projectWebsite}
-                className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold"
+                className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
               >
-                {/* TODO: Shortening the displayed link */}
-                {project.projectInformations.projectWebsite}
+                {/* TODO: Put this inside a function "getShortenedUrl()" and add "www." if !string.includes("www.")
+                    shortenedUrl === null ? project.projectInformations.projectWebsite : shortenedUrl
+                    Do i have to do this before the return statement by iterating throug the data? */}
+                {project.projectInformations.projectWebsite
+                  .match(/\/\/[^\/]+\//g)[0]
+                  .substring(
+                    2,
+                    project.projectInformations.projectWebsite.match(
+                      /\/\/[^\/]+\//g
+                    )[0].length - 1
+                  )}
               </a>
             </div>
           ))}
@@ -176,70 +195,48 @@ export function Mintraketen({ data }) {
           <strong>MINT</strong>news
         </H2>
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
-          {
-            /*
-            news: allWpNewsItem(
-              filter: { tags: { nodes: { elemMatch: { name: { eq: "MINTrakete" } } } } }
-            ) {
-              nodes {
-                tags {
-                  nodes {
-                    slug
-                    name
-                  }
-                }
-                title
-                slug
-                excerpt
-                featuredImage {
-                  node {
-                    altText
-                    localFile {
-                      childImageSharp {
-                        gatsbyImageData(width: 500, quality: 80)
-                      }
+          {data.news.nodes.map((news, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+            >
+              <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                  <GatsbyImage
+                    image={
+                      news.featuredImage.node.localFile.childImageSharp
+                        .gatsbyImageData
                     }
-                  }
-                }
-              }
-            } */
-            data.news.nodes.map((news, index) => (
-              <div
-                key={`teaserbox-${index}`}
-                className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
-              >
-                <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
-                  <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-                    <GatsbyImage
-                      image={
-                        news.featuredImage.node.localFile.childImageSharp
-                          .gatsbyImageData
-                      }
-                      className="w-full h-auto"
-                      alt={news.featuredImage.node.altText}
-                    />
-                  </div>
-                  <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
-                  <p className="lg:mx-2">{news.excerpt}</p>
-                </Link>
-                <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
-                  {news.tags.nodes.map((tag, index) => {
-                    return (
-                      <li key={`tag-${index}`}>
-                        <Chip
-                          title={tag.name}
-                          slug={tag.slug}
-                          onClick={() =>
-                            (document.location.href = `/news/?tags=${tag.slug}`)
-                          }
-                        />
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))
-          }
+                    className="w-full h-auto"
+                    alt={news.featuredImage.node.altText}
+                  />
+                </div>
+                <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
+                <p className="line-clamp-2 lg:mx-2">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: news.excerpt as string,
+                    }}
+                  />
+                </p>
+              </Link>
+              <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
+                {news.tags.nodes.map((tag, index) => {
+                  return (
+                    <li key={`tag-${index}`}>
+                      <Chip
+                        title={tag.name}
+                        slug={tag.slug}
+                        onClick={() =>
+                          (document.location.href = `/news/?tags=${tag.slug}`)
+                        }
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -327,7 +324,7 @@ export const pageQuery = graphql`
           projectLogo {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 64, quality: 100)
+                gatsbyImageData(width: 80, quality: 100)
               }
             }
           }
