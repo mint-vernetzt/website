@@ -90,7 +90,7 @@ export function Projects({ data }) {
             </p>
             <p>
               <Link
-                to="/news/mintrakete-didaktik-als-schluessel-jetzt-bewerben"
+                to="/news/mintrakete-mint-trifft-kunst-und-kreativitat"
                 className="btn-primary"
               >
                 Teilnehmen
