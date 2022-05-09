@@ -188,7 +188,7 @@ export function Mintraketen({ data }) {
                     </div>
                   </div>
                   <p className="line-clamp-2 lg:mx-2">
-                    <span
+                    <div
                       dangerouslySetInnerHTML={{
                         __html: project.excerpt as string,
                       }}
