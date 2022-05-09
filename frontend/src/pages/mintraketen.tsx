@@ -43,7 +43,7 @@ export function Mintraketen({ data }) {
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
-          <p className="text-xl md:px-8 lg:px-20 ">
+          <p className="lg:text-xl md:px-8 lg:px-20 ">
             Die MINTrakete ist eine Auszeichnung für außergewöhnliche
             Gute-Praxis-Beispiele in der MINT-Bildung. Mithilfe regelmäßiger
             Ausschreibungen rufen wir zu wechselnden Themen zur Bewerbung auf
@@ -215,7 +215,7 @@ export function Mintraketen({ data }) {
         <H2 like="h1">
           <strong>MINT</strong>news
         </H2>
-        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {data.news.nodes.map((news, index) => (
             <div
               key={`teaserbox-${index}`}
@@ -309,7 +309,9 @@ export default Mintraketen;
 // TODO: Update heroImage, aktuelleAusschreibungenImage, vergangeneAusschreibungenImage
 export const pageQuery = graphql`
   query MintraketenPage {
-    heroImage: file(relativePath: { eq: "news_overview_large.jpg" }) {
+    heroImage: file(
+      relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
+    ) {
       childImageSharp {
         gatsbyImageData(width: 1488, quality: 80)
       }
@@ -335,7 +337,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 560)
       }
     }
-    projects: allWpProject {
+    projects: allWpProject(sort: { fields: [title], order: ASC }) {
       nodes {
         title
         projectInformations {
@@ -355,6 +357,7 @@ export const pageQuery = graphql`
     }
     news: allWpNewsItem(
       filter: { tags: { nodes: { elemMatch: { name: { eq: "MINTrakete" } } } } }
+      sort: { fields: [date], order: DESC }
     ) {
       nodes {
         tags {
@@ -371,7 +374,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 500, quality: 80)
+                gatsbyImageData(width: 700, quality: 100)
               }
             }
           }
@@ -380,7 +383,7 @@ export const pageQuery = graphql`
     }
     currentTender: allWpNewsItem(
       filter: {
-        title: { eq: "„Es geht darum, Mädchen in der Informatik zu sehen“" }
+        title: { eq: "MINTrakete – MINT TRIFFT KUNST UND KREATIVITÄT" }
       }
     ) {
       nodes {
@@ -390,7 +393,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 500, quality: 80)
+                gatsbyImageData(width: 700, quality: 100)
               }
             }
           }
@@ -407,7 +410,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 500, quality: 80)
+                gatsbyImageData(width: 700, quality: 100)
               }
             }
           }
