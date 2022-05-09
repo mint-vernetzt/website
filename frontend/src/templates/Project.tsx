@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import { H1, H3, H4, H5 } from "../components/Heading/Heading";
@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Link from "../components/Link";
 import SEO from "../components/SEO";
 
-
 function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
   const { project } = data;
 
@@ -15,33 +14,33 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
     <Layout>
       <SEO
         title={`${project.title}`}
-        slug={`/event/${project.slug}`}
+        slug={`/project/${project.slug}`}
         description=""
         children=""
       />
 
-      {/* <section className="container my-4 md:my-8">
+      <section className="container my-4 md:my-8">
         <Link
           className="inline-block border border-neutral-400 py-3 px-4 mb-4 text-neutral-800 text-semibold uppercase rounded-lg"
           to="/"
           onClick={(e) => {
-            if (
-              typeof window !== "undefined" &&
-              window.previousPath === "/events/"
-            ) {
-              e.preventDefault();
-              navigate(-1);
-            }
+            // if (
+            //   typeof window !== "undefined" &&
+            //   window.previousPath === "/mintrakete/"
+            // ) {
+            e.preventDefault();
+            navigate("/mintrakete/");
+            // }
           }}
         >
           <span className="flex items-center">
             <span className="mr-2">
               <Icon type={IconType.ChevronLeft} />
             </span>
-            Zur Raketenübersicht
+            Zur Übersicht
           </span>
-        </Link>        
-      </section> */}
+        </Link>
+      </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 lg:mb-20">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-4 my-10">
