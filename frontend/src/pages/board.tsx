@@ -3,8 +3,80 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
+import UserCardContainer from "../components/UserCard/UserCardContainer";
 
 export function Board({ data }) {
+  const boardMembers = [
+    {
+      name: "Prof. Dr. Carsten Busch",
+      organisation: "Hochschule für Technik und Wirtschaft Berlin/HAWtech",
+    },
+    {
+      name: "Jacob Chammon",
+      organisation: "Forum Bildung Digitalisierung",
+    },
+    {
+      name: "Michael Fritz",
+      organisation: "Haus der kleinen Forscher",
+    },
+    {
+      name: "Dr. Sven Günther",
+      organisation: "STIFT/Länderbeirat MINT-Regionen",
+    },
+    {
+      name: "Indra Hadeler",
+      organisation: "Arbeitgeberverband Gesamtmetall",
+    },
+    {
+      name: "Alexander Handschuh",
+      organisation: "Deutscher Städte- und Gemeindebund",
+    },
+    {
+      name: "Jana Heiberger",
+      organisation: "Deutscher Industrie- und Handelskammertag",
+    },
+    {
+      name: "Dr. Kirsten Kielbassa-Schnepp",
+      organisation: "Zentralverband des Deutschen Handwerks",
+    },
+    {
+      name: "Kim Klebolte",
+      organisation: "#SheTransformsIT",
+    },
+    {
+      name: "Dr. Nico Kock",
+      organisation: "Stiftung Jugend forscht e. V.",
+    },
+    {
+      name: "Susanne Müller",
+      organisation: "Bundesvereinigung der Deutschen Arbeitgeberverbände",
+    },
+    {
+      name: "Katarina Peranić",
+      organisation: "Deutsche Stiftung für Engagement und Ehrenamt",
+    },
+    {
+      name: "Dr. Nicole Saverschek",
+      organisation: "TU9",
+    },
+    {
+      name: "Sabine Schwarz",
+      organisation: "Bundesagentur für Arbeit",
+    },
+    {
+      name: "Volker Tschiedel",
+      organisation: "Bildungsministerium Rheinland-Pfalz/KMK AG-MINT",
+    },
+    {
+      name: "Anja Weusthoff",
+      organisation: " Deutscher Gewerkschaftsbund",
+    },
+    {
+      name: "NN",
+      organisation: "Wissensfabrik",
+    },
+  ];
+
   return (
     <Layout>
       <SEO title="Gremien" slug="/board" description="" image="" children="" />
@@ -28,7 +100,7 @@ export function Board({ data }) {
             Blick zu behalten.
           </p>
         </header>
-        <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
+        <div className="rounded-3xl overflow-hidden">
           {data?.heroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
             <GatsbyImage
               image={data.heroImage.childImageSharp.gatsbyImageData}
@@ -43,6 +115,47 @@ export function Board({ data }) {
           Kowitz-Harms (Körber-Stiftung), Dr. Pascal Hetze (Stifterverband),
           Prof. Dr. Heidrun Stöger (Universität Regensburg)
         </p>
+      </section>
+
+      <section className="container mt-8">
+        <header>
+          <H2 like="h2">Der MINT-Vernetzungsbeirat</H2>
+          <p className="text-neutral-600 lg:text-xl lg:px-10">
+            Der MINT-Vernetzungsbeirat ist das neueste Gremium von MINTvernetzt
+            und startet im Mai 2022 mit der ersten offiziellen Sitzung.
+            Insgesamt 17 Vertreter:innen unterschiedlicher Sektoren kommen
+            mindestens einmal im Jahr zusammen, um ihre unterschiedlichen
+            Perspektiven und Netzwerke einzubringen, kritisch zu diskutieren,
+            Denkräume zu öffnen und sich gemeinsam für eine bessere MINT-Bildung
+            in Deutschland zu engagieren. Darüber hinaus können sich die
+            Mitglieder in weiteren Formaten von MINTvernetzt einbringen und sich
+            im Rahmen von Stakeholderdialogen zu unterschiedlichen Themen
+            austauschen. Unser Ziel ist es, mit Hilfe des
+            MINT-Vernetzungsbeirates unsere Arbeit stetig zu verbessern, neue
+            Impulse zu erhalten und Synergien zwischen den verschiedenen
+            Sektoren anzuregen.
+          </p>
+        </header>
+      </section>
+
+      <section className="container mt-8">
+        <div className="bg-tertiary-300 rounded-3xl py-4 md:py-10 lg:py-24 px-2">
+          <header>
+            <H3 like="h3">Mitglieder des MINT-Vernetzungsbeirates</H3>
+          </header>
+          <div className="grid gap-8 gap-y-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {
+              boardMembers.map((boardMember, index) => {
+                return (
+                  <div key={`board-member-container-item-${index}`}>
+                    <p className="">{boardMember.name}</p>
+                    <p className="">{boardMember.organisation}</p>
+                  </div>
+                );
+              }) /** TODO */
+            }
+          </div>
+        </div>
       </section>
     </Layout>
   );
