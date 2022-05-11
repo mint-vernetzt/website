@@ -139,17 +139,22 @@ export function Board({ data }) {
       </section>
 
       <section className="container mt-8">
-        <div className="bg-tertiary-300 rounded-3xl py-4 md:py-10 lg:py-24 px-2">
+        <div className="bg-tertiary-300 rounded-3xl py-10 px-2">
           <header>
             <H3 like="h3">Mitglieder des MINT-Vernetzungsbeirates</H3>
           </header>
-          <div className="grid gap-8 gap-y-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-8 gap-y-8 mx-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {
               boardMembers.map((boardMember, index) => {
                 return (
-                  <div key={`board-member-container-item-${index}`}>
-                    <p className="">{boardMember.name}</p>
-                    <p className="">{boardMember.organisation}</p>
+                  <div
+                    key={`board-member-container-item-${index}`}
+                    className="flex flex-col justify-center items-center text-center border border-black rounded-3xl py-4 px-2"
+                  >
+                    <p className="mb-1 font-semibold text-neutral-800">
+                      {boardMember.name}
+                    </p>
+                    <p>{boardMember.organisation}</p>
                   </div>
                 );
               }) /** TODO */
