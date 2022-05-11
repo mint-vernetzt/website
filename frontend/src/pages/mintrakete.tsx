@@ -383,7 +383,7 @@ export const pageQuery = graphql`
     }
     currentTender: allWpNewsItem(
       filter: {
-        title: { eq: "MINTrakete – MINT TRIFFT KUNST UND KREATIVITÄT" }
+        title: { eq: "MINTrakete – MINT trifft Kunst und Kreativität" }
       }
     ) {
       nodes {
