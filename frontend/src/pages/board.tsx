@@ -148,7 +148,7 @@ export function Board({ data }) {
           <p className="text-neutral-600 lg:text-3xl font-bold">
             Gemeinsam mit Expert:innen stark für nachhaltige MINT-Bildung
           </p>
-          <H2 like="h2" className="mb-4 lg:mb-8 mt-8 lg:mt-16">
+          <H2 like="h2" className="mt-8 lg:mt-16">
             Der Strategiekreis
           </H2>
           <p className="text-neutral-600 lg:text-xl lg:px-10">
@@ -180,9 +180,7 @@ export function Board({ data }) {
 
       <section className="container mt-8 lg:mt-16">
         <header>
-          <H2 like="h2" className="mb-4 lg:mb-8">
-            Der MINT-Vernetzungsbeirat
-          </H2>
+          <H2 like="h2">Der MINT-Vernetzungsbeirat</H2>
           <p className="text-neutral-600 lg:text-xl lg:px-10">
             Der MINT-Vernetzungsbeirat ist das neueste Gremium von MINTvernetzt
             und startet im Mai 2022 mit der ersten offiziellen Sitzung.
@@ -228,9 +226,7 @@ export function Board({ data }) {
 
       <section className="container mt-8 lg:mt-16">
         <header>
-          <H2 like="h2" className="mb-4 lg:mb-8">
-            Das Scientific Advisory Board
-          </H2>
+          <H2 like="h2">Das Scientific Advisory Board</H2>
           <p className="text-neutral-600 lg:text-xl lg:px-10">
             Im Bereich Wissenstransfer werden wir von einem Scientific Advisory
             Board unterstützt. Das Gremium, bestehend aus 12 Expert:innen mit
@@ -252,9 +248,7 @@ export function Board({ data }) {
       </section>
 
       <section className="container mt-8 lg:mt-16">
-        <H3 like="h3" className="mb-4 lg:mb-8">
-          Vorsitz Scientific Advisory Board
-        </H3>
+        <H3 like="h3">Vorsitz Scientific Advisory Board</H3>
         <div className="grid gap-8 gap-y-8 grid-cols-1 md:grid-cols-2">
           {scientificAdvisoryManagementBoardMembers.map(
             (boardMember, index) => {
@@ -274,9 +268,7 @@ export function Board({ data }) {
       </section>
 
       <section className="container mt-8 lg:mt-16">
-        <H3 like="h3" className="mb-4 lg:mb-8">
-          Mitglieder Scientific Advisory Board
-        </H3>
+        <H3 like="h3">Mitglieder Scientific Advisory Board</H3>
         <div className="grid gap-8 gap-y-8 grid-cols-1 md:grid-cols-2">
           {scientificAdvisoryBoardMembers.map((boardMember, index) => {
             return (
