@@ -3,79 +3,140 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
-import UserCardContainer from "../components/UserCard/UserCardContainer";
 
 export function Board({ data }) {
-  const boardMembers = [
-    {
-      name: "Prof. Dr. Carsten Busch",
-      organisation: "Hochschule für Technik und Wirtschaft Berlin/HAWtech",
-    },
-    {
-      name: "Jacob Chammon",
-      organisation: "Forum Bildung Digitalisierung",
-    },
-    {
-      name: "Michael Fritz",
-      organisation: "Haus der kleinen Forscher",
-    },
-    {
-      name: "Dr. Sven Günther",
-      organisation: "STIFT/Länderbeirat MINT-Regionen",
-    },
-    {
-      name: "Indra Hadeler",
-      organisation: "Arbeitgeberverband Gesamtmetall",
-    },
-    {
-      name: "Alexander Handschuh",
-      organisation: "Deutscher Städte- und Gemeindebund",
-    },
-    {
-      name: "Jana Heiberger",
-      organisation: "Deutscher Industrie- und Handelskammertag",
-    },
-    {
-      name: "Dr. Kirsten Kielbassa-Schnepp",
-      organisation: "Zentralverband des Deutschen Handwerks",
-    },
-    {
-      name: "Kim Klebolte",
-      organisation: "#SheTransformsIT",
-    },
-    {
-      name: "Dr. Nico Kock",
-      organisation: "Stiftung Jugend forscht e. V.",
-    },
-    {
-      name: "Susanne Müller",
-      organisation: "Bundesvereinigung der Deutschen Arbeitgeberverbände",
-    },
-    {
-      name: "Katarina Peranić",
-      organisation: "Deutsche Stiftung für Engagement und Ehrenamt",
-    },
-    {
-      name: "Dr. Nicole Saverschek",
-      organisation: "TU9",
-    },
-    {
-      name: "Sabine Schwarz",
-      organisation: "Bundesagentur für Arbeit",
-    },
-    {
-      name: "Volker Tschiedel",
-      organisation: "Bildungsministerium Rheinland-Pfalz/KMK AG-MINT",
-    },
-    {
-      name: "Anja Weusthoff",
-      organisation: " Deutscher Gewerkschaftsbund",
-    },
-    {
-      name: "NN",
-      organisation: "Wissensfabrik",
-    },
-  ];
+  const networkBoardMembers = [
+      {
+        name: "Prof. Dr. Carsten Busch",
+        organisation: "Hochschule für Technik und Wirtschaft Berlin/HAWtech",
+      },
+      {
+        name: "Jacob Chammon",
+        organisation: "Forum Bildung Digitalisierung",
+      },
+      {
+        name: "Michael Fritz",
+        organisation: "Haus der kleinen Forscher",
+      },
+      {
+        name: "Dr. Sven Günther",
+        organisation: "STIFT/Länderbeirat MINT-Regionen",
+      },
+      {
+        name: "Indra Hadeler",
+        organisation: "Arbeitgeberverband Gesamtmetall",
+      },
+      {
+        name: "Alexander Handschuh",
+        organisation: "Deutscher Städte- und Gemeindebund",
+      },
+      {
+        name: "Jana Heiberger",
+        organisation: "Deutscher Industrie- und Handelskammertag",
+      },
+      {
+        name: "Dr. Kirsten Kielbassa-Schnepp",
+        organisation: "Zentralverband des Deutschen Handwerks",
+      },
+      {
+        name: "Kim Klebolte",
+        organisation: "#SheTransformsIT",
+      },
+      {
+        name: "Dr. Nico Kock",
+        organisation: "Stiftung Jugend forscht e. V.",
+      },
+      {
+        name: "Susanne Müller",
+        organisation: "Bundesvereinigung der Deutschen Arbeitgeberverbände",
+      },
+      {
+        name: "Katarina Peranić",
+        organisation: "Deutsche Stiftung für Engagement und Ehrenamt",
+      },
+      {
+        name: "Dr. Nicole Saverschek",
+        organisation: "TU9",
+      },
+      {
+        name: "Sabine Schwarz",
+        organisation: "Bundesagentur für Arbeit",
+      },
+      {
+        name: "Volker Tschiedel",
+        organisation: "Bildungsministerium Rheinland-Pfalz/KMK AG-MINT",
+      },
+      {
+        name: "Anja Weusthoff",
+        organisation: " Deutscher Gewerkschaftsbund",
+      },
+      {
+        name: "NN",
+        organisation: "Wissensfabrik",
+      },
+    ],
+    scientificAdvisoryManagementBoardMembers = [
+      {
+        name: "Prof. Dr. Heidrun Stöger",
+        organisation:
+          "Universität Regensburg, Inhaberin des Lehrstuhls für Schulpädagogik",
+      },
+      {
+        name: "Prof. Dr. Olaf Köller",
+        organisation:
+          "IPN – Leibniz-Institut für die Pädagogik der Naturwissenschaften und Mathematik, geschäftsführender wissenschaftlicher Direktor, Kiel",
+      },
+    ],
+    scientificAdvisoryBoardMembers = [
+      {
+        name: "Prof. Dr. Silke Anger",
+        organisation:
+          "Otto-Friedrich-Universität Bamberg, Professorin für Volkswirtschaftslehre, insb. Bildungsökonomik",
+      },
+      {
+        name: "Prof. Dr. Doris Holzberger",
+        organisation:
+          "Technische Universität München, Ko-Leiterin Clearing House, Leiterin des Zentrums für internationale Bildungsvergleichsstudien (ZIB) Bereich Forschungssynthesen und Forschungstransfer",
+      },
+      {
+        name: "Prof. Dr. René Matzdorf",
+        organisation: "Universität Kassel, Vizepräsident für Studium und Lehre",
+      },
+      {
+        name: "Prof. Dr. Axel Plünnecke",
+        organisation:
+          "Institut der deutschen Wirtschaft, Leiter des Kompetenzfelds Bildung, Zuwanderung und Innovation, Köln",
+      },
+      {
+        name: "Prof. Dipl.-Psych. Dr. Barbara Schober",
+        organisation:
+          "Universität Wien, Institut für Psychologie der Entwicklung und Bildung, Leiterin Bildungspsychologie",
+      },
+      {
+        name: "Prof. Dr. Friederike Siller",
+        organisation:
+          "Technische Hochschule Köln, Leiterin des Instituts für Medienforschung und Medienpädagogik",
+      },
+      {
+        name: "Prof. Dr. Johann Sjuts",
+        organisation: "Universität Osnabrück, Professor für Mathematikdidaktik",
+      },
+      {
+        name: "Prof. Dr. Martin Storksdieck",
+        organisation:
+          "Oregon State University, Director STEM Research Center, USA",
+      },
+      {
+        name: "Prof. Dr. Jan Vahrenhold",
+        organisation:
+          "Universität Münster, Professor für Praktische Informatik",
+      },
+      {
+        name: "Prof. Dr. Albert Ziegler",
+        organisation:
+          "Friedrich-Alexander-Universität Erlangen-Nürnberg, Inhaber des Lehrstuhls für Pädagogische Psychologie und Exzellenzforschung",
+      },
+    ];
 
   return (
     <Layout>
@@ -143,13 +204,15 @@ export function Board({ data }) {
       <section className="container mt-8 lg:mt-16">
         <div className="bg-tertiary-300 rounded-3xl py-10 px-2">
           <header>
-            <H3 like="h3">Mitglieder des MINT-Vernetzungsbeirates</H3>
+            <H3 like="h3" className="text-center">
+              Mitglieder des MINT-Vernetzungsbeirates
+            </H3>
           </header>
-          <div className="grid gap-8 gap-y-8 mx-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {boardMembers.map((boardMember, index) => {
+          <div className="grid gap-8 gap-y-8 mx-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {networkBoardMembers.map((boardMember, index) => {
               return (
                 <div
-                  key={`board-member-container-item-${index}`}
+                  key={`network-board-member-container-item-${index}`}
                   className="flex flex-col justify-center items-center text-center border border-black rounded-3xl py-4 px-2"
                 >
                   <p className="mb-1 font-semibold text-neutral-800">
@@ -186,6 +249,46 @@ export function Board({ data }) {
             untermauern.
           </p>
         </header>
+      </section>
+
+      <section className="container mt-8 lg:mt-16">
+        <H3 like="h3" className="mb-4 lg:mb-8">
+          Vorsitz Scientific Advisory Board
+        </H3>
+        <div className="grid gap-8 gap-y-8 grid-cols-1 md:grid-cols-2">
+          {scientificAdvisoryManagementBoardMembers.map(
+            (boardMember, index) => {
+              return (
+                <div
+                  key={`scientific-management-board-member-container-item-${index}`}
+                >
+                  <p className="mb-1 font-semibold text-neutral-800">
+                    {boardMember.name}
+                  </p>
+                  <p>{boardMember.organisation}</p>
+                </div>
+              );
+            }
+          )}
+        </div>
+      </section>
+
+      <section className="container mt-8 lg:mt-16">
+        <H3 like="h3" className="mb-4 lg:mb-8">
+          Mitglieder Scientific Advisory Board
+        </H3>
+        <div className="grid gap-8 gap-y-8 grid-cols-1 md:grid-cols-2">
+          {scientificAdvisoryBoardMembers.map((boardMember, index) => {
+            return (
+              <div key={`scientific-board-member-container-item-${index}`}>
+                <p className="mb-1 font-semibold text-neutral-800">
+                  {boardMember.name}
+                </p>
+                <p>{boardMember.organisation}</p>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </Layout>
   );
