@@ -87,7 +87,7 @@ export function Board({ data }) {
           <p className="text-neutral-600 lg:text-3xl font-bold">
             Gemeinsam mit Expert:innen stark für nachhaltige MINT-Bildung
           </p>
-          <H2 like="h2" className="mt-8 md:mt-16">
+          <H2 like="h2" className="mb-4 lg:mb-8 mt-8 lg:mt-16">
             Der Strategiekreis
           </H2>
           <p className="text-neutral-600 lg:text-xl lg:px-10">
@@ -117,9 +117,11 @@ export function Board({ data }) {
         </p>
       </section>
 
-      <section className="container mt-8">
+      <section className="container mt-8 lg:mt-16">
         <header>
-          <H2 like="h2">Der MINT-Vernetzungsbeirat</H2>
+          <H2 like="h2" className="mb-4 lg:mb-8">
+            Der MINT-Vernetzungsbeirat
+          </H2>
           <p className="text-neutral-600 lg:text-xl lg:px-10">
             Der MINT-Vernetzungsbeirat ist das neueste Gremium von MINTvernetzt
             und startet im Mai 2022 mit der ersten offiziellen Sitzung.
@@ -138,29 +140,52 @@ export function Board({ data }) {
         </header>
       </section>
 
-      <section className="container mt-8">
+      <section className="container mt-8 lg:mt-16">
         <div className="bg-tertiary-300 rounded-3xl py-10 px-2">
           <header>
             <H3 like="h3">Mitglieder des MINT-Vernetzungsbeirates</H3>
           </header>
           <div className="grid gap-8 gap-y-8 mx-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {
-              boardMembers.map((boardMember, index) => {
-                return (
-                  <div
-                    key={`board-member-container-item-${index}`}
-                    className="flex flex-col justify-center items-center text-center border border-black rounded-3xl py-4 px-2"
-                  >
-                    <p className="mb-1 font-semibold text-neutral-800">
-                      {boardMember.name}
-                    </p>
-                    <p>{boardMember.organisation}</p>
-                  </div>
-                );
-              }) /** TODO */
-            }
+            {boardMembers.map((boardMember, index) => {
+              return (
+                <div
+                  key={`board-member-container-item-${index}`}
+                  className="flex flex-col justify-center items-center text-center border border-black rounded-3xl py-4 px-2"
+                >
+                  <p className="mb-1 font-semibold text-neutral-800">
+                    {boardMember.name}
+                  </p>
+                  <p>{boardMember.organisation}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
+      </section>
+
+      <section className="container mt-8 lg:mt-16">
+        <header>
+          <H2 like="h2" className="mb-4 lg:mb-8">
+            Das Scientific Advisory Board
+          </H2>
+          <p className="text-neutral-600 lg:text-xl lg:px-10">
+            Im Bereich Wissenstransfer werden wir von einem Scientific Advisory
+            Board unterstützt. Das Gremium, bestehend aus 12 Expert:innen mit
+            unterschiedlichen wissenschaftlichen Schwerpunkten, tagt zweimal im
+            Jahr: Dabei werden strategische Planungen und einzelne Formate des
+            Wissenstransfers vorgestellt und es wird von den Expert:innen
+            Feedback eingeholt. So sichern wir die Qualität unserer
+            wissenschaftlichen Arbeit. Darüber hinaus werden Trends und
+            Herausforderungen in der Bildungsforschung diskutiert und Impulse
+            für die Entwicklung von Innovationen in der MINT-Bildung gegeben.
+            Neben der inhaltlichen Beratung sind die Mitglieder immer wieder auf
+            MINTvernetzt-Veranstaltungen als Speaker:innen zu sehen oder als
+            Teil der Jury bei unseren Ausschreibungen zur MINTrakete aktiv.
+            Durch die Zusammenarbeit mit externen Gremien möchten wir unseren
+            Blick weiten und unsere Arbeit wissenschaftlich fundiert
+            untermauern.
+          </p>
+        </header>
       </section>
     </Layout>
   );
