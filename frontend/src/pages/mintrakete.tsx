@@ -61,23 +61,6 @@ export function Mintraketen({ data }) {
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
-          {/**currentTender: allWpNewsItem(
-      filter: {title: {eq: "„Es geht darum, Mädchen in der Informatik zu sehen“"}}
-    ) {
-      nodes {
-        slug
-        featuredImage {
-          node {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(width: 500, quality: 80)
-              }
-            }
-          }
-        }
-      }
-    } */}
           {[
             {
               image:
@@ -187,13 +170,12 @@ export function Mintraketen({ data }) {
                       </p>
                     </div>
                   </div>
-                  <p className="line-clamp-2 lg:mx-2">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: project.excerpt as string,
-                      }}
-                    />
-                  </p>
+                  <div
+                    className="line-clamp-2 lg:mx-2"
+                    dangerouslySetInnerHTML={{
+                      __html: project.excerpt as string,
+                    }}
+                  />
                 </Link>
                 <div className="mt-2">
                   <a
@@ -233,13 +215,12 @@ export function Mintraketen({ data }) {
                   />
                 </div>
                 <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
-                <p className="line-clamp-2 lg:mx-2">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: news.excerpt as string,
-                    }}
-                  />
-                </p>
+                <div
+                  className="line-clamp-2 lg:mx-2"
+                  dangerouslySetInnerHTML={{
+                    __html: news.excerpt as string,
+                  }}
+                />
               </Link>
               <ul className="lg:mx-2 flex flex-wrap md:order-4 z-10">
                 {news.tags.nodes.map((tag, index) => {
@@ -283,7 +264,7 @@ export function Mintraketen({ data }) {
                   image={
                     data?.mintBildungsforschungImage?.childImageSharp
                       ?.gatsbyImageData
-                  } // TODO
+                  }
                   className="w-full h-auto"
                   alt="MINT-Bildungsforschung"
                 />
@@ -306,7 +287,7 @@ export function Mintraketen({ data }) {
 }
 
 export default Mintraketen;
-// TODO: Update heroImage, aktuelleAusschreibungenImage, vergangeneAusschreibungenImage
+
 export const pageQuery = graphql`
   query MintraketenPage {
     heroImage: file(
@@ -317,20 +298,6 @@ export const pageQuery = graphql`
       }
     }
     mintBildungsforschungImage: file(
-      relativePath: { eq: "mint-bildungsforschung.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(width: 560)
-      }
-    }
-    aktuelleAusschreibungenImage: file(
-      relativePath: { eq: "mint-bildungsforschung.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(width: 560)
-      }
-    }
-    vergangeneAusschreibungenImage: file(
       relativePath: { eq: "mint-bildungsforschung.jpg" }
     ) {
       childImageSharp {
@@ -383,7 +350,7 @@ export const pageQuery = graphql`
     }
     currentTender: allWpNewsItem(
       filter: {
-        title: { eq: "MINTrakete – MINT TRIFFT KUNST UND KREATIVITÄT" }
+        title: { eq: "MINTrakete – MINT trifft Kunst und Kreativität" }
       }
     ) {
       nodes {
