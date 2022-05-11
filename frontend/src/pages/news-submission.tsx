@@ -37,7 +37,7 @@ const Input = React.forwardRef((props: InputProps<HTMLInputElement>, ref) => {
         placeholder=" "
         {...restProps}
       />
-      {errorMessage && <span>{errorMessage}</span>}
+      {errorMessage && <span className="error-message">{errorMessage}</span>}
     </>
   );
 });
@@ -54,7 +54,7 @@ const Textarea = React.forwardRef(
           placeholder=" "
           {...restProps}
         />
-        {errorMessage && <span>{errorMessage}</span>}
+        {errorMessage && <span className="error-message">{errorMessage}</span>}
       </>
     );
   }
@@ -105,6 +105,8 @@ const yupSchema = buildYup(schema, {
     },
     $minLength: (constraints: { minLength: number }) =>
       `Mindestlänge ${constraints.minLength} Zeichen`,
+    $maxLength: (constraints: { maxLength: number }) =>
+      `Maximallänge ${constraints.maxLength} Zeichen`,
     $email: "Ungültige E-Mail Adresse ",
     $required: "Pflichtfeld",
   },
@@ -185,25 +187,20 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
           <div className="order-2 md:order-1 flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
             <header className="text-left">
               <H1 like="h2" className="font-bold">
-                News eintragen
+                News einreichen
               </H1>
               <p className="text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad
-                dicta, nulla consequuntur error fugiat amet accusamus quae
-                voluptate qui sunt officia quam. Possimus fuga natus quaerat
-                consequatur dolorem minima?
+                Über dieses Formular könnt Ihr Eure News mit der MINT-Community
+                teilen. Einfach alle relevanten Informationen als kurze Meldung
+                in unser Formular eintragen und nach einer kurzen Prüfung,
+                findet Ihr diese auf unserer Webseite.
               </p>
             </header>
 
             {isSubmitted && errors.serverError && (
               <>
                 <H2 like="h4">Leider gab es einen Fehler bei der Versendung</H2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                  quod minus repellat non quibusdam tempora! Temporibus
-                  consequuntur sunt dignissimos quia expedita ad alias,
-                  laboriosam distinctio aut! Quos esse tempora commodi.
-                </p>
+
                 <button
                   className="btn-primary"
                   onClick={() => {
@@ -217,7 +214,6 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
 
             {isSubmitSuccessful && (
               <>
-                <H2 like="h4">News eingereicht</H2>
                 <H3 like="h5">Vielen Dank!</H3>
                 <p>
                   Wir posten deine News sobald sie von unserem Team gesichtet
@@ -232,19 +228,27 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
             {!errors.serverError && !isSubmitSuccessful && (
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FormRow>
-                  <FormLabel htmlFor="title">Titel</FormLabel>
+                  <FormLabel htmlFor="title">
+                    Titel/Headline (max. 70 Zeichen)*
+                  </FormLabel>
 
                   <Controller
                     name="title"
                     control={control}
                     render={({ field }) => (
-                      <Input {...field} errorMessage={errors.title?.message} />
+                      <Input
+                        {...field}
+                        errorMessage={errors.title?.message}
+                        required
+                      />
                     )}
                   />
                 </FormRow>
 
                 <FormRow>
-                  <FormLabel htmlFor="text">Inhalt</FormLabel>
+                  <FormLabel htmlFor="text">
+                    Inhalt (max. 1500 Zeichen)*
+                  </FormLabel>
                   <Controller
                     name="text"
                     control={control}
@@ -258,7 +262,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                 </FormRow>
 
                 <FormRow>
-                  <FormLabel>Quelle / Link zur Meldung</FormLabel>
+                  <FormLabel>Quelle / Link zur Meldung*</FormLabel>
                   <Controller
                     name="source"
                     control={control}
@@ -276,7 +280,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                 <FormRow>
                   <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
                     <div>
-                      <FormLabel>Kontaktpersonen für Rückfragen</FormLabel>
+                      <FormLabel>Kontaktpersonen für Rückfragen*</FormLabel>
                       <Controller
                         name="contact_name"
                         control={control}
@@ -290,7 +294,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                     </div>
 
                     <div>
-                      <FormLabel>E-Mail für Rückfragen</FormLabel>
+                      <FormLabel>E-Mail für Rückfragen*</FormLabel>
                       <Controller
                         name="contact_email"
                         control={control}
@@ -323,10 +327,14 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                     />
                     <span className="label-text">
                       Ich stimme der Verwendung meiner eingegebnenen Daten
-                      entsprechend der Datenschutzerklärung zu
+                      entsprechend der Datenschutzerklärung zu*
                     </span>
                   </FormLabel>
                 </FormRowCheckbox>
+
+                <small>
+                  <sup>*</sup> Pflichtfelder
+                </small>
 
                 <div className="flex gap-6 justify-end mt-10">
                   <button
@@ -350,7 +358,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                     type="submit"
                     disabled={!isValid || isSubmitting}
                   >
-                    {isSubmitting ? "sende ..." : "senden"}
+                    {isSubmitting ? "sende ..." : "Senden"}
                   </button>
                 </div>
               </form>
@@ -434,7 +442,7 @@ export const pageQuery = graphql`
       }
     }
     PageContact: wpContact(
-      contactInformations: { lastName: { eq: "Kellner" } }
+      contactInformations: { lastName: { eq: "Borggräfe" } }
     ) {
       contactInformations {
         firstName

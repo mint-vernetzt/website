@@ -5,18 +5,16 @@
   "properties": {
     "title": {
       "type": "string",
-      "minLength": 5
+      "maxLength": 70
     },
     "text": {
       "type": "string",
-      "minLength": 100
+      "maxLength": 1500
     },
     "source": {
-      "minLength": 5,
       "type": "string"
     },
     "contact_name": {
-      "minLength": 5,
       "type": "string"
     },
     "contact_email": {
