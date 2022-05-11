@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plattform.mintvernetzt.de/news.schema.json",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "text": {
+      "type": "string",
+      "minLength": 100
+    },
+    "source": {
+      "minLength": 5,
+      "type": "string"
+    },
+    "contact_name": {
+      "minLength": 5,
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "terms_accepted": {
+      "type": "string",
+      "enum": ["true"]
+    }
+  },
+  "required": [
+    "title",
+    "text",
+    "source",
+    "contact_name",
+    "contact_email",
+    "terms_accepted"
+  ],
+  "additionalProperties": false
+}
