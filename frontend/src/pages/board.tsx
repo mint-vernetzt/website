@@ -290,9 +290,7 @@ export default Board;
 
 export const pageQuery = graphql`
   query BoardPage {
-    heroImage: file(
-      relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
-    ) {
+    heroImage: file(relativePath: { eq: "mintvernetzt_gremien.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1488, quality: 80)
       }
