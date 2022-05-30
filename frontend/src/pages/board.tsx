@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
-export function Board({ data }) {
+export function Board({ data }: { data: GatsbyTypes.BoardPageQuery }) {
   const networkBoardMembers = [
       {
         name: "Prof. Dr. Carsten Busch",
