@@ -4,7 +4,11 @@ import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 
-export function WirFuerMint({ data }) {
+export function WirFuerMint({
+  data,
+}: {
+  data: GatsbyTypes.WirFuerMintPageQuery;
+}) {
   return (
     <Layout>
       <SEO
