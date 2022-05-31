@@ -47,7 +47,7 @@ export function Pakt({ data }) {
   return (
     <Layout>
       <SEO
-        title={`Pakt`}
+        title={`Pakt für Frauen`}
         slug={`/pakt/`}
         description={""}
         image={""}
@@ -62,7 +62,6 @@ export function Pakt({ data }) {
               classes="contact-card my-10"
               headline="Ansprechpartner:in"
               name={`${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`}
-
               position={data.wpContact.contactInformations.position}
               phone={data.wpContact.contactInformations.phone}
               email={data.wpContact.contactInformations.email}
@@ -83,28 +82,29 @@ export function Pakt({ data }) {
             </p>
 
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Der Pakt für Frauen in MINT-Berufen hat es sich zum Ziel gesetzt, 
-              Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und 
-              -Berufe zu begeistern und in ihrem Werdegang zu unterstützen. So 
-              trägt der Pakt zu mehr Teilhabe in der Gesellschaft, zur Sicherung 
-              des Innovations- und Wirtschaftsstandorts Deutschland und zur Lösung 
-              globaler Herausforderungen bei.
+              Der Pakt für Frauen in MINT-Berufen hat es sich zum Ziel gesetzt,
+              Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und
+              -Berufe zu begeistern und in ihrem Werdegang zu unterstützen. So
+              trägt der Pakt zu mehr Teilhabe in der Gesellschaft, zur Sicherung
+              des Innovations- und Wirtschaftsstandorts Deutschland und zur
+              Lösung globaler Herausforderungen bei.
             </p>
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Das Bündnis wurde 2008 vom Bundesministerium für Bildung und Forschung 
-              initiiert und wird seit September 2021 von der Kompetenz- und 
-              Vernetzungsstelle MINTvernetzt koordiniert. Über 300 Mitglieder aus  
-              rund 270 verschiedenen Institutionen aus Wirtschaft, Bildung und 
-              Wissenschaft, Medien und Politik haben sich seither im Pakt 
-              zusammengeschlossen, um gemeinsam einen Beitrag dafür zu leisten, 
-              Mädchen und Frauen stärker für MINT-Ausbildungen, -Studiengänge und 
-              -Berufe zu begeistern. Dies ist eine Übersicht der aktuellen Mitglieder 
-              im Pakt für Frauen in MINT-Berufen, die für die gemeinsamen Ziele eintreten:
+              Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
+              Forschung initiiert und wird seit September 2021 von der
+              Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
+              300 Mitglieder aus   rund 270 verschiedenen Institutionen aus
+              Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
+              sich seither im Pakt zusammengeschlossen, um gemeinsam einen
+              Beitrag dafür zu leisten, Mädchen und Frauen stärker für
+              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern. Dies
+              ist eine Übersicht der aktuellen Mitglieder im Pakt für Frauen in
+              MINT-Berufen, die für die gemeinsamen Ziele eintreten:
             </p>
           </div>
         </div>
       </section>
-      <section className="container my-4 md:my-6 lg:my-10">        
+      <section className="container my-4 md:my-6 lg:my-10">
         <ul className="pakt-list">
           {categories.map((category, index) => {
             const categorySlug = getCategorySlugFromMember(
@@ -138,7 +138,7 @@ export function Pakt({ data }) {
               </li>
             );
           })}
-        </ul>         
+        </ul>
       </section>
     </Layout>
   );
