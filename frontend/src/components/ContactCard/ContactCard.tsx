@@ -5,6 +5,7 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Image from "../Image";
 
 export interface ContactCardProps {
+  classes?: string;
   headline: string;
   name: string;
   position: string;
@@ -14,6 +15,7 @@ export interface ContactCardProps {
 }
 
 export function ContactCard({
+  classes,
   headline,
   name,
   position,
@@ -21,8 +23,9 @@ export function ContactCard({
   email = null,
   avatar,
 }: ContactCardProps) {
+  const className = classes ?? 'contact-card lg:px-8'
   return (
-    <div className="contact-card lg:px-8">
+    <div className={className}>
       <H4>{headline}</H4>
       <div className="flex items-center mb-2">
         <div className="flex-18 mr-4">
