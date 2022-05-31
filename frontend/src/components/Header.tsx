@@ -40,7 +40,7 @@ export function Header() {
           </div>
 
           <button
-            className="h-6 w-6 md:hidden ml-auto"
+            className="h-6 w-6 lg:hidden ml-auto"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <span
@@ -64,13 +64,17 @@ export function Header() {
           <nav
             className={`${
               isExpanded ? `block` : `hidden`
-            } flex-100 md:block md:ml-auto md:flex-auto`}
+            } flex-100 lg:block lg:ml-auto lg:flex-auto`}
           >
-            <ul className="py-8 text-sm leading-6 md:py-0 md:flex md:items-center md:justify-end md:-mx-2">
+            <ul className="py-8 text-sm leading-6 lg:py-0 lg:flex lg:items-center lg:justify-end lg:-mx-2">
               {[
                 {
                   route: `/about/`,
                   title: `Über uns`,
+                },
+                {
+                  route: `/board/`,
+                  title: `Gremien`,
                 },
                 {
                   route: `/news/`,
@@ -91,7 +95,7 @@ export function Header() {
               ].map((link, index) => (
                 <li
                   key={`nav-item-${index}`}
-                  className="text-center py-2 px-4 md:py-0"
+                  className="text-center py-2 px-4 lg:py-0"
                 >
                   <Link
                     className="inline-block py-px px-2 rounded-lg hover:bg-blue-500 hover:text-neutral-200"
