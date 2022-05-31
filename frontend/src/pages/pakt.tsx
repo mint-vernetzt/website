@@ -89,7 +89,7 @@ export function Pakt({ data }) {
               des Innovations- und Wirtschaftsstandorts Deutschland und zur
               Lösung globaler Herausforderungen bei.
             </p>
-            <p className="lg:text-xl text-neutral-600 mb-4">
+            <p className="lg:text-xl text-neutral-600 mb-16">
               Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
               Forschung initiiert und wird seit September 2021 von der
               Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
@@ -101,45 +101,44 @@ export function Pakt({ data }) {
               ist eine Übersicht der aktuellen Mitglieder im Pakt für Frauen in
               MINT-Berufen, die für die gemeinsamen Ziele eintreten:
             </p>
+
+            <ul className="pakt-list">
+              {categories.map((category, index) => {
+                const categorySlug = getCategorySlugFromMember(
+                  paktDataByCategory[category][0].slug
+                );
+
+                return (
+                  <li
+                    key={category}
+                    id={categorySlug}
+                    className="pakt-category relative overflow-hidden"
+                  >
+                    <a
+                      href={`#${categorySlug}`}
+                      className="block font-bold text-blue-500 md:text-3xl md:leading-snug py-3 flex item-center"
+                    >
+                      {category}
+                    </a>
+                    <ul className="pakt-member max-h-0 overflow-hidden transition-all ease-in-out duration-300 px-6 md:px-8">
+                      {paktDataByCategory[category].map((member) => (
+                        <li key={member.slug} className="py-2">
+                          <Link
+                            to={`/pakt/${member.slug}`}
+                            className="block md:text-2xl"
+                          >
+                            {member.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
-      </section>
-      <section className="container my-4 md:my-6 lg:my-10">
-        <ul className="pakt-list">
-          {categories.map((category, index) => {
-            const categorySlug = getCategorySlugFromMember(
-              paktDataByCategory[category][0].slug
-            );
-
-            return (
-              <li
-                key={category}
-                id={categorySlug}
-                className="pakt-category relative overflow-hidden"
-              >
-                <a
-                  href={`#${categorySlug}`}
-                  className="block font-bold text-blue-500 md:text-3xl md:leading-snug py-3 flex item-center"
-                >
-                  {category}
-                </a>
-                <ul className="pakt-member max-h-0 overflow-hidden transition-all ease-in-out duration-300 px-6 md:px-8">
-                  {paktDataByCategory[category].map((member) => (
-                    <li key={member.slug} className="py-2">
-                      <Link
-                        to={`/pakt/${member.slug}`}
-                        className="block md:text-2xl"
-                      >
-                        {member.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+      </section>      
     </Layout>
   );
 }
