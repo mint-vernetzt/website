@@ -42,15 +42,15 @@ export function WirFuerMint({
         </div>
       </section>
 
-      <section className="container mt-8 lg:mt-16">
-        <p className="text-neutral-600 lg:text-xl">
+      <section className="container mt-8 lg:mt-16 text-neutral-600 lg:text-xl">
+        <p>
           Das ist Eure Seite! Hier findet Ihr alle Postings, die Ihr unter dem
           Hashtag #WirfuerMINT veröffentlicht habt. Im Zeitraum vom 2. bis zum
           15. Juni laufen hier live Eure Postings in der Social Wall ein und
           zeigen, wer alles hinter #WirfuerMINT steckt. Wir freuen uns, dass Ihr
           dabei seid!
         </p>
-        <p className="text-neutral-600 lg:text-xl">
+        <p>
           Für alle unter Euch, die gerade das erste Mal von der
           Social-Media-Kampagne lesen, gibt es hier ein paar
           Hintergrundinformationen: Unter dem Hashtag #WirfuerMINT findet im
@@ -66,6 +66,10 @@ export function WirFuerMint({
             hier
           </Link>{" "}
           nachlesen.
+        </p>
+        <p>
+          Die Social Wall macht leider kein Einbinden Eurer LinkedIn Beiträge
+          möglich. Diese teilen wir aber natürlich auf unserer LinkedIn Seite.
         </p>
       </section>
 
