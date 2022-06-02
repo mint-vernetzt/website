@@ -243,11 +243,11 @@ export function Mintraketen({ data }) {
       </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <H2>Wissenschaftliche Forschungserkenntnisse</H2>
+        <H2>Erkenntnisse aus der MINT-Bildungsforschung</H2>
         <p>
-          Ihr habt Interesse an theoretischen Erkenntnissen zu
-          Gute-Praxis-Beispielen?<br></br>
-          Dann findet Ihr auf unserer Seite MINT-Bildungsforschung weitere
+          Ihr habt Interesse an wissenschaftlichen Erkenntnissen zu
+          Gute-Praxis-Beispielen und mehr Informationen aus der Forschung zu
+          gelingender MINT-Bildung? Dann findet ihr auf dieser Seite weitere
           spannende Einblicke.
         </p>
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
