@@ -71,8 +71,12 @@ export function Board({ data }: { data: GatsbyTypes.BoardPageQuery }) {
         organisation: " Deutscher Gewerkschaftsbund",
       },
       {
-        name: "NN",
+        name: "Mathias Haase",
         organisation: "Wissensfabrik",
+      },
+      {
+        name: "Dr. Maximilian Müller-Härlin",
+        organisation: "Bundesministerium für Bildung und Forschung",
       },
     ],
     scientificAdvisoryManagementBoardMembers = [
