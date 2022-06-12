@@ -75,5 +75,13 @@ module.exports = {
         path: "src/data/pakt/",
       },
     },
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "1",
+        matomoUrl: "https://analytics.mint-vernetzt.de/",
+        siteUrl: "https://mint-vernetzt.de/",
+      },
+    },
   ],
 };
