@@ -78,9 +78,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-matomo",
       options: {
-        siteId: "1",
-        matomoUrl: "https://analytics.mint-vernetzt.de/",
-        siteUrl: "https://mint-vernetzt.de/",
+        siteId: `${process.env.MATOMO_SITE_ID}`,
+        matomoUrl: `${process.env.MATOMO_URL}`,
+        siteUrl: `${process.env.SITE_URL}`,
       },
     },
   ],
