@@ -23,8 +23,10 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^4.5.4",
+    "@hookform/resolvers": "^2.8.8",
     "@radix-ui/react-popover": "^0.1.6",
     "@tailwindcss/line-clamp": "^0.3.1",
+    "@types/yup": "^0.29.13",
     "gatsby": "^4.9.3",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-manifest": "^4.10.0",
@@ -40,7 +42,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "swiper": "^8.0.7"
+    "react-hook-form": "^7.29.0",
+    "schema-to-yup": "^1.11.9",
+    "swiper": "^8.0.7",
+    "yup": "^0.26.10"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
