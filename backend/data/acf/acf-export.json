@@ -1,0 +1,821 @@
+[
+  {
+    "key": "group_617ae461c0b05",
+    "title": "Contact Informations",
+    "fields": [
+      {
+        "key": "field_617ae47eda360",
+        "label": "First Name",
+        "name": "first_name",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae4e0da361",
+        "label": "Last Name",
+        "name": "last_name",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae502da362",
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae523da363",
+        "label": "Phone",
+        "name": "phone",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae53dda364",
+        "label": "Email",
+        "name": "email",
+        "type": "email",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_617ae57bda365",
+        "label": "Position",
+        "name": "position",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae6a1d23c7",
+        "label": "Organization",
+        "name": "organization",
+        "type": "relationship",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "post_type": ["organizations"],
+        "taxonomy": "",
+        "filters": ["post_type"],
+        "elements": "",
+        "min": "",
+        "max": "",
+        "return_format": "object"
+      },
+      {
+        "key": "field_6181330bb0cf6",
+        "label": "Photo",
+        "name": "photo",
+        "type": "image",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "return_format": "array",
+        "preview_size": "medium",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "contacts"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "show_in_graphql": 1,
+    "graphql_field_name": "contactInformations",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  },
+  {
+    "key": "group_617684481faae",
+    "title": "Event Informations",
+    "fields": [
+      {
+        "key": "field_6176858492f63",
+        "label": "Start Date",
+        "name": "start_date",
+        "type": "date_picker",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "display_format": "F j, Y",
+        "return_format": "Y-m-d",
+        "first_day": 1
+      },
+      {
+        "key": "field_61795efdaff8a",
+        "label": "Start Time",
+        "name": "start_time",
+        "type": "time_picker",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "display_format": "H:i",
+        "return_format": "H:i:s"
+      },
+      {
+        "key": "field_6176875192f64",
+        "label": "End Date",
+        "name": "end_date",
+        "type": "date_picker",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "display_format": "F j, Y",
+        "return_format": "Y-m-d",
+        "first_day": 1
+      },
+      {
+        "key": "field_61795f43aff8b",
+        "label": "End Time",
+        "name": "end_time",
+        "type": "time_picker",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "display_format": "H:i",
+        "return_format": "H:i:s"
+      },
+      {
+        "key": "field_61891499a7318",
+        "label": "Contact Person",
+        "name": "contact_person",
+        "type": "relationship",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "post_type": ["contacts"],
+        "taxonomy": "",
+        "filters": ["search"],
+        "elements": "",
+        "min": 0,
+        "max": 1,
+        "return_format": "object"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "events"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "show_in_graphql": 1,
+    "graphql_field_name": "eventInformations",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  },
+  {
+    "key": "group_617ae74cd2863",
+    "title": "Organization Informations",
+    "fields": [
+      {
+        "key": "field_6188db3b463b5",
+        "label": "Name",
+        "name": "name",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae76ea2325",
+        "label": "Url",
+        "name": "url",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_617ae79fa2327",
+        "label": "Logo",
+        "name": "logo",
+        "type": "image",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "return_format": "array",
+        "preview_size": "medium",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      },
+      {
+        "key": "field_6188dad2aa067",
+        "label": "Description",
+        "name": "description",
+        "type": "textarea",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "maxlength": "",
+        "rows": "",
+        "new_lines": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "organizations"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "show_in_graphql": 1,
+    "graphql_field_name": "organizationInformations",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  },
+  {
+    "key": "group_6204d4a1a3e0a",
+    "title": "Teaser Informations",
+    "fields": [
+      {
+        "key": "field_6204d4b140b44",
+        "label": "Post",
+        "name": "post",
+        "type": "relationship",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "post_type": ["news", "events"],
+        "taxonomy": "",
+        "filters": ["search", "post_type"],
+        "elements": ["featured_image"],
+        "min": "",
+        "max": 1,
+        "return_format": "object"
+      },
+      {
+        "key": "field_6204db4c40b45",
+        "label": "Page Path",
+        "name": "page_path",
+        "type": "text",
+        "instructions": "optional link page path",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "/page/path",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6204db8740b46",
+        "label": "Image",
+        "name": "image",
+        "type": "image",
+        "instructions": "optional teaser image",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "return_format": "array",
+        "preview_size": "medium",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      },
+      {
+        "key": "field_6204dba240b47",
+        "label": "ButtonText",
+        "name": "button_text",
+        "type": "text",
+        "instructions": "optional button text",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "teaser"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "teaserInformations",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  },
+  {
+    "key": "group_6204f4ea1390b",
+    "title": "Link Tree Item Information",
+    "fields": [
+      {
+        "key": "field_6204f4f622b1a",
+        "label": "Url",
+        "name": "url",
+        "type": "url",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_6204f55539203",
+        "label": "Url Text",
+        "name": "url_text",
+        "type": "text",
+        "instructions": "url text is optional",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "optional",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6204f607b6dda",
+        "label": "Category",
+        "name": "category",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "taxonomy": "link_tree_item_category",
+        "field_type": "select",
+        "allow_null": 0,
+        "add_term": 0,
+        "save_terms": 0,
+        "load_terms": 0,
+        "return_format": "object",
+        "multiple": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "link_tree_items"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "linkTreeItemInformation",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  },
+  {
+    "key": "group_626ee248e4971",
+    "title": "Project Informations",
+    "fields": [
+      {
+        "key": "field_626ee571db127",
+        "label": "Project Logo",
+        "name": "project_logo",
+        "type": "image",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "return_format": "array",
+        "preview_size": "medium",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      },
+      {
+        "key": "field_626ee25bdb125",
+        "label": "Institution",
+        "name": "institution",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_626ee4e7db126",
+        "label": "Initiative",
+        "name": "initiative",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_626ee6d6db128",
+        "label": "Contact Person Full Name",
+        "name": "contact_person_full_name",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_626ee802db129",
+        "label": "Email",
+        "name": "email",
+        "type": "email",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_626ee864db12a",
+        "label": "Phone",
+        "name": "phone",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_626ee879db12b",
+        "label": "Address",
+        "name": "address",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_626ee89fdb12c",
+        "label": "Project Website",
+        "name": "project_website",
+        "type": "url",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "projects"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "projectInformations",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": ""
+  }
+]

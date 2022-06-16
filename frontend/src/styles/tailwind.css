@@ -126,7 +126,8 @@ section.container header:not(.text-left) p.lead {
 
 .event-description > ul,
 .wp-block-create-block-schedule-item div ul,
-.blog-post-content ul {
+.blog-post-content ul,
+.content ul {
   @apply list-disc list-outside leading-6 mb-6 pl-5;
 }
 

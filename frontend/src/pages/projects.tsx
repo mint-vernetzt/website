@@ -60,7 +60,7 @@ export function Projects({ data }) {
 
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
-          <div className="flex-100 pb-6 md:pb-0 md:flex-1/3 lg:flex-1/4 md:px-6 lg:px-10">
+          <div className="flex-1/4 pb-6 md:pb-0 md:flex-1/3 lg:flex-1/4 md:px-6 lg:px-10">
             <BadgeRocket />
             {/* <img
               className="w-full h-auto"
@@ -90,7 +90,7 @@ export function Projects({ data }) {
             </p>
             <p>
               <Link
-                to="/news/mintrakete-didaktik-als-schluessel-jetzt-bewerben"
+                to="/news/mintrakete-mint-trifft-kunst-und-kreativitat"
                 className="btn-primary"
               >
                 Teilnehmen

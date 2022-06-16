@@ -31,6 +31,12 @@ exports.createPages = async (props) => {
           slug
         }
       }
+      allWpProject {
+        nodes {
+          id
+          slug
+        }
+      }
     }
   `);
   result.data.allWpNewsItem.nodes.forEach((node) => {
@@ -52,6 +58,17 @@ exports.createPages = async (props) => {
       },
     });
   });
+
+  result.data.allWpProject.nodes.forEach((node) => {
+    createPage({
+      path: `/project/${node.slug}`,
+      component: path.resolve(`./src/templates/Project.tsx`),
+      context: {
+        id: node.id,
+      },
+    });
+  });
+
 
   const { createRedirect } = actions;
 

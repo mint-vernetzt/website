@@ -75,5 +75,13 @@ module.exports = {
         path: "src/data/pakt/",
       },
     },
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: `${process.env.MATOMO_SITE_ID}`,
+        matomoUrl: `${process.env.MATOMO_URL}`,
+        siteUrl: `${process.env.SITE_URL}`,
+      },
+    },
   ],
 };

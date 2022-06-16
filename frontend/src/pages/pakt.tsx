@@ -9,6 +9,7 @@ import {
   PaktDataByCategory,
 } from "../utils/dataTransformer";
 import { H1 } from "../components/Heading/Heading";
+import ContactCard from "../components/ContactCard/ContactCard";
 
 /* eslint-disable-next-line */
 export interface PaktProps {}
@@ -17,7 +18,7 @@ const getCategorySlugFromMember = (slug: string) => {
   return slug.split("/")[0] ?? "no-category";
 };
 
-export function Pakt({ data }: { data: GatsbyTypes.PaktPageQuery }) {
+export function Pakt({ data }) {
   const paktDataByCategory: PaktDataByCategory = getPaktDataByCategory(
     data.paktData.edges
   );
@@ -46,7 +47,7 @@ export function Pakt({ data }: { data: GatsbyTypes.PaktPageQuery }) {
   return (
     <Layout>
       <SEO
-        title={`Pakt`}
+        title={`Pakt für Frauen`}
         slug={`/pakt/`}
         description={""}
         image={""}
@@ -54,67 +55,90 @@ export function Pakt({ data }: { data: GatsbyTypes.PaktPageQuery }) {
       />
       <section className="container mt-8 md:mt-10 lg:mt-20">
         <div className="flex flex-wrap md:-mx-6 lg:-mx-10">
-          <div className="flex-100 md:flex-1/3 md:order-2 pb-4 md:pb-0 md:px-6 lg:px-10">
+          <div className="flex-100 lg:flex-1/3 lg:order-2 pb-4 lg:pb-0 lg:px-10">
             <PaktOverview />
+
+            <ContactCard
+              classes="contact-card my-10"
+              headline="Ansprechpartner:in"
+              name={`${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`}
+              position={data.wpContact.contactInformations.position}
+              phone={data.wpContact.contactInformations.phone}
+              email={data.wpContact.contactInformations.email}
+              avatar={{
+                src: data.wpContact.contactInformations.photo.localFile
+                  .childImageSharp.gatsbyImageData,
+                alt: `${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`,
+              }}
+            />
           </div>
 
-          <div className="flex-100 md:flex-2/3 md:px-6 lg:px-10 md:order-1">
+          <div className="flex-100 lg:flex-2/3 lg:px-10 lg:order-1">
             <H1 like="h0">
               MINT<span className="font-normal">pakt</span>
             </H1>
             <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
-              Der Nationale Pakt für Frauen in MINT-Berufen
+              #empowerMINT #FrauenInMINT
             </p>
 
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Seit 2008 haben sich über 370 Partner:innen aus Wirtschaft,
-              Wissenschaft, Medien und Politik im Nationalen Pakt für Frauen in
-              MINT-Berufen zusammengeschlossen. Ihr erklärtes Ziel ist es, mehr
-              Mädchen und Frauen für eine Karriere in MINT-Berufen zu
-              begeistern. Der Pakt ist im Mai 2021 von MINTvernetzt übernommen
-              worden und wird gemeinsam mit den Partner:innen weiterentwickelt.
-              Dies ist eine Übersicht über die aktuellen Pakt-Partner:innen, die
-              seit der Unterzeichnung des Memorandums für das Thema eintreten:
+              Der Pakt für Frauen in MINT-Berufen hat es sich zum Ziel gesetzt,
+              Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und
+              -Berufe zu begeistern und in ihrem Werdegang zu unterstützen. So
+              trägt der Pakt zu mehr Teilhabe in der Gesellschaft, zur Sicherung
+              des Innovations- und Wirtschaftsstandorts Deutschland und zur
+              Lösung globaler Herausforderungen bei.
             </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
+              Forschung initiiert und wird seit September 2021 von der
+              Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
+              300 Mitglieder aus   rund 270 verschiedenen Institutionen aus
+              Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
+              sich seither im Pakt zusammengeschlossen, um gemeinsam einen
+              Beitrag dafür zu leisten, Mädchen und Frauen stärker für
+              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern. Dies
+              ist eine Übersicht der aktuellen Mitglieder im Pakt für Frauen in
+              MINT-Berufen, die für die gemeinsamen Ziele eintreten:
+            </p>
+
+            <ul className="pakt-list">
+              {categories.map((category, index) => {
+                const categorySlug = getCategorySlugFromMember(
+                  paktDataByCategory[category][0].slug
+                );
+
+                return (
+                  <li
+                    key={category}
+                    id={categorySlug}
+                    className="pakt-category relative overflow-hidden"
+                  >
+                    <a
+                      href={`#${categorySlug}`}
+                      className="block font-bold text-blue-500 md:text-3xl md:leading-snug py-3 flex item-center"
+                    >
+                      {category}
+                    </a>
+                    <ul className="pakt-member max-h-0 overflow-hidden transition-all ease-in-out duration-300 px-6 md:px-8">
+                      {paktDataByCategory[category].map((member) => (
+                        <li key={member.slug} className="py-2">
+                          <Link
+                            to={`/pakt/${member.slug}`}
+                            className="block md:text-2xl"
+                          >
+                            {member.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
-      </section>
-      <section className="container my-4 md:my-6 lg:my-10">
-        <ul className="pakt-list">
-          {categories.map((category, index) => {
-            const categorySlug = getCategorySlugFromMember(
-              paktDataByCategory[category][0].slug
-            );
-
-            return (
-              <li
-                key={category}
-                id={categorySlug}
-                className="pakt-category relative overflow-hidden"
-              >
-                <a
-                  href={`#${categorySlug}`}
-                  className="block font-bold text-blue-500 md:text-3xl md:leading-snug py-3 flex item-center"
-                >
-                  {category}
-                </a>
-                <ul className="pakt-member max-h-0 overflow-hidden transition-all ease-in-out duration-300 px-6 md:px-8">
-                  {paktDataByCategory[category].map((member) => (
-                    <li key={member.slug} className="py-2">
-                      <Link
-                        to={`/pakt/${member.slug}`}
-                        className="block md:text-2xl"
-                      >
-                        {member.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+      </section>      
     </Layout>
   );
 }
@@ -132,6 +156,25 @@ export const pageQuery = graphql`
             slug
             name
             category
+          }
+        }
+      }
+    }
+    
+    wpContact(contactInformations: {lastName: {eq: "Linhoff"}}) {
+      id
+      contactInformations {
+        phone
+        firstName
+        lastName
+        email
+        position
+        photo {
+          altText
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 144)
+            }
           }
         }
       }

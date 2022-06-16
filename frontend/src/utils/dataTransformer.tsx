@@ -205,3 +205,20 @@ export const getTeasersData = (data: GatsbyTypes.LandingPageQuery) => {
     };
   });
 };
+
+export const getHostnameFromURL = (url: string) => {
+  let hostname;
+
+  if (url === null) {
+    return null;
+  }
+  hostname = url.match(/\/\/[^\/]+\//g);
+  if (hostname === null) {
+    return null;
+  }
+  hostname = hostname[0].substring(2, hostname[0].length - 1);
+  if (!hostname.includes("www.")) {
+    hostname = "www." + hostname;
+  }
+  return hostname;
+};

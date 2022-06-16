@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Icon, { IconType } from "../../components/Icon/Icon";
-import { H2, H3, H4, H6 } from "../../components/Heading/Heading";
+import { H2, H4, H5, H6 } from "../../components/Heading/Heading";
 
 export function DossierMeta({
   data,
@@ -405,7 +405,6 @@ export function DossierMeta({
           <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4">
             <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
               <div className="study_details mb-6">
-                <H3 className="font-semibold mb-2">Details</H3>
                 <p className="font-bold text-sm mb-2 text-neutral-900">
                   Veröffentlicht am 16.03.2022
                 </p>
@@ -421,12 +420,17 @@ export function DossierMeta({
                 <p>
                   Die Unterrepräsentation von Mädchen in MINT wird in der
                   Forschung in Zusammenhang mit Sozialisations- und
-                  Umwelteinflüsse durch Eltern, Lehrkräfte, Peers und Medien
+                  Umwelteinflüssen durch Eltern, Lehrkräfte, Peers und Medien
                   diskutiert. Wie kann dem mit didaktischen Maßnahmen entgegen
                   gewirkt werden um so mehr Mädchen für den Informatik-Bereich
-                  zu begeistern? Eine Übersicht von konkreten
-                  Handlungsempfehlungen und Strategien für gendersensible
-                  Informatik-Bildung.
+                  zu begeistern? Eines der wichtigsten Elemente, die zum
+                  Verbleib von Schülerinnen in der Informatik führen, ist das
+                  Interesse. Die im Rahmen des Meta-Reviews identifizierten
+                  didaktischen Empfehlungen sind deshalb nach sechs
+                  verschiedenen Phasen geordnet, in denen sich das
+                  Informatik-Interesse von Schülerinnen beständig
+                  weiterentwickelt und führen je Phase konkrete
+                  Handlungsempfehlungen auf.
                 </p>
               </div>
 
@@ -471,6 +475,21 @@ export function DossierMeta({
                 </ul>
               </div>
 
+              <hr className="mb-6" />
+
+              <div className="study_summary mb-4">
+                <H4 className="font-semibold mb-4">Interview</H4>
+                <Link to="/mint-bildungsforschung/themenspezial-interview-ingo-wagner/">
+                  <H5 className="font-semibold text-lg text-primary-400 hover:text-primary">
+                    „Es geht darum, Mädchen in der Informatik zu sehen“
+                  </H5>
+                  <p>
+                    Gespräch mit Ingo Wagner, einem der Autor:innen, über die
+                    Kernelemente der Übersichtsarbeit und wo MINT-Akteur:inenn
+                    und Eltern ansetzen können.
+                  </p>
+                </Link>
+              </div>
               {/* <hr className="mb-6" />
 
               <div className="study_download">
