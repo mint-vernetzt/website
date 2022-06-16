@@ -105,6 +105,8 @@ const yupSchema = buildYup(schema, {
     },
     $minLength: (constraints: { minLength: number }) =>
       `Mindestlänge ${constraints.minLength} Zeichen`,
+    $maxLength: (constraints: { maxLength: number }) =>
+      `Maximallänge ${constraints.maxLength} Zeichen`,
     $email: "Ungültige E-Mail Adresse ",
     $required: "Pflichtfeld",
   },
@@ -184,50 +186,56 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
         <div className="flex flex-wrap md:flex-nowrap md:-mx-4 my-10">
           <div className="order-2 md:order-1 flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
             <header className="text-left">
-              <H1 like="h2" className="font-bold">
-                News eintragen
-              </H1>
-              <p className="text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad
-                dicta, nulla consequuntur error fugiat amet accusamus quae
-                voluptate qui sunt officia quam. Possimus fuga natus quaerat
-                consequatur dolorem minima?
-              </p>
+              {!isSubmitSuccessful && !errors.serverError && (
+                <>
+                  <H1 like="h2" className="font-bold">
+                    News einreichen
+                  </H1>
+
+                  <p className="text-md">
+                    Über dieses Formular könnt Ihr Eure News mit der
+                    MINT-Community teilen. Einfach alle relevanten Informationen
+                    als kurze Meldung in unser Formular eintragen und nach einer
+                    kurzen Prüfung, findet Ihr diese auf unserer Webseite.
+                  </p>
+                </>
+              )}
+
+              {isSubmitted && errors.serverError && (
+                <>
+                  <H1 like="h2" className="font-bold">
+                    Leider gab es einen Fehler
+                  </H1>
+                  <p>
+                    Bitte versuche es noch einmal oder kontaktiere{" "}
+                    {data?.PageContact?.contactInformations?.firstName}.
+                  </p>
+                  <button
+                    className="btn-primary"
+                    onClick={() => {
+                      reset({ terms_accepted: "true" }, { keepValues: true });
+                    }}
+                  >
+                    Zurück zum Formular
+                  </button>
+                </>
+              )}
+
+              {isSubmitSuccessful && (
+                <>
+                  <H1 like="h2" className="font-bold">
+                    Vielen Dank!
+                  </H1>
+                  <p>
+                    Wir posten deine News sobald sie von unserem Team gesichtet
+                    wurde.
+                  </p>
+                  <button className="btn-primary" onClick={() => reset()}>
+                    Weitere News einreichen
+                  </button>
+                </>
+              )}
             </header>
-
-            {isSubmitted && errors.serverError && (
-              <>
-                <H2 like="h4">Leider gab es einen Fehler bei der Versendung</H2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                  quod minus repellat non quibusdam tempora! Temporibus
-                  consequuntur sunt dignissimos quia expedita ad alias,
-                  laboriosam distinctio aut! Quos esse tempora commodi.
-                </p>
-                <button
-                  className="btn-primary"
-                  onClick={() => {
-                    reset({ terms_accepted: "true" }, { keepValues: true });
-                  }}
-                >
-                  Zurück zum Formular
-                </button>
-              </>
-            )}
-
-            {isSubmitSuccessful && (
-              <>
-                <H2 like="h4">News eingereicht</H2>
-                <H3 like="h5">Vielen Dank!</H3>
-                <p>
-                  Wir posten deine News sobald sie von unserem Team gesichtet
-                  wurde.
-                </p>
-                <button className="btn-primary" onClick={() => reset()}>
-                  Juhu
-                </button>
-              </>
-            )}
 
             {!errors.serverError && !isSubmitSuccessful && (
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -323,7 +331,11 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                     />
                     <span className="label-text">
                       Ich stimme der Verwendung meiner eingegebnenen Daten
-                      entsprechend der Datenschutzerklärung zu
+                      entsprechend der{" "}
+                      <a className="underline" href="/privacy" target="_blank">
+                        Datenschutzerklärung
+                      </a>{" "}
+                      zu
                     </span>
                   </FormLabel>
                 </FormRowCheckbox>
@@ -350,7 +362,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                     type="submit"
                     disabled={!isValid || isSubmitting}
                   >
-                    {isSubmitting ? "sende ..." : "senden"}
+                    {isSubmitting ? "sende ..." : "Senden"}
                   </button>
                 </div>
               </form>
