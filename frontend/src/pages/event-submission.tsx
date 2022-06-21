@@ -498,9 +498,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 1488, quality: 80)
       }
     }
-    PageContact: wpContact(
-      contactInformations: { lastName: { eq: "Kellner" } }
-    ) {
+    PageContact: wpContact(contactInformations: { lastName: { eq: "Novik" } }) {
       contactInformations {
         firstName
         lastName
