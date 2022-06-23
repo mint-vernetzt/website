@@ -168,12 +168,15 @@ export function Index({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-2 lg:-mx-4">
           <div className="flex-100 pb-8 md:pb-0 md:flex-2/3 md:px-2 lg:px-4">
-            <div className="flex items-baseline justify-between no-wrap">
-              <H2 like="h1">
+            <div className="flex items-baseline justify-end no-wrap">
+              <H2 like="h1" className="grow">
                 <strong>MINT</strong>news
               </H2>
-              <Link to="/news/" className="text-sm text-primary">
+              <Link to="/news/" className="text-sm text-primary mr-4">
                 Alle ansehen
+              </Link>
+              <Link to="/news-submission/" className="text-sm text-primary">
+                News einreichen
               </Link>
             </div>
             <NewsFeed
