@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Affix from "../components/Affix";
@@ -83,6 +83,12 @@ export function News({ data }: { data: GatsbyTypes.NewsFeedQuery }) {
             </div>
           </div>
         </div>
+        <Link
+          to="/news-submission/"
+          className="text-sm text-primary float-right mt-4 lg:mt-8"
+        >
+          News einreichen
+        </Link>
       </section>
       <section className="container my-8 md:my-10 lg:my-20" ref={scrollToRef}>
         <div style={{ height: "50px" }} className="mb-2">
