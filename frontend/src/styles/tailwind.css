@@ -186,6 +186,7 @@ ol {
 .hero-index,
 .hero-news {
   height: 540px;
+  z-index: 0;
 }
 .hero-index .hero-text {
   background-image: linear-gradient(
@@ -376,4 +377,8 @@ ol {
 
 .form-control.checkbox .label-text {
   @apply order-2 flex-auto;
+}
+
+.gatsby-image-wrapper {
+  z-index: 0;
 }

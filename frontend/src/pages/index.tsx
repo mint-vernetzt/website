@@ -151,7 +151,7 @@ export function Index({
               className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
             >
               <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4 z-0">
                   <GatsbyImage
                     image={teaserbox.image}
                     className="w-full h-auto"
