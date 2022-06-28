@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import Affix from "../components/Affix";
 import ChipFilter from "../components/ChipFilter/ChipFilter";
@@ -67,7 +67,7 @@ export function Events({ data }: { data: GatsbyTypes.EventFeedQuery }) {
         description=""
       />
 
-      <section className="container my-8 md:my-10 lg:my-20">
+      <section className="container mt-8 md:mt-10 lg:mt-20 mb-3 md:mb-4 lg:mb-8">
         <div className="flex flex-wrap md:-mx-6 lg:-mx-10">
           <div className="flex-100 md:flex-1/3 md:order-2 pb-4 md:pb-0 md:px-6 lg:px-10">
             <EventsOverview />
@@ -99,10 +99,17 @@ export function Events({ data }: { data: GatsbyTypes.EventFeedQuery }) {
           </div>
         </div>
       </section>
-
+      <section className="container flex justify-end">
+        <Link
+          to="/event-submission/"
+          className="inline-block border border-primary hover:bg-primary py-2 px-4 text-primary hover:text-white text-semibold font-sm rounded-lg"          
+        >
+          Event einreichen
+        </Link>
+      </section>
       <section
         ref={scrollToRef}
-        className="container event-list my-8 md:my-10 lg:my-20"
+        className="container event-list mb-8 md:mb-10 lg:mb-20 mt-3 md:mt-4 lg:mt-8"
       >
         <div style={{ height: "50px" }} className="mb-2">
           <Affix top={0} className="z-50">
