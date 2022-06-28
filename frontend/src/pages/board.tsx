@@ -165,11 +165,11 @@ export function Board({ data }: { data: GatsbyTypes.BoardPageQuery }) {
             Blick zu behalten.
           </p>
         </header>
-        <div className="rounded-3xl overflow-hidden">
+        <div className="">
           {data?.heroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
             <GatsbyImage
               image={data.heroImage.childImageSharp.gatsbyImageData}
-              className="w-full h-full"
+              className="w-full h-full rounded-3xl overflow-hidden z-0"
               alt="Unsere Gremien."
             />
           ) : null}
