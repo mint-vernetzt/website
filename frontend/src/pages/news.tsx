@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Affix from "../components/Affix";
@@ -63,7 +63,7 @@ export function News({ data }: { data: GatsbyTypes.NewsFeedQuery }) {
         description=""
         image=""
       />
-      <section className="container my-8 md:my-10 lg:my-20">
+      <section className="container mt-8 md:mt-10 lg:mt-20 mb-3 md:mb-4 lg:mb-8">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
           {data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
             <GatsbyImage
@@ -82,9 +82,17 @@ export function News({ data }: { data: GatsbyTypes.NewsFeedQuery }) {
               </p>
             </div>
           </div>
-        </div>
+        </div>        
       </section>
-      <section className="container my-8 md:my-10 lg:my-20" ref={scrollToRef}>
+      <section className="container flex justify-end">
+        <Link
+          to="/news-submission/"
+          className="inline-block border border-primary hover:bg-primary py-2 px-4 text-primary hover:text-white text-semibold font-sm rounded-lg"          
+        >
+          News einreichen
+        </Link>
+      </section>
+      <section className="container mb-8 md:mb-10 lg:mb-20 mt-2 md:mt-3 lg:mt-6" ref={scrollToRef}>
         <div style={{ height: "50px" }} className="mb-2">
           <Affix top={0} className="z-50">
             <ChipFilter
