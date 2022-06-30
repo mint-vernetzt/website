@@ -114,9 +114,9 @@ export function About({ data }: { data: GatsbyTypes.AboutPageQuery }) {
             },
             {
               title: `Community`,
-              text: `Erste Ansprechperson für alle Belange rund um unsere digitale Community-Plattform ist Anna Schröter. Ihr erreicht sie auf diesem Wege:`,
-              phone: `0211 7570762`,
-              mail: `anna.schroeter@mint-vernetzt.de`,
+              text: `Erste Ansprechperson für alle Belange rund um unsere digitale Community-Plattform ist Inga Leffers. Ihr erreicht sie auf diesem Wege:`,
+              phone: `0211 75707314`,
+              mail: `inga.leffers@mint-vernetzt.de`,
             },
             {
               title: `Veranstaltungen`,
