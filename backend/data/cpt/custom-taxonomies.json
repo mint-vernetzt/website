@@ -399,9 +399,9 @@
     "meta_box_cb": "",
     "default_term": "",
     "object_types": ["events"],
-    "show_in_graphql": "0",
-    "graphql_single_name": "",
-    "graphql_plural_name": ""
+    "show_in_graphql": "1",
+    "graphql_single_name": "EventType",
+    "graphql_plural_name": "EventTypes"
   },
   "experiencelevels": {
     "name": "experiencelevels",
@@ -450,8 +450,8 @@
     "meta_box_cb": "",
     "default_term": "",
     "object_types": ["events"],
-    "show_in_graphql": "0",
-    "graphql_single_name": "",
-    "graphql_plural_name": ""
+    "show_in_graphql": "1",
+    "graphql_single_name": "ExperienceLevel",
+    "graphql_plural_name": "ExperienceLevels"
   }
 }
