@@ -130,77 +130,77 @@ export function Mintraketen({ data }) {
         </div>
       </section>
       {data.calls.nodes.map((call) => {
-        return (
+        const projects = data.projects.nodes.filter((project) =>
+          project.calls.nodes.some(
+            (projectCall) => projectCall.slug === call.slug
+          )
+        );
+
+        return projects.length > 0 ? (
           <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
             <H2>{call.name}</H2>
             <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {data.projects.nodes
-                .filter((project) =>
-                  project.calls.nodes.some(
-                    (projectCall) => projectCall.slug === call.slug
-                  )
-                )
-                .map((project, index) => {
-                  let projectHostname = getHostnameFromURL(
-                    project.projectInformations.projectWebsite
-                  );
-                  return (
-                    <div
-                      key={`teaserbox-${index}`}
-                      className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+              {projects.map((project, index) => {
+                let projectHostname = getHostnameFromURL(
+                  project.projectInformations.projectWebsite
+                );
+                return (
+                  <div
+                    key={`teaserbox-${index}`}
+                    className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+                  >
+                    <Link
+                      to={`/project/${project.slug}`}
+                      className="flex flex-col h-100"
                     >
-                      <Link
-                        to={`/project/${project.slug}`}
-                        className="flex flex-col h-100"
-                      >
-                        <div className="flex flex-nowrap content-center items-center">
-                          <div className="flex-1/4 overflow-hidden mb-2 lg:mb-4 lg:leading-snug lg:mx-2">
-                            <GatsbyImage
-                              image={
-                                project.projectInformations.projectLogo
-                                  .localFile.childImageSharp.gatsbyImageData
-                              }
-                              className="w-fit h-auto"
-                              alt=""
-                            />
-                          </div>
-                          <div className="flex-3/4 mb-4">
-                            <H3
-                              like="h5"
-                              className="line-clamp-2 lg:leading-snug lg:mx-2"
-                            >
-                              {project.title}
-                            </H3>
-                            <p className="lg:leading-snug lg:mx-2 text-xs">
-                              <strong>
-                                {project.projectInformations.institution}
-                              </strong>
-                            </p>
-                          </div>
+                      <div className="flex flex-nowrap content-center items-center">
+                        <div className="flex-1/4 overflow-hidden mb-2 lg:mb-4 lg:leading-snug lg:mx-2">
+                          <GatsbyImage
+                            image={
+                              project.projectInformations.projectLogo.localFile
+                                .childImageSharp.gatsbyImageData
+                            }
+                            className="w-fit h-auto"
+                            alt=""
+                          />
                         </div>
-                        <div
-                          className="line-clamp-2 lg:mx-2"
-                          dangerouslySetInnerHTML={{
-                            __html: project.excerpt as string,
-                          }}
-                        />
-                      </Link>
-                      <div className="mt-2">
-                        <a
-                          href={project.projectInformations.projectWebsite}
-                          className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
-                        >
-                          {projectHostname === null
-                            ? project.projectInformations.projectWebsite
-                            : projectHostname}
-                        </a>
+                        <div className="flex-3/4 mb-4">
+                          <H3
+                            like="h5"
+                            className="line-clamp-2 lg:leading-snug lg:mx-2"
+                          >
+                            {project.title}
+                          </H3>
+                          <p className="lg:leading-snug lg:mx-2 text-xs">
+                            <strong>
+                              {project.projectInformations.institution}
+                            </strong>
+                          </p>
+                        </div>
                       </div>
+                      <div
+                        className="line-clamp-2 lg:mx-2"
+                        dangerouslySetInnerHTML={{
+                          __html: project.excerpt as string,
+                        }}
+                      />
+                    </Link>
+                    <div className="mt-2">
+                      <a
+                        href={project.projectInformations.projectWebsite}
+                        className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
+                      >
+                        {projectHostname === null
+                          ? project.projectInformations.projectWebsite
+                          : projectHostname}
+                      </a>
                     </div>
-                  );
-                })}
+                  </div>
+                );
+              })}
             </div>
           </section>
-        );
+        ) : null;
       })}
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
