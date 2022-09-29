@@ -67,7 +67,7 @@ export function Mintraketen({ data }) {
                 data.currentTender.nodes[0].featuredImage.node.localFile
                   .childImageSharp.gatsbyImageData,
               altText: data.currentTender.nodes[0].featuredImage.node.altText,
-              title: `Aktuelle Ausschreibung`,
+              title: data.currentTender.nodes[0].title,
               text: `Erfahrt hier alles zur aktuellen Ausschreibung und zu den Teilnahmebedingungen. Wir sind gespannt auf Eure Projekte.`,
               link: `/news/${data.currentTender.nodes[0].slug}`,
             },
@@ -76,7 +76,7 @@ export function Mintraketen({ data }) {
                 data.previousTender.nodes[0].featuredImage.node.localFile
                   .childImageSharp.gatsbyImageData,
               altText: data.previousTender.nodes[0].featuredImage.node.altText,
-              title: `Vergangene Ausschreibungen`,
+              title: data.previousTender.nodes[0].title,
               text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht haben? Dann hier entlang!`,
               link: `/news/${data.previousTender.nodes[0].slug}`,
             },
@@ -129,69 +129,79 @@ export function Mintraketen({ data }) {
           </div>
         </div>
       </section>
+      {data.calls.nodes.map((call) => {
+        const projects = data.projects.nodes.filter((project) =>
+          project.calls.nodes.some(
+            (projectCall) => projectCall.slug === call.slug
+          )
+        );
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {data.projects.nodes.map((project, index) => {
-            let projectHostname = getHostnameFromURL(
-              project.projectInformations.projectWebsite
-            );
-            return (
-              <div
-                key={`teaserbox-${index}`}
-                className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
-              >
-                <Link
-                  to={`/project/${project.slug}`}
-                  className="flex flex-col h-100"
-                >
-                  <div className="flex flex-nowrap content-center items-center">
-                    <div className="flex-1/4 overflow-hidden mb-2 lg:mb-4 lg:leading-snug lg:mx-2">
-                      <GatsbyImage
-                        image={
-                          project.projectInformations.projectLogo.localFile
-                            .childImageSharp.gatsbyImageData
-                        }
-                        className="w-fit h-auto"
-                        alt=""
+        return projects.length > 0 ? (
+          <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+            <H2>{call.name}</H2>
+            <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {projects.map((project, index) => {
+                let projectHostname = getHostnameFromURL(
+                  project.projectInformations.projectWebsite
+                );
+                return (
+                  <div
+                    key={`teaserbox-${index}`}
+                    className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+                  >
+                    <Link
+                      to={`/project/${project.slug}`}
+                      className="flex flex-col h-100"
+                    >
+                      <div className="flex flex-nowrap content-center items-center">
+                        <div className="flex-1/4 overflow-hidden mb-2 lg:mb-4 lg:leading-snug lg:mx-2">
+                          <GatsbyImage
+                            image={
+                              project.projectInformations.projectLogo.localFile
+                                .childImageSharp.gatsbyImageData
+                            }
+                            className="w-fit h-auto"
+                            alt=""
+                          />
+                        </div>
+                        <div className="flex-3/4 mb-4">
+                          <H3
+                            like="h5"
+                            className="line-clamp-2 lg:leading-snug lg:mx-2"
+                          >
+                            {project.title}
+                          </H3>
+                          <p className="lg:leading-snug lg:mx-2 text-xs">
+                            <strong>
+                              {project.projectInformations.institution}
+                            </strong>
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        className="line-clamp-2 lg:mx-2"
+                        dangerouslySetInnerHTML={{
+                          __html: project.excerpt as string,
+                        }}
                       />
-                    </div>
-                    <div className="flex-3/4 mb-4">
-                      <H3
-                        like="h5"
-                        className="line-clamp-2 lg:leading-snug lg:mx-2"
+                    </Link>
+                    <div className="mt-2">
+                      <a
+                        href={project.projectInformations.projectWebsite}
+                        className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
                       >
-                        {project.title}
-                      </H3>
-                      <p className="lg:leading-snug lg:mx-2 text-xs">
-                        <strong>
-                          {project.projectInformations.institution}
-                        </strong>
-                      </p>
+                        {projectHostname === null
+                          ? project.projectInformations.projectWebsite
+                          : projectHostname}
+                      </a>
                     </div>
                   </div>
-                  <div
-                    className="line-clamp-2 lg:mx-2"
-                    dangerouslySetInnerHTML={{
-                      __html: project.excerpt as string,
-                    }}
-                  />
-                </Link>
-                <div className="mt-2">
-                  <a
-                    href={project.projectInformations.projectWebsite}
-                    className="lg:leading-snug lg:mx-2 text-lilac-500 font-bold hover:underline"
-                  >
-                    {projectHostname === null
-                      ? project.projectInformations.projectWebsite
-                      : projectHostname}
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+                );
+              })}
+            </div>
+          </section>
+        ) : null;
+      })}
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <H2 like="h1">
@@ -320,6 +330,17 @@ export const pageQuery = graphql`
         }
         excerpt
         slug
+        calls {
+          nodes {
+            slug
+          }
+        }
+      }
+    }
+    calls: allWpCall(sort: { fields: [id], order: DESC }) {
+      nodes {
+        name
+        slug
       }
     }
     news: allWpNewsItem(
@@ -355,6 +376,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         slug
+        title
         featuredImage {
           node {
             altText
@@ -372,6 +394,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         slug
+        title
         featuredImage {
           node {
             altText
