@@ -67,7 +67,7 @@ export function Mintraketen({ data }) {
                 data.currentTender.nodes[0].featuredImage.node.localFile
                   .childImageSharp.gatsbyImageData,
               altText: data.currentTender.nodes[0].featuredImage.node.altText,
-              title: `Aktuelle Ausschreibung`,
+              title: data.currentTender.nodes[0].title,
               text: `Erfahrt hier alles zur aktuellen Ausschreibung und zu den Teilnahmebedingungen. Wir sind gespannt auf Eure Projekte.`,
               link: `/news/${data.currentTender.nodes[0].slug}`,
             },
@@ -76,7 +76,7 @@ export function Mintraketen({ data }) {
                 data.previousTender.nodes[0].featuredImage.node.localFile
                   .childImageSharp.gatsbyImageData,
               altText: data.previousTender.nodes[0].featuredImage.node.altText,
-              title: `Vergangene Ausschreibungen`,
+              title: data.previousTender.nodes[0].title,
               text: `Ihr interessiert Euch für die letzten Ausschreibungen, die Themen und Projekte, nach denen wir gesucht haben? Dann hier entlang!`,
               link: `/news/${data.previousTender.nodes[0].slug}`,
             },
@@ -376,6 +376,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         slug
+        title
         featuredImage {
           node {
             altText
@@ -393,6 +394,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         slug
+        title
         featuredImage {
           node {
             altText
