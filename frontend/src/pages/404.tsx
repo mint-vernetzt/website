@@ -33,11 +33,15 @@ const NotFoundPage = () => {
       <p style={paragraphStyles}>
         Es tut uns leid: Diese Seite ist leider nicht erreichbar.
         <br />
-        Vielleicht enthält{" "}
-        <Link to={`${document.location.pathname}`}>
-          {document.location.href}
-        </Link>{" "}
-        einen Tippfehler?
+        {typeof document !== "undefined" ? (
+          <>
+            Vielleicht enthält{" "}
+            <Link to={`${document.location.pathname}`}>
+              {document.location.href}
+            </Link>{" "}
+            einen Tippfehler?
+          </>
+        ) : null}
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
