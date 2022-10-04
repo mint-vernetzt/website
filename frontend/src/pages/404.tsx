@@ -29,13 +29,15 @@ const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
+      <h1 style={headingStyles}>Seite wurde nicht gefunden</h1>
       <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
+        Es tut uns leid: Diese Seite ist leider nicht erreichbar.
+        <br />
+        Vielleicht enthält{" "}
+        <Link to={`${document.location.pathname}`}>
+          {document.location.href}
+        </Link>{" "}
+        einen Tippfehler?
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -45,7 +47,8 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        Hier findet Ihr viele Informationen über uns und die MINT-Bildung in
+        Deutschland: Zu <Link to="/">MINTvernetzt</Link>
       </p>
     </main>
   );
