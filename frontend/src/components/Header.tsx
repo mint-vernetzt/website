@@ -33,6 +33,7 @@ function Teaser(props: { menu: MenuItem }) {
 
 export function Header() {
   const [isExpanded, toggleExpansion] = React.useState(false);
+  const [activeMenu, setActiveMenu] = React.useState<number | null>(null);
   const megaMenu = useMenu();
 
   return (
@@ -68,7 +69,6 @@ export function Header() {
               </svg>
             </Link>
           </div>
-
           <button
             className="h-6 w-6 lg:hidden ml-auto"
             onClick={() => toggleExpansion(!isExpanded)}
@@ -90,7 +90,6 @@ export function Header() {
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900 transform -rotate-45 absolute top-2 left-0"></span>
             </span>
           </button>
-
           <nav
             className={`${
               isExpanded ? `block` : `hidden`
@@ -102,31 +101,18 @@ export function Header() {
                   key={`nav-item-${index}`}
                   className="mainNav text-center py-2 px-4 lg:py-0"
                 >
-                  <Link
-                    className="inline-block py-px px-2 rounded-lg hover:bg-blue-500 hover:text-neutral-200"
-                    as={GatsbyLink}
-                    to={mainMenu.url}
+                  <a
+                    className={`inline-block py-px px-2 rounded-lg hover:bg-blue-500 hover:text-neutral-200 ${
+                      activeMenu === index ? "bg-blue-500 text-neutral-200" : ""
+                    }`}
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveMenu(index === activeMenu ? null : index);
+                    }}
                   >
                     {mainMenu.title}
-                  </Link>
-                  {hasMenus(mainMenu) === true && (
-                    <div className="subNav flex hidden">
-                      <ul className="menu">
-                        {mainMenu.items.map((menu) => (
-                          <li key={mainMenu.url + menu.url}>
-                            <SubMenuItem menu={menu} />
-                          </li>
-                        ))}
-                      </ul>
-                      <ul className="teaser">
-                        {mainMenu.teaser.map((teaser) => (
-                          <li key={mainMenu.url + teaser.url}>
-                            <Teaser menu={teaser} />
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -134,6 +120,30 @@ export function Header() {
           </nav>
         </div>
       </div>
+      <button onClick={() => setActiveMenu(null)}>Close</button>
+      {megaMenu.menu.map((mainMenu, index) => {
+        return (
+          activeMenu === index &&
+          hasMenus(mainMenu) === true && (
+            <div className="subNav flex">
+              <ul className="menu">
+                {mainMenu.items.map((menu) => (
+                  <li key={mainMenu.url + menu.url}>
+                    <SubMenuItem menu={menu} />
+                  </li>
+                ))}
+              </ul>
+              <ul className="teaser">
+                {mainMenu.teaser.map((teaser) => (
+                  <li key={mainMenu.url + teaser.url}>
+                    <Teaser menu={teaser} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        );
+      })}
     </div>
   );
 }
