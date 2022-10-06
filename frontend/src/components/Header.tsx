@@ -1,9 +1,39 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import { Link } from "./Link";
+import { MainMenu, MenuItem, useMenu } from "../hooks/useMenu";
+import { GatsbyImage } from "gatsby-plugin-image";
+
+function hasMenus(mainMenu: MainMenu) {
+  return mainMenu.teaser.length > 0 || mainMenu.items.length > 0;
+}
+
+function SubMenuItem(props: { menu: MenuItem }) {
+  const { title, description, url, image } = props.menu;
+
+  return (
+    <Link to={url}>
+      <span>{title}</span>
+      {image && <GatsbyImage image={image} alt={title} />}
+      {description}
+    </Link>
+  );
+}
+
+function Teaser(props: { menu: MenuItem }) {
+  const { title, description, url, image } = props.menu;
+
+  return (
+    <Link to={url}>
+      <span>TEASER: {title}</span>
+      {description}
+    </Link>
+  );
+}
 
 export function Header() {
   const [isExpanded, toggleExpansion] = React.useState(false);
+  const megaMenu = useMenu();
 
   return (
     <div className="header-section py-4 shadow-lg">
@@ -67,47 +97,40 @@ export function Header() {
             } flex-100 lg:block lg:ml-auto lg:flex-auto`}
           >
             <ul className="py-8 text-sm leading-6 lg:py-0 lg:flex lg:items-center lg:justify-end lg:-mx-2">
-              {[
-                {
-                  route: `/about/`,
-                  title: `Über uns`,
-                },
-                {
-                  route: `/board/`,
-                  title: `Gremien`,
-                },
-                {
-                  route: `/news/`,
-                  title: `Neuigkeiten`,
-                },
-                {
-                  route: `/events/`,
-                  title: `Veranstaltungen`,
-                },
-                {
-                  route: `/projects/`,
-                  title: `Projekte`,
-                },
-                {
-                  route: `/pakt/`,
-                  title: `Pakt für Frauen`,
-                },
-              ].map((link, index) => (
+              {megaMenu.menu.map((mainMenu, index) => (
                 <li
                   key={`nav-item-${index}`}
-                  className="text-center py-2 px-4 lg:py-0"
+                  className="mainNav text-center py-2 px-4 lg:py-0"
                 >
                   <Link
                     className="inline-block py-px px-2 rounded-lg hover:bg-blue-500 hover:text-neutral-200"
                     as={GatsbyLink}
-                    key={link.title}
-                    to={link.route}
+                    to={mainMenu.url}
                   >
-                    {link.title}
+                    {mainMenu.title}
                   </Link>
+                  {hasMenus(mainMenu) === true && (
+                    <div className="subNav flex hidden">
+                      <ul className="menu">
+                        {mainMenu.items.map((menu) => (
+                          <li key={mainMenu.url + menu.url}>
+                            <SubMenuItem menu={menu} />
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="teaser">
+                        {mainMenu.teaser.map((teaser) => (
+                          <li key={mainMenu.url + teaser.url}>
+                            <Teaser menu={teaser} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
+            {megaMenu.teasers.map((menu) => menu.title)}
           </nav>
         </div>
       </div>

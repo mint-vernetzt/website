@@ -531,7 +531,6 @@
     "supports": [
       "title",
       "thumbnail",
-      "excerpt",
       "custom-fields",
       "page-attributes"
     ],

@@ -49,6 +49,26 @@
         "return_format": "value",
         "ajax": 0,
         "placeholder": ""
+      },
+      {
+        "key": "field_633ebc9274ddb",
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "show_in_graphql": 1,
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
       }
     ],
     "location": [

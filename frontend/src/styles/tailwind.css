@@ -382,3 +382,26 @@ ol {
 .gatsby-image-wrapper {
   z-index: 0;
 }
+
+
+.mainNav {
+  position: relative;
+}
+
+.mainNav .subNav {
+  display: hidden;
+}
+
+.mainNav:hover .subNav, .subNav:hover {
+  display: block;
+}
+
+.subNav {
+  position: absolute;
+  top: 0px;
+  width: 200px;
+  margin-top: 20px;
+  padding-top: 50px;
+  background: white;
+  z-index: 9999;
+}
