@@ -12,10 +12,14 @@ function SubMenuItem(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url}>
-      <span>{title}</span>
-      {image && <GatsbyImage image={image} alt={title} />}
-      {description}
+    <Link to={url} className="flex text-left mb-8">
+      <div className="w-24 mr-6 pt-2 shrink-0">
+        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
+      </div>
+      <div className="">
+        <h4 className="font-bold m-0 leading-normal">{title}</h4>
+        <p className="text-base">{description}</p>
+      </div>        
     </Link>
   );
 }
@@ -24,9 +28,14 @@ function Teaser(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url}>
-      <span>TEASER: {title}</span>
-      {description}
+    <Link to={url} className="flex text-left mb-8">
+      <div className="w-24 mr-6 pt-2 shrink-0">
+        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
+      </div>
+      <div className="">
+        <h4 className="font-bold m-0 leading-normal">{title}</h4>
+        <p className="text-base">{description}</p>
+      </div>        
     </Link>
   );
 }
@@ -35,12 +44,14 @@ export function Header() {
   const [isExpanded, toggleExpansion] = React.useState(false);
   const [activeMenu, setActiveMenu] = React.useState<number | null>(null);
   const megaMenu = useMenu();
+  console.log(megaMenu)
 
   return (
-    <div className="header-section py-4 shadow-lg">
-      <div className="container">
+    <div className={`header-section shadow-lg`}>
+      <button onClick={() => setActiveMenu(null)} className={`w-screen h-screen absolute top-0 left-0 ${activeMenu !== null ? "block" : "hidden"}`}></button>
+      <div className="container relative py-4 bg-white z-10">
         <div className="flex flex-wrap items-center">
-          <div className="logo-mint lg:pr-16">
+          <div className="logo-mint lg:pr-8">
             <Link to="/" as={GatsbyLink}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,82 +79,97 @@ export function Header() {
                 </g>
               </svg>
             </Link>
+          </div>          
+          <nav
+            className={`${isExpanded ? `block` : `hidden`
+              } flex-100 lg:block lg:flex-auto`}
+          >
+            <ul className="py-8 text-sm leading-6 lg:py-0 lg:flex lg:items-center lg:-mx-2">
+              {megaMenu.menu.map((mainMenu, index) => (
+                <li
+                  key={`nav-item-${index}`}
+                  className="mainNav text-center py-2 px-2 lg:py-0"
+                >
+                  {hasMenus(mainMenu) === true && (
+                    <>
+                      <a
+                        className={`inline-block py-1 px-4 rounded-lg hover:bg-blue-500 hover:text-neutral-200 ${activeMenu === index ? "bg-blue-500 text-neutral-200" : ""
+                          }`}
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setActiveMenu(index === activeMenu ? null : index);
+                        }}
+                      >
+                        {mainMenu.title}
+                      </a>
+                    
+                      {activeMenu === index && (
+                        <div className="absolute top-full left-0 right-0 overflow-hidden mx-20">
+                          <div className="subNav flex mx-8 mb-8 bg-white shadow-[0px_8px_24px_-4px_#00000029] rounded-b-2xl">
+                            <div className="w-1/2 bg-white rounded-bl-2xl">
+                              <ul className="menu p-8">
+                                {mainMenu.items.map((menu) => (
+                                  <li key={mainMenu.url + menu.url}>
+                                    <SubMenuItem menu={menu} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>  
+                            <div className="w-1/2 bg-[#EFE8E6] rounded-br-2xl">
+                              <ul className="teaser p-8">
+                                {mainMenu.teaser.map((teaser) => (
+                                  <li key={mainMenu.url + teaser.url}>
+                                    <Teaser menu={teaser} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>  
+                          </div>
+                        </div>  
+                      )}
+                    </>    
+                  )}
+                  {hasMenus(mainMenu) === false && (
+                    <Link
+                      className="inline-block py-1 px-4 rounded-lg hover:bg-blue-500 hover:text-neutral-200"
+                      as={GatsbyLink}
+                      to={mainMenu.url}
+                    >
+                      {mainMenu.title}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+            {megaMenu.teasers.map((menu) => menu.title)}
+          </nav>
+          <div className="ml-auto">
+            <a
+              className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200" 
+              href="https://community.mint-vernetzt.de/" target="_blank">Zur Community-Plattform</a>
           </div>
           <button
             className="h-6 w-6 lg:hidden ml-auto"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <span
-              className={`${
-                isExpanded ? `hidden` : `block`
-              } items-center h-6 w-6 px-0.5 flex flex-col justify-center`}
+              className={`${isExpanded ? `hidden` : `block`
+                } items-center h-6 w-6 px-0.5 flex flex-col justify-center`}
             >
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
             </span>
             <span
-              className={`${
-                isExpanded ? `block` : `hidden`
-              } items-center h-6 w-6 px-0.5 flex flex-col relative`}
+              className={`${isExpanded ? `block` : `hidden`
+                } items-center h-6 w-6 px-0.5 flex flex-col relative`}
             >
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900 transform rotate-45 absolute top-2 left-0"></span>
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900 transform -rotate-45 absolute top-2 left-0"></span>
             </span>
           </button>
-          <nav
-            className={`${
-              isExpanded ? `block` : `hidden`
-            } flex-100 lg:block lg:ml-auto lg:flex-auto`}
-          >
-            <ul className="py-8 text-sm leading-6 lg:py-0 lg:flex lg:items-center lg:justify-end lg:-mx-2">
-              {megaMenu.menu.map((mainMenu, index) => (
-                <li
-                  key={`nav-item-${index}`}
-                  className="mainNav text-center py-2 px-4 lg:py-0"
-                >
-                  <a
-                    className={`inline-block py-px px-2 rounded-lg hover:bg-blue-500 hover:text-neutral-200 ${
-                      activeMenu === index ? "bg-blue-500 text-neutral-200" : ""
-                    }`}
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setActiveMenu(index === activeMenu ? null : index);
-                    }}
-                  >
-                    {mainMenu.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            {megaMenu.teasers.map((menu) => menu.title)}
-          </nav>
         </div>
-      </div>
-      <button onClick={() => setActiveMenu(null)}>Close</button>
-      {megaMenu.menu.map((mainMenu, index) => {
-        return (
-          activeMenu === index &&
-          hasMenus(mainMenu) === true && (
-            <div className="subNav flex">
-              <ul className="menu">
-                {mainMenu.items.map((menu) => (
-                  <li key={mainMenu.url + menu.url}>
-                    <SubMenuItem menu={menu} />
-                  </li>
-                ))}
-              </ul>
-              <ul className="teaser">
-                {mainMenu.teaser.map((teaser) => (
-                  <li key={mainMenu.url + teaser.url}>
-                    <Teaser menu={teaser} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
-        );
-      })}
+      </div>      
     </div>
   );
 }
