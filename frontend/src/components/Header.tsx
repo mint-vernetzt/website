@@ -41,14 +41,14 @@ function Teaser(props: { menu: MenuItem }) {
   );
 }
 
-function MainTeaser(props: { teasers: MenuItem }) {
-  const { title, description, url, image } = props.teasers;
+function MainTeaser(props: { menu: MenuItem }) {
+  const { title,  description, url, image } = props.menu;
 
   return (
     <Link to={url} className="flex text-left">
       <div>
-        <h4 className="text-lg lg:text-base font-bold m-0 leading-normal">{title}</h4>
-        <p className="lg:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h4 className="text-lg font-bold m-0 leading-normal">{title}</h4>
+        <p>{description}</p>
       </div>        
     </Link>
   );
@@ -163,7 +163,7 @@ export function Header() {
               <ul className="main-teaser pt-6">
                 {megaMenu.teasers.map((menu) => (
                   <li key={menu.url} className="pb-6">
-                    <MainTeaser teasers={menu} />
+                    <MainTeaser menu={menu} />
                   </li>
                 ))}
               </ul>    
