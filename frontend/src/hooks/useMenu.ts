@@ -89,6 +89,7 @@ export const useMenu = (): MegaMenu => {
                 id
                 menuInformations {
                   url
+                  description
                 }
                 title
                 featuredImage {
