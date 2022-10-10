@@ -8,17 +8,18 @@ function hasMenus(mainMenu: MainMenu) {
   return mainMenu.teaser.length > 0 || mainMenu.items.length > 0;
 }
 
+
 function SubMenuItem(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left mb-8">
-      <div className="w-24 mr-6 pt-2 shrink-0">
+    <Link to={url} className="flex text-left mb-4 lg:mb-8">
+      <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
         {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
       </div>
       <div className="">
-        <h4 className="font-bold m-0 leading-normal">{title}</h4>
-        <p className="text-base">{description}</p>
+      <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">{title}</h4>
+        <p className="lg:text-base">{description}</p>
       </div>        
     </Link>
   );
@@ -28,13 +29,26 @@ function Teaser(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left mb-8">
-      <div className="w-24 mr-6 pt-2 shrink-0">
+    <Link to={url} className="flex text-left mb-4 lg:mb-8">
+      <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
         {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
       </div>
       <div className="">
-        <h4 className="font-bold m-0 leading-normal">{title}</h4>
-        <p className="text-base">{description}</p>
+        <h4 className="text-lg lg:text-base font-bold m-0 leading-normal">{title}</h4>
+        <p className="lg:text-base">{description}</p>
+      </div>        
+    </Link>
+  );
+}
+
+function MainTeaser(props: { teasers: MenuItem }) {
+  const { title, description, url, image } = props.teasers;
+
+  return (
+    <Link to={url} className="flex text-left">
+      <div>
+        <h4 className="text-lg lg:text-base font-bold m-0 leading-normal">{title}</h4>
+        <p className="lg:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>        
     </Link>
   );
@@ -48,8 +62,8 @@ export function Header() {
 
   return (
     <div className={`header-section shadow-lg`}>
-      <button onClick={() => setActiveMenu(null)} className={`w-screen h-screen absolute top-0 left-0 ${activeMenu !== null ? "block" : "hidden"}`}></button>
-      <div className="container relative py-4 bg-white z-10">
+      <button onClick={() => setActiveMenu(null)} className={`w-screen h-screen absolute top-0 left-0 z-20 hidden ${activeMenu !== null ? "lg:block" : "hidden"}`}></button>
+      <div className="container relative py-4 bg-white">
         <div className="flex flex-wrap items-center">
           <div className="logo-mint lg:pr-8">
             <Link to="/" as={GatsbyLink}>
@@ -82,18 +96,18 @@ export function Header() {
           </div>          
           <nav
             className={`${isExpanded ? `block` : `hidden`
-              } flex-100 lg:block lg:flex-auto`}
+              } flex-100 lg:block lg:flex-auto z-30 shadow-[0px_8px_24px_-4px_#00000029] lg:shadow-none rounded-b-2xl lg:rounded-none`}
           >
-            <ul className="py-8 text-sm leading-6 lg:py-0 lg:flex lg:items-center lg:-mx-2">
+            <ul className="w-full bg-white lg:inherit text-base lg:text-sm leading-6 lg:flex lg:items-center lg:-mx-2 px-6 lg:px-0 z-100 mb-0">
               {megaMenu.menu.map((mainMenu, index) => (
                 <li
                   key={`nav-item-${index}`}
-                  className="mainNav text-center py-2 px-2 lg:py-0"
+                  className="mainNav py-2 lg:px-2 lg:py-0 border-b border-neutral-500 last:border-0 lg:border-0"
                 >
                   {hasMenus(mainMenu) === true && (
                     <>
                       <a
-                        className={`inline-block py-1 px-4 rounded-lg hover:bg-blue-500 hover:text-neutral-200 ${activeMenu === index ? "bg-blue-500 text-neutral-200" : ""
+                        className={`flex items-center font-bold lg:inline-block py-1 lg:px-4 lg:rounded-lg lg:hover:bg-blue-500 lg:hover:text-neutral-200 ${activeMenu === index ? "lg:bg-blue-500 lg:text-neutral-200" : ""
                           }`}
                         href="#"
                         onClick={(e) => {
@@ -101,14 +115,17 @@ export function Header() {
                           setActiveMenu(index === activeMenu ? null : index);
                         }}
                       >
-                        {mainMenu.title}
+                        <span>{mainMenu.title}</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" className={`ml-auto lg:hidden ${activeMenu === index ? "rotate-180" : ""}`}>
+                          <path d="M2.71 4.529c0.262-0.268 0.626-0.289 0.946 0l2.345 2.248 2.345-2.248c0.32-0.289 0.685-0.268 0.944 0 0.262 0.267 0.245 0.718 0 0.969-0.244 0.251-2.817 2.701-2.817 2.701-0.13 0.134-0.301 0.201-0.472 0.201s-0.342-0.067-0.473-0.201c0 0-2.572-2.45-2.817-2.701s-0.262-0.702 0-0.969z"></path>
+                        </svg>
                       </a>
                     
                       {activeMenu === index && (
-                        <div className="absolute top-full left-0 right-0 overflow-hidden mx-20">
-                          <div className="subNav flex mx-8 mb-8 bg-white shadow-[0px_8px_24px_-4px_#00000029] rounded-b-2xl">
-                            <div className="w-1/2 bg-white rounded-bl-2xl">
-                              <ul className="menu p-8">
+                        <div className="lg:absolute lg:top-full lg:left-0 lg:right-0 overflow-hidden lg:mx-20">
+                          <div className="subNav flex lg:mx-8 lg:mb-8 bg-white lg:shadow-[0px_8px_24px_-4px_#00000029] lg:rounded-b-2xl">
+                            <div className="lg:w-1/2 bg-white lg:rounded-bl-2xl">
+                              <ul className="menu pt-4 lg:p-8">
                                 {mainMenu.items.map((menu) => (
                                   <li key={mainMenu.url + menu.url}>
                                     <SubMenuItem menu={menu} />
@@ -116,7 +133,7 @@ export function Header() {
                                 ))}
                               </ul>
                             </div>  
-                            <div className="w-1/2 bg-[#EFE8E6] rounded-br-2xl">
+                            <div className="hidden lg:block w-1/2 bg-[#EFE8E6] rounded-br-2xl">
                               <ul className="teaser p-8">
                                 {mainMenu.teaser.map((teaser) => (
                                   <li key={mainMenu.url + teaser.url}>
@@ -132,7 +149,7 @@ export function Header() {
                   )}
                   {hasMenus(mainMenu) === false && (
                     <Link
-                      className="inline-block py-1 px-4 rounded-lg hover:bg-blue-500 hover:text-neutral-200"
+                      className="flex items-center font-bold lg:inline-block py-1 lg:px-4 lg:rounded-lg lg:hover:bg-blue-500 lg:hover:text-neutral-200"
                       as={GatsbyLink}
                       to={mainMenu.url}
                     >
@@ -142,15 +159,23 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            {megaMenu.teasers.map((menu) => menu.title)}
+            <div className="lg:hidden bg-[#EFE8E6] rounded-br-2xl px-6">
+              <ul className="main-teaser pt-6">
+                {megaMenu.teasers.map((menu) => (
+                  <li key={menu.url} className="pb-6">
+                    <MainTeaser teasers={menu} />
+                  </li>
+                ))}
+              </ul>    
+            </div>     
           </nav>
-          <div className="ml-auto">
+          <div className="ml-auto hidden lg:block">
             <a
               className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200" 
               href="https://community.mint-vernetzt.de/" target="_blank">Zur Community-Plattform</a>
           </div>
           <button
-            className="h-6 w-6 lg:hidden ml-auto"
+            className="h-6 w-6 lg:hidden ml-auto z-30"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <span
