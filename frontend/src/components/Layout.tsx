@@ -10,7 +10,7 @@ interface LayoutProps {
 // function Layout({ children, ...otherProps }) {
 function Layout(props: LayoutProps) {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-600">
+    <div className="flex flex-col min-h-screen font-sans text-neutral-600">
       {/* {otherProps.location?.pathname === "/" ? (
         <Banner to="/event/mint-aktionswoche">
         Bis zum 26.11. findet die MINT-Aktionswoche statt. Hier findet Ihr einen
