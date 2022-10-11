@@ -13,12 +13,12 @@ function SubMenuItem(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left">
-      <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
-        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
+    <Link to={url} className="flex text-left lg:px-2 pb-2 lg:hover:bg-[#F4F5F6] lg:rounded-lg">
+      <div className="hidden md:block w-24 mr-6 shrink-0 pt-2">
+        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16 rounded" />}
       </div>
-      <div className="">
-      <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">{title}</h4>
+      <div className="pt-1">
+      <h4 className="text-base lg:text-3xl font-bold m-0 leading-normal lg:leading-8">{title}</h4>
         <p className="lg:text-base">{description}</p>
       </div>        
     </Link>
@@ -29,12 +29,12 @@ function Teaser(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left">
-      <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
-        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
+    <Link to={url} className="flex text-left p-2 hover:bg-white/50 rounded-lg">
+      <div className="hidden md:block w-24 mr-6 shrink-0">
+        {image && <GatsbyImage image={image} alt={title} className="w-24 h-16 rounded" />}
       </div>
-      <div className="">
-        <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">{title}</h4>
+      <div className="p-1">
+        <h4 className="text-base lg:text-3xl font-bold m-0 leading-normal lg:leading-8">{title}</h4>
         <p className="lg:text-base">{description}</p>
       </div>        
     </Link>
@@ -127,18 +127,18 @@ export function Header() {
                         <div className="lg:absolute lg:top-full lg:left-0 lg:right-0 overflow-hidden lg:mx-20">
                           <div className="subNav flex lg:mx-8 lg:mb-8 bg-white lg:shadow-[0px_8px_24px_-4px_#00000029] lg:rounded-b-2xl">
                             <div className="lg:w-1/2 bg-white lg:rounded-bl-2xl">
-                              <ul className="menu pt-4 lg:p-8">
+                              <ul className="menu pt-4 lg:p-6">
                                 {mainMenu.items.map((menu) => (
-                                  <li key={mainMenu.url + menu.url} className="mb-4 lg:mb-8 lg:last:mb-0">
+                                  <li key={mainMenu.url + menu.url} className="mb-4 lg:last:mb-0">
                                     <SubMenuItem menu={menu} />
                                   </li>
                                 ))}
                               </ul>
                             </div>  
                             <div className="hidden lg:block w-1/2 bg-[#EFE8E6] rounded-br-2xl">
-                              <ul className="teaser p-8">
+                              <ul className="teaser p-6">
                                 {mainMenu.teaser.map((teaser) => (
-                                  <li key={mainMenu.url + teaser.url} className="mb-8 last:mb-0">
+                                  <li key={mainMenu.url + teaser.url} className="mb-4 last:mb-0">
                                     <Teaser menu={teaser} />
                                   </li>
                                 ))}
