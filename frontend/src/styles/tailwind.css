@@ -10,7 +10,7 @@
   @import "@fontsource/source-sans-pro/600-italic.css";
 
   body {
-    @apply text-neutral-600;
+    
   }
 
   /** Heading **/
@@ -81,7 +81,7 @@ div ul:last-child {
 li::marker {
   @apply text-neutral-600;
 }
-
+/*
 @screen lg {
   .header-section nav a[aria-current="page"] {
     --tw-text-opacity: 1;
@@ -90,6 +90,7 @@ li::marker {
     background-color: rgba(21, 65, 148, var(--tw-bg-opacity));
   }
 }
+*/
 section.container header {
   @apply mb-10;
 }

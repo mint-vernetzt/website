@@ -8,7 +8,7 @@ export function SocialBar(props: SocialBarProps) {
   return (
     <div className={props.className}>
       <div className="md:pr-4">
-        <H4 className="text-base text-gray-600 font-bold mb-3 lg:text-xl lg:mb-6">
+        <H4 className="text-base text-neutral-600 font-bold mb-3 lg:text-xl lg:mb-6">
           Ihr wollt informiert bleiben?
         </H4>
         <ul className="flex -mx-2 text-sm lg:text-base lg:-mx-4">
@@ -65,7 +65,7 @@ export function SocialBar(props: SocialBarProps) {
         </ul>
       </div>
       <div className="mt-2 md:mt-0 md:pl-4">
-        <H4 className="text-base text-gray-600 font-bold mb-3 lg:text-xl lg:mb-6">
+        <H4 className="text-base text-neutral-600 font-bold mb-3 lg:text-xl lg:mb-6">
           Hier sind wir auch noch zu finden
         </H4>
         <ul className="flex text-sm flex-wrap md:flex-nowrap -mx-2 lg:text-base lg:-mx-4">

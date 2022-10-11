@@ -34,7 +34,7 @@ function Teaser(props: { menu: MenuItem }) {
         {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
       </div>
       <div className="">
-        <h4 className="text-lg lg:text-base font-bold m-0 leading-normal">{title}</h4>
+        <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">{title}</h4>
         <p className="lg:text-base">{description}</p>
       </div>        
     </Link>
@@ -47,7 +47,7 @@ function MainTeaser(props: { menu: MenuItem }) {
   return (
     <Link to={url} className="flex text-left">
       <div>
-        <h4 className="text-lg font-bold m-0 leading-normal">{title}</h4>
+        <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">{title}</h4>
         <p>{description}</p>
       </div>        
     </Link>
@@ -184,8 +184,8 @@ export function Header() {
               className={`${isExpanded ? `hidden` : `block`
                 } items-center h-5 w-5 flex flex-col justify-center`}
             >
-              <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
-              <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
+              <span className="my-0.5 w-full h-0.5 rounded-sm bg-neutral-800"></span>
+              <span className="my-0.5 w-full h-0.5 rounded-sm bg-neutral-800"></span>
             </span>
             <span
               className={`${isExpanded ? `block` : `hidden`
