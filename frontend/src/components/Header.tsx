@@ -13,7 +13,7 @@ function SubMenuItem(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left mb-4 lg:mb-8">
+    <Link to={url} className="flex text-left">
       <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
         {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
       </div>
@@ -29,7 +29,7 @@ function Teaser(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left mb-4 lg:mb-8">
+    <Link to={url} className="flex text-left">
       <div className="hidden md:block w-24 mr-6 pt-2 shrink-0">
         {image && <GatsbyImage image={image} alt={title} className="w-24 h-16" />}
       </div>
@@ -116,9 +116,11 @@ export function Header() {
                         }}
                       >
                         <span>{mainMenu.title}</span>
-                        <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" className={`ml-auto lg:hidden ${activeMenu === index ? "rotate-180" : ""}`}>
-                          <path d="M2.71 4.529c0.262-0.268 0.626-0.289 0.946 0l2.345 2.248 2.345-2.248c0.32-0.289 0.685-0.268 0.944 0 0.262 0.267 0.245 0.718 0 0.969-0.244 0.251-2.817 2.701-2.817 2.701-0.13 0.134-0.301 0.201-0.472 0.201s-0.342-0.067-0.473-0.201c0 0-2.572-2.45-2.817-2.701s-0.262-0.702 0-0.969z"></path>
-                        </svg>
+                        <button className={`ml-auto lg:hidden items-center h-5 w-5 flex item-center justify-center`}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={`h-3 w-3 lg:hidden ${activeMenu === index ? "rotate-180" : ""}`} viewBox="0 0 16 16">                          
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                        </button>                        
                       </a>
                     
                       {activeMenu === index && (
@@ -127,7 +129,7 @@ export function Header() {
                             <div className="lg:w-1/2 bg-white lg:rounded-bl-2xl">
                               <ul className="menu pt-4 lg:p-8">
                                 {mainMenu.items.map((menu) => (
-                                  <li key={mainMenu.url + menu.url}>
+                                  <li key={mainMenu.url + menu.url} className="mb-4 lg:mb-8 lg:last:mb-0">
                                     <SubMenuItem menu={menu} />
                                   </li>
                                 ))}
@@ -136,7 +138,7 @@ export function Header() {
                             <div className="hidden lg:block w-1/2 bg-[#EFE8E6] rounded-br-2xl">
                               <ul className="teaser p-8">
                                 {mainMenu.teaser.map((teaser) => (
-                                  <li key={mainMenu.url + teaser.url}>
+                                  <li key={mainMenu.url + teaser.url} className="mb-8 last:mb-0">
                                     <Teaser menu={teaser} />
                                   </li>
                                 ))}
@@ -175,22 +177,23 @@ export function Header() {
               href="https://community.mint-vernetzt.de/" target="_blank">Zur Community-Plattform</a>
           </div>
           <button
-            className="h-6 w-6 lg:hidden ml-auto z-30"
+            className="h-5 w-5 lg:hidden ml-auto z-30"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <span
               className={`${isExpanded ? `hidden` : `block`
-                } items-center h-6 w-6 px-0.5 flex flex-col justify-center`}
+                } items-center h-5 w-5 flex flex-col justify-center`}
             >
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
               <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900"></span>
             </span>
             <span
               className={`${isExpanded ? `block` : `hidden`
-                } items-center h-6 w-6 px-0.5 flex flex-col relative`}
+                } items-center h-5 w-5 flex item-center justify-center`}
             >
-              <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900 transform rotate-45 absolute top-2 left-0"></span>
-              <span className="my-0.5 w-full h-0.5 rounded-sm bg-gray-900 transform -rotate-45 absolute top-2 left-0"></span>
+              <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.80764 0.307518C0.865697 0.249314 0.934667 0.203135 1.0106 0.171627C1.08653 0.140119 1.16793 0.123901 1.25014 0.123901C1.33235 0.123901 1.41375 0.140119 1.48968 0.171627C1.56561 0.203135 1.63458 0.249314 1.69264 0.307518L5.00014 3.61627L8.30764 0.307518C8.36575 0.249408 8.43474 0.203313 8.51066 0.171864C8.58659 0.140415 8.66796 0.124229 8.75014 0.124229C8.83232 0.124229 8.9137 0.140415 8.98962 0.171864C9.06554 0.203313 9.13453 0.249408 9.19264 0.307518C9.25075 0.365628 9.29685 0.434615 9.32829 0.510539C9.35974 0.586463 9.37593 0.667839 9.37593 0.750018C9.37593 0.832198 9.35974 0.913574 9.32829 0.989498C9.29685 1.06542 9.25075 1.13441 9.19264 1.19252L5.88389 4.50002L9.19264 7.80752C9.25075 7.86563 9.29685 7.93461 9.32829 8.01054C9.35974 8.08646 9.37593 8.16784 9.37593 8.25002C9.37593 8.3322 9.35974 8.41357 9.32829 8.4895C9.29685 8.56542 9.25075 8.63441 9.19264 8.69252C9.13453 8.75063 9.06554 8.79672 8.98962 8.82817C8.9137 8.85962 8.83232 8.87581 8.75014 8.87581C8.66796 8.87581 8.58659 8.85962 8.51066 8.82817C8.43474 8.79672 8.36575 8.75063 8.30764 8.69252L5.00014 5.38377L1.69264 8.69252C1.63453 8.75063 1.56554 8.79672 1.48962 8.82817C1.4137 8.85962 1.33232 8.87581 1.25014 8.87581C1.16796 8.87581 1.08659 8.85962 1.01066 8.82817C0.934737 8.79672 0.86575 8.75063 0.80764 8.69252C0.74953 8.63441 0.703435 8.56542 0.671986 8.4895C0.640537 8.41357 0.624351 8.3322 0.624351 8.25002C0.624351 8.16784 0.640537 8.08646 0.671986 8.01054C0.703435 7.93461 0.74953 7.86563 0.80764 7.80752L4.11639 4.50002L0.80764 1.19252C0.749436 1.13446 0.703258 1.06549 0.671749 0.98956C0.640241 0.913629 0.624023 0.832227 0.624023 0.750018C0.624023 0.667809 0.640241 0.586408 0.671749 0.510476C0.703258 0.434545 0.749436 0.365575 0.80764 0.307518Z" fill="#454C5C"/>
+              </svg>
             </span>
           </button>
         </div>
