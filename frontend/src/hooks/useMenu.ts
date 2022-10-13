@@ -5,6 +5,7 @@ export type MenuItem = {
   description?: string;
   url: string;
   image?: GatsbyTypes.ImageSharp["gatsbyImageData"];
+  svg?: string;
 };
 
 export type MainMenu = MenuItem & {
@@ -24,6 +25,10 @@ function buildMenuItemFromMenu(node: GatsbyTypes.WpWebsiteMenu): MenuItem {
     url: node.menuInformations?.url ?? "",
     image:
       node.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
+    svg:
+      node.featuredImage?.node?.localFile?.extension === "svg"
+        ? node.featuredImage?.node?.localFile?.publicURL
+        : undefined,
   };
 }
 
@@ -68,6 +73,8 @@ export const useMenu = (): MegaMenu => {
                       featuredImage {
                         node {
                           localFile {
+                            publicURL
+                            extension
                             childImageSharp {
                               gatsbyImageData(width: 100)
                             }
@@ -95,6 +102,8 @@ export const useMenu = (): MegaMenu => {
                 featuredImage {
                   node {
                     localFile {
+                      publicURL
+                      extension
                       childImageSharp {
                         gatsbyImageData(width: 100)
                       }
