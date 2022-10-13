@@ -270,7 +270,7 @@ export function Header() {
             </span>
           </button>
         </div>
-      </div>
+      </div>      
     </div>
   );
 }
