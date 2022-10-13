@@ -45,7 +45,11 @@ function Teaser(props: { menu: MenuItem }) {
       className="flex items-stretch text-left hover:bg-white/50 rounded-lg"
     >
       <div className="hidden md:block w-24 mr-6 shrink-0 rounded-l-md">
-        {svg && <img src={svg} alt={title} />}
+        {svg && (
+          <div className="w-full h-full flex item-center justify-center">
+            <img src={svg} alt={title} />
+          </div>  
+        )}
         {!svg && image && (
           <GatsbyImage
             image={image}
