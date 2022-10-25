@@ -12,7 +12,6 @@ import EventTeaser from "../components/EventTeaser/EventTeaser";
 import NewsFeed from "../components/NewsFeed/NewsFeed";
 import SocialBar from "../components/SocialBar/SocialBar";
 import { H2, H4 } from "../components/Heading/Heading";
-import { OrganizationBoxContainer } from "../components/OrganizationBox/OrganizationBoxContainer";
 import HeroCarousel from "../components/HeroCarousel";
 import { EventTeaserItemProps } from "../components/EventTeaser/EventTeaserItem";
 import { isBeforeOneDayAfterDate } from "../utils/eventFilter";
@@ -28,8 +27,7 @@ export function Index({
       <span dangerouslySetInnerHTML={{ __html: item.body as string }} />
     );
     return item;
-  });
-  const organisations = getOrganizationsData(data.organizationsData);
+  });  
 
   const teasers =
     data.teasers.nodes.length > 0
@@ -66,10 +64,6 @@ export function Index({
             ),
           },
         ];
-
-  const caseInsensitiveSortedOrganization = organisations.sort((a, b) => {
-    return a.name.toLocaleLowerCase().localeCompare(b.name.toLocaleLowerCase());
-  });
 
   const now = new Date();
 
@@ -114,57 +108,6 @@ export function Index({
         </div>
       </section>
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <header>
-          <H2 like="h1">Aktiv werden</H2>
-          <p className="text-xl md:px-8 lg:px-20 ">
-            Wir entwickeln MINTvernetzt mit Euch (weiter)! Hier könnt Ihr Euch
-            vernetzen, gute Praxis teilen und Kooperationen aufbauen. So machen
-            wir zusammen MINT-Bildungsangebote in Deutschland sichtbar, helfen
-            Euch bei der Weiterentwicklung und schaffen Innovationsräume.
-          </p>
-        </header>
-
-        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-3">
-          {[
-            {
-              image: data?.MintmachenImage?.childImageSharp?.gatsbyImageData,
-              title: `MI(N)Tmachen`,
-              text: `Wir machen die MINT-Akteur:innen Deutschlands sichtbar und vernetzen Euch. Aber dafür brauchen wir Eure Hilfe! Bringt Euch jetzt aktiv ein und helft einander mehr und bessere MINT-Angebote zu schaffen.`,
-              link: `/mintmachen/`,
-            },
-            {
-              image: data?.MintvernetztImage?.childImageSharp?.gatsbyImageData,
-              title: `MINTvernetzt informiert`,
-              text: `Informieren, inspirieren, Emotionen wecken: Wir geben Euch Einblicke in die MINT-Welt und schauen auch über den Tellerrand: Hier findet Ihr Newsletter, MINTNews & Co.`,
-              link: `/mintvernetzt/`,
-            },
-            {
-              image: data?.MintcommunityImage?.childImageSharp?.gatsbyImageData,
-              title: `Werde Teil der MINTcommunity`,
-              text: `Wir bauen einen Marktplatz für die MINTcommunity Deutschlands: die MINTvernetzt-Plattform. Und zwar mit Euch! Bringt Euch jetzt aktiv ein und werdet BETA-Tester:in.`,
-              link: `/mintcommunity/`,
-            },
-          ].map((teaserbox, index) => (
-            <div
-              key={`teaserbox-${index}`}
-              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
-            >
-              <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4 z-0">
-                  <GatsbyImage
-                    image={teaserbox.image}
-                    className="w-full h-auto"
-                    alt=""
-                  />
-                </div>
-                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
-                <p className="lg:mx-2">{teaserbox.text}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-2 lg:-mx-4">
           <div className="flex-100 pb-8 md:pb-0 md:flex-2/3 md:px-2 lg:px-4">
@@ -220,13 +163,89 @@ export function Index({
           </div>
         </div>
       </section>
-      <section className="container my-8 md:my-10 lg:my-20">
-        <OrganizationBoxContainer
-          headline="Der Verbund"
-          body="Herausforderungen lösen wir gemeinsam. MINT-Potenziale heben wir im Team. MINTvernetzt ist ein Verbundprojekt, das gemeinsam von Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, des Nationalen MINTForums e.V., des Stifterverbands und der Universität Regensburg umgesetzt wird. Zusammen blicken wir auf viel Erfahrung in der MINT-Bildung, die wir bei MINTvernetzt bündeln und weiterentwickeln wollen. Hier findet Ihr die unterschiedlichen Zuständigkeiten der Verbundpartner bei MINTvernetzt."
-          organisations={caseInsensitiveSortedOrganization}
-        />
-      </section>
+              
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <div className="flex flex-wrap items-center md:-mx-6 lg:-mx-10">
+          <div className="md:px-6 lg:px-10 md:w-1/2">
+            <H2 like="h1">Unsere Community-Plattform</H2>
+            <p className="text-xl mb-8">
+              Die bundesweite MINT-Community lebt davon, sich auszutauschen, Wissen zu teilen, von- und miteinander zu lernen. 
+              Wir haben dafür die Lösung: Im digitalen Raum gibt  es dafür die Community-Plattform, auf der Ihr Euch untereinander 
+              und mit Organisationen vernetzen könnt. Ihr sucht Inspiration oder Expert:innen zu konkreten Themen in Eurer 
+              Umgebung? Meldet Euch an und vernetzt Euch miteinander!
+            </p>
+            <p>
+              <a href="https://community.mint-vernetzt.de/" className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200">
+                Erfahre mehr
+              </a>
+            </p>
+          </div>
+          <div className="md:px-6 lg:px-10 md:w-1/2">
+              <GatsbyImage
+                image={data?.PlattformImage?.childImageSharp?.gatsbyImageData}
+                className=""
+                alt=""
+              />
+          </div>
+        </div>
+      </section>    
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <header>
+          <H2 like="h1">Unsere Projekte</H2>
+          <p className="text-xl md:px-8 lg:px-20 ">
+            Hier findet Ihr immer einen aktuellen Überblick über spannende Auszeichnungen, Projekte oder neue Tools.
+          </p>
+        </header>
+
+        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-3">
+          {[
+            {
+              image: data?.RaketeImage?.childImageSharp?.gatsbyImageData,
+              title: `MINTrakete`,
+              text: `Die MINTrakete ist eine Auszeichnung für außergewöhnliche Gute-Praxis-Beispiele mit neuen Projektansätzen in der MINT-Bildung.`,
+              link: `/mintrakete/`,
+            },
+            {
+              image: data?.PaktImage?.childImageSharp?.gatsbyImageData,
+              title: `Pakt für Frauen`,
+              text: `Mit über 300 Mitgliedern unterstützt der Pakt für Frauen in MINT-Berufen dabei, Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.`,
+              link: `/pakt/`,
+            },
+            {
+              image: data?.DatalabImage?.childImageSharp?.gatsbyImageData,
+              title: `DataLab`,
+              text: `Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur regionalen Ebene, etwa Schul- und  Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt.`,
+              link: `/datalab/`,
+            },
+          ].map((teaserbox, index) => (
+            <div
+              key={`teaserbox-${index}`}
+              className="p-4 pb-6 md:p-2 md:pb-6 lg:p-4 lg:pb-6 rounded-lg bg-neutral-200 shadow-lg flex flex-col h-100"
+            >              
+              <div className="rounded-lg overflow-hidden mb-2 lg:mb-4 z-0 flex-initial">
+                <Link to={`${teaserbox.link}`}>
+                  <GatsbyImage
+                    image={teaserbox.image}
+                    className="w-full h-auto bg-[#D0AACD]"
+                    alt={teaserbox.title}
+                  />
+                </Link>  
+              </div>
+              <div className="flex-auto pb-4">
+                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
+                <p className="lg:mx-2">{teaserbox.text}</p>
+              </div>
+              <div className="flex-initial">
+                <p className="lg:mx-2">
+                  <Link to={`${teaserbox.link}`} className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200">
+                    Erfahre mehr
+                  </Link>
+                </p>            
+              </div>    
+            </div>
+          ))}
+        </div>
+      </section>      
     </Layout>
   );
 }
@@ -240,20 +259,27 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 1488)
       }
     }
-    MintmachenImage: file(relativePath: { eq: "landingpage_mintmachen.png" }) {
+    RaketeImage: file(relativePath: { eq: "teaser_mintrakete.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 560)
       }
     }
-    MintvernetztImage: file(
-      relativePath: { eq: "landingpage_mintvernetzt.png" }
+    PaktImage: file(
+      relativePath: { eq: "teaser_pakt.png" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 560)
       }
     }
-    MintcommunityImage: file(
-      relativePath: { eq: "landingpage_mintcommunity.png" }
+    DatalabImage: file(
+      relativePath: { eq: "teaser_datalab.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(width: 560)
+      }
+    }
+    PlattformImage: file(
+      relativePath: { eq: "mockup_plattform.png" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 560)
@@ -269,23 +295,6 @@ export const pageQuery = graphql`
           nodes {
             name
             slug
-          }
-        }
-      }
-    }
-    organizationsData: allWpOrganization(
-      sort: { fields: organizationInformations___name, order: ASC }
-    ) {
-      nodes {
-        organizationInformations {
-          name
-          description
-          url
-          logo {
-            altText
-            localFile {
-              publicURL
-            }
           }
         }
       }
