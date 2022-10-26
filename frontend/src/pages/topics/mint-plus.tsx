@@ -4,12 +4,35 @@ import SEO from "../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
 import { ReactComponent as BadgeRocket } from "../../images/Badge_02Rocket.svg";
+import Icon, { IconType } from "../../components/Icon/Icon";
+import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
+import { formatDate } from "../../components/EventFeed/utils";
 
 export function MintPlus({
   data,
 }: {
   data: GatsbyTypes.MintPlusPageQuery;
 }) {
+  const now = new Date();
+
+  const events = data.events.nodes
+    .filter((event) =>
+      isBeforeOneDayAfterDate(now, new Date(event.eventInformations.endDate))
+    )
+    .map((event) => ({
+      headline: event.title,
+      body: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: event.excerpt.replace(/<[^>]*>/g, "").substr(0, 150),
+          }}
+        />
+      ),
+      date: new Date(event.eventInformations.startDate),
+      url: `/event/${event.slug}/`,
+    }))
+    .slice(0, 3);
+
   return (
     <Layout>
       <SEO
@@ -105,6 +128,44 @@ export function MintPlus({
         </div>
       </section>      
 
+      {events.length > 0 && (
+        <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+          <header>
+            <H2 like="h1">Unsere Events zum Thema MINT+</H2>
+            <p className="text-xl md:px-8 lg:px-20 ">
+              Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie wir als MINT-Community 
+              Mädchen und junge Frauen in diesem Bereich stärken können. Dafür gibt es Events wie das 
+              MINTcafé Gender. Schaut mal rein!
+            </p>
+          </header>
+          <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+            {events.map((event, index) => (
+              <div
+                key={`event-${index}`}
+                className="p-4 rounded-lg bg-neutral-200 shadow-lg"
+              >
+                <Link
+                  to={event.url}
+                  className="flex flex-col h-100"
+                >
+                  <div className="text-neutral-800 leading-tight text-xs font-semibold flex items-center mb-2 lg:mx-2">
+                    <Icon type={IconType.Calendar} />{" "}
+                    <time className="ml-2">{formatDate(event.date)}</time>
+                  </div>
+                  <H4 className="lg:leading-snug lg:mx-2">{event.headline}</H4>
+                  <p className="line-clamp-3 lg:mx-2">{event.body}</p>                  
+                </Link>
+              </div>
+            ))}
+          </div>
+          <p className="md:text-center">
+            <Link to="/events/?tags=didactics" className="btn-primary mt-8">
+              Zur Eventübersicht
+            </Link>
+          </p>
+        </section>
+      )}
+
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="flex flex-wrap content-center items-stretch md:-mx-4">
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
@@ -136,36 +197,43 @@ export function MintPlus({
         </div>
       </section>
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <header>
-          <H2 like="h1">Blogbeiträge und Events zum Thema <span className="font-bold">MINT</span>+</H2>
-          <p className="text-xl md:px-8 lg:px-20 ">
-            Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie
-            wir als MINT-Community Mädchen und junge Frauen in diesem Bereich
-            stärken können. Dafür gibt es Events wie das MINTcafé Gender, aber
-            auch immer wieder Blogartikel über neue Erkenntnisse und
-            Praxisperspektiven. Schaut mal rein!
+      {data.news.nodes.length > 0 && (        
+        <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+          <header>
+            <H2 like="h1">Blogbeiträge zum Thema <span className="font-bold">MINT</span>+</H2>
+            <p className="text-xl md:px-8 lg:px-20 ">
+              Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie
+              wir als MINT-Community Mädchen und junge Frauen in diesem Bereich
+              stärken können. Dafür gibt es Events wie das MINTcafé Gender, aber
+              auch immer wieder Blogartikel über neue Erkenntnisse und
+              Praxisperspektiven. Schaut mal rein!
+            </p>
+          </header>
+          <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+            {data.news.nodes.map((news, index) => (
+              <div
+                key={`teaserbox-${index}`}
+                className="p-4 rounded-lg bg-neutral-200 shadow-lg"
+              >
+                <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
+                  <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
+                  <div
+                    className="line-clamp-3 lg:mx-2"
+                    dangerouslySetInnerHTML={{
+                      __html: news.excerpt as string,
+                    }}
+                  />
+                </Link>              
+              </div>
+            ))}
+          </div>
+          <p className="md:text-center">
+            <Link to="/news/?tags=steam" className="btn-primary mt-8">
+              Zur Newsübersicht
+            </Link>
           </p>
-        </header>
-        <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {data.news.nodes.map((news, index) => (
-            <div
-              key={`teaserbox-${index}`}
-              className="p-4 rounded-lg bg-neutral-200 shadow-lg"
-            >
-              <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
-                <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
-                <div
-                  className="line-clamp-3 lg:mx-2"
-                  dangerouslySetInnerHTML={{
-                    __html: news.excerpt as string,
-                  }}
-                />
-              </Link>              
-            </div>
-          ))}
-        </div>
-      </section>
+        </section>
+      )}
     </Layout>
   );
 }
@@ -193,13 +261,30 @@ export const pageQuery = graphql`
       }
     }    
     news: allWpNewsItem(
-      filter: { tags: { nodes: { elemMatch: { name: { eq: "MINT+" } } } } }
-      sort: { fields: [date], order: DESC }
+      limit: 3
+      filter: { tags: { nodes: { elemMatch: { slug: { eq: "steam" } } } } }
+      sort: { fields: date, order: DESC }
     ) {
       nodes {
         title
         slug
-        excerpt        
+        excerpt
+      }
+    }
+    events: allWpEvent(
+      filter: { parentId: { eq: null }, tags: { nodes: { elemMatch: { slug: { eq: "steam" } } } } }
+      sort: { fields: eventInformations___startDate, order: ASC }
+    ) {
+      nodes {
+        excerpt
+        eventInformations {
+          startTime
+          startDate
+          endTime
+          endDate
+        }
+        title
+        slug
       }
     }    
   }
