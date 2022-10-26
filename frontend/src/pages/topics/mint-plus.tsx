@@ -200,14 +200,7 @@ export function MintPlus({
       {data.news.nodes.length > 0 && (        
         <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
           <header>
-            <H2 like="h1">Blogbeiträge zum Thema <span className="font-bold">MINT</span>+</H2>
-            <p className="text-xl md:px-8 lg:px-20 ">
-              Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie
-              wir als MINT-Community Mädchen und junge Frauen in diesem Bereich
-              stärken können. Dafür gibt es Events wie das MINTcafé Gender, aber
-              auch immer wieder Blogartikel über neue Erkenntnisse und
-              Praxisperspektiven. Schaut mal rein!
-            </p>
+            <H2 like="h1">Blogbeiträge zum Thema <span className="font-bold">MINT</span>+</H2>            
           </header>
           <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {data.news.nodes.map((news, index) => (
