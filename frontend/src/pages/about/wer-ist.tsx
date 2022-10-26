@@ -6,9 +6,18 @@ import UserCardContainer from "../../components/UserCard/UserCardContainer";
 import { ReactComponent as Logo } from "../../images/logo-mint-vernetzt.svg";
 import { getUserCardsProps } from "../../utils/dataTransformer";
 import { H1, H2, H3 } from "../../components/Heading/Heading";
+import { getOrganizationsData } from "../../utils/dataTransformer";
+import { OrganizationBoxContainer } from "../../components/OrganizationBox/OrganizationBoxContainer";
 
 export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
   const userCardsProps = getUserCardsProps(data.usersData);
+
+  const organisations = getOrganizationsData(data.organizationsData);
+
+  const caseInsensitiveSortedOrganization = organisations.sort((a, b) => {
+    return a.name.toLocaleLowerCase().localeCompare(b.name.toLocaleLowerCase());
+  });
+  
   return (
     <Layout>
       <SEO title="Wer ist MINTvernetzt?" slug="/about/wer-ist/" description="" image="" children="" />
@@ -139,6 +148,14 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
           userCardsProps={userCardsProps}
         />
       </section>
+
+      <section className="container my-8 md:my-10 lg:my-20">
+        <OrganizationBoxContainer
+          headline="Der Verbund"
+          body="Herausforderungen lösen wir gemeinsam. MINT-Potenziale heben wir im Team. MINTvernetzt ist ein Verbundprojekt, das gemeinsam von Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, des Nationalen MINTForums e.V., des Stifterverbands und der Universität Regensburg umgesetzt wird. Zusammen blicken wir auf viel Erfahrung in der MINT-Bildung, die wir bei MINTvernetzt bündeln und weiterentwickeln wollen. Hier findet Ihr die unterschiedlichen Zuständigkeiten der Verbundpartner bei MINTvernetzt."
+          organisations={caseInsensitiveSortedOrganization}
+        />
+      </section>
     </Layout>  
   )
 }
@@ -180,6 +197,23 @@ export const pageQuery = graphql`
               }
             }
             altText
+          }
+        }
+      }
+    }
+    organizationsData: allWpOrganization(
+      sort: { fields: organizationInformations___name, order: ASC }
+    ) {
+      nodes {
+        organizationInformations {
+          name
+          description
+          url
+          logo {
+            altText
+            localFile {
+              publicURL
+            }
           }
         }
       }
