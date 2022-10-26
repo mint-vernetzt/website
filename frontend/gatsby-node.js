@@ -79,6 +79,30 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/mintrakete",
+    toPath: `/projects/mint-raketen/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/mintrakete/",
+    toPath: `/projects/mint-raketen/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/",
+    toPath: `/projects/mint-pakt/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt",
+    toPath: `/projects/mint-pakt/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {

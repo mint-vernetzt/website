@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    @apply text-primary mb-2 leading-tight lg:leading-none;
+    @apply text-primary mb-2 leading-tight lg:leading-none font-semibold;
   }
   h1,
   .h1 {
