@@ -16,7 +16,7 @@ function SubMenuItem(props: { menu: MenuItem }) {
       to={url}
       className="flex items-stretch text-left lg:hover:bg-[#F4F5F6] lg:rounded-lg"
     >
-      <div className="hidden md:block w-24 mr-6 shrink-0 rounded-l-md">
+      <div className="hidden w-24 mr-6 shrink-0 rounded-l-md">
         {svg && <img src={svg} alt={title} />}
         {!svg && image && (
           <GatsbyImage
@@ -26,7 +26,7 @@ function SubMenuItem(props: { menu: MenuItem }) {
           />
         )}
       </div>
-      <div className="md:p-2">
+      <div className="md:py-2 md:px-4">
         <h4 className="text-base lg:text-3xl font-bold m-0 leading-normal lg:leading-8">
           {title}
         </h4>
@@ -44,7 +44,7 @@ function Teaser(props: { menu: MenuItem }) {
       to={url}
       className="flex items-stretch text-left hover:bg-white/50 rounded-lg"
     >
-      <div className="hidden md:block w-24 mr-6 shrink-0 rounded-l-md">
+      <div className="hidden w-24 mr-6 shrink-0 rounded-l-md">
         {svg && (
           <div className="w-full h-full flex item-center justify-center">
             <img src={svg} alt={title} />
@@ -58,7 +58,7 @@ function Teaser(props: { menu: MenuItem }) {
           />
         )}
       </div>
-      <div className="md:p-2">
+      <div className="md:py-2 md:px-4">
         <h4 className="text-base lg:text-3xl font-bold m-0 leading-normal lg:leading-8">
           {title}
         </h4>
