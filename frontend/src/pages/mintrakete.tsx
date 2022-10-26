@@ -7,7 +7,7 @@ import { ReactComponent as BadgeRocket } from "../images/Badge_02Rocket.svg";
 import { Chip } from "../components/Chip/Chip";
 import { getHostnameFromURL } from "../utils/dataTransformer";
 
-export function Mintraketen({ data }) {
+export function Mintrakete({ data }) {
   return (
     <Layout>
       <SEO
@@ -296,10 +296,10 @@ export function Mintraketen({ data }) {
   );
 }
 
-export default Mintraketen;
+export default Mintrakete;
 
 export const pageQuery = graphql`
-  query MintraketenPage {
+  query MintraketePage {
     heroImage: file(
       relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
     ) {
