@@ -184,6 +184,7 @@ export function Index({
               <a
                 href="https://community.mint-vernetzt.de/"
                 className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
+                target="_blank"
               >
                 Erfahre mehr
               </a>
@@ -213,19 +214,19 @@ export function Index({
               image: data?.RaketeImage?.childImageSharp?.gatsbyImageData,
               title: `MINTrakete`,
               text: `Die MINTrakete ist eine Auszeichnung für außergewöhnliche Gute-Praxis-Beispiele mit neuen Projektansätzen in der MINT-Bildung.`,
-              link: `/mintrakete/`,
+              link: `/projects/mint-raketen/`,
             },
             {
               image: data?.PaktImage?.childImageSharp?.gatsbyImageData,
               title: `Pakt für Frauen`,
               text: `Mit über 300 Mitgliedern unterstützt der Pakt für Frauen in MINT-Berufen dabei, Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.`,
-              link: `/pakt/`,
+              link: `/projects/mint-pakt/`,
             },
             {
               image: data?.DatalabImage?.childImageSharp?.gatsbyImageData,
               title: `DataLab`,
               text: `Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt.`,
-              link: `/datalab/`,
+              // link: `/datalab/`,
             },
           ].map((teaserbox, index) => (
             <div
@@ -245,16 +246,18 @@ export function Index({
                 <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
                 <p className="lg:mx-2">{teaserbox.text}</p>
               </div>
-              <div className="flex-initial">
-                <p className="lg:mx-2">
-                  <Link
-                    to={`${teaserbox.link}`}
-                    className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
-                  >
-                    Erfahre mehr
-                  </Link>
-                </p>
-              </div>
+              {teaserbox.link !== undefined && (
+                <div className="flex-initial">
+                  <p className="lg:mx-2">
+                    <Link
+                      to={`${teaserbox.link}`}
+                      className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
+                    >
+                      Erfahre mehr
+                    </Link>
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
