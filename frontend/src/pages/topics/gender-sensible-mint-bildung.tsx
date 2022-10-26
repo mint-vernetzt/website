@@ -9,11 +9,6 @@ export function GenderSensibleMintBildung({
 }: {
   data: GatsbyTypes.GenderSensibleMintBildungPageQuery;
 }) {
-  // Why are they undefined?
-  console.log(Object.keys(data));
-  // console.log(data.heroImage?.childImageSharp?.gatsbyImageData);
-  // console.log(data.bildungsforschungImage?.childImageSharp?.gatsbyImageData);
-  // console.log(data.news);
   return (
     <Layout>
       <SEO
