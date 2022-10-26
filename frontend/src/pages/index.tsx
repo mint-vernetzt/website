@@ -27,7 +27,7 @@ export function Index({
       <span dangerouslySetInnerHTML={{ __html: item.body as string }} />
     );
     return item;
-  });  
+  });
 
   const teasers =
     data.teasers.nodes.length > 0
@@ -280,23 +280,17 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 560)
       }
     }
-    PaktImage: file(
-      relativePath: { eq: "teaser_pakt.png" }
-    ) {
+    PaktImage: file(relativePath: { eq: "teaser_pakt.png" }) {
       childImageSharp {
         gatsbyImageData(width: 560)
       }
     }
-    DatalabImage: file(
-      relativePath: { eq: "teaser_datalab.jpg" }
-    ) {
+    DatalabImage: file(relativePath: { eq: "teaser_datalab.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 560)
       }
     }
-    PlattformImage: file(
-      relativePath: { eq: "mockup_plattform.png" }
-    ) {
+    PlattformImage: file(relativePath: { eq: "mockup_plattform.png" }) {
       childImageSharp {
         gatsbyImageData(width: 560)
       }
