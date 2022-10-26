@@ -118,7 +118,10 @@ export function Index({
               <Link to="/news/" className="text-sm text-primary mr-4 mb-4">
                 Alle ansehen
               </Link>
-              <Link to="/news-submission/" className="text-sm text-primary mb-4">
+              <Link
+                to="/news-submission/"
+                className="text-sm text-primary mb-4"
+              >
                 News einreichen
               </Link>
             </div>
@@ -152,7 +155,7 @@ export function Index({
                   >
                     Event einreichen
                   </Link>
-                </div>  
+                </div>
               </div>
               <EventTeaser
                 linkToOverview="/events/"
@@ -163,37 +166,44 @@ export function Index({
           </div>
         </div>
       </section>
-              
+
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="flex flex-wrap items-center md:-mx-6 lg:-mx-10">
           <div className="md:px-6 lg:px-10 md:w-1/2">
             <H2 like="h1">Unsere Community-Plattform</H2>
             <p className="text-xl mb-8">
-              Die bundesweite MINT-Community lebt davon, sich auszutauschen, Wissen zu teilen, von- und miteinander zu lernen. 
-              Wir haben dafür die Lösung: Im digitalen Raum gibt  es dafür die Community-Plattform, auf der Ihr Euch untereinander 
-              und mit Organisationen vernetzen könnt. Ihr sucht Inspiration oder Expert:innen zu konkreten Themen in Eurer 
-              Umgebung? Meldet Euch an und vernetzt Euch miteinander!
+              Die bundesweite MINT-Community lebt davon, sich auszutauschen,
+              Wissen zu teilen, von- und miteinander zu lernen. Wir haben dafür
+              die Lösung: Im digitalen Raum gibt es dafür die
+              Community-Plattform, auf der Ihr Euch untereinander und mit
+              Organisationen vernetzen könnt. Ihr sucht Inspiration oder
+              Expert:innen zu konkreten Themen in Eurer Umgebung? Meldet Euch an
+              und vernetzt Euch miteinander!
             </p>
             <p>
-              <a href="https://community.mint-vernetzt.de/" className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200">
+              <a
+                href="https://community.mint-vernetzt.de/"
+                className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
+              >
                 Erfahre mehr
               </a>
             </p>
           </div>
           <div className="md:px-6 lg:px-10 md:w-1/2">
-              <GatsbyImage
-                image={data?.PlattformImage?.childImageSharp?.gatsbyImageData}
-                className=""
-                alt=""
-              />
+            <GatsbyImage
+              image={data?.PlattformImage?.childImageSharp?.gatsbyImageData}
+              className=""
+              alt=""
+            />
           </div>
         </div>
-      </section>    
+      </section>
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
           <H2 like="h1">Unsere Projekte</H2>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Hier findet Ihr immer einen aktuellen Überblick über spannende Auszeichnungen, Projekte oder neue Tools.
+            Hier findet Ihr immer einen aktuellen Überblick über spannende
+            Auszeichnungen, Projekte oder neue Tools.
           </p>
         </header>
 
@@ -214,14 +224,14 @@ export function Index({
             {
               image: data?.DatalabImage?.childImageSharp?.gatsbyImageData,
               title: `DataLab`,
-              text: `Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur regionalen Ebene, etwa Schul- und  Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt.`,
+              text: `Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt.`,
               link: `/datalab/`,
             },
           ].map((teaserbox, index) => (
             <div
               key={`teaserbox-${index}`}
               className="p-4 pb-6 md:p-2 md:pb-6 lg:p-4 lg:pb-6 rounded-lg bg-neutral-200 shadow-lg flex flex-col h-100"
-            >              
+            >
               <div className="rounded-lg overflow-hidden mb-2 lg:mb-4 z-0 flex-initial">
                 <Link to={`${teaserbox.link}`}>
                   <GatsbyImage
@@ -229,7 +239,7 @@ export function Index({
                     className="w-full h-auto bg-[#D0AACD]"
                     alt={teaserbox.title}
                   />
-                </Link>  
+                </Link>
               </div>
               <div className="flex-auto pb-4">
                 <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
@@ -237,15 +247,18 @@ export function Index({
               </div>
               <div className="flex-initial">
                 <p className="lg:mx-2">
-                  <Link to={`${teaserbox.link}`} className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200">
+                  <Link
+                    to={`${teaserbox.link}`}
+                    className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
+                  >
                     Erfahre mehr
                   </Link>
-                </p>            
-              </div>    
+                </p>
+              </div>
             </div>
           ))}
         </div>
-      </section>      
+      </section>
     </Layout>
   );
 }
