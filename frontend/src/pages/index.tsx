@@ -110,7 +110,7 @@ export function Index({
 
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-2/3 md:px-2 lg:px-4">
+          <div className="w-full pb-8 md:pb-0 md:w-2/3 md:px-2 lg:px-4">
             <div className="flex items-center justify-end no-wrap">
               <H2 like="h1" className="grow">
                 <strong>MINT</strong>news
@@ -136,7 +136,7 @@ export function Index({
               }}
             />
           </div>
-          <div className="event-teaser flex-100 md:flex-1/3 pb-8 md:pb-0 md:px-2 lg:px-4">
+          <div className="event-teaser w-full md:w-1/3 pb-8 md:pb-0 md:px-2 lg:px-4">
             <div className="flex flex-col p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg">
               <div className="flex items-center justify-end flex-wrap">
                 <H2 className="whitespace-nowrap grow">
