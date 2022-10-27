@@ -46,11 +46,11 @@ export function Footer() {
                   title: `Datenschutz`,
                 },
                 {
-                  route: `/mintvernetzt/#newsletter`,
+                  route: `/mintvernetzt-informiert/#newsletter`,
                   title: `Newsletter`,
                 },
                 {
-                  route: `/about/#contact-details`,
+                  route: `/about/wer-ist/#contact-details`,
                   title: `Kontakt`,
                 },
               ].map((link, index) => (

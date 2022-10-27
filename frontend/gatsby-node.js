@@ -103,6 +103,30 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/about",
+    toPath: `/about/was-ist/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/about/",
+    toPath: `/about/was-ist/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/mintvernetzt",
+    toPath: `/mintvernetzt-informiert/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/mintvernetzt/",
+    toPath: `/mintvernetzt-informiert/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
