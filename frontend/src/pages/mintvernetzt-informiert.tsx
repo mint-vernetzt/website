@@ -59,7 +59,7 @@ export function MintVernetztInformiert({
         </div>
       </section>
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20" id="newsletter">
         <div className="flex flex-wrap md:-mx-4">
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
             <div className="rounded-3xl overflow-hidden">
