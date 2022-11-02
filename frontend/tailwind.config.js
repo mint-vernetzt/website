@@ -39,6 +39,11 @@ module.exports = {
         slideUpAndFade:
           "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
+      maxWidth: {
+        xs: "20rem",
+        "1/2": "50%",
+        "3/4": "75%",
+      },
     },
     fontFamily: {
       sans: ["'Source Sans Pro'", ...defaultTheme.fontFamily.sans],
@@ -70,12 +75,7 @@ module.exports = {
       12.5: "12.5rem",
       "3/4": "75%",
     },
-    maxWidth: {
-      ...defaultTheme.maxWidth,
-      xs: "20rem",
-      "1/2": "50%",
-      "3/4": "75%",
-    },
+    
     spacing: {
       ...defaultTheme.spacing,
       18: "4.5rem",
