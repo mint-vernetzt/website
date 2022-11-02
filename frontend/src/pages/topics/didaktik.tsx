@@ -68,12 +68,13 @@ export function Didaktik({
         <header>
           <H2 like="h1">Bildungsforschung mit Praxisbezug</H2>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Es gibt bereits einige Studien, wissenschaftliche Publikationen und Erfahrungen 
-            aus der Bildungspraxis, die sich mit Geschlechterunterschieden in der MINT-Bildung 
-            und didaktischen Maßnahmen befassen. Wir bereiten diese Erkenntnisse in 
-            unterschiedlichen Beiträgen mit einem Praxisbezug sowie dem Fokus auf Gender für 
-            Euch auf. Das Ziel ist, mithilfe diesen Wissens eine breitere Zielgruppe mit Euren 
-            MINT-Angeboten zu erreichen.
+            Es gibt bereits einige Studien, wissenschaftliche Publikationen und
+            Erfahrungen aus der Bildungspraxis, die sich mit
+            Geschlechterunterschieden in der MINT-Bildung und didaktischen
+            Maßnahmen befassen. Wir bereiten diese Erkenntnisse in
+            unterschiedlichen Beiträgen mit einem Praxisbezug sowie dem Fokus
+            auf Gender für Euch auf. Das Ziel ist, mithilfe diesen Wissens eine
+            breitere Zielgruppe mit Euren MINT-Angeboten zu erreichen.
           </p>
         </header>
 
@@ -122,7 +123,7 @@ export function Didaktik({
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
             <div className="h-full bg-[#EFE8E6] py-24 flex items-center rounded-lg">
               <BadgeRocket className="w-64 h-64 mx-auto" />
-            </div>  
+            </div>
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
@@ -130,18 +131,23 @@ export function Didaktik({
                 <span className="font-bold">MINT</span>raketen
               </H3>
               <p>
-                Die MINTrakete ist eine Auszeichnung für außergewöhnliche Praxis-Projekte in der MINT-Bildung. Zweimal 
-                im Jahr werden Projekte, die innovative Ansätze nutzen und die Kinder und Jugendliche im und für den 
-                MINT-Bereich motivieren, ausgezeichnet. Die zweite Ausschreibungsrunde lief unter dem Oberthema "MINT 
-                trifft Kunst und Kreativität". 
+                Die MINTrakete ist eine Auszeichnung für außergewöhnliche
+                Praxis-Projekte in der MINT-Bildung. Zweimal im Jahr werden
+                Projekte, die innovative Ansätze nutzen und die Kinder und
+                Jugendliche im und für den MINT-Bereich motivieren,
+                ausgezeichnet.
               </p>
               <p>
-                Bewerben können sich außerschulische Anbieter:innen von MINT-Bildungsangeboten, die sich entweder an 
-                Kinder und Jugendliche oder an weitere MINT-Anbieter:innen richten. Eine interdisziplinäre Jury 
-                bewertet anhand ausgewählter Kriterien die Projekte!
+                Bewerben können sich außerschulische Anbieter:innen von
+                MINT-Bildungsangeboten, die sich entweder an Kinder und
+                Jugendliche oder an weitere MINT-Anbieter:innen richten. Eine
+                interdisziplinäre Jury bewertet anhand ausgewählter Kriterien
+                die Projekte!
               </p>
               <p>
-              <Link to="/projects/mint-raketen/" className="btn-primary">Jetzt entdecken</Link>
+                <Link to="/projects/mint-raketen/" className="btn-primary">
+                  Jetzt entdecken
+                </Link>
               </p>
             </div>
           </div>
@@ -193,9 +199,10 @@ export function Didaktik({
           <header>
             <H2 like="h1">Unsere Events zum Thema Didaktik</H2>
             <p className="text-xl md:px-8 lg:px-20 ">
-              Wir möchten in Vernetzungsformaten darüber in Austausch kommen, wie wir als MINT-Community 
-              Mädchen und junge Frauen in diesem Bereich stärken können. Dafür gibt es Events wie das 
-              MINTcafé Gender. Schaut mal rein!
+              Wir möchten in Vernetzungsformaten darüber in Austausch kommen,
+              wie wir als MINT-Community Mädchen und junge Frauen in diesem
+              Bereich stärken können. Dafür gibt es Events wie das MINTcafé
+              Gender. Schaut mal rein!
             </p>
           </header>
           <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
@@ -204,16 +211,13 @@ export function Didaktik({
                 key={`event-${index}`}
                 className="p-4 rounded-lg bg-neutral-200 shadow-lg"
               >
-                <Link
-                  to={event.url}
-                  className="flex flex-col h-100"
-                >
+                <Link to={event.url} className="flex flex-col h-100">
                   <div className="text-neutral-800 leading-tight text-xs font-semibold flex items-center mb-2 lg:mx-2">
                     <Icon type={IconType.Calendar} />{" "}
                     <time className="ml-2">{formatDate(event.date)}</time>
                   </div>
                   <H4 className="lg:leading-snug lg:mx-2">{event.headline}</H4>
-                  <p className="line-clamp-3 lg:mx-2">{event.body}</p>                  
+                  <p className="line-clamp-3 lg:mx-2">{event.body}</p>
                 </Link>
               </div>
             ))}
@@ -229,7 +233,7 @@ export function Didaktik({
       {data.news.nodes.length > 0 && (
         <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
           <header>
-            <H2 like="h1">Unsere Newsbeiträge zum Thema Didaktik</H2>            
+            <H2 like="h1">Unsere Newsbeiträge zum Thema Didaktik</H2>
           </header>
           <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {data.news.nodes.map((news, index) => (
@@ -237,10 +241,7 @@ export function Didaktik({
                 key={`news-${index}`}
                 className="p-4 rounded-lg bg-neutral-200 shadow-lg"
               >
-                <Link
-                  to={`/news/${news.slug}`}
-                  className="flex flex-col h-100"
-                >
+                <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
                   <H4 className="lg:leading-snug lg:mx-2">{news.title}</H4>
                   <div
                     className="line-clamp-3 lg:mx-2"

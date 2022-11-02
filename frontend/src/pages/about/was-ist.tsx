@@ -7,7 +7,13 @@ import { H1, H3 } from "../../components/Heading/Heading";
 export function WasIst() {
   return (
     <Layout>
-      <SEO title="Was ist MINTvernetzt?" slug="/about/was-ist/" description="" image="" children="" />
+      <SEO
+        title="Was ist MINTvernetzt?"
+        slug="/about/was-ist/"
+        description=""
+        image=""
+        children=""
+      />
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
           <div className="flex-100 md:flex-1/3 pb-8 md:pb-0 md:px-6 lg:px-10">
@@ -30,7 +36,7 @@ export function WasIst() {
               die außerschulische MINT-Bildung in Deutschland. MINTvernetzt wird
               vom Bundesministerium für Bildung und Forschung gefördert und von
               Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, dem
-              Nationalen MINTForum e.V., dem Stifterverband und der Universität
+              Nationalen MINT Forum e.V., dem Stifterverband und der Universität
               Regensburg als Verbund gemeinsam umgesetzt.
             </p>
           </div>
@@ -76,8 +82,8 @@ export function WasIst() {
           ))}
         </div>
       </section>
-    </Layout>  
-  )
+    </Layout>
+  );
 }
 
 export default WasIst;

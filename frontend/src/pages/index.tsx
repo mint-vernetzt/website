@@ -172,12 +172,11 @@ export function Index({
             <H2 like="h1">Unsere Community-Plattform</H2>
             <p className="text-xl mb-8">
               Die bundesweite MINT-Community lebt davon, sich auszutauschen,
-              Wissen zu teilen, von- und miteinander zu lernen. Wir haben dafür
-              die Lösung: Im digitalen Raum gibt es dafür die
-              Community-Plattform, auf der Ihr Euch untereinander und mit
-              Organisationen vernetzen könnt. Ihr sucht Inspiration oder
-              Expert:innen zu konkreten Themen in Eurer Umgebung? Meldet Euch an
-              und vernetzt Euch miteinander!
+              Wissen zu teilen, von- und miteinander zu lernen. Einer der
+              Lösungswege: Unsere Community-Plattform als digitaler Dorfplatz.
+              Hier könnt Ihr Euch untereinander und mit anderen Organisationen
+              vernetzen. Ihr könnt Inspirationen oder Expert:innen zu konkreten
+              Themen in Eurer Umgebung finden. Meldet Euch jetzt an!
             </p>
             <p>
               <a
@@ -185,7 +184,7 @@ export function Index({
                 className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
                 target="_blank"
               >
-                Erfahre mehr
+                Mehr erfahren
               </a>
             </p>
           </div>
@@ -223,9 +222,9 @@ export function Index({
             },
             {
               image: data?.DatalabImage?.childImageSharp?.gatsbyImageData,
-              title: `DataLab`,
+              title: `MINT-DataLab`,
               text: `Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt.`,
-              // link: `/datalab/`,
+              link: `/data/daten-fakten/`,
             },
           ].map((teaserbox, index) => (
             <div
@@ -252,7 +251,7 @@ export function Index({
                       to={`${teaserbox.link}`}
                       className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
                     >
-                      Erfahre mehr
+                      Mehr erfahren
                     </Link>
                   </p>
                 </div>

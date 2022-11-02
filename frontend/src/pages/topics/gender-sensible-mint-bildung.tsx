@@ -45,21 +45,23 @@ export function GenderSensibleMintBildung({
           </H2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16">
             <p className="text-xl text-left">
-              Mädchen können kein MINT oder warum gibt es im MINT-Bereich so
-              starke Unterschiede in der Verteilung der Geschlechter? Das zu
-              ändern, sich auszutauschen und zu informieren und dadurch eine
-              breitere Zielgruppe für MINT zu begeistern ist das Ziel von
-              MINTvernetzt. Der Schwerpunkt unserer Arbeit liegt auf der
-              Gendersensibilisierung. Wir wollen MINT-Akteur:innen die
-              besonderen Bedarfe von Mädchen und jungen Frauen bewusst machen.
+              Mädchen können kein MINT? Doch natürlich! Aber warum gibt es im
+              MINT-Bereich so starke Unterschiede in der Verteilung der
+              Geschlechter? Das wollen wir ändern! Daher setzen wir bei
+              MINTvernetzt einen besonderen Schwerpunkt auf die
+              Gendersensibilisierung. Mit unseren Formaten unterstützen wir Euch
+              dabei, mehr Mädchen und junge Frauen für MINT zu begeistern. Wir
+              bieten Euch die Möglichkeit, Euch untereinander auszutauschen,
+              über Erkenntnisse aus Wissenschaft und Praxis zu informieren und
+              von- und miteinander zu lernen.
             </p>
             <p className="text-xl text-left">
               Hier findet Ihr unsere Blogbeitragserie, in der wir spannende
-              Erkenntnisse aus der Forschung aufbereiten, Gute-Praxis-Beispiele,
-              eine jährliche Befragung der MINT-Akteur:innen sowie Austausch-
-              und Vernetzungsmöglichkeiten zum Thema Gender für Eure
-              MINT-Bildungspraxis. Macht mit, tauscht Euch aus und lernt
-              voneinander!
+              Erkenntnisse aus der Forschung aufbereiten, Gute-Praxis-Beispiele
+              zeigen, eine jährliche Befragung der MINT-Akteur:innen
+              veröffentlichen sowie Austausch- und Vernetzungsmöglichkeiten zum
+              Thema Gender für Eure MINT-Bildungspraxis zur Verfügung stellen.
+              Seid dabei und macht mit!
             </p>
           </div>
         </header>
@@ -247,12 +249,12 @@ export function GenderSensibleMintBildung({
             {
               image: data?.vernetzungImage?.childImageSharp?.gatsbyImageData,
               title: `Vernetzung und Austausch`,
-              text: `Um Eure Angebote stärker zu vernetzen, findet regelmäßig das „MINTcafé Gender“ statt – eine digitale Veranstaltungsreihe, in der Forschungserkenntnisse und Praxiserfahrungen im Fokus stehen. Zudem gibt es eine regelmäßige Sprechstunde und Austauschformate für die Mitglieder des Nationalen Paktes für Frauen in MINT-Berufen.`,
+              text: ` Um Euch mit Euren Angeboten stärker zu vernetzen, findet regelmäßig das "MINTcafé Gender" statt - eine digitale Veranstaltungsreihe, in der Forschungserkenntnisse und Praxiserfahrungen im Fokus stehen. Zudem gibt es eine regelmäßige Sprechstunde und Austauschformate für die Mitglieder des Nationalen Paktes für Frauen in MINT-Berufen.`,
             },
             {
               image: data?.transferImage?.childImageSharp?.gatsbyImageData,
               title: `Forschungstransfer`,
-              text: `Um MINT-Angeboten praxisrelevante Erkenntnisse aus Wissenschaft und Forschung zugänglich zu machen, werden diese in Blogbeiträgen und Themendossiers aufbereitet und veröffentlicht.`,
+              text: `Um Euch praxisrelevante Erkenntnisse aus Wissenschaft und Forschung zugänglich zu machen, werden diese in Blogbeiträgen und Themendossiers aufbereitet und veröffentlicht.`,
             },
           ].map((teaserbox, index) => (
             <div

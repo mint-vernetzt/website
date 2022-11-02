@@ -20,7 +20,13 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
   
   return (
     <Layout>
-      <SEO title="Wer ist MINTvernetzt?" slug="/about/wer-ist/" description="" image="" children="" />
+      <SEO
+        title="Wer ist MINTvernetzt?"
+        slug="/about/wer-ist/"
+        description=""
+        image=""
+        children=""
+      />
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
           <div className="flex-100 md:flex-1/3 pb-8 md:pb-0 md:px-6 lg:px-10">
@@ -39,12 +45,11 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
             </p>
 
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Die MINT-Vernetzungsstelle, kurz MINTvernetzt, ist das Dach für
-              die außerschulische MINT-Bildung in Deutschland. MINTvernetzt wird
-              vom Bundesministerium für Bildung und Forschung gefördert und von
-              Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, dem
-              Nationalen MINTForum e.V., dem Stifterverband und der Universität
-              Regensburg als Verbund gemeinsam umgesetzt.
+              Das Verbundteam von MINTvernetzt besteht aus Mitarbeitenden der
+              Körber-Stiftung, der matrix gGmbH, dem Nationalen MINT Forum e.V.,
+              dem Stifterverband und der Universität Regensburg. Mit
+              unterschiedlichen Fokusthemen und Erfahrungen sind wir als
+              Ansprechpartner:innen für Euch da.
             </p>
           </div>
         </div>
@@ -56,11 +61,6 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
       >
         <header>
           <H2 like="h1">Für jede Frage die richtige Adresse</H2>
-          <p className="lead">
-            Ihr habt eine Frage, sucht Informationen oder möchtet eine Idee mit
-            uns teilen?<br />Wir sind als Ansprechpartner:innen von MINTvernetzt
-            gerne für Euch da.
-          </p>
         </header>
 
         <div
@@ -152,12 +152,12 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
       <section className="container my-8 md:my-10 lg:my-20">
         <OrganizationBoxContainer
           headline="Der Verbund"
-          body="Herausforderungen lösen wir gemeinsam. MINT-Potenziale heben wir im Team. MINTvernetzt ist ein Verbundprojekt, das gemeinsam von Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, des Nationalen MINTForums e.V., des Stifterverbands und der Universität Regensburg umgesetzt wird. Zusammen blicken wir auf viel Erfahrung in der MINT-Bildung, die wir bei MINTvernetzt bündeln und weiterentwickeln wollen. Hier findet Ihr die unterschiedlichen Zuständigkeiten der Verbundpartner bei MINTvernetzt."
+          body="Herausforderungen lösen wir gemeinsam. MINT-Potenziale heben wir im Team. MINTvernetzt ist ein Verbundprojekt, das gemeinsam von Mitarbeitenden der Körber-Stiftung, der matrix gGmbH, des Nationalen MINT Forums e.V., des Stifterverbands und der Universität Regensburg umgesetzt wird. Zusammen blicken wir auf viel Erfahrung in der MINT-Bildung, die wir bei MINTvernetzt bündeln und weiterentwickeln wollen. Hier findet Ihr die unterschiedlichen Zuständigkeiten der Verbundpartner bei MINTvernetzt."
           organisations={caseInsensitiveSortedOrganization}
         />
       </section>
-    </Layout>  
-  )
+    </Layout>
+  );
 }
 
 export default WerIst;

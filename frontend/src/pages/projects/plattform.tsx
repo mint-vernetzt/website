@@ -36,7 +36,8 @@ export function Plattform({
             <div className="md:flex-100">
               <H1 like="h0">MINTvernetzt Plattform</H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
-              Austausch, Vernetzung und Inspiration aus der Community für Eure MINT-Praxis.
+                Austausch, Vernetzung und Inspiration aus der Community für Eure
+                MINT-Praxis.
               </p>
             </div>
           </div>
@@ -48,11 +49,13 @@ export function Plattform({
           <div className="mb-6 md:mb-0 md:px-6 lg:px-10 md:w-1/2">
             <H2 like="h1">Entdecken und Vernetzen</H2>
             <p className="text-xl mb-8">
-              Die bundesweite MINT-Community lebt davon, sich auszutauschen, Wissen zu teilen, 
-              von- und miteinander zu lernen. Einer der Lösungswege: Unser digitaler Dorfplatz 
-              ist die Community-Plattform, auf der Ihr Euch untereinander und mit Organisationen 
-              vernetzen könnt. Ihr sucht Inspiration oder Expert:innen zu konkreten Themen in 
-              Eurer Umgebung? Meldet Euch an und vernetzt Euch miteinander!
+              Die bundesweite MINT-Community lebt davon, sich auszutauschen,
+              Wissen zu teilen, von- und miteinander zu lernen. Einer der
+              Lösungswege ist unser digitaler Dorfplatz: die
+              Community-Plattform, auf der Ihr Euch untereinander und mit
+              Organisationen vernetzen könnt. Ihr sucht Inspiration oder
+              Expert:innen zu konkreten Themen in Eurer Umgebung? Meldet Euch an
+              und vernetzt Euch miteinander!
             </p>
             <p>
               <a
@@ -60,7 +63,7 @@ export function Plattform({
                 className="btn-primary"
                 target="_blank"
               >
-                Akteur:innen entdecken
+                Jetzt anmelden
               </a>
             </p>
           </div>
@@ -79,51 +82,56 @@ export function Plattform({
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 md:order-2">
             <div className="h-full bg-[#EFE8E6] flex items-center rounded-3xl aspect-4/3">
               <BadgeRocket className="w-1/2 h-1/2 mx-auto" />
-            </div>  
+            </div>
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
               <H3 like="h1">
-                Wissen teilen und Inspirationen finden – Gute-Praxis-Projekte                
+                Wissen teilen und Inspirationen finden – Gute-Praxis-Projekte
               </H3>
               <p>
-                Niemand weiß besser, wie man junge Menschen für MINT begeistert, als die MINT-Community selbst. 
-                Auf der Community-Plattform findet ihr deswegen in Kürze Gute-Praxis- Projekte aus anderen 
-                Regionen und von anderen Akteur:innen. Neben Inspirationen und der Möglichkeit Rückfragen zu 
-                den Angeboten zu stellen, könnt Ihr aber auch Eure eigenen Angebote einstellen und mit der 
-                Gemeinschaft teilen. Die Projekte könnt Ihr nach Schwerpunkten filtern und suchen. Besonders 
-                ausgezeichnete Gute Praxis-Projekte findet Ihr mit der Kennzeichnung der MINT-Rakete.
-              </p>              
+                Niemand weiß besser, wie man junge Menschen für MINT begeistert,
+                als die MINT-Community selbst. Auf der Community-Plattform
+                findet Ihr deswegen in Kürze Gute-Praxis- Projekte aus anderen
+                Regionen und von anderen Akteur:innen. Neben Inspirationen und
+                der Möglichkeit Rückfragen zu den Angeboten zu stellen, könnt
+                Ihr aber auch Eure eigenen Angebote einstellen und mit der
+                Gemeinschaft teilen. Die Projekte könnt Ihr nach Schwerpunkten
+                filtern und suchen. Besonders ausgezeichnete Gute
+                Praxis-Projekte findet Ihr mit der Kennzeichnung der
+                MINT-Rakete.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="flex flex-wrap content-center items-center md:-mx-4">
-          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 aspect-4/3 flex items-center">            
+          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 aspect-4/3 flex items-center">
             <GatsbyImage
-              image={
-                data.plattformEventImage?.childImageSharp?.gatsbyImageData
-              }
+              image={data.plattformEventImage?.childImageSharp?.gatsbyImageData}
               className="w-full h-auto"
-              alt="Die Community treffen und von einander lernen"
-            />            
+              alt="Die Community treffen und voneinander lernen"
+            />
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H3 like="h1">
-                Die Community treffen und von einander lernen
-              </H3>
+              <H3 like="h1">Die Community treffen und voneinander lernen</H3>
               <p>
-                Ihr wollt Euch über spannende Veranstaltungen informieren? Hier könnt Ihr Euch direkt für unsere 
-                Veranstaltungsformate anmelden und Euch im Anschluss mit anderen Teilnehmenden vernetzen. In Kürze 
-                habt Ihr die Möglichkeit eigene Netzwerk- und Austauschveranstaltungen für die MINT-Community sowie 
+                Ihr wollt Euch über spannende Veranstaltungen informieren? Hier
+                könnt Ihr Euch direkt für unsere Veranstaltungsformate anmelden
+                und Euch im Anschluss mit anderen Teilnehmenden vernetzen. In
+                Kürze habt Ihr die Möglichkeit, eigene Netzwerk- und
+                Austauschveranstaltungen für die MINT-Community sowie
                 Interessierte aus der MINT-Bildung einzustellen.
               </p>
               <p>
-                <a href="https://community.mint-vernetzt.de/explore/events" target="_blank" className="btn-primary">
+                <a
+                  href="https://community.mint-vernetzt.de/explore/events"
+                  target="_blank"
+                  className="btn-primary"
+                >
                   Veranstaltungen entdecken
                 </a>
               </p>
@@ -131,8 +139,6 @@ export function Plattform({
           </div>
         </div>
       </section>
-
-      
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="flex flex-wrap content-center items-center md:-mx-4">
@@ -148,15 +154,18 @@ export function Plattform({
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
               <H3 like="h1">
-                Die Entstehung der Community-Plattform: Co-Kreativ und partizipativ 
+                Die Entstehung der Community-Plattform: Co-Kreativ und
+                partizipativ
               </H3>
               <p>
-                Damit die Funktionen des Community-Bereichs genau da ansetzen, wo sie benötigt werden, 
-                setzen wir in der Entwicklung auf Partizipation und Co-Kreation auf zwei Ebenen: 
-                MINT-Akteur:innen wirken aktiv auf die Tools und das Design ein. Ihre Bedarfe stehen 
-                im Fokus, sodass Programmierer:innen aus der Community passende Features entwickeln, 
-                die durch das MINTvernetzt-Webteam geprüft und in die Entwicklung eingebunden werden. 
-                Ein Format dafür ist unser MINTvernetzt-Hackathon. 
+                Damit die Funktionen des Community-Bereichs genau da ansetzen,
+                wo sie benötigt werden, setzen wir in der Entwicklung auf
+                Partizipation und Co-Kreation auf zwei Ebenen: MINT-Akteur:innen
+                wirken aktiv auf die Tools und das Design ein. Ihre Bedarfe
+                stehen im Fokus, sodass Programmierer:innen aus der Community
+                passende Features entwickeln, die durch das MINTvernetzt-Webteam
+                geprüft und in die Entwicklung eingebunden werden. Ein Format
+                dafür ist unser MINTvernetzt-Hackathon.
               </p>
             </div>
           </div>
@@ -176,51 +185,55 @@ export function Plattform({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H3 like="h1">
-                Jetzt aktiv mitgestalten
-              </H3>
+              <H3 like="h1">Jetzt aktiv mitgestalten</H3>
               <p>
-                Du bist MINT-Akteur:in, Designer:in oder Programmierer:in und möchtest die Plattform aktiv mitgestalten? 
-                Melde dich bei Arne Klauke und Inga Leffersoder tritt mit uns über {" "}
-                <a href="mailto:community@mint-vernetzt.de" className="text-lilac-500 whitespace-nowrap">community@mint-vernetzt.de</a> in Kontakt.
-
+                Du bist MINT-Akteur:in, Designer:in oder Programmierer:in und
+                möchtest die Plattform aktiv mitgestalten? Melde dich bei Arne
+                Klauke und Inga Leffersoder tritt mit uns über{" "}
+                <a
+                  href="mailto:community@mint-vernetzt.de"
+                  className="text-lilac-500 whitespace-nowrap"
+                >
+                  community@mint-vernetzt.de
+                </a>{" "}
+                in Kontakt.
               </p>
             </div>
           </div>
         </div>
-        
+
         <div className="flex">
           <div className="grid gap-y-8 lg:-mx-8 grid-cols-1 md:grid-cols-2 pt-8 flex-initial">
             <div className="">
-                <ContactCard
-                  headline=""
-                  name={`${contactKlauke.firstName} ${contactKlauke.lastName}`}
-                  position={contactKlauke.position}
-                  phone={contactKlauke.phone}
-                  email={contactKlauke.email}
-                  avatar={{
-                    src: contactKlauke?.photo?.localFile?.childImageSharp
-                      ?.gatsbyImageData,
-                    alt: `${contactKlauke.firstName} ${contactKlauke.lastName}`,
-                  }}
-                />
+              <ContactCard
+                headline=""
+                name={`${contactKlauke.firstName} ${contactKlauke.lastName}`}
+                position={contactKlauke.position}
+                phone={contactKlauke.phone}
+                email={contactKlauke.email}
+                avatar={{
+                  src: contactKlauke?.photo?.localFile?.childImageSharp
+                    ?.gatsbyImageData,
+                  alt: `${contactKlauke.firstName} ${contactKlauke.lastName}`,
+                }}
+              />
             </div>
             <div className="">
-                <ContactCard
-                  headline=""
-                  name={`${contactLeffers.firstName} ${contactLeffers.lastName}`}
-                  position={contactLeffers.position}
-                  phone={contactLeffers.phone}
-                  email={contactLeffers.email}
-                  avatar={{
-                    src: contactLeffers?.photo?.localFile?.childImageSharp
-                      ?.gatsbyImageData,
-                    alt: `${contactLeffers.firstName} ${contactLeffers.lastName}`,
-                  }}
-                />
-            </div>  
-          </div>            
-        </div>          
+              <ContactCard
+                headline=""
+                name={`${contactLeffers.firstName} ${contactLeffers.lastName}`}
+                position={contactLeffers.position}
+                phone={contactLeffers.phone}
+                email={contactLeffers.email}
+                avatar={{
+                  src: contactLeffers?.photo?.localFile?.childImageSharp
+                    ?.gatsbyImageData,
+                  alt: `${contactLeffers.firstName} ${contactLeffers.lastName}`,
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   );

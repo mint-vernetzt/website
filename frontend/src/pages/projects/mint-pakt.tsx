@@ -161,7 +161,7 @@ export const pageQuery = graphql`
       }
     }
 
-    wpContact(contactInformations: { lastName: { eq: "Linhoff" } }) {
+    wpContact(contactInformations: { lastName: { eq: "Kowitz-Harms" } }) {
       id
       contactInformations {
         phone
