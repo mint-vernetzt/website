@@ -122,6 +122,10 @@ section.container header:not(.text-left) p.lead {
   @apply text-lilac-500 font-bold hover:underline;
 }
 
+.event-description ul li a {
+  @apply text-lilac-500 hover:underline;
+}
+
 .blog-post-content li a {
   @apply text-lilac-500 font-bold hover:underline;
 }
