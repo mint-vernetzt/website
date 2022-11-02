@@ -249,7 +249,7 @@ export function GenderSensibleMintBildung({
             {
               image: data?.vernetzungImage?.childImageSharp?.gatsbyImageData,
               title: `Vernetzung und Austausch`,
-              text: ` Um Euch mit Euren Angeboten stärker zu vernetzen, findet regelmäßig das "MINTcafé Gender" statt - eine digitale Veranstaltungsreihe, in der Forschungserkenntnisse und Praxiserfahrungen im Fokus stehen. Zudem gibt es eine regelmäßige Sprechstunde und Austauschformate für die Mitglieder des Nationalen Paktes für Frauen in MINT-Berufen.`,
+              text: `Um Euch mit Euren Angeboten stärker zu vernetzen, findet regelmäßig das "MINTcafé Gender" statt - eine digitale Veranstaltungsreihe, in der Forschungserkenntnisse und Praxiserfahrungen im Fokus stehen. Zudem gibt es eine regelmäßige Sprechstunde und Austauschformate für die Mitglieder des Nationalen Paktes für Frauen in MINT-Berufen.`,
             },
             {
               image: data?.transferImage?.childImageSharp?.gatsbyImageData,

@@ -409,7 +409,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 664)
       }
     }
-    distributorImage: file(relativePath: { eq: "mintvernetzt_verteiler.png" }) {
+    distributorImage: file(relativePath: { eq: "mintvernetzt_verteiler.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(width: 664)

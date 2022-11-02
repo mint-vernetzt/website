@@ -173,10 +173,11 @@ export function Index({
             <p className="text-xl mb-8">
               Die bundesweite MINT-Community lebt davon, sich auszutauschen,
               Wissen zu teilen, von- und miteinander zu lernen. Einer der
-              Lösungswege: Unsere Community-Plattform als digitaler Dorfplatz.
-              Hier könnt Ihr Euch untereinander und mit anderen Organisationen
-              vernetzen. Ihr könnt Inspirationen oder Expert:innen zu konkreten
-              Themen in Eurer Umgebung finden. Meldet Euch jetzt an!
+              Lösungswege ist unser digitaler Dorfplatz: die
+              Community-Plattform, auf der Ihr Euch untereinander und mit
+              Organisationen vernetzen könnt. Ihr sucht Inspiration oder
+              Expert:innen zu konkreten Themen in Eurer Umgebung? Meldet Euch an
+              und vernetzt Euch miteinander!
             </p>
             <p>
               <a

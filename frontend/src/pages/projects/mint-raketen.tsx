@@ -34,7 +34,7 @@ export function Mintraketen({ data }) {
                 MINT<span className="font-normal">raketen</span>
               </H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
-                Konkrete Gute-Praxis-Beispiele von MINT-Bildungsanbieter:innen.
+                Konkrete Gute-Praxis-Beispiele von MINT-Bildungsanbieter:innen
               </p>
             </div>
           </div>
@@ -45,16 +45,16 @@ export function Mintraketen({ data }) {
         <header>
           <p className="lg:text-xl md:px-8 lg:px-20 ">
             Die MINTrakete ist eine Auszeichnung für außergewöhnliche
-            Gute-Praxis-Beispiele in der MINT-Bildung. Mithilfe regelmäßiger
-            Ausschreibungen rufen wir zu wechselnden Themen zur Bewerbung auf
-            und bieten so verschiedenen Bildungsangeboten eine Bühne. Es können
-            sich also alle außerschulischen Lernorte bewerben, die ein gutes
-            Umsetzungsbeispiel zum aktuellen Ausschreibungsthema präsentieren
-            können. Die Gewinnerprojekte stellen wir Euch nach jeder
-            Ausschreibung vor: Schaut gerne vorbei. Also lernt andere und neue
-            Projektansätze kennen und tauscht Euch in verschiedenen
-            Community-Formaten darüber aus. Im Fokus steht das gemeinschaftliche
-            Von- und Miteinanderlernen.
+            Gute-Praxis-Beispiele mit neuen Projektansätzen in der MINT-Bildung.
+            Zweimal im Jahr werden Projekte, die innovative Ansätze nutzen und
+            die Kinder und Jugendliche im und für den MINT-Bereich motivieren,
+            durch eine interdisziplinäre Jury ausgezeichnet. Bewerben können
+            sich außerschulische Anbieter:innen von MINT-Bildungsangeboten, die
+            sich entweder an Kinder und Jugendliche oder an weitere
+            MINT-Anbieter:innen richten. Die Gewinnerprojekte stellen wir Euch
+            nach jeder Ausschreibung vor: Schaut gerne vorbei, lernt andere und
+            neue Projektansätze kennen und tauscht Euch in verschiedenen
+            Community-Formaten darüber aus.
           </p>
         </header>
       </section>
@@ -115,8 +115,8 @@ export function Mintraketen({ data }) {
           </div>
           <div className="flex-100 md:flex-2/3 md:px-6 lg:px-10">
             <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
-              Lerne hier unsere MINT
-              <span className="font-light">raketen</span> näher kennen
+              Lernt hier unsere MINT<span className="font-light">raketen</span>{" "}
+              näher kennen.
             </p>
             <H3 like="h1">
               <strong>Ausgezeichnete MINT</strong>raketen
@@ -257,7 +257,7 @@ export function Mintraketen({ data }) {
         <p>
           Ihr habt Interesse an wissenschaftlichen Erkenntnissen zu
           Gute-Praxis-Beispielen und mehr Informationen aus der Forschung zu
-          gelingender MINT-Bildung? Dann findet ihr auf dieser Seite weitere
+          gelingender MINT-Bildung? Dann findet Ihr auf dieser Seite weitere
           spannende Einblicke.
         </p>
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">

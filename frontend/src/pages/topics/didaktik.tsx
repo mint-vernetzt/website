@@ -68,13 +68,16 @@ export function Didaktik({
         <header>
           <H2 like="h1">Bildungsforschung mit Praxisbezug</H2>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Es gibt bereits einige Studien, wissenschaftliche Publikationen und
-            Erfahrungen aus der Bildungspraxis, die sich mit
-            Geschlechterunterschieden in der MINT-Bildung und didaktischen
-            Maßnahmen befassen. Wir bereiten diese Erkenntnisse in
-            unterschiedlichen Beiträgen mit einem Praxisbezug sowie dem Fokus
-            auf Gender für Euch auf. Das Ziel ist, mithilfe diesen Wissens eine
-            breitere Zielgruppe mit Euren MINT-Angeboten zu erreichen.
+            Mädchen und junge Frauen fehlen in sämtlichen MINT-Bereichen.
+            Deshalb zeigen wir Euch in diesem Themenschwerpunkt, welche
+            didaktischen Maßnahmen dabei helfen können, Mädchen für einzelne
+            MINT-Disziplinen zu begeistern und sie zur Teilnahme an Projekten zu
+            motivieren. Wir bereiten Erkenntnisse aus Studien und
+            wissenschaftlichen Publikationen für Euch auf und gehen auf konkrete
+            Handlungsmöglichkeiten ein, die dazu beitragen sollen,
+            Geschlechterklischees in der Praxis aufzubrechen. Darüber hinaus
+            zeigen wir auf, inwieweit Formate der Begabtenförderung immer noch
+            von Stereotypen beeinflusst werden.
           </p>
         </header>
 

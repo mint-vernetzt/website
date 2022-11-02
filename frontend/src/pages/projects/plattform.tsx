@@ -7,11 +7,7 @@ import { ReactComponent as BadgeRocket } from "../../images/Badge_02Rocket.svg";
 import ContactCard from "../../components/ContactCard/ContactCard";
 import Icon, { IconType } from "../../components/Icon/Icon";
 
-export function Plattform({
-  data,
-}: {
-  data: GatsbyTypes.PlattformPageQuery;
-}) {
+export function Plattform({ data }: { data: GatsbyTypes.PlattformPageQuery }) {
   const contactKlauke = data.contactKlauke?.contactInformations;
   const contactLeffers = data.contactLeffers?.contactInformations;
 
@@ -37,7 +33,7 @@ export function Plattform({
               <H1 like="h0">MINTvernetzt Plattform</H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
                 Austausch, Vernetzung und Inspiration aus der Community für Eure
-                MINT-Praxis.
+                MINT-Praxis
               </p>
             </div>
           </div>
@@ -92,13 +88,13 @@ export function Plattform({
               <p>
                 Niemand weiß besser, wie man junge Menschen für MINT begeistert,
                 als die MINT-Community selbst. Auf der Community-Plattform
-                findet Ihr deswegen in Kürze Gute-Praxis- Projekte aus anderen
+                findet Ihr deswegen in Kürze Gute-Praxis-Projekte aus anderen
                 Regionen und von anderen Akteur:innen. Neben Inspirationen und
                 der Möglichkeit Rückfragen zu den Angeboten zu stellen, könnt
                 Ihr aber auch Eure eigenen Angebote einstellen und mit der
                 Gemeinschaft teilen. Die Projekte könnt Ihr nach Schwerpunkten
-                filtern und suchen. Besonders ausgezeichnete Gute
-                Praxis-Projekte findet Ihr mit der Kennzeichnung der
+                filtern und suchen. Besonders ausgezeichnete
+                Gute-Praxis-Projekte findet Ihr mit der Kennzeichnung der
                 MINT-Rakete.
               </p>
             </div>
@@ -189,7 +185,7 @@ export function Plattform({
               <p>
                 Du bist MINT-Akteur:in, Designer:in oder Programmierer:in und
                 möchtest die Plattform aktiv mitgestalten? Melde dich bei Arne
-                Klauke und Inga Leffersoder tritt mit uns über{" "}
+                Klauke und Inga Leffers oder tritt mit uns über{" "}
                 <a
                   href="mailto:community@mint-vernetzt.de"
                   className="text-lilac-500 whitespace-nowrap"
@@ -266,10 +262,10 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 744)
       }
     }
-    activeImage: file(relativePath: { eq: "plattform_aktiv.jpg" }) {
+    activeImage: file(relativePath: { eq: "plattform_aktiv.png" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 496)
+        gatsbyImageData(width: 496, quality: 90)
       }
     }
     contactKlauke: wpContact(
