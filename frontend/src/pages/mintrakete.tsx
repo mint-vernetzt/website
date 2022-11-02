@@ -13,7 +13,7 @@ export function Mintrakete({ data }) {
       <SEO
         title="MINTraketen"
         slug="/mintraketen"
-        description=""
+        description="Konkrete Gute-Praxis-Beispiele von MINT-Bildungsanbieter:innen."
         image=""
         children=""
       />

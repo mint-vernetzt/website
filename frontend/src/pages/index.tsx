@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import {
   getNewsItems,
-  getOrganizationsData,
   getTeasersData,
 } from "../utils/dataTransformer";
 import { GatsbyImage } from "gatsby-plugin-image";
