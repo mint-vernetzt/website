@@ -21,11 +21,10 @@ export function GenderSensibleMintBildung({
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">
           <GatsbyImage
-            image={data.heroImage?.childImageSharp?.gatsbyImageData}
+            image={data.heroImageBright?.childImageSharp?.gatsbyImageData}
             className="w-full h-full"
             alt="Gendersensible MINT-Bildung"
           />
-
           <div className="hero-text absolute top-0 left-0 h-full right-0 pt-12 px-4 md:px-12 md:flex md:items-center lg:px-20">
             <div className="md:flex-100">
               <H1 like="h0">Gendersensible MINT-Bildung</H1>
@@ -285,6 +284,12 @@ export default GenderSensibleMintBildung;
 export const pageQuery = graphql`
   query GenderSensibleMintBildungPage {
     heroImage: file(relativePath: { eq: "hero_gender.jpg" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(width: 600)
+      }
+    }
+    heroImageBright: file(relativePath: { eq: "hero_gender_bright.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(width: 1488)
