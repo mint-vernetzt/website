@@ -14,6 +14,7 @@ function SubMenuItem(props: { menu: MenuItem }) {
   return (
     <Link
       to={url}
+      isExternal={url.startsWith("http")}
       className="flex items-stretch text-left lg:hover:bg-[#F4F5F6] lg:rounded-lg"
     >
       <div className="hidden w-24 mr-6 shrink-0 rounded-l-md">
@@ -42,13 +43,14 @@ function Teaser(props: { menu: MenuItem }) {
   return (
     <Link
       to={url}
+      isExternal={url.startsWith("http")}
       className="flex items-stretch text-left hover:bg-white/50 rounded-lg"
     >
       <div className="hidden w-24 mr-6 shrink-0 rounded-l-md">
         {svg && (
           <div className="w-full h-full flex item-center justify-center">
             <img src={svg} alt={title} />
-          </div>  
+          </div>
         )}
         {!svg && image && (
           <GatsbyImage
@@ -72,7 +74,11 @@ function MainTeaser(props: { menu: MenuItem }) {
   const { title, description, url, image } = props.menu;
 
   return (
-    <Link to={url} className="flex text-left">
+    <Link
+      to={url}
+      isExternal={url.startsWith("http")}
+      className="flex text-left"
+    >
       <div>
         <h4 className="text-base lg:text-lg font-bold m-0 leading-normal">
           {title}
