@@ -40,7 +40,7 @@ jobs:
       - name: "build website"
         run: cd frontend/ && npm run build
         env:
-          CMS_API: ${{secrets.CMS_API}}
+          CMS_API: ${{secrets.CMS_API_PROD}}
           SITE_URL: ${{secrets.SITE_URL_STAGE}}
           GATSBY_NEWSSUBMISSION_URL: ${{secrets.GATSBY_NEWSSUBMISSION_URL_STAGE}}
           GATSBY_EVENTSUBMISSION_URL: ${{secrets.GATSBY_EVENTSUBMISSION_URL_STAGE}}
