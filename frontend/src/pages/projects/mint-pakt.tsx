@@ -74,9 +74,7 @@ export function MintPakt({ data }) {
           </div>
 
           <div className="flex-100 lg:flex-2/3 lg:px-10 lg:order-1">
-            <H1 like="h0">
-              MINT<span className="font-normal">pakt</span>
-            </H1>
+            <H1 like="h0">Nationaler Pakt für Frauen in MINT-Berufen</H1>
             <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
               #empowerMINT #FrauenInMINT
             </p>

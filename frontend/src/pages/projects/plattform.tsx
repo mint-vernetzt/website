@@ -14,7 +14,7 @@ export function Plattform({ data }: { data: GatsbyTypes.PlattformPageQuery }) {
   return (
     <Layout>
       <SEO
-        title="MINTvernetzt Plattform"
+        title="MINTvernetzt-Plattform"
         slug="/projects/plattform/"
         description="Austausch, Vernetzung und Inspiration aus der Community für Eure MINT-Praxis."
         image={data?.heroImage?.publicURL}
@@ -25,12 +25,12 @@ export function Plattform({ data }: { data: GatsbyTypes.PlattformPageQuery }) {
           <GatsbyImage
             image={data.heroImage?.childImageSharp?.gatsbyImageData}
             className="w-full h-full"
-            alt="MINTvernetzt Plattform"
+            alt="MINTvernetzt-Plattform"
           />
 
           <div className="hero-text absolute top-0 left-0 h-full right-0 pt-12 px-4 md:px-12 md:flex md:items-center lg:px-20">
             <div className="md:flex-100">
-              <H1 like="h0">MINTvernetzt Plattform</H1>
+              <H1 like="h0">MINTvernetzt-Plattform</H1>
               <p className="font-bold md:max-w-1/2 lg:text-3xl lg:leading-snug">
                 Austausch, Vernetzung und Inspiration aus der Community für Eure
                 MINT-Praxis
