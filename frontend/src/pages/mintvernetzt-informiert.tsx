@@ -133,7 +133,7 @@ export function MintVernetztInformiert({
               <p>
                 <a
                   href="https://survey.lamapoll.de/Anmeldung-MINTvernetzt-Verteiler/"
-                  className="text-lilac-500 font-bold"
+                  className="btn-primary"
                   target="_blank"
                   rel="noreferrer"
                 >
