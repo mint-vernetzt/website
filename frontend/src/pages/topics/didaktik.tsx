@@ -25,7 +25,7 @@ export function Didaktik({
       body: (
         <span
           dangerouslySetInnerHTML={{
-            __html: event.excerpt.replace(/<[^>]*>/g, "").substr(0, 150),
+            __html: event.excerpt.replace(/<[^>]*>/g, "").substr(0, 250),
           }}
         />
       ),
