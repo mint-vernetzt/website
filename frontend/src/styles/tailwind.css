@@ -10,7 +10,7 @@
   @import "@fontsource/source-sans-pro/600-italic.css";
 
   body {
-    
+    scroll-behavior: smooth;
   }
 
   /** Heading **/
