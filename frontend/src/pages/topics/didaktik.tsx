@@ -81,6 +81,26 @@ export function Didaktik({
           </p>
         </header>
 
+        <div className="flex gap-4 lg:gap-8 justify-center">
+          <div className="flex-initial w-full md:w-1/2 rounded-lg bg-neutral-200 shadow-lg mb-4 md:mb-8">          
+            <Link to="/mint-bildungsforschung/themenspezial-artikel-abbau-von-geschlechterunterschieden" className="flex flex-col h-100">
+              <div className="rounded-t-lg overflow-hidden">
+                <GatsbyImage
+                  image={data.Dossier3TeaserImage.childImageSharp.gatsbyImageData}                
+                  className="w-full h-auto"
+                  alt=""
+                />
+              </div>
+              <div className="p-4 lg:p-6">     
+                <H4 className="lg:leading-snug">Abbau von Geschlechterunterschieden in der MINT-Bildung </H4>
+                <p className="">Wenige Frauen in MINT-Berufen, ungenutztes Potential und Lohnungleichheit: All das können Folgen von verinnerlichten Geschlechterstereotypen sein. Doch die Forschung zeigt auch, dass sich Geschlechterunterschiede abbauen lassen. Über praktische Tipps für mehr Chancengleichheit und weniger verinnerlichte Stereotype.</p>
+                <p>
+                  <button className="btn-primary">Jetzt lesen</button>
+                </p>
+              </div>  
+            </Link>            
+          </div>
+        </div>    
         <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {[
             {
@@ -100,21 +120,23 @@ export function Didaktik({
           ].map((teaserbox, index) => (
             <div
               key={`teaserbox-${index}`}
-              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+              className="rounded-lg bg-neutral-200 shadow-lg"
             >
               <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                <div className="rounded-t-lg overflow-hidden">
                   <GatsbyImage
                     image={teaserbox.image}
                     className="w-full h-auto"
                     alt=""
                   />
                 </div>
-                <H4 className="lg:leading-snug lg:mx-2">{teaserbox.title}</H4>
-                <p className="lg:mx-2">{teaserbox.text}</p>
-                <p>
-                  <button className="btn-primary">Jetzt lesen</button>
-                </p>
+                <div className="p-4 lg:p-6">     
+                  <H4 className="lg:leading-snug">{teaserbox.title}</H4>
+                  <p>{teaserbox.text}</p>
+                  <p>
+                    <button className="btn-primary">Jetzt lesen</button>
+                  </p>
+                </div>  
               </Link>
             </div>
           ))}
@@ -288,6 +310,13 @@ export const pageQuery = graphql`
     }
     Dossier2TeaserImage: file(
       relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(width: 744)
+      }
+    }
+    Dossier3TeaserImage: file(
+      relativePath: { eq: "card_abbau-von-geschlechterunterschieden.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 744)
