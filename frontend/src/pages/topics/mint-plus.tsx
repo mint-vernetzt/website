@@ -90,48 +90,37 @@ export function MintPlus({
               text: `Was ist MINT+ und inwieweit kann das „plus“ – die Erweiterung von MINT – hilfreich für Euch und Eure Projekte sein? Mit diesem Blogbeitrag bekommt Ihr einen ersten Einblick in das Thema - viel Spaß beim Lesen!`,
               link: `/news/mint-oder-warum-wir-den-blick-uber-den-tellerrand-wagen-sollten/`,
             },
+            {
+              image: data.LernenArtikelImage.childImageSharp.gatsbyImageData,
+              title: `Lernen im Kontext – ein wichtiger Baustein für MINT+`,
+              text: `Was gibt es für Konzepte von „Kontextualisiertem Lernen“, welche Methoden wurden von der Forschung begleitet und als wirksam erkannt und wo gibt es trotzdem noch Herausforderungen in der schulischen und außerschulischen Praxis? Ein Überblick aus der Bildungsforschung.`,
+              link: `/topics/mint-plus/themenspezial-artikel-mint-plus-lernen-im-kontext/`,
+            },
           ].map((teaserbox, index) => (
             <div
               key={`teaserbox-${index}`}
-              className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg"
+              className="rounded-lg bg-neutral-200 shadow-lg"
             >
               <Link to={`${teaserbox.link}`} className="flex flex-col h-100">
-                <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
+                <div className="rounded-t-lg overflow-hidden">
                   <GatsbyImage
                     image={teaserbox.image}
                     className="w-full h-auto"
                     alt={teaserbox.title}
                   />
                 </div>
-                <H2 like="h4" className="lg:leading-snug lg:mx-2">
-                  {teaserbox.title}
-                </H2>
-                <p className="lg:mx-2">{teaserbox.text}</p>
-                <p>
-                  <button className="btn-primary">Jetzt lesen</button>
-                </p>
+                <div className="p-4 lg:p-6"> 
+                  <H2 like="h4" className="lg:leading-snug">
+                    {teaserbox.title}
+                  </H2>
+                  <p>{teaserbox.text}</p>
+                  <p>
+                    <button className="btn-primary">Jetzt lesen</button>
+                  </p>
+                </div>  
               </Link>
             </div>
-          ))}
-          <div className="p-4 pb-8 md:p-2 md:pb-8 lg:p-4 lg:pb-8 rounded-lg bg-neutral-200 shadow-lg flex flex-col h-100">
-            <div className="rounded-lg overflow-hidden mb-2 lg:mb-4">
-              <GatsbyImage
-                image={data.LernenArtikelImage.childImageSharp.gatsbyImageData}
-                className="w-full h-auto"
-                alt="Lernen im Kontext – ein wichtiger Baustein für MINT+"
-              />
-            </div>
-            <H2 like="h4" className="lg:leading-snug lg:mx-2">
-              Lernen im Kontext – ein wichtiger Baustein für MINT+
-            </H2>
-            <p className="lg:mx-2">
-              Was gibt es für Konzepte von „Kontextualisiertem Lernen“, welche
-              Methoden wurden von der Forschung begleitet und als wirksam
-              erkannt und wo gibt es trotzdem noch Herausforderungen in der
-              schulischen und außerschulischen Praxis? Ein Überblick aus der
-              Bildungsforschung.
-            </p>
-          </div>
+          ))}          
         </div>
       </section>
 
@@ -253,7 +242,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 1488)
       }
     }
-    LernenArtikelImage: file(relativePath: { eq: "Mint_Plus_Lernen_Artikel.jpg" }) {
+    LernenArtikelImage: file(relativePath: { eq: "card_mint_plus_lernen.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(width: 1488)

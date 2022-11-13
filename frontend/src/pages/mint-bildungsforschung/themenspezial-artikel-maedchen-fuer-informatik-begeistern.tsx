@@ -23,7 +23,7 @@ export function DossierMeta({
       <section className="container py-4 md:py-8">
         <Link
           className="inline-block border border-neutral-400 py-3 px-4 mb-6 text-neutral-800 text-semibold uppercase rounded-lg"
-          to="/mint-bildungsforschung"
+          to="/topics/didaktik/"
         >
           <span className="flex items-center">
             <span className="mr-2">
@@ -32,13 +32,15 @@ export function DossierMeta({
             zur Übersicht
           </span>
         </Link>
-        {data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
-          <GatsbyImage
-            image={data.HeroImage.childImageSharp.gatsbyImageData}
-            className="w-full h-auto rounded-2xl shadow-md"
-            alt=""
-          />
-        ) : null}
+        <div className="hero-image h-72 lg:h-116 rounded-lg lg:rounded-3xl overflow-hidden">
+          {data?.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+            <GatsbyImage
+              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              className="w-full h-full object-cover"
+              alt="Wie können Mädchen für Informatik begeistert werden?"
+            />
+          ) : null}
+        </div>  
       </section>
 
       <section className="container my-4 md:my-8 lg:my-8">
@@ -63,7 +65,7 @@ export function DossierMeta({
               einzelnen MINT-Bereichen nachhaltig beeinflusst, ist die
               didaktische Gestaltung von MINT-Unterricht und
               MINT-Bildungsangeboten (
-              <a href="#ref_3" className="text-blue-400">
+              <a href="#ref_3" className="text-lilac-500 font-semibold hover:underline">
                 Kampshoff & Wiepcke, 2020
               </a>
               ). Deshalb zeigen wir in diesem Beitrag am Beispiel der
@@ -71,7 +73,7 @@ export function DossierMeta({
               um das Interesse von Mädchen an Informatik, Programmieren und
               Computer nachhaltig zu fördern. Der Artikel beruht auf der
               systematischen Übersichtsarbeit der Wissenschaftler:innen{" "}
-              <a href="#ref_2" className="text-blue-400">
+              <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                 Lucia Happe, Barbora Buhnova, Anne Koziolek und Ingo Wagner
               </a>
               , die 2021 erschienen ist.
@@ -84,7 +86,7 @@ export function DossierMeta({
             <p>
               In der Publikation „Effective measures to foster girls’ interest
               in secondary computer science education“ (
-              <a href="#ref_2" className="text-blue-400">
+              <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                 Happe, Buhnova, Koziolek & Wagner, 2021
               </a>
               ) sind die wichtigsten Strategien für gendersensible
@@ -149,7 +151,7 @@ export function DossierMeta({
                 nicht dem Klischee des/der exzentrischen Einzelgänger:in
                 entsprechen, sondern die sich auch mit Freund:innen treffen und
                 Hobbys wie Sport und Musik haben (vgl. auch{" "}
-                <a href="#ref_2" className="text-blue-400">
+                <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                   Boston & Cimpian, 2018
                 </a>
                 )
@@ -158,7 +160,7 @@ export function DossierMeta({
                 Die Arbeit in der Informatik als gemeinschaftsorientiert
                 darstellen (dient nicht nur der eigenen Neugier und Anerkennung,
                 sondern hilft vor allem anderen; vgl. auch{" "}
-                <a href="#ref_2" className="text-blue-400">
+                <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                   Boston & Cimpian, 2018
                 </a>
                 ), um stereotype Vorstellungen darüber zu revidieren, was
@@ -178,7 +180,7 @@ export function DossierMeta({
                 Mädchen besser mit den Frauen identifizieren und es wird umso
                 greifbarer, in der Informatik erfolgreich sein zu können (vgl.
                 auch{" "}
-                <a href="#ref_2" className="text-blue-400">
+                <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                   Boston & Cimpian, 2018
                 </a>
                 )
@@ -403,18 +405,7 @@ export function DossierMeta({
           </div>
 
           <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4">
-            <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
-              <div className="study_details mb-6">
-                <p className="font-bold text-sm mb-2 text-neutral-900">
-                  Veröffentlicht am 16.03.2022
-                </p>
-                <p className="font-bold text-sm mb-0 text-neutral-900">
-                  Originalartikel vom 16.11.2020
-                </p>
-              </div>
-
-              <hr className="mb-6" />
-
+            <div className="px-4 py-6 lg:px-6 rounded-lg lg:rounded-2xl bg-neutral-200 shadow-lg relative">
               <div className="study_summary mb-4">
                 <H4 className="font-semibold mb-4">Zusammenfassung</H4>
                 <p>
@@ -440,7 +431,7 @@ export function DossierMeta({
                   <li className="mb-4">
                     <a
                       href="#study_results"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Wirksame didaktische Maßnahmen um Mädchen für den
                       Informatik-Bereich zu begeistern
@@ -449,7 +440,7 @@ export function DossierMeta({
                   <li className="mb-4">
                     <a
                       href="#study_recommendations"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Konkrete Handlungsempfehlungen gegliedert in 6 thematische
                       Gruppen
@@ -458,7 +449,7 @@ export function DossierMeta({
                   <li className="mb-4">
                     <a
                       href="#study_final"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Welche didaktischen Maßnahmen man als Minimum umsetzen
                       sollte
@@ -467,7 +458,7 @@ export function DossierMeta({
                   <li>
                     <a
                       href="#study_sources"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Literatur, Originalartikel, Autor:innen
                     </a>
@@ -477,7 +468,7 @@ export function DossierMeta({
 
               <hr className="mb-6" />
 
-              <div className="study_summary mb-4">
+              <div className="study_summary mb-8">
                 <H4 className="font-semibold mb-4">Interview</H4>
                 <Link to="/mint-bildungsforschung/themenspezial-interview-ingo-wagner/">
                   <H5 className="font-semibold text-lg text-primary-400 hover:text-primary">
@@ -490,37 +481,9 @@ export function DossierMeta({
                   </p>
                 </Link>
               </div>
-              {/* <hr className="mb-6" />
-
-              <div className="study_download">
-                <H4 className="font-semibold mb-4">Downloads</H4>
-                <a
-                  href="https://link.springer.com/content/pdf/10.1007/s10639-020-10379-x.pdf"
-                  className="flex py-4 px-6 rounded-lg bg-neutral-400 text-neutral-700 hover:shadow-lg relative items-center"
-                >
-                  <div className="">
-                    <p className="text-xs m-0 leading-4 text-semibold">
-                      PDF - Download
-                    </p>
-                    <H6 className="m-0 text-neutral-700">
-                      Mädchen für Programmieren begeistern?
-                    </H6>
-                  </div>
-                  <div className="ml-auto">
-                    <svg
-                      width="24px"
-                      height="auto"
-                      viewBox="0 0 12 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g fill="currentColor" fill-rule="nonzero">
-                        <path d="M1.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 1 0 0 1h2A1.5 1.5 0 0 0 12 9.5v-8A1.5 1.5 0 0 0 10.5 0h-9A1.5 1.5 0 0 0 0 1.5v8A1.5 1.5 0 0 0 1.5 11h2a.5.5 0 1 0 0-1h-2Z" />
-                        <path d="M5.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L6.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 1 0-.708.708l3 3Z" />
-                      </g>
-                    </svg>
-                  </div>
-                </a>
-              </div> */}
+              <hr className="mb-6" />
+              <p className="text-sm mb-0 text-neutral-600 text-center">Veröffentlicht am 16.03.2022</p>              
+              <p className="text-sm mb-0 text-neutral-600 text-center">Originalartikel vom 16.11.2020</p>              
             </div>
           </div>
         </div>
@@ -533,7 +496,7 @@ export function DossierMeta({
               <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
             </div>
           </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
+          <div className="flex-100 md:flex-5/12"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
@@ -544,28 +507,49 @@ export function DossierMeta({
 
             <ul>
               <li className="pb-4 font-semibold" id="ref_1">
+                Boston, J. S., & Cimpian, A. (2018). How do we encourage
+                gifted girls to pursue and succeed in science and engineering?
+                Gifted Child Today, 41(4), 196–207.
                 <a
                   href="https://doi.org/10.1177/1076217518786955"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary underline"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
-                  Boston, J. S., & Cimpian, A. (2018). How do we encourage
-                  gifted girls to pursue and succeed in science and engineering?
-                  Gifted Child Today, 41(4), 196–207.
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-4 h-4 inline-block mx-1 mb-1"
+                  >
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  https://doi.org/10.1177/1076217518786955                  
                 </a>
               </li>
               <li className="pb-4 font-semibold" id="ref_2">
+                Happe, L., Buhnova, B., Koziolek, A., & Wagner, I. (2021).
+                Effective measures to foster girls’ interest in secondary
+                computer science education. Education and Information
+                Technologies, 26(3), 2811–2829.                  
                 <a
                   href="https://link.springer.com/article/10.1007/s10639-020-10379-x"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary underline"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
-                  Happe, L., Buhnova, B., Koziolek, A., & Wagner, I. (2021).
-                  Effective measures to foster girls’ interest in secondary
-                  computer science education. Education and Information
-                  Technologies, 26(3), 2811–2829.
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-4 h-4 inline-block mx-1 mb-1"
+                  >
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                      fill="currentColor"
+                    />
+                  </svg>
                   https://doi.org/10.1007/s10639-020-10379-x
                 </a>
               </li>
