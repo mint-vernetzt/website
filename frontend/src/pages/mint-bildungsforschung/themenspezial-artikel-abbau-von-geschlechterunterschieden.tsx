@@ -433,7 +433,7 @@ export function DossierAbbau({
                   href="https://doi.org/10.1111/bjep.12512"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap inline-block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -457,7 +457,7 @@ export function DossierAbbau({
                   href="https://doi.org/10.31244/9783830995340"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap inline-block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -254,7 +254,7 @@ export function DossierLernen({
               <a
                 href="https://community.mint-vernetzt.de/event/klimawandelpandemiealltagsfragenlernenimkontextindermintbildungideenfuerformateunddiverserezielgruppen-l9ftjf4x"
                 target="_blank"
-                className="text-lilac-500 font-bold hover:underline whitespace-nowrap"
+                className="text-lilac-500 font-bold hover:underline"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -420,7 +420,7 @@ export function DossierLernen({
               <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
             </div>
           </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
+          <div className="flex-100 md:flex-5/12"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
@@ -437,7 +437,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1007/978-3-662-56320-5_12"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -459,7 +459,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1080/09500693.2018.1470346"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -482,7 +482,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1080/03057267.2013.802463"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -504,7 +504,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1016/j.pisc.2014.06.001"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -526,7 +526,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1080/09500690500498419"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -548,7 +548,7 @@ export function DossierLernen({
                   href="https://files.eric.ed.gov/fulltext/EJ1062183.pdf"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -570,7 +570,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1002/ckon.201900038"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -592,7 +592,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1080/09500693.2021.1891321"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -616,7 +616,7 @@ export function DossierLernen({
                   href="https://doi.org/10.1145/3501385.3543960"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-lilac-500 font-bold hover:underline whitespace-nowrap block"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
