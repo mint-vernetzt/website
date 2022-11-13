@@ -106,7 +106,7 @@ export function DossierAbbau({
               Metaanalyse{" "}
               <a
                 href="#ref_1"
-                className="text-lilac-500 font-bold hover:underline"
+                className="text-lilac-500 font-semibold hover:underline"
               >
                 "Reducing gender differences in student motivational-affective
                 factors: A meta-analysis of school-based interventions“ (2022)
