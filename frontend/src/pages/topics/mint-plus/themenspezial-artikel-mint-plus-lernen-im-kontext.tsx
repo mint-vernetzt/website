@@ -100,13 +100,12 @@ export function DossierLernen({
               Getreu der Wortbedeutung (lat. contextere = verknüpfen) wird das
               zu vermittelnde MINT-Wissen mit anderen Themen und Bereichen
               verknüpft.<sup>1</sup>{" "} Am bekanntesten ist bislang die Verbindung mit
-              kreativen und künstlerischen Ansätzen – {" "}
+              kreativen und künstlerischen Ansätzen – ganz im Sinne unseres{" "}
               <a href="https://mint-vernetzt.de/news/mint-oder-warum-wir-den-blick-uber-den-tellerrand-wagen-sollten"
                 className="text-lilac-500 font-bold hover:underline"
               >
-                  ganz im Sinne unseres
-              </a>  {" "}
-              Verständnisses von MINT+. Aber auch die Öffnung von
+                Verständnisses von MINT+  
+              </a>. Aber auch die Öffnung von
               MINT-Disziplinen zu anderen Bereichen kann eine Verbindung zur
               Lebensrealität der Lernenden herstellen.<sup>1</sup>{" "} Das macht MINT-Themen
               für viele greifbarer und zeigt gleichzeitig die Bedeutung der
@@ -138,7 +137,7 @@ export function DossierLernen({
               Zum anderen wird Grundlagenwissen damit anwendbar, es muss sich sozusagen in einer relevanten 
               Frage als tragfähig bewähren.“ 
             </p>
-            <p>Prof. Dr. Ilka Parchmann , Professorin für Didaktik der Chemie am IPN Kiel</p>
+            <p>Prof. Dr. Ilka Parchmann, Professorin für Didaktik der Chemie am IPN Kiel</p>
 
             <H4 className="font-semibold mt-10 mb-6" id="section_3">
               Exkurs: Lernen im Kontext als Weg zur „Scientific Literacy“ 
@@ -419,7 +418,7 @@ export function DossierLernen({
               <hr className="mb-6" />
 
               <p className="text-sm mb-0 text-neutral-600 text-center">
-                Originalartikel vom 4. November 2022
+                Originalartikel vom 14. November 2022
               </p>
             </div>
           </div>
