@@ -45,7 +45,7 @@ export function DossierAbbau({
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-4">
               Abbau von Geschlechterunterschieden in der MINT-Bildung
             </H2>
@@ -399,21 +399,11 @@ export function DossierAbbau({
               <hr className="mb-6" />
 
               <p className="text-sm mb-0 text-neutral-600 text-center">
+                Veröffentlicht am 14. November 2022<br />
                 Originalartikel vom 27. April 2022
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-            </div>
-          </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
