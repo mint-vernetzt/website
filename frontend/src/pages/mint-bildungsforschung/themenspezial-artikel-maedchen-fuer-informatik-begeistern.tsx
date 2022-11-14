@@ -45,7 +45,7 @@ export function DossierMeta({
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-4">
               Wie können Mädchen für Informatik begeistert werden?
             </H2>
@@ -486,17 +486,6 @@ export function DossierMeta({
               <p className="text-sm mb-0 text-neutral-600 text-center">Originalartikel vom 16.11.2020</p>              
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-            </div>
-          </div>
-          <div className="flex-100 md:flex-5/12"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">

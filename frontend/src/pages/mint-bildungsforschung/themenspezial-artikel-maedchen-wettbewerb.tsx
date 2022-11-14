@@ -46,7 +46,7 @@ export function DossierWettbewerbe({
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-12">
               Naturwissenschaftliche Wettbewerbe sind für Mädchen weniger
               attraktiv als für Jungen – über Stereotype und Strukturen
@@ -366,17 +366,6 @@ export function DossierWettbewerbe({
               
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-            </div>
-          </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">

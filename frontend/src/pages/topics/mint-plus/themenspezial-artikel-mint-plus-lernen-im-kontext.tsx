@@ -45,7 +45,7 @@ export function DossierLernen({
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-8 lg:mb-12">
               Lernen im Kontext – ein wichtiger Baustein für MINT+
             </H2>
@@ -59,7 +59,24 @@ export function DossierLernen({
               erfolgreich oder beliebt ist.<sup>1, 3</sup>{" "} Wie Konzepte von
               „kontextualisiertem Lernen“ helfen können, das zu ändern – und
               welche Erfahrungen und Herausforderungen es gibt –, darum soll es
-              unter anderem bei den MINT-Aktionstagen im November gehen. Wir
+              unter anderem bei den{" "}
+              <a
+                href="https://community.mint-vernetzt.de/event/klimawandelpandemiealltagsfragenlernenimkontextindermintbildungideenfuerformateunddiverserezielgruppen-l9ftjf4x"
+                target="_blank"
+                className="text-lilac-500 font-bold hover:underline"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  className="w-4 h-4 inline-block mx-1 mb-1"
+                >
+                  <path
+                    d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    fill="currentColor"
+                  />
+                </svg>MINT-Aktionstagen 
+              </a>{" "}
+              im November gehen. Wir
               geben Euch einen Einblick in das Thema.
             </p>
             <p>
@@ -83,7 +100,12 @@ export function DossierLernen({
               Getreu der Wortbedeutung (lat. contextere = verknüpfen) wird das
               zu vermittelnde MINT-Wissen mit anderen Themen und Bereichen
               verknüpft.<sup>1</sup>{" "} Am bekanntesten ist bislang die Verbindung mit
-              kreativen und künstlerischen Ansätzen – ganz im Sinne unseres
+              kreativen und künstlerischen Ansätzen – {" "}
+              <a href="https://mint-vernetzt.de/news/mint-oder-warum-wir-den-blick-uber-den-tellerrand-wagen-sollten"
+                className="text-lilac-500 font-bold hover:underline"
+              >
+                  ganz im Sinne unseres
+              </a>  {" "}
               Verständnisses von MINT+. Aber auch die Öffnung von
               MINT-Disziplinen zu anderen Bereichen kann eine Verbindung zur
               Lebensrealität der Lernenden herstellen.<sup>1</sup>{" "} Das macht MINT-Themen
@@ -383,15 +405,6 @@ export function DossierLernen({
                       Innovative Ideen für die Zukunft des Lernens bei den MINT-Aktionstagen 
                       </a>
                   </li>
-                  <li className="mb-4">
-                    <a
-                      href="#section_11"
-                      className="block font-semibold text-lg text-secondary hover:underline"
-                    >
-                      Unsere Expert:innen
-                    </a>
-                  </li>
-                  
                   <li>
                     <a
                       href="#section_12"
@@ -410,18 +423,7 @@ export function DossierLernen({
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-            </div>
-          </div>
-          <div className="flex-100 md:flex-5/12"></div>
-        </div>
+        </div>        
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
           <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
