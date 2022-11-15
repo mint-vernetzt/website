@@ -286,8 +286,23 @@ export function DossierAbbau({
               Interventionen, die gezielt das stereotyp benachteiligte
               Geschlecht ansprechen, einen größeren Effekt für ebendieses
               Geschlecht haben als unspezifische Maßnahmen. Detaillierte
-              Informationen zur Wirkung schulischer Interventionen findet Ihr im
-              praxisorientierten Themenheft (ab Seite 20).
+              Informationen zur Wirkung schulischer Interventionen findet Ihr{" "}
+              <a
+                href="https://www.edu.sot.tum.de/suf/fuer-lehrkraefte/geschlechterunterschiede-im-bildungskontext/themenheft-geschlechterunterschiede-im-bildungskontext/"
+                target="_blank"
+                className="text-lilac-500 font-bold hover:underline"
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  className="w-4 h-4 inline-block mx-1 mb-1"
+                >
+                  <path
+                    d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    fill="currentColor"
+                  />
+                </svg>
+                im praxisorientierten Themenheft (ab Seite 20)</a>.
             </p>
             <p>
               Eine weitere Erkenntnis, die die Autor:innen extrahieren konnten,
