@@ -168,7 +168,7 @@ export function DossierLernen({
               komplexe Sachverhalte zu analysieren und zu bewerten. Es versetzt sie in die Lage, sich 
               an Debatten zu sozialen, politischen oder ethischen Fragen zu beteiligen.<sup>2, 3</sup>{" "} 
               Ein Zustand, der "Scientific Literacy", also "wissenschaftliche Alphabetisierung", 
-              genannt wird.<sup>6</sup>{" "}  
+              genannt wird.<sup>6</sup>
             </p>
             
             <div className="border border-neutral-400 p-6 rounded-lg lg:rounded-2xl my-8 shadow-lg">
@@ -418,7 +418,7 @@ export function DossierLernen({
               <hr className="mb-6" />
 
               <p className="text-sm mb-0 text-neutral-600 text-center">
-                Originalartikel vom 14. November 2022
+                Veröffentlicht am 14. November 2022
               </p>
             </div>
           </div>
