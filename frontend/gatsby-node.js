@@ -127,6 +127,12 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/projects/mint-pakt/",
+    toPath: `/projects/mint-buendnis/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
