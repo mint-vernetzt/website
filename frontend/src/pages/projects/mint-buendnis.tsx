@@ -118,13 +118,13 @@ export function MintPakt({ data }) {
               Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
               Forschung initiiert und wird seit September 2021 von der
               Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
-              300 Mitglieder aus   rund 270 verschiedenen Institutionen aus
+              300 Mitglieder aus rund 260 verschiedenen Institutionen aus
               Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
-              sich seither im Pakt zusammengeschlossen, um gemeinsam einen
+              sich seither im Bündnis zusammengeschlossen, um gemeinsam einen
               Beitrag dafür zu leisten, Mädchen und Frauen stärker für
               MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern. Dies
-              ist eine Übersicht der aktuellen Mitglieder im Pakt für Frauen in
-              MINT-Berufen, die für die gemeinsamen Ziele eintreten:
+              ist eine Übersicht der aktuellen Mitglieder im Bündnis für Frauen
+              in MINT-Berufen, die für die gemeinsamen Ziele eintreten:
             </p>
 
             <ul className="pakt-list">
