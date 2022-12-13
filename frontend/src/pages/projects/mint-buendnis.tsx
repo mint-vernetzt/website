@@ -48,8 +48,8 @@ export function MintPakt({ data }) {
   return (
     <Layout>
       <SEO
-        title={`Pakt für Frauen`}
-        slug={`/pakt/`}
+        title={`Bündnis für Frauen`}
+        slug={`/projects/mint-buendnis/`}
         description={""}
         image={""}
         children={""}
