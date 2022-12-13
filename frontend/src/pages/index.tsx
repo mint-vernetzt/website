@@ -217,9 +217,9 @@ export function Index({
             },
             {
               image: data?.PaktImage?.childImageSharp?.gatsbyImageData,
-              title: `Pakt für Frauen`,
-              text: `Mit über 300 Mitgliedern unterstützt der Pakt für Frauen in MINT-Berufen dabei, Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.`,
-              link: `/projects/mint-pakt/`,
+              title: `Bündnis für Frauen`,
+              text: `Mit über 300 Mitgliedern unterstützt das Bündnis für Frauen in MINT-Berufen dabei, Mädchen und junge Frauen für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.`,
+              link: `/projects/mint-buendnis/`,
             },
             {
               image: data?.DatalabImage?.childImageSharp?.gatsbyImageData,
