@@ -211,8 +211,8 @@ export function GenderSensibleMintBildung({
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
               <H3 like="h1">
-                Nationaler Pakt für Frauen in{" "}
-                <span className="font-bold">MINT</span>-Berufen
+                Bündnis für Frauen in <span className="font-bold">MINT</span>
+                -Berufen
               </H3>
               <p>
                 Der weiterhin niedrige Anteil weiblicher Beschäftigter in
@@ -221,15 +221,15 @@ export function GenderSensibleMintBildung({
                 stärker für MINT-Ausbildungen, -Studiengänge und -Berufe zu
                 interessieren und zu ermutigen sowie die Nachwuchs- und
                 Fachkräfte in ihrem beruflichen MINT-Werdegang zu unterstützen.
-                Aus diesem Grund gibt es den Pakt für Frauen in MINT-Berufen:
-                Mit über 300 Mitgliedern unterstützt der Pakt dabei, diese
+                Aus diesem Grund gibt es das Bündnis für Frauen in MINT-Berufen:
+                Mit über 300 Mitgliedern unterstützt das Bündnis dabei, diese
                 Anliegen umzusetzen. Durch regelmäßigen Austausch und
-                Netzwerkformate stärkt der Pakt die MINT-Bildung und aktiviert
-                MINT-Talente, um den Innovations- und Wirtschaftsstandort
-                Deutschland zu sichern.
+                Netzwerkformate stärkt das Bündnis die MINT-Bildung und
+                aktiviert MINT-Talente, um den Innovations- und
+                Wirtschaftsstandort Deutschland zu sichern.
               </p>
               <p>
-                <Link to="/projects/mint-pakt" className="btn-primary">
+                <Link to="/projects/mint-buendnis" className="btn-primary">
                   Mehr erfahren
                 </Link>
               </p>
