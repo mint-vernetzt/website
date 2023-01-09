@@ -14,7 +14,7 @@ Heute setzt die THGA auf neue Schwerpunkte mit den drei Wissenschaftsbereichen G
 
 Die Studieninhalte werden in enger Zusammenarbeit mit der Industrie entwickelt und sind auf den Arbeitsmarkt abgestimmt. So beschäftigen sich rund 80 Prozent aller Abschlussarbeiten bereits mit konkreten Anwendungen in Unternehmen und initiieren unmittelbare Verbesserungen.
 
-![Paktbeitritt THGA](https://www.komm-mach-mint.de/var/mint/storage/images/_aliases/medium/3/0/8/4/134803-1-ger-DE/THGA_Paktbeitritt_web.jpg)
+![Bündnisbeitritt THGA](https://www.komm-mach-mint.de/var/mint/storage/images/_aliases/medium/3/0/8/4/134803-1-ger-DE/THGA_Paktbeitritt_web.jpg)
 
 THGA-Präsident, Prof. Dr. Jürgen Kretschmann (Mitte), unterzeichnet das Memorandum im Beisein Jasmin Gerau (r.), Gleichstellungsbeauftragte, und Benedikt Gräfingholt (r.), Koordinator für politische Angelegenheiten / Third Mission.  
 Foto: THGA

@@ -16,6 +16,6 @@ Die klare und übersichtliche Themenrubrizierung sowie die nutzenfokussierte Auf
 
 #### Aktivitäten im MINT-Bereich
 
-MED engineering unterstützt den Nationalen Pakt für Frauen in MINT-Berufen durch Schülerinnenpraktika, eine Praktikantinnenbörse unter med-eng.de und durch eine regelmäßige redaktionelle Unterstützung bei MINT-Events oder -Aktivitäten, die junge Frauen für die MINT-Berufe motivieren sollen. Denn Technik ist mehr als schnödes Eisen und langweilige Kabel. Richtig eingesetzt, ermöglicht es den Menschen auf der Erde ein gesünderes Dasein. Sei es durch Pumpen und Filter (sauberes Wasser) oder auch durch die vielen Medizingeräte, die Leben erhalten und verbessern.
+MED engineering unterstützt das Bündnis für Frauen in MINT-Berufen durch Schülerinnenpraktika, eine Praktikantinnenbörse unter med-eng.de und durch eine regelmäßige redaktionelle Unterstützung bei MINT-Events oder -Aktivitäten, die junge Frauen für die MINT-Berufe motivieren sollen. Denn Technik ist mehr als schnödes Eisen und langweilige Kabel. Richtig eingesetzt, ermöglicht es den Menschen auf der Erde ein gesünderes Dasein. Sei es durch Pumpen und Filter (sauberes Wasser) oder auch durch die vielen Medizingeräte, die Leben erhalten und verbessern.
 
 [www.med-eng.de](http://www.med-eng.de/ta002/na201010191355370/pb20120210815331/Karriere_pb.html)

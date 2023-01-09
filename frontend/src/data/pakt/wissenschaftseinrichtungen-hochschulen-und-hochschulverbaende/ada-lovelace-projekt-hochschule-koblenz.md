@@ -5,7 +5,7 @@ logo: "../logos/Ada-lovelace.png"
 category: "Wissenschaftseinrichtungen, Hochschulen und Hochschulverbände"
 citeAuthor: "Prof. Dr. Jens Bongartz"
 citeAuthorFunction: "Vizepräsident der Fachhochschule Koblenz"
-citeQuote: "„Durch den Beitritt zum `Komm, mach MINT´ setzt die Fachhochschule Koblenz mit dem Ada-Lovelace-Projekt ein starkes Zeichen für eine stärkere Präsenz von Frauen in den technisch-naturwissenschaftlichen Studienfächern, ein Anliegen, dem wir uns bereits seit langem widmen. Das Ada-Lovelace-Projekt in Rheinland Pfalz arbeitet seit über 10 Jahren daran, Mädchen und Frauen für naturwissenschaftlich-technische Studiengänge und Berufe zu motivieren. Mit unserem Beitritt unterstützen wir den Nationalen Pakt für Frauen in MINT-Berufen mit dem bundesweit größten Mentorinnenprojekt.”"
+citeQuote: "„Durch den Beitritt zum `Komm, mach MINT´ setzt die Fachhochschule Koblenz mit dem Ada-Lovelace-Projekt ein starkes Zeichen für eine stärkere Präsenz von Frauen in den technisch-naturwissenschaftlichen Studienfächern, ein Anliegen, dem wir uns bereits seit langem widmen. Das Ada-Lovelace-Projekt in Rheinland Pfalz arbeitet seit über 10 Jahren daran, Mädchen und Frauen für naturwissenschaftlich-technische Studiengänge und Berufe zu motivieren. Mit unserem Beitritt unterstützen wir das Bündnis für Frauen in MINT-Berufen mit dem bundesweit größten Mentorinnenprojekt.”"
 ---
 
 Ein Mentorinnen-Netzwerk zur Gewinnung von Frauen für technisch-naturwissenschaftliche Studiengänge und Berufe.

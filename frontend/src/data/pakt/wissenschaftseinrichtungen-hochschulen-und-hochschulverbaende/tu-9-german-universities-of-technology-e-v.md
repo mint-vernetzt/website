@@ -5,7 +5,7 @@ logo: "../logos/TU9.png"
 category: "Wissenschaftseinrichtungen, Hochschulen und Hochschulverbände"
 citeAuthor: "Univ.-Prof. Dr.-Ing. Dr. h. c. Wolfram Ressel"
 citeAuthorFunction: "TU9-Präsident"
-citeQuote: "„Als Allianz neun führender Technischer Universitäten in Deutschland freuen wir uns über steigende Studentinnenzahlen in den MINT-Fächern. Aber wir wollen natürlich mehr. Deshalb engagieren wir uns im Pakt, um Frauen gezielt für MINT-Studiengänge zu begeistern und bei Ihrer Karriere in MINT-Berufen unterstützend zu begleiten.”"
+citeQuote: "„Als Allianz neun führender Technischer Universitäten in Deutschland freuen wir uns über steigende Studentinnenzahlen in den MINT-Fächern. Aber wir wollen natürlich mehr. Deshalb engagieren wir uns im Bündnis, um Frauen gezielt für MINT-Studiengänge zu begeistern und bei Ihrer Karriere in MINT-Berufen unterstützend zu begleiten.”"
 ---
 
 TU9 ist die Allianz führender Technischer Universitäten in Deutschland: RWTH Aachen University, TU Berlin, TU Braunschweig, TU Darmstadt, TU Dresden, Leibniz Universität Hannover, Karlsruher Institut für Technologie, TU München und Universität Stuttgart.

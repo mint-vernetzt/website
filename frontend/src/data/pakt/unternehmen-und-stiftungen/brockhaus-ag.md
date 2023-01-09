@@ -56,7 +56,7 @@ Die BROCKHAUS AG hat ihre Mitarbeiterinnen gefragt, was sie an ihren Jobs in der
 
 **KlischeeFrei**
 
-Bereits 2017 trat die BROCKHAUS AG dem internationalen Pakt für Frauen in MINT-Berufen "Komm mach MINT" bei, den sie seitdem dabei unterstützen, Mädchen und junge Frauen für ein Studium bzw. einen Beruf im MINT-Bereich zu begeistern.
+Bereits 2017 trat die BROCKHAUS AG dem Bündnis für Frauen in MINT-Berufen "Komm mach MINT" bei, den sie seitdem dabei unterstützen, Mädchen und junge Frauen für ein Studium bzw. einen Beruf im MINT-Bereich zu begeistern.
 
 [www.brockhaus-ag.de/blog/initiative-klischeefrei](https://www.brockhaus-ag.de/blog/initiative-klischeefrei "Öffnet im neuen Fenster")
 

@@ -16,7 +16,7 @@ Airbus hat sich acht der der "UN Sustainable Development Goals" verschrieben, da
 
 Das Unternehmen möchte eine offene, inklusive und diverse Arbeitsumgebung unterstützen. Das Netzwerk "Balance for Business" und das Programm "My Way" unterstützen Frauen auf ihrem Karriereweg. Die Initiative "Elles du Futur" inspiriert Frauen für Luft- und Raumfahrt Karrieren.
 
-In ihrem 50jährigen Jubiläumsjahr 2019 schlossen sie sich als 50. Paktpartner 2019 _Komm, mach MINT_ an mit dem Ziel, den Frauenanteil in ihren technischen Abteilungen zu erhöhen.
+In ihrem 50jährigen Jubiläumsjahr 2019 schlossen sie sich als 50. Bündnispartner 2019 _Komm, mach MINT_ an mit dem Ziel, den Frauenanteil in ihren technischen Abteilungen zu erhöhen.
 
 [Informationen über die Airbus-Aktivitäten für Gleichberechtigung](https://www.airbus.com/company/sustainability/inclusion-diversity/women-at-Airbus.html)
 
