@@ -5,7 +5,7 @@ logo: "../logos/Landschaftsverband-Rheinland-1.png"
 category: "Körperschaften des öffentlichen Rechts"
 citeAuthor: "Stefanie Blietschau"
 citeAuthorFunction: "LVR-Stabsstelle Gleichstellung und Gender Mainstreaming, Landschaftsverband Rheinland"
-citeQuote: "„Der LVR arbeitet als Kommunalverband mit rund 15.000 Beschäftigten für die etwa 9,6 Millionen Menschen im Rheinland. Mit zahlreichen Arbeitsplätzen in MINT-Berufen, der Zielsetzung einer ausgewogenen Beschäftigtenstruktur gerade in diesen Bereichen und dem Bemühen, sich als familienfreundlicher Arbeitgeber zu positionieren, bietet sich der Beitritt des LVR zum Nationalen Pakt für Frauen in MINT-Berufen an.
+citeQuote: "„Der LVR arbeitet als Kommunalverband mit rund 15.000 Beschäftigten für die etwa 9,6 Millionen Menschen im Rheinland. Mit zahlreichen Arbeitsplätzen in MINT-Berufen, der Zielsetzung einer ausgewogenen Beschäftigtenstruktur gerade in diesen Bereichen und dem Bemühen, sich als familienfreundlicher Arbeitgeber zu positionieren, bietet sich der Beitritt des LVR zum Bündnis für Frauen in MINT-Berufen an.
 
 Die MINT-Ziele sollen sowohl in bereits bestehende Angebote - Girls’Day, Frauenfördermaßnahmen, Mentoring-Programme, vielfältige Bemühungen um Familienfreundlichkeit - integriert, als auch bei der Entwicklung zukünftiger Maßnahmen beachtet werden.”"
 ---

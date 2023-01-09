@@ -16,6 +16,6 @@ GHETTOmedia wurde im Jahre 2012 in Berlin-Moabit gegründet. Da Moabit einstmali
 
 **Unsere Vision** ist, dass GHETTOmedia ihren Bekanntheitsgrad kontinuierlich erhöht, gern durch Mundpropaganda und andere Wege fernab von den Standard Werbemaßnahmen. Wir wünschen uns, dass unser Start Up auf diese Weise stetig wächst und gedeiht.
 
-GHETTOmedia ist dem Nationalen Pakt für Frauen in MINT-Berufen im Mai 2013 beigetreten, um dem demografisch bedingten Fachkräftemangel im MINT-Bereich zu begegnen und mehr Frauen für MINT- Berufe zu begeistern.
+GHETTOmedia ist dem Bündnis für Frauen in MINT-Berufen im Mai 2013 beigetreten, um dem demografisch bedingten Fachkräftemangel im MINT-Bereich zu begegnen und mehr Frauen für MINT- Berufe zu begeistern.
 
 [ghettomedia.de/mint](http://ghettomedia.de/mint/)

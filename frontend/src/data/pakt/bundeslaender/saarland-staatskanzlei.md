@@ -16,6 +16,6 @@ Ziel ist es, weibliche Talente in Naturwissenschaft und Technik zu entdecken, ih
 
 Vor allem im Sinne einer zukunftsorientierten Berufswahl ist wichtiger denn je, dass insbesondere Schülerinnen die Möglichkeit geboten wird, Berufe im MINT-Bereich kennen zu lernen. Der „Girls’ Day“ will Mädchen ermutigen, sich für mathematisch-naturwissenschaftliche und technische Berufe zu interessieren. Technisch orientierte Unternehmen sowie Hochschulen, Forschungszentren und ähnliche Einrichtungen öffnen ihre Pforten und gewähren Einblicke in Berufsfelder, die Mädchen im Prozess der Berufsorientierung nur selten in Betracht ziehen. Auch der Aktionstag “Mädchen und Technik“ informiert über Berufs- und Studienzweige in technischen und naturwissenschaftlichen Berufen.
 
-Der Beitritt des Saarlandes zum Nationalen Pakt für Frauen in MINT-Berufen ist ein weiterer Schritt, das Image für MINT-Berufe zu verbessern und das Potenzial von Frauen für die naturwissenschaftlich-technischen Berufe noch besser zu nutzen.
+Der Beitritt des Saarlandes zum Bündnis für Frauen in MINT-Berufen ist ein weiterer Schritt, das Image für MINT-Berufe zu verbessern und das Potenzial von Frauen für die naturwissenschaftlich-technischen Berufe noch besser zu nutzen.
 
 [www.saarland.de/staatskanzlei](http://www.saarland.de/staatskanzlei.htm)

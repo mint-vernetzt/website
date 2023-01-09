@@ -10,7 +10,7 @@ citeQuote: ""
 
 Baden-Württemberg verfolgt seit vielen Jahren das Ziel, die Frauenanteile in naturwissenschaftlichen und technischen Studiengängen und Berufen zu erhöhen.
 
-Das Ziel des Nationalen Pakts für Frauen in MINT-Berufen ist es, das Potential von Frauen für naturwissenschaftlich-technische Berufe zu nutzen. Damit in Einklang stehen die Aktivitäten des Landes Baden-Württemberg, das sich seit Jahren insbesondere aus zwei Gründen dafür einsetzt, mehr Frauen für MINT-Berufe zu gewinnen. Zum einen ist die Erhöhung der Frauenanteile in MINT-Fächern ein Baustein zur **Verwirklichung der Chancengleichheit** von Frauen und Männern. Zum anderen ist es für Baden-Württemberg als starker Technologiestandort und Innovationsregion von entscheidender Bedeutung, **genügend hochqualifizierte Fachkräfte** zu haben. Darum gilt es, die Talente von Frauen im naturwissenschaftlich-technischen Bereich verstärkt einzubeziehen.
+Das Ziel des Bündnisses für Frauen in MINT-Berufen ist es, das Potential von Frauen für naturwissenschaftlich-technische Berufe zu nutzen. Damit in Einklang stehen die Aktivitäten des Landes Baden-Württemberg, das sich seit Jahren insbesondere aus zwei Gründen dafür einsetzt, mehr Frauen für MINT-Berufe zu gewinnen. Zum einen ist die Erhöhung der Frauenanteile in MINT-Fächern ein Baustein zur **Verwirklichung der Chancengleichheit** von Frauen und Männern. Zum anderen ist es für Baden-Württemberg als starker Technologiestandort und Innovationsregion von entscheidender Bedeutung, **genügend hochqualifizierte Fachkräfte** zu haben. Darum gilt es, die Talente von Frauen im naturwissenschaftlich-technischen Bereich verstärkt einzubeziehen.
 
 #### "Schülerinnen forschen - Einblicke in Naturwissenschaft und Technik"
 

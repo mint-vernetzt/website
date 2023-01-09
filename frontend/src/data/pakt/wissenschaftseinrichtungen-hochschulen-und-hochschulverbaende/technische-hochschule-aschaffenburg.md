@@ -12,7 +12,7 @@ Die Technische Hochschule Aschaffenburg ist eine Hochschule am Rande der Metropo
 
 ![Prof. Dr. Eva-Maria Beck-Meuth unterzeichnet das Memorandum](https://www.komm-mach-mint.de/var/mint/storage/images/_aliases/medium/2/2/7/0/130722-1-ger-DE/TH_Aschaffenburg_Beitritt_web.jpg)
 
-Prof. Dr. Eva-Maria Beck-Meuth unterzeichnet das Memorandum zum Nationalen Pakt für Frauen in MINT-Berufen "Komm, mach MINT." Foto: TH Aschaffenburg
+Prof. Dr. Eva-Maria Beck-Meuth unterzeichnet das Memorandum zum Bündnis für Frauen in MINT-Berufen "Komm, mach MINT." Foto: TH Aschaffenburg
 
 Enge Kooperationen mit vielen Unternehmen sowie Partnerschaften mit ausländischen Hochschulen garantieren den Studierenden, praxisrelevantes Wissen zu erwerben.
 

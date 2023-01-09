@@ -5,7 +5,7 @@ logo: "../logos/AG_Gesamtmetall-1.png"
 category: "Arbeitgeber- und Arbeitnehmerverbände"
 citeAuthor: "Wolfgang Gollub"
 citeAuthorFunction: "Abteilungsleiter Nachwuchssicherung, Arbeitgeberverband Gesamtmetall"
-citeQuote: "„Vernetzung ist der Schlüssel, um Maßnahmen stärker aufeinander abzustimmen, so dass sie ineinandergreifen können. Das Zusammenwirken der Partner aus Politik, Wirtschaft, Bildung und Medien im Pakt sorgt durch gebündelte Aktivitäten für deutliche Synergieeffekte. Ein stärkeres Zusammenspiel der unterschiedlichen Angebote wird ihre Effekte deutlich verstärken.”"
+citeQuote: "„Vernetzung ist der Schlüssel, um Maßnahmen stärker aufeinander abzustimmen, so dass sie ineinandergreifen können. Das Zusammenwirken der Partner aus Politik, Wirtschaft, Bildung und Medien im Bündnis sorgt durch gebündelte Aktivitäten für deutliche Synergieeffekte. Ein stärkeres Zusammenspiel der unterschiedlichen Angebote wird ihre Effekte deutlich verstärken.”"
 ---
 
 Der Arbeitgeberverband Gesamtmetall ist der Dachverband von 22 Arbeitgeberverbänden der Metall- und Elektro-Industrie. In den M+E-Verbänden sind insgesamt 6.100 Unternehmen mit mehr als 2 Millionen Beschäftigten organisiert.

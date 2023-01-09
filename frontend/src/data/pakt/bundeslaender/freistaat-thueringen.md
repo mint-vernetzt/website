@@ -10,7 +10,7 @@ citeQuote: ""
 
 Durch die Verbindung der drei im Namen des Ministeriums genannten Aufgabenbereiche besteht im Thüringer Ministerium für Wirtschaft, Wissenschaft und Digitale Gesellschaft ein besonderes Bewusstsein dafür, dass hochqualifizierte Fachkräfte für eine immer wissensintensivere Wirtschaft ein bestimmender Faktor sind. Gesucht sind sie insbesondere im technisch-naturwissenschaftlichen Bereich. Bei der Fachkräftegewinnung kann im Interesse der Attraktivität des Wirtschafts- und Forschungsstandorts Thüringen, aber auch der Chancengleichheit auf die Potenziale der Frauen, ihre Ideen, Perspektiven und Fähigkeiten nicht verzichtet werden.
 
-Deshalb wird in Übereinstimmung mit dem Nationalen Pakt für Frauen in MINT-Berufen durch das Ministerium das Ziel, Frauen für naturwissenschaftliche und technische Studiengänge zu begeistern, sie für die Aufnahme entsprechender Studiengänge zu gewinnen sowie die Studentinnen und Absolventinnen dieser Studiengänge beim Weg in den Beruf zu begleiten, schon seit vielen Jahren verfolgt.
+Deshalb wird in Übereinstimmung mit dem Bündnis für Frauen in MINT-Berufen durch das Ministerium das Ziel, Frauen für naturwissenschaftliche und technische Studiengänge zu begeistern, sie für die Aufnahme entsprechender Studiengänge zu gewinnen sowie die Studentinnen und Absolventinnen dieser Studiengänge beim Weg in den Beruf zu begleiten, schon seit vielen Jahren verfolgt.
 
 Das Ministerium fördert bzw. unterstützt entsprechende Maßnahmen der Thüringer Hochschulen und ihrer Einrichtungen.
 

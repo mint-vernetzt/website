@@ -24,7 +24,7 @@ Das »myTalent-Portal« bietet eine Fülle von Informationen aus der Welt der Ma
 
 **»Talent Take Off«**
 
-Fraunhofer und die Deutsche Telekom Stiftung haben das neuartiges Begabten-Netzwerk »Talent Take Off« initiiert, um Schülerinnen, Schülern und Studierenden sowohl eine Plattform zum Austausch als auch Informationen und Anregungen zur Studienfachwahl anzubieten. Das Netzwerk ist Teil des »Nationalen Pakts für Frauen in MINT-Berufen«, gefördert durch das Bundesministerium für Bildung und Forschung (BMBF). [www.fraunhofer.de/talent-take-off](https://www.fraunhofer.de/de/jobs-und-karriere/schueler/talent-take-off.html)
+Fraunhofer und die Deutsche Telekom Stiftung haben das neuartiges Begabten-Netzwerk »Talent Take Off« initiiert, um Schülerinnen, Schülern und Studierenden sowohl eine Plattform zum Austausch als auch Informationen und Anregungen zur Studienfachwahl anzubieten. Das Netzwerk ist Teil des »Bündnis für Frauen in MINT-Berufen«, gefördert durch das Bundesministerium für Bildung und Forschung (BMBF). [www.fraunhofer.de/talent-take-off](https://www.fraunhofer.de/de/jobs-und-karriere/schueler/talent-take-off.html)
 
 **Fraunhofer Mentoring-Programm**
 

@@ -14,6 +14,6 @@ brigitte.de erreicht monatlich 720.000 UserInnen (70 % Frauen) – der erfolgrei
 
 ####  Aktivitäten im MINT-Bereich
 
-Auf der Website [Brigitte.de](https://www.brigitte.de/aktuell/themen/mathematik-10026722.html) gibt es anlässlich der Kooperation mit dem Nationalen Pakt für Frauen in MINT-Berufen einen Themenschwerpunkt „Komm, mach MINT - Zukunftsberufe für Frauen“ in der Rubrik Jobs & Finanzen. Hier gibt es neben einem Interview mit Annette Schavan, verschiedenen Diskussionsforen zu dem Thema "Frauen in technischen Berufen" auch Informationen über einzelne Berufsbilder aus dem MINT-Bereich.
+Auf der Website [Brigitte.de](https://www.brigitte.de/aktuell/themen/mathematik-10026722.html) gibt es anlässlich der Kooperation mit dem Bündnis für Frauen in MINT-Berufen einen Themenschwerpunkt „Komm, mach MINT - Zukunftsberufe für Frauen“ in der Rubrik Jobs & Finanzen. Hier gibt es neben einem Interview mit Annette Schavan, verschiedenen Diskussionsforen zu dem Thema "Frauen in technischen Berufen" auch Informationen über einzelne Berufsbilder aus dem MINT-Bereich.
 
 [www.brigitte.de](https://www.brigitte.de/aktuell/job/)

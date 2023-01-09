@@ -5,7 +5,7 @@ logo: "../logos/Niedersachsen-1.png"
 category: "Bundesländer"
 citeAuthor: "Björn Thümler"
 citeAuthorFunction: "Niedersächsischer Minister für Wissenschaft und Kultur"
-citeQuote: "„Als erstes Bundesland ist Niedersachsen 2009 dem Nationalen Pakt für Frauen in MINT-Berufen beigetreten. Nach wie vor halte ich die Vereinbarung für ein bedeutendes Instrument zur Gewinnung von Fachkräften. Mit dem „Niedersachsen-Technikum“, das junge Frauen in Theorie und Praxis auf MINT-Berufe und -Studiengänge vorbereitet, setzen wir die Leitgedanken des Paktes in unserem Land erfolgreich um. Dank des Zusammenwirkens verschiedener Akteurinnen und Akteure aus Schulen, Hochschulen und Wirtschaft hat es sich als ein wertvolles Instrument bei der Studien- und Berufswahl etabliert.”"
+citeQuote: "„Als erstes Bundesland ist Niedersachsen 2009 dem Bündnis für Frauen in MINT-Berufen beigetreten. Nach wie vor halte ich die Vereinbarung für ein bedeutendes Instrument zur Gewinnung von Fachkräften. Mit dem „Niedersachsen-Technikum“, das junge Frauen in Theorie und Praxis auf MINT-Berufe und -Studiengänge vorbereitet, setzen wir die Leitgedanken des Bündnisses in unserem Land erfolgreich um. Dank des Zusammenwirkens verschiedener Akteurinnen und Akteure aus Schulen, Hochschulen und Wirtschaft hat es sich als ein wertvolles Instrument bei der Studien- und Berufswahl etabliert.”"
 ---
 
 Niedersachsen hat bereits seit Anfang der 90er Jahre zahlreiche und vielfältige Projekte gefördert, um Mädchen und junge Frauen für natur- und ingenieurwissenschaftliche Schulfächer bzw. Studiengänge zu interessieren. Insbesondere wurden Mentoring-Projekte unterstützt, die – in Kooperation zwischen Schulen, Hochschulen und Wirtschaftsunternehmen – Informations- und Unterstützungsangebote für Schülerinnen und Studentinnen umfassten.
@@ -14,7 +14,7 @@ Im Rahmen des Hochschulpaktes 2020 ist in Niedersachsen bei der Verteilung der M
 
 Mittlerweile weist Niedersachsen im Vergleich der Bundesländer mit 38 % die meisten Absolventinnen in den natur- und ingenieurwissenschaftlichen Fächern auf und liegt damit auch deutlich über dem OECD-Durchschnitt.
 
-Diese positiven Entwicklungen gilt es weiter zu führen. Deshalb hat sich Niedersachsen – als erstes Bundesland – bereit erklärt, dem Pakt für Frauen in MINT-Berufen beizutreten.
+Diese positiven Entwicklungen gilt es weiter zu führen. Deshalb hat sich Niedersachsen – als erstes Bundesland – bereit erklärt, dem Bündnis für Frauen in MINT-Berufen beizutreten.
 
 #### Aktivitäten im MINT-Bereich
 

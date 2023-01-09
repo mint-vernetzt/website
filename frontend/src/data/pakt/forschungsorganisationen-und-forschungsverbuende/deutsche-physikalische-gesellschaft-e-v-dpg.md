@@ -19,7 +19,7 @@ Die Förderung von Chancengleichheit von Frauen und Männern und insbesondere di
 Die DPG unterstützt dabei ausdrücklich die Resolution Nr. 5 der International Union of Pure and Applied Physics zur Stärkung der Rolle der Frauen in der Physik.  
 Damit aus solchen Bekenntnissen auch reale Veränderungen entstehen, hat die DPG in den letzten Jahren viele Maßnahmen initiiert. So verleiht sie mit dem Hertha-Sponer-Preis gezielt einen mittlerweile hoch geachteten Preis für herausragende jüngere Wissenschaftlerinnen. Ein zentrales Ziel dieser Preisvergabe ist es, Role Models für Schülerinnen und Studentinnen zu schaffen.
 
-In diesem Jahr feiert der Arbeitskreis Chancengleichheit der DPG (AKC) sein 10-jähriges Bestehen. Aus dem AKC heraus sind viele Initiativen entstanden, die die Chancengleichheit von Frauen und Männern in der Physik vorantreiben. Das Jubiläum möchte die DPG dazu nutzen, die unverändert drängenden Chancengleichheitsfragen zu einem Aktionsschwerpunkt zu machen und bei Mädchen und jungen Frauen intensiv für naturwissenschaftliche Berufe zu werben. Die DPG ist daher auch gerne bereit, sich am Nationaler Pakt für Frauen in MINT-Berufen zu beteiligen.
+In diesem Jahr feiert der Arbeitskreis Chancengleichheit der DPG (AKC) sein 10-jähriges Bestehen. Aus dem AKC heraus sind viele Initiativen entstanden, die die Chancengleichheit von Frauen und Männern in der Physik vorantreiben. Das Jubiläum möchte die DPG dazu nutzen, die unverändert drängenden Chancengleichheitsfragen zu einem Aktionsschwerpunkt zu machen und bei Mädchen und jungen Frauen intensiv für naturwissenschaftliche Berufe zu werben. Die DPG ist daher auch gerne bereit, sich am Bündnis für Frauen in MINT-Berufen zu beteiligen.
 
 #### Aktivitäten im MINT-Bereich
 
