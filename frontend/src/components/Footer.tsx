@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 
 export function Footer() {
+  const year = new Date().getFullYear().toString();
+
   return (
     <div className="footer-section py-4 lg:py-10 border-t border-neutral-400 overflow-hidden">
       <div className="container">
@@ -67,7 +69,7 @@ export function Footer() {
 
             <div className="flex-100 md:flex-initial md:text-right pb-6 lg:pt-0 lg:pb-0 md:ml-auto">
               <p className="text-sm leading-4 font-semibold">
-                Copyright © 2022. All Rights Reserved matrix gGmbH
+                Copyright © {year}. All Rights Reserved matrix gGmbH
               </p>
             </div>
           </div>
