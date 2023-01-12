@@ -8,7 +8,7 @@ citeAuthorFunction: ""
 citeQuote: ""
 ---
 
-Aus dem Land Schleswig-Holstein sind das Ministerium für Bildung, Wissenschaft und Kultur und das Ministerium für Wirtschaft, Verkehr, Arbeit, Technologie und Tourismus dem Nationalen Pakt für Frauen in MINT-Berufen beigetreten.
+Aus dem Land Schleswig-Holstein sind das Ministerium für Bildung, Wissenschaft und Kultur und das Ministerium für Wirtschaft, Verkehr, Arbeit, Technologie und Tourismus dem Bündnis für Frauen in MINT-Berufen beigetreten.
 
 #### Ministerium für Bildung, Wissenschaft und Kultur
 
@@ -16,7 +16,7 @@ Das Ministerium für Bildung, Wissenschaft und Kultur des Landes Schleswig-Holst
 
 Um dies zu erreichen, unterstützt und fördert das Ministerium die Zusammenarbeit zwischen den Hochschulen, Universitäten des Landes und den Schulen, baut ein flächendeckendes Angebot an Schülerlaboren und Schülerforschungszentren auf, begleitet und initiiert Wettbewerbe und arbeitet intensiv mit der Joachim Herz Stiftung, der Körber-Stiftung und der Nordmetall-Stiftung zusammen - auch um eine enge Vernetzung von schulischen und außerschulischen Angeboten zu ermöglichen und die Zusammenarbeit zu intensivieren.
 
-Durch den Beitritt zum „Nationalen Pakt für Frauen in MINT-Berufen“ werden gemeinsame Aktivitäten über die Landesgrenzen hinweg möglich und es können neue Angebote geschaffen werden und neue innovative Projekte entstehen.
+Durch den Beitritt zum „Bündnis für Frauen in MINT-Berufen“ werden gemeinsame Aktivitäten über die Landesgrenzen hinweg möglich und es können neue Angebote geschaffen werden und neue innovative Projekte entstehen.
 
 **Aktivitäten im MINT-Bereich:**
 

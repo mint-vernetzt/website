@@ -131,9 +131,14 @@ export function MintVernetztInformiert({
                 Unterstützung!
               </p>
               <p>
-                <Link to="/mintmachen/" className="btn-primary">
+                <a
+                  href="https://survey.lamapoll.de/Anmeldung-MINTvernetzt-Verteiler/"
+                  className="btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Anmelden
-                </Link>
+                </a>
               </p>
             </div>
           </div>

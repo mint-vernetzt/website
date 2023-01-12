@@ -9,8 +9,8 @@
   @import "@fontsource/source-sans-pro/600.css";
   @import "@fontsource/source-sans-pro/600-italic.css";
 
-  body {
-    
+  html, body { 
+    scroll-behavior: smooth;
   }
 
   /** Heading **/

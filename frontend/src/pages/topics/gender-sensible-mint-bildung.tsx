@@ -3,12 +3,37 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
+import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
 
 export function GenderSensibleMintBildung({
   data,
 }: {
   data: GatsbyTypes.GenderSensibleMintBildungPageQuery;
 }) {
+  const now = new Date();
+
+  console.log("events.nodes", data.events.nodes);
+
+  const events = data.events.nodes
+    .filter((event) =>
+      isBeforeOneDayAfterDate(now, new Date(event.eventInformations.endDate))
+    )
+    .map((event) => ({
+      headline: event.title,
+      body: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: event.excerpt.replace(/<[^>]*>/g, "").substr(0, 250),
+          }}
+        />
+      ),
+      date: new Date(event.eventInformations.startDate),
+      url: `/event/${event.slug}/`,
+    }))
+    .slice(0, 3);
+
+  console.log("events", events);
+
   return (
     <Layout>
       <SEO
@@ -141,7 +166,7 @@ export function GenderSensibleMintBildung({
         </div>
       </section>
 
-      {data.events.nodes.length > 0 && (
+      {events.length > 0 && (
         <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
           <header>
             <H2 like="h1">Unsere Events zum Thema Gender</H2>
@@ -152,22 +177,14 @@ export function GenderSensibleMintBildung({
             </p>
           </header>
           <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            {data.events.nodes.map((event, index) => (
+            {events.map((event, index) => (
               <div
                 key={`event-${index}`}
                 className="p-4 rounded-lg bg-neutral-200 shadow-lg"
               >
-                <Link
-                  to={`/news/${event.slug}`}
-                  className="flex flex-col h-100"
-                >
-                  <H4 className="lg:leading-snug lg:mx-2">{event.title}</H4>
-                  <div
-                    className="line-clamp-3 lg:mx-2"
-                    dangerouslySetInnerHTML={{
-                      __html: event.excerpt as string,
-                    }}
-                  />
+                <Link to={event.url} className="flex flex-col h-100">
+                  <H4 className="lg:leading-snug lg:mx-2">{event.headline}</H4>
+                  <div className="line-clamp-3 lg:mx-2">{event.body}</div>
                 </Link>
               </div>
             ))}
@@ -194,8 +211,8 @@ export function GenderSensibleMintBildung({
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
               <H3 like="h1">
-                Nationaler Pakt für Frauen in{" "}
-                <span className="font-bold">MINT</span>-Berufen
+                Bündnis für Frauen in <span className="font-bold">MINT</span>
+                -Berufen
               </H3>
               <p>
                 Der weiterhin niedrige Anteil weiblicher Beschäftigter in
@@ -204,15 +221,15 @@ export function GenderSensibleMintBildung({
                 stärker für MINT-Ausbildungen, -Studiengänge und -Berufe zu
                 interessieren und zu ermutigen sowie die Nachwuchs- und
                 Fachkräfte in ihrem beruflichen MINT-Werdegang zu unterstützen.
-                Aus diesem Grund gibt es den Pakt für Frauen in MINT-Berufen:
-                Mit über 300 Mitgliedern unterstützt der Pakt dabei, diese
+                Aus diesem Grund gibt es das Bündnis für Frauen in MINT-Berufen:
+                Mit über 300 Mitgliedern unterstützt das Bündnis dabei, diese
                 Anliegen umzusetzen. Durch regelmäßigen Austausch und
-                Netzwerkformate stärkt der Pakt die MINT-Bildung und aktiviert
-                MINT-Talente, um den Innovations- und Wirtschaftsstandort
-                Deutschland zu sichern.
+                Netzwerkformate stärkt das Bündnis die MINT-Bildung und
+                aktiviert MINT-Talente, um den Innovations- und
+                Wirtschaftsstandort Deutschland zu sichern.
               </p>
               <p>
-                <Link to="/projects/mint-pakt" className="btn-primary">
+                <Link to="/projects/mint-buendnis" className="btn-primary">
                   Mehr erfahren
                 </Link>
               </p>
@@ -339,15 +356,19 @@ export const pageQuery = graphql`
       }
     }
     events: allWpEvent(
-      limit: 3
       filter: { tags: { nodes: { elemMatch: { slug: { eq: "gender" } } } } }
-      sort: { fields: date, order: DESC }
+      sort: { fields: eventInformations___startDate, order: ASC }
     ) {
       nodes {
         excerpt
         slug
         title
-        date
+        eventInformations {
+          startTime
+          startDate
+          endTime
+          endDate
+        }
       }
     }
   }

@@ -20,6 +20,6 @@ Durch Aufzeigen von Rollenvorbildern in Studium, Hochschule und Wirtschaft werde
 
 Die Thüringer Koordinierungsstelle NWT wurde 1997 durch die Landeskonferenz der Gleichstellungsbeauftragten an Thüringer Hochschulen initiiert und ist seit 2016 eine Arbeitseinheit des Thüringer Kompetenznetzwerks für Gleichstellung (TKG) und wird vom Thüringer Ministerium für Wirtschaft, Wissenschaft und Digitale Gesellschaft gefördert.
 
-Seit August 2009 ist sie Pakt-Partnerin im Komm-mach-MINT-Netzwerk und fungiert als bundesweite und internationale Netzwerkpartnerin auf dem Gebiet der Förderung von Frauen im MINT-Bereich.
+Seit August 2009 ist sie Bündnis-Partnerin im Komm-mach-MINT-Netzwerk und fungiert als bundesweite und internationale Netzwerkpartnerin auf dem Gebiet der Förderung von Frauen im MINT-Bereich.
 
 [www.thueko.de](https://www.thueko.de/)

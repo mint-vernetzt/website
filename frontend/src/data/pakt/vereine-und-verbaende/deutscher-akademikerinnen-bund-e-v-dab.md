@@ -9,7 +9,7 @@ citeQuote: "„Motivation: der AK-FNT setzt sich seit als 30 Jahren ein für Unt
 
 Projekte des AK-FNT haben wesentlich zur Akzeptanz von Naturwissenschaftlerinnen und Ingenieurinnen sowie zur Heranführung von Schülerinnen an technische Berufsfelder beigetragen.
 
-Einstellung: Wir sind der Meinung, Frauen und MINT passt gut, sie sind ebenso talentiert für Berufe im MINT-Bereich und müssen hierbei unterstützt werden. Daher möchten wir uns gerne als Partner am Pakt Komm,mach MINT. beteiligen. Der MINT-Pakt mit seinen vielen Partnern ist ein ausgesprochen gutes und durch seine Größe auch starkes Netzwerk für die Erreichung unserer Ziele.
+Einstellung: Wir sind der Meinung, Frauen und MINT passt gut, sie sind ebenso talentiert für Berufe im MINT-Bereich und müssen hierbei unterstützt werden. Daher möchten wir uns gerne als Partner am Bündnis Komm,mach MINT. beteiligen. Das MINT-Bündnis mit seinen vielen Partnern ist ein ausgesprochen gutes und durch seine Größe auch starkes Netzwerk für die Erreichung unserer Ziele.
 
 Perspektiven: Wir sehen in dem Projekt Komm-mach-MINT eine große Chance, dass unsere Bemühungen, Mädchen für den MINT-Bereich zu begeistern und ermutigen, weiter voranschreiten können. Als langfristiges Ziel und mögliche Perspektive des Projekts sehen wir nicht nur die Erhöhung des Anteils von Studentinnen in MINT-Fächern sondern auch die aktive Präsenz von Frauen aus MINT-Bereichen in entsprechenden Positionen von Hochschulen und Industrie.”"
 ---

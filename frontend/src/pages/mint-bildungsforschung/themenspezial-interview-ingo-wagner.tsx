@@ -22,7 +22,7 @@ export function DossierWagner({
       <section className="container py-4 md:py-8">
         <Link
           className="inline-block border border-neutral-400 py-3 px-4 mb-6 text-neutral-800 text-semibold uppercase rounded-lg"
-          to="/mint-bildungsforschung"
+          to="/topics/didaktik/"
         >
           <span className="flex items-center">
             <span className="mr-2">
@@ -42,7 +42,7 @@ export function DossierWagner({
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-12">
               „Es geht darum, Mädchen in der Informatik zu sehen“
             </H2>
@@ -256,15 +256,7 @@ export function DossierWagner({
 
           <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4">
             <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
-              <div className="study_details mb-6">
-                <p className="font-bold text-sm mb-0 text-neutral-900">
-                  Veröffentlicht am 06.04.2022
-                </p>
-              </div>
-
-              <hr className="mb-6" />
-
-              <div className="">
+              <div>
                 <H4 className="font-semibold mb-4">Interviewpartner</H4>
                 <p>
                   <span className="font-bold">Ingo Wagner</span>, 40, ist seit
@@ -279,20 +271,15 @@ export function DossierWagner({
                   promovierte.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+              <hr className="mt-8 mb-6" />
 
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
+              <p className="text-sm mb-0 text-neutral-600 text-center">
+                Veröffentlicht am 06.04.2022
+              </p>
             </div>
           </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
         </div>
+        
       </section>
     </Layout>
   );

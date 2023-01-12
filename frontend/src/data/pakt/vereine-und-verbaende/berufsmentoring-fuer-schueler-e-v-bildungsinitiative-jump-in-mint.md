@@ -12,6 +12,6 @@ Das Projekt JUMP in MINT des Vereins Berufsmentoring für Schüler e.V begeister
 
 JUMP in MINT richtet sich gezielt an 8. bis 10. Klässlerinnen, denn die Frage, „Was will ich eigentlich nach der Schule machen?“, ist in diesem Zeitfenster von zentraler Bedeutung. Es ist genau der richtige Zeitpunkt, um in verschiedene Berufe hineinzuschnuppern, bevor sich die Schülerinnen um einen Ausbildungsplatz bewerben oder die passenden Leistungskurse wählen.
 
-Mit dem Beitritt zum Nationalen Pakt für Frauen in MINT-Berufen „Komm, mach MINT.“ will der federführende Verein Berufsmentoring für Schüler e.V. das Projekt ausbauen und Partner gewinnen, die Mentoring-Partnerschaften übernehmen und weitere Berufsorientierungsworkshops für Mädchen anbieten. Zudem soll das Projekt als Anregung für interessierte Unternehmen, Hochschulen und Institutionen dienen, ähnliche Maßnahmen zu initiieren.
+Mit dem Beitritt zum Bündnis für Frauen in MINT-Berufen „Komm, mach MINT.“ will der federführende Verein Berufsmentoring für Schüler e.V. das Projekt ausbauen und Partner gewinnen, die Mentoring-Partnerschaften übernehmen und weitere Berufsorientierungsworkshops für Mädchen anbieten. Zudem soll das Projekt als Anregung für interessierte Unternehmen, Hochschulen und Institutionen dienen, ähnliche Maßnahmen zu initiieren.
 
 [www.jumpinmint.org](http://www.jumpinmint.org/)

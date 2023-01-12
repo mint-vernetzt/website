@@ -14,7 +14,7 @@ Der Wirtschafts- und Technologiestandort Nordrhein-Westfalen braucht die Innovat
 
 Das Land ergreift vielfältige Maßnahmen und Programme, die Mädchen und Frauen darin bestärken, eine MINT-Ausbildung oder ein MINT-Studium zu wählen. Beispielhaft ist die vom Land initiierte Gemeinschaftsoffensive "zdi – Zukunft durch Innovation" zur Förderung des naturwissenschaftlich-technischen Nachwuchses. Ihr gehören mittlerweile über 2.600 Partner aus Wirtschaft, Wissenschaft, Schule, Hochschule, Politik und Gesellschaft an. Sie bieten gemeinsame Maßnahmen entlang der gesamten Bildungskette vom Kindergarten bis zum Übergang in ein Studium und in den Beruf an, die sich auch speziell der Berufsorientierung von Mädchen widmen.
 
-Mit seinem Beitritt zum Nationalen Pakt  "Komm, mach MINT." setzt Nordrhein-Westfalen ein bundesweites Signal für die Bedeutung der Gendersensibilität bei der Fachkräftegewinnung.
+Mit seinem Beitritt zum Bündnis "Komm, mach MINT." setzt Nordrhein-Westfalen ein bundesweites Signal für die Bedeutung der Gendersensibilität bei der Fachkräftegewinnung.
 
 #### Aktivitäten im MINT-Bereich
 

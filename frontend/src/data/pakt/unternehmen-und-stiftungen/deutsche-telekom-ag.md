@@ -14,7 +14,7 @@ Im Mittelpunkt aller Aktivitäten steht der Nutzen für die Kundschaft. Ziel is
 
 Netzzugänge, Kommunikations- und Mehrwertdienste stellt die Telekom über Festnetz und Mobilfunk mit zunehmend hoher Bandbreite zur Verfügung. Mit innovativen Produkten und Dienstleistungen fördert der Konzern die persönliche und soziale Vernetzung der Menschen. Unter dem Dach des "T", der konzernweiten Unternehmensmarke, stehen die Marken T-Home für "Alles für zu Hause" und T-Mobile für "Alles für unterwegs". Unter der Marke T-Systems bietet der Konzern weltweit Angebote für Mittelstand und Großunternehmen.
 
-Die Deutsche Telekom setzt sich bereits seit vielen Jahren dafür ein, mehr Frauen für technische Berufe zu gewinnen. Daher werden wir als Partnerin im Nationalen Pakt unsere Aktivitäten selbstverständlich fortführen, bzw. fortführen und weiter entwickeln.
+Die Deutsche Telekom setzt sich bereits seit vielen Jahren dafür ein, mehr Frauen für technische Berufe zu gewinnen. Daher werden wir als Partnerin im Bündnis unsere Aktivitäten selbstverständlich fortführen, bzw. fortführen und weiter entwickeln.
 
 #### Aktivitäten im MINT-Bereich
 

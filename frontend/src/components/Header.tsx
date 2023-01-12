@@ -93,7 +93,6 @@ export function Header() {
   const [isExpanded, toggleExpansion] = React.useState(false);
   const [activeMenu, setActiveMenu] = React.useState<number | null>(null);
   const megaMenu = useMenu();
-  console.log(megaMenu);
 
   return (
     <div className={`header-section shadow-lg`}>

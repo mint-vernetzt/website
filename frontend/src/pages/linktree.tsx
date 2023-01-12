@@ -36,7 +36,7 @@ export function LinkTree({ data }) {
     };
   });
 
-  console.log(linkTreeItems);
+  const year = new Date().getFullYear().toString();
 
   return (
     <div className="max-w-sm">
@@ -337,7 +337,7 @@ export function LinkTree({ data }) {
 
                 <div className="flex-100 pb-6">
                   <p className="text-sm leading-4 font-semibold">
-                    Copyright © 2021. All Rights Reserved matrix gGmbH
+                    Copyright © {year}. All Rights Reserved matrix gGmbH
                   </p>
                 </div>
               </div>

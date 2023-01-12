@@ -23,7 +23,7 @@ export function DossierWettbewerbe({
       <section className="container py-4 md:py-8">
         <Link
           className="inline-block border border-neutral-400 py-3 px-4 mb-6 text-neutral-800 text-semibold uppercase rounded-lg"
-          to="/mint-bildungsforschung"
+          to="/topics/didaktik/"
         >
           <span className="flex items-center">
             <span className="mr-2">
@@ -32,18 +32,21 @@ export function DossierWettbewerbe({
             zur Übersicht
           </span>
         </Link>
-        {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
-          <GatsbyImage
-            image={data.HeroImage.childImageSharp.gatsbyImageData}
-            className="w-full h-auto rounded-2xl shadow-md"
-            alt=""
-          />
-        ) : null}
+        <div className="hero-image h-72 lg:h-116 rounded-lg lg:rounded-3xl overflow-hidden">
+          {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+            <GatsbyImage
+              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              className="w-full h-full object-cover"
+              alt="Naturwissenschaftliche Wettbewerbe sind für Mädchen weniger
+              attraktiv als für Jungen – über Stereotype und Strukturen"
+            />
+          ) : null}
+        </div>  
       </section>
 
       <section className="container my-4 md:my-8 lg:my-8">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
+          <div className="flex-100 pb-8 md:pb-10 md:flex-7/12 md:px-2 lg:px-4">
             <H2 className="font-semibold mb-12">
               Naturwissenschaftliche Wettbewerbe sind für Mädchen weniger
               attraktiv als für Jungen – über Stereotype und Strukturen
@@ -62,7 +65,7 @@ export function DossierWettbewerbe({
               Forschungsartikels „First steps toward gender equity in the
               chemistry Olympiad: Understanding the role of implicit gender
               science stereotypes“ (
-              <a href="#ref_3" className="text-blue-400">
+              <a href="#ref_3" className="text-lilac-500 font-semibold hover:underline">
                 Steegh, Höffler, Höft & Parchmann, 2021
               </a>
               ).
@@ -79,7 +82,7 @@ export function DossierWettbewerbe({
               Studie, dass über 50 % von 345 ehemaligen Wettbewerbsteilnehmenden
               in den USA später einen Doktortitel gemacht haben und viele danach
               auch weiterhin in der Wissenschaft tätig waren (
-              <a href="#ref_1" className="text-blue-400">
+              <a href="#ref_1" className="text-lilac-500 font-semibold hover:underline">
                 Campbell & Walberg, 2011
               </a>
               ). Viele Wissenschaftsolympiaden werden deshalb auch mit
@@ -125,7 +128,7 @@ export function DossierWettbewerbe({
               53 % erstmals mehr Mädchen als Jungen an naturwissenschaftlichen
               Olympiaden teil – männliche Teilnehmer gewinnen die Wettbewerbe
               jedoch nach wie vor häufiger (
-              <a href="#ref_2" className="text-blue-400">
+              <a href="#ref_2" className="text-lilac-500 font-semibold hover:underline">
                 Köller & Steffensky, 2021
               </a>
               ).
@@ -210,7 +213,7 @@ export function DossierWettbewerbe({
               weiblich. Der Fragebogen enthielt – zur Erfassung der unbewussten
               Stereotype – einen
               <Popover.Root>
-                <Popover.Trigger className="text-lilac-500 font-semibold">
+                <Popover.Trigger className="text-lilac-500 font-semibold hover:underline">
                   &nbsp;Impliziten Assoziationstest (IAT)&nbsp;
                 </Popover.Trigger>
                 <Popover.Content className="bg-white p-4 max-w-sm rounded-lg shadow-lg">
@@ -244,7 +247,7 @@ export function DossierWettbewerbe({
               von Mädchen und jungen Frauen an naturwissenschaftlichen
               Wettbewerben wie der Chemie-Olympiade. Entsprechende
               Organisationen sollten daher nach{" "}
-              <a href="#ref_3" className="text-blue-400">
+              <a href="#ref_3" className="text-lilac-500 font-semibold hover:underline">
                 Steegh et al. (2021)
               </a>{" "}
               ihre Strukturen kritisch reflektieren, um aufzudecken, welche
@@ -268,16 +271,7 @@ export function DossierWettbewerbe({
           </div>
 
           <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4">
-            <div className="p-4 pb-15 md:pb-5 py-6 rounded-lg bg-neutral-200 shadow-lg relative">
-              <div className="study_details mb-6">
-                <p className="font-bold text-sm mb-2 text-neutral-900">
-                  Veröffentlicht am 16.03.2022
-                </p>
-                <p className="font-bold text-sm mb-0 text-neutral-900">
-                  Originalartikel vom 14.06.2020
-                </p>
-              </div>
-
+            <div className="px-4 py-6 lg:px-6 rounded-lg lg:rounded-2xl bg-neutral-200 shadow-lg relative">
               <hr className="mb-6" />
 
               <div className="study_summary mb-4">
@@ -303,7 +297,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_1"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Wissenschaftliche Wettbewerbe als Sprungbrett für die
                       MINT-Karriere
@@ -312,7 +306,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_2"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Wenig Mädchen bei naturwissenschaftlichen Wettbewerben
                     </a>
@@ -320,7 +314,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_3"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Woran könnte das liegen?
                     </a>
@@ -328,7 +322,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_4"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Wenig attraktive Strukturen für Mädchen
                     </a>
@@ -336,7 +330,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_5"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Beeinflussen unbewusste stereotype Vorstellungen die
                       Leistungen und die Teilnahme von Mädchen und Jungen an
@@ -346,7 +340,7 @@ export function DossierWettbewerbe({
                   <li className="mb-4">
                     <a
                       href="#chapter_6"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Eigene Strukturen kritisch reflektieren
                     </a>
@@ -354,61 +348,24 @@ export function DossierWettbewerbe({
                   <li>
                     <a
                       href="#study_sources"
-                      className="block font-semibold text-lg text-primary-400 hover:text-primary"
+                      className="block font-semibold text-lg text-secondary hover:underline"
                     >
                       Literatur, Originalartikel, Autor:innen
                     </a>
                   </li>
                 </ul>
               </div>
+              <hr className="mb-6" />
 
-              {/* <hr className="mb-6" />
-
-              <div className="study_download">
-                <H4 className="font-semibold mb-4">Downloads</H4>
-                <a
-                  href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/tea.21645"
-                  target="_blank"
-                  className="flex py-4 px-6 rounded-lg bg-neutral-400 text-neutral-700 hover:shadow-lg relative items-center"
-                >
-                  <div className="">
-                    <p className="text-xs m-0 leading-4 text-semibold">
-                      PDF - Download
-                    </p>
-                    <H6 className="m-0 text-neutral-700">
-                      First steps toward gender equity in thechemistry Olympiad:
-                      Understanding the role ofimplicit gender-science
-                      stereotypes
-                    </H6>
-                  </div>
-                  <div className="ml-auto">
-                    <svg
-                      width="24px"
-                      height="auto"
-                      viewBox="0 0 12 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g fill="currentColor" fill-rule="nonzero">
-                        <path d="M1.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 1 0 0 1h2A1.5 1.5 0 0 0 12 9.5v-8A1.5 1.5 0 0 0 10.5 0h-9A1.5 1.5 0 0 0 0 1.5v8A1.5 1.5 0 0 0 1.5 11h2a.5.5 0 1 0 0-1h-2Z" />
-                        <path d="M5.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L6.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 1 0-.708.708l3 3Z" />
-                      </g>
-                    </svg>
-                  </div>
-                </a>
-              </div> */}
+              <p className="text-sm mb-0 text-neutral-600 text-center">
+                Veröffentlicht am 16.03.2022
+              </p>
+              <p className="text-sm mb-0 text-neutral-600 text-center">
+                Originalartikel vom 14.06.2020
+              </p>  
+              
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4 my-10">
-          <div className="flex-100 pb-8 md:pb-0 md:flex-7/12 md:px-2 lg:px-4">
-            <div className="flex justify-center">
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-              <div className="w-4 h-1 bg-neutral-400 rounded mx-2"></div>
-            </div>
-          </div>
-          <div className="flex-100 md:flex-5/12 pb-8 md:pb-0 md:px-2 lg:px-4"></div>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap md:-mx-2 lg:-mx-4">
@@ -422,8 +379,18 @@ export function DossierWettbewerbe({
                 href="https://science-surfers.com/sdg5-geschlechtergleichheit/"
                 rel="noreferrer"
                 target="_blank"
-                className="text-primary underline"
+                className="text-lilac-500 font-bold hover:underline block"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  className="w-4 h-4 inline-block mx-1 mb-1"
+                >
+                  <path
+                    d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    fill="currentColor"
+                  />
+                </svg>
                 Mädchen und MINT – na klar! Nur in vielen Köpfen ist das noch
                 nicht angekommen
               </a>
@@ -436,8 +403,18 @@ export function DossierWettbewerbe({
                 href="https://www.discovermagazine.com/mind/at-stem-competitions-gender-norms-still-hold-girls-back#.XS49oi2ZOi4"
                 rel="noreferrer"
                 target="_blank"
-                className="text-primary underline"
+                className="text-lilac-500 font-bold hover:underline block"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  className="w-4 h-4 inline-block mx-1 mb-1"
+                >
+                  <path
+                    d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    fill="currentColor"
+                  />
+                </svg>
                 At STEM Competitions, Gender Norms Still Hold Girls Back
               </a>
             </p>
@@ -446,40 +423,73 @@ export function DossierWettbewerbe({
 
             <ul>
               <li className="pb-4 font-semibold" id="ref_1">
+                Campbell, J. R., & Walberg, H. J. (2011). Olympiad studies:
+                Competitions provide alternatives to developing talents that
+                serve national interests. Roeper Review, 33(1), 8–17.
                 <a
                   href="https://doi.org/10.1080/02783193.2011.530202"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary underline"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
-                  Campbell, J. R., & Walberg, H. J. (2011). Olympiad studies:
-                  Competitions provide alternatives to developing talents that
-                  serve national interests. Roeper Review, 33(1), 8–17.
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-4 h-4 inline-block mx-1 mb-1"
+                  >
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  https://doi.org/10.1080/02783193.2011.530202                  
                 </a>
               </li>
               <li className="pb-4 font-semibold" id="ref_2">
+                Köller, O., & Steffensky, M. (2021). MINT Nachwuchsbarometer
+                2021: Eine Studie von acatech, IPN und Körber-Stiftung.
+                Abgerufen am 22. Februar 2022
                 <a
                   href="https://www.koerber-stiftung.de/fileadmin/user_upload/koerber-stiftung/redaktion/mint_nachwuchsbarometer/pdf/2021/MINT-Nachwuchsbarometer_2021.pdf"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary underline"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
-                  Köller, O., & Steffensky, M. (2021). MINT Nachwuchsbarometer
-                  2021: Eine Studie von acatech, IPN und Körber-Stiftung.
-                  Abgerufen am 22. Februar 2022
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-4 h-4 inline-block mx-1 mb-1"
+                  >
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  https://www.koerber-stiftung.de/fileadmin/user_upload/koerber-stiftung/redaktion/mint_nachwuchsbarometer/pdf/2021/MINT-Nachwuchsbarometer_2021.pdf                  
                 </a>
               </li>
               <li className="pb-4 font-semibold" id="ref_3">
+                Steegh, A., Höffler, T., Höft, L., & Parchmann, I. (2021).
+                First steps toward gender equity in the chemistry Olympiad:
+                Understanding the role of implicit gender‐science stereotypes.
+                Journal of Research in Science Teaching, 58(1), 40–68.
                 <a
                   href="https://doi.org/10.1002/tea.21645"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-primary underline"
+                  className="text-lilac-500 font-bold hover:underline block"
                 >
-                  Steegh, A., Höffler, T., Höft, L., & Parchmann, I. (2021).
-                  First steps toward gender equity in the chemistry Olympiad:
-                  Understanding the role of implicit gender‐science stereotypes.
-                  Journal of Research in Science Teaching, 58(1), 40–68.
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-4 h-4 inline-block mx-1 mb-1"
+                  >
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  https://doi.org/10.1002/tea.21645                  
                 </a>
               </li>
             </ul>

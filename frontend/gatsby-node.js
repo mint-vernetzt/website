@@ -127,6 +127,24 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/projects/mint-pakt/",
+    toPath: `/projects/mint-buendnis/`,
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/codingschule-junior-g-gmb-h",
+    toPath: "/pakt/unternehmen-und-stiftungen/tech-and-teach-g-gmb-h/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/codingschule-junior-g-gmb-h/",
+    toPath: "/pakt/unternehmen-und-stiftungen/tech-and-teach-g-gmb-h/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
