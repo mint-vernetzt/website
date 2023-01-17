@@ -40,7 +40,7 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
         organisation: "Zentralverband des Deutschen Handwerks",
       },
       {
-        name: "Kim Klebolte",
+        name: "Pauline Blombeck",
         organisation: "#SheTransformsIT",
       },
       {
@@ -145,7 +145,13 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
 
   return (
     <Layout>
-      <SEO title="Wer unterstützt MINTvernetzt?" slug="/about/wer-unterstuetzt/" description="" image="" children="" />
+      <SEO
+        title="Wer unterstützt MINTvernetzt?"
+        slug="/about/wer-unterstuetzt/"
+        description=""
+        image=""
+        children=""
+      />
 
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="flex flex-wrap content-center items-center md:-mx-6 lg:-mx-10">
@@ -161,15 +167,18 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
             </H1>
 
             <p className="lg:text-3xl text-neutral-600 mb-4 font-bold">
-              Gemeinsam mit Expert:innen sind wir stark für nachhaltige MINT-Bildung.
+              Gemeinsam mit Expert:innen sind wir stark für nachhaltige
+              MINT-Bildung.
             </p>
 
             <p className="lg:text-xl text-neutral-600 mb-4">
-              MINTvernetzt wird von einem Kreis von Expert:innen in der alltäglichen Arbeit unterstützt und 
-              beraten. Zu den Gremien zählen der Strategiekreis, der MINT-Vernetzungsbeirat sowie das 
-              Scientific Advisory Board. Die Mitglieder bringen ihre Expertise aus unterschiedlichen 
-              Fachrichtungen mit ein und können dadurch bei der Entwicklung, bei Herausforderungen und 
-              Synergien unterstützen.
+              MINTvernetzt wird von einem Kreis von Expert:innen in der
+              alltäglichen Arbeit unterstützt und beraten. Zu den Gremien zählen
+              der Strategiekreis, der MINT-Vernetzungsbeirat sowie das
+              Scientific Advisory Board. Die Mitglieder bringen ihre Expertise
+              aus unterschiedlichen Fachrichtungen mit ein und können dadurch
+              bei der Entwicklung, bei Herausforderungen und Synergien
+              unterstützen.
             </p>
           </div>
         </div>
@@ -326,5 +335,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-
