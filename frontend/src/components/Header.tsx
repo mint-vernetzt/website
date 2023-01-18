@@ -138,7 +138,7 @@ export function Header() {
               isExpanded ? `block` : `hidden`
             } flex-100 lg:block lg:flex-auto z-30 shadow-[0px_8px_24px_-4px_#00000029] lg:shadow-none rounded-b-2xl lg:rounded-none`}
           >
-            <ul className="w-full bg-white lg:inherit text-base lg:text-sm leading-6 lg:flex lg:items-center lg:-mx-2 px-6 lg:px-0 z-100 mb-0">
+            <ul className="w-full bg-white lg:inherit text-base lg:text-sm leading-6 lg:flex lg:items-center px-6 lg:px-0 z-100 mb-0">
               {megaMenu.menu.map((mainMenu, index) => (
                 <li
                   key={`nav-item-${index}`}
@@ -223,6 +223,17 @@ export function Header() {
                   )}
                 </li>
               ))}
+                <li className="lg:ml-auto py-3">
+                <div>
+                  <a
+                    className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200 my-2"
+                    href="https://community.mint-vernetzt.de/"
+                    target="_blank"
+                  >
+                    Zur Community-Plattform
+                  </a>
+                </div>
+                </li>
             </ul>
             <div className="lg:hidden bg-[#EFE8E6] rounded-br-2xl px-6">
               <ul className="main-teaser pt-6">
@@ -233,16 +244,7 @@ export function Header() {
                 ))}
               </ul>
             </div>
-          </nav>
-          <div className="ml-auto hidden lg:block">
-            <a
-              className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200"
-              href="https://community.mint-vernetzt.de/"
-              target="_blank"
-            >
-              Zur Community-Plattform
-            </a>
-          </div>
+          </nav>          
           <button
             className="h-5 w-5 lg:hidden ml-auto z-30"
             onClick={() => toggleExpansion(!isExpanded)}
