@@ -126,6 +126,35 @@ export function MintPakt({ data }) {
               ist eine Übersicht der aktuellen Mitglieder im Bündnis für Frauen
               in MINT-Berufen, die für die gemeinsamen Ziele eintreten:
             </p>
+            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
+              #empowerMINT-Kampagne 2023
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-4">
+              Zusammen mit den Partner:innen des Bündnisses möchten wir auf das
+              Engagement für Frauen in MINT-Berufen aufmerksam machen - und das
+              in einer möglichst breiten Öffentlichkeit. Denn noch immer
+              entscheiden sich zu wenige Frauen für eine MINT-Ausbildung oder
+              ein -Studium. Das wollen wir ändern! Zum Weltfrauentag am 8. März
+              2023 starten wir daher eine zweiwöchige Social Media-Offensive
+              unter dem gemeinsamen #empowerMINT. Wir wollen zeigen, welche
+              Unternehmen und Organisationen bereits aktiv sind, was sie
+              antreibt und wie sie sich konkret engagieren. Wir freuen uns,
+              gemeinsam laut zu werden!
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              Zur Vorbereitung findet am 22. Februar für alle
+              Bündnispartner:innen ein kurzer Workshop mit konkreten Hinweisen
+              zur Umsetzung statt. Anmeldung zum Workshop und weitere
+              Informationen gibt es hier:{" "}
+              <a
+                className="text-lilac-500 hover:underline"
+                target="_blank"
+                href="https://community.mint-vernetzt.de/event/miniworkshopempowermint-ldloggvm"
+              >
+                MINTvernetzt Community Plattform | Mini-Workshop #empowerMINT
+                (mint-vernetzt.de)
+              </a>
+            </p>
 
             <ul className="pakt-list">
               {categories.map((category, index) => {
