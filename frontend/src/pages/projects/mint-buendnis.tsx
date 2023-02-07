@@ -122,9 +122,7 @@ export function MintPakt({ data }) {
               Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
               sich seither im Bündnis zusammengeschlossen, um gemeinsam einen
               Beitrag dafür zu leisten, Mädchen und Frauen stärker für
-              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern. Dies
-              ist eine Übersicht der aktuellen Mitglieder im Bündnis für Frauen
-              in MINT-Berufen, die für die gemeinsamen Ziele eintreten:
+              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.
             </p>
             <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
               #empowerMINT-Kampagne 2023
@@ -154,6 +152,11 @@ export function MintPakt({ data }) {
                 MINTvernetzt Community Plattform | Mini-Workshop #empowerMINT
                 (mint-vernetzt.de)
               </a>
+            </p>
+
+            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
+              Liste der aktuellen Mitglieder im Bündnis für Frauen in
+              MINT-Berufen:
             </p>
 
             <ul className="pakt-list">
