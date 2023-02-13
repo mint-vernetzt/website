@@ -76,7 +76,7 @@ export function MintPakt({ data }) {
             <ul className="document-list">
               <li className="mb-2">
                 <a
-                  href="https://cms.mint-vernetzt.de/app/uploads/2022/12/221115_Leitbild_Buendnis_fuer_Frauen.pdf"
+                  href="https://cms.mint-vernetzt.de/app/uploads/2023/02/230208_Leitbild_Buendnis_fuer_Frauen.pdf"
                   target="_blank"
                   className="flex item-center bg-beige-300 border border-neutral-400 rounded-lg"
                 >
