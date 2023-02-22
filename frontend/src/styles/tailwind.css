@@ -170,11 +170,24 @@ ol {
 }
 
 .btn-primary {
-  @apply px-4 py-3 rounded-lg bg-primary text-neutral-200 font-semibold inline-block;
+  @apply px-4 py-2 rounded-lg bg-primary border border-primary text-neutral-200 leading-5  font-semibold inline-block;
+}
+
+.btn-outline-primary {
+  /* @apply px-4 py-2 rounded-lg text-primary border border-primary font-semibold text-sm leading-5 inline-block; */
+  @apply px-4 py-2 rounded-lg text-primary border border-primary leading-5 font-semibold inline-block;
+}
+
+.btn-icon {
+  @apply inline-flex flex-nowrap items-center;
+}
+
+.btn-icon svg {
+  @apply mr-2;
 }
 
 .btn-white {
-  @apply px-4 py-3 bg-white font-semibold inline-block;
+  @apply px-4 py-2 bg-white border border-white font-semibold leading-5 inline-block;
 }
 
 /* Hero Slider Styles */
@@ -194,7 +207,7 @@ ol {
   height: 540px;
   z-index: 0;
 }
-.hero-index .hero-text {
+.hero-index .hero-text {  
   background-image: linear-gradient(
     to bottom,
     #efe8e6,
@@ -231,6 +244,7 @@ ol {
       rgba(239, 232, 230, 0) 77%,
       rgba(239, 232, 230, 0) 95%
     );
+    background: linear-gradient(90deg, #FBFAFA, rgba(255, 255, 255, 0) 80%);
   }
   .hero-news {
     height: 288px;

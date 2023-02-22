@@ -4,6 +4,7 @@ import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import MoodCarousel from "../../components/MoodCarousel";
+import Icon, { IconType } from "../../components/Icon/Icon";
 
 export function Datenfakten({
   data,
@@ -266,9 +267,10 @@ export function Datenfakten({
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Auf dieser Seite lassen wir Fakten sprechen: Wir sammeln für Euch von A wie Analysen bis Z wie Zahlen – 
-            alles, was mit MINT zu tun hat. Ihr findet im MINT-DataLab  statistische Kennzahlen und im 
-            MINT-Stimmungsbarometer ein aktuelles Stimmungsbild zur MINT-Bildung in Deutschland.
+            Auf dieser Seite lassen wir Fakten sprechen: Wir sammeln für Euch von A wie Analysen bis Z wie Zahlen – alles, 
+            was mit MINT zu tun hat. Ihr findet im MINT-DataLab statistische Kennzahlen, in unseren Auftragsstudien 
+            Rechercheergebnisse zu ausgewählten Themen und im MINT-Stimmungsbarometer ein aktuelles Stimmungsbild zur 
+            MINT-Bildung in Deutschland.
           </p>
         </header>
       </section>
@@ -286,19 +288,23 @@ export function Datenfakten({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H3 like="h2">
+              <H2 like="h1">
                 MINT-DataLab (Betaversion)
-              </H3>
+              </H2>
               <p>
-                Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen 
-                bis zur regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt. 
-                Es stehen stets zwei Fragen im Vordergrund: Wie hoch ist der MINT-Anteil in den unterschiedlichen Bereichen? 
-                Und wie hoch ist der jeweilige Frauenanteil? Je nach Verfügbarkeit der Daten kann z. B. nach einzelnen
-                MINT-Fächern und Bereichen gefiltert werden. In der Regel können die Daten für den Zeitraum vom Jahr 2000 bis 
-                heute abgerufen werden.
+                Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur 
+                regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt. Es stehen stets zwei 
+                Fragen im Vordergrund: Wie hoch ist der MINT-Anteil in den unterschiedlichen Bereichen? Und wie hoch ist der jeweilige 
+                Frauenanteil? Je nach Verfügbarkeit der Daten kann z. B. nach einzelnen MINT-Fächern und Bereichen gefiltert werden. 
+                In der Regel können die Daten für den Zeitraum vom Jahr 2000 bis heute abgerufen werden.
               </p>
               <p>
-                <a href="https://mint-vernetzt.shinyapps.io/datalab/" target="_blank" className="btn-primary">
+                <a href="https://mint-vernetzt.shinyapps.io/datalab/" target="_blank" className="btn-primary btn-icon">                  
+                  <Icon type={IconType.ExternalLink} />                  
+                  Zum MINT-DataLab
+                </a>
+                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-outline-primary ml-4 btn-icon">
+                  <Icon type={IconType.ExternalLink} />                  
                   Zum MINT-DataLab
                 </a>
               </p>
@@ -308,29 +314,76 @@ export function Datenfakten({
       </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <H2 like="h1" className="text-center mb-14">
+          <span className="font-bold">MINT</span>vernetzt-Studien 
+        </H2>
         <div className="flex flex-wrap content-center items-center md:-mx-4">
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 md:order-2">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden rounded-lg">
               <GatsbyImage
-                image={data.umfrageImage?.childImageSharp?.gatsbyImageData}
+                image={data.didaktikImage?.childImageSharp?.gatsbyImageData}
                 className="w-full h-full object-cover"
-                alt="Feedback erwünscht"
+                alt="Didaktik an außerschulischen Lernorten (MINTvernetzt/ Boris Loehrer)"
               />
             </div>
+            <p className="text-xs">MINTvernetzt/ Boris Loehrer</p>
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
-              <H3 like="h2">
-                Feedback erwünscht
+              <H3 like="h2" className="mb-6">
+                Didaktik an außerschulischen Lernorten
               </H3>
               <p>
-                Das MINT-DataLab wird kontinuierlich und bedarfsorientiert weiterentwickelt. Daher freuen wir uns über Anregungen, 
-                Feedback und Wünsche zu weiteren Datensätzen oder Darstellungen: 
+                Lehrende haben oft fachliche Expertise und praktische Erfahrung, aber nicht zwingend einen 
+                pädagogischen Hintergrund. Entsprechend selten kommen didaktische Konzepte zum Einsatz. Die 
+                Studie zeigt die Besonderheiten außerschulischer Lernorte auf und ermittelt konkrete Bedarfe 
+                an didaktischer Weiterbildung. Eine Langfassung wird in Kürze verfügbar sein.
               </p>
-              <p>
-                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-primary">
-                  Jetzt Feedback geben
+              <p className="mb-2">
+                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-primary btn-icon">                  
+                  <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
+                  <span>Download Kurzfassung</span>
                 </a>
+              </p>
+              <p className="text-xs">
+                PDF, xy KB
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+        <div className="flex flex-wrap content-center items-center md:-mx-4">
+          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
+            <div className="overflow-hidden rounded-lg">
+              <GatsbyImage
+                image={data.diversityImage?.childImageSharp?.gatsbyImageData}
+                className="w-full h-full object-cover"
+                alt="Diversität in der MINT-Bildung (Unsplash / John Schaidler)"
+              />
+            </div>
+            <p className="text-xs">Unsplash / John Schaidler</p>
+          </div>
+          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
+            <div>
+              <H3 like="h2" className="mb-6">
+                Diversität in der MINT-Bildung
+              </H3>
+              <p>
+                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung 
+                von Kindern und Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, 
+                um mehr Chancengleichheit zu schaffen und so die Diversität in MINT-Berufen zu verbessern. Eine 
+                Langfassung wird in Kürze verfügbar sein.
+              </p>
+              <p className="mb-2">
+                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-primary btn-icon">                  
+                  <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
+                  <span>Download Kurzfassung</span>
+                </a>
+              </p>
+              <p className="text-xs">
+                PDF, xy KB
               </p>
             </div>
           </div>
@@ -387,7 +440,13 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 744)
       }
     }
-    umfrageImage: file(relativePath: { eq: "daten_und_fakten_umfrage.png" }) {
+    didaktikImage: file(relativePath: { eq: "daten-fakten_didaktik.jpg" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(width: 744)
+      }
+    }    
+    diversityImage: file(relativePath: { eq: "daten-fakten_diversity.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(width: 744)
