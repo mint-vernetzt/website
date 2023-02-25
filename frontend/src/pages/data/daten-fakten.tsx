@@ -298,14 +298,14 @@ export function Datenfakten({
                 Frauenanteil? Je nach Verfügbarkeit der Daten kann z. B. nach einzelnen MINT-Fächern und Bereichen gefiltert werden. 
                 In der Regel können die Daten für den Zeitraum vom Jahr 2000 bis heute abgerufen werden.
               </p>
-              <p>
-                <a href="https://mint-vernetzt.shinyapps.io/datalab/" target="_blank" className="btn-primary btn-icon">                  
+              <p className="-m-2">
+                <a href="https://mint-vernetzt.shinyapps.io/datalab/" target="_blank" className="btn-primary btn-icon m-2">                  
                   <Icon type={IconType.ExternalLink} />                  
                   Zum MINT-DataLab
                 </a>
-                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-outline-primary ml-4 btn-icon">
+                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-outline-primary m-2 btn-icon">
                   <Icon type={IconType.ExternalLink} />                  
-                  Zum MINT-DataLab
+                  Feedback geben
                 </a>
               </p>
             </div>
@@ -326,7 +326,7 @@ export function Datenfakten({
                 alt="Didaktik an außerschulischen Lernorten (MINTvernetzt/ Boris Loehrer)"
               />
             </div>
-            <p className="text-xs">MINTvernetzt/ Boris Loehrer</p>
+            <p className="text-xs">MINTvernetzt / Boris Loehrer</p>
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
