@@ -83,5 +83,6 @@ module.exports = {
         siteUrl: `${process.env.SITE_URL}`,
       },
     },
+    `gatsby-plugin-meta-redirect`,
   ],
 };
