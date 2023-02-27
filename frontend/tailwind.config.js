@@ -69,6 +69,7 @@ module.exports = {
     },
     aspectRatio: {
       '4/3': '4 / 3',
+      '16/9': '16 / 9',
     },
     minHeight: {
       ...defaultTheme.minHeight,

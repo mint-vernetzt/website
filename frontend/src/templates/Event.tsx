@@ -170,45 +170,39 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
 
             {event.id === "cG9zdDoxODg3" && (
               <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "56.25%",
-                  marginBottom: "25px",
-                }}
+                id="livestream-container"
+                className="mb-8 bg-blue-500 md:aspect-16/9 flex items-center"                
               >
-                <div className="bg-blue-500 w-full h-full absolute p-5">
-                  <iframe
-                    id="livestream-embed"
-                    style={{
-                      position: "absolute",
-                      display: "none",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: 0,
-                    }}
-                    data-src="https://www.youtube-nocookie.com/embed/ABCDEFG?autoplay=1"
-                    title="Live Stream"
-                    allowfullscreen="true"
-                    allow="autoplay"
-                  ></iframe>
-                  <div id="livestream-optin" className="flex m-10 mt-12">
-                    <div className="text-center">
-                      <h2 className="text-white">
-                        Livestream der Jahrestagung
-                      </h2>
-                      <p className="text-white">
-                        An dieser Stelle finden Sie einen externen Inhalt von
-                        YouTube, der den Artikel ergänzt und von der Redaktion
-                        empfohlen wird. Sie können ihn sich mit einem Klick
-                        anzeigen lassen und wieder ausblenden.
-                      </p>
-
+                
+                <iframe
+                  id="livestream-embed"
+                  style={{
+                    display: "none",                      
+                    border: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  data-src="https://www.youtube-nocookie.com/embed/RDTV-g0XG9E"
+                  title="Live Stream"
+                  allowfullscreen="true"
+                  allow="autoplay"
+                ></iframe>
+                <div id="livestream-optin" className="flex p-8 lg:px-16">
+                  <div className="text-center">
+                    <h2 className="text-white mb-8">
+                      Livestream der Jahrestagung
+                    </h2>
+                    <p className="text-white">
+                      Mit dem Klick auf den Button wird ein Youtube-Video geöffnet und Ihr willigt ausdrücklich ein, Inhalte von Youtube angezeigt zu bekommen. 
+                    </p>
+                    <p>
                       <button
                         className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-white text-blue-500 my-2"
                         onClick={() => {
+                          const embeddiv = document.querySelector(
+                            "#livestream-container"
+                          ) as HTMLDivElement;
+
                           const embed = document.querySelector(
                             "#livestream-embed"
                           ) as HTMLDivElement;
@@ -219,6 +213,7 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                               "#livestream-optin"
                             ) as HTMLDivElement;
                             if (optIn) {
+                              embeddiv.classList.add("aspect-16/9");
                               optIn.style.display = "none";
                             }
                           }
@@ -226,23 +221,20 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                       >
                         Externen Inhalt anzeigen
                       </button>
-                      <p className="text-white">
-                        Ich bin damit einverstanden, dass mir externe Inhalte
-                        angezeigt werden. Damit können personenbezogene Daten an
-                        Drittplattformen übermittelt werden. Mehr dazu in
-                        unserer{" "}
-                        <a
-                          href="/privacy/"
-                          target="_blank"
-                          className="text-underline"
-                        >
-                          Datenschutzerklärung
-                        </a>
-                        .
-                      </p>
-                    </div>
+                      </p> 
+                    <p className="text-white mb-0">
+                      Beim Abspielen des Videos werden Daten an die Server von Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
+                      <a
+                        href="https://www.google.com/intl/de/policies/privacy/"
+                        target="_blank"
+                        className="underline underline-offset-1"
+                      >
+                        Datenschutzerklärung (www.google.com/intl/de/policies/privacy/)
+                      </a>
+                      .
+                    </p>
                   </div>
-                </div>
+                </div>                
               </div>
             )}
             <div
