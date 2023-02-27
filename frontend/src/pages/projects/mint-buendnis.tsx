@@ -78,7 +78,7 @@ export function MintPakt({ data }) {
                 <a
                   href="https://cms.mint-vernetzt.de/app/uploads/2023/02/230208_Leitbild_Buendnis_fuer_Frauen.pdf"
                   target="_blank"
-                  className="flex item-center bg-beige-300 border border-neutral-400 rounded-lg"
+                  className="flex item-center bg-beige-300 border border-neutral-400 rounded-lg mb-2"
                 >
                   <span className="icon w-8 h-8 mb-2 m-4 mr-0">
                     <Icon type={IconType.FilePDF} width="32" height="32" />
