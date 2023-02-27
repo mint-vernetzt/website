@@ -5,6 +5,8 @@ import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import MoodCarousel from "../../components/MoodCarousel";
 import Icon, { IconType } from "../../components/Icon/Icon";
+import PdfDidaktik from "../../download/Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf";
+import PdfDiversitaet from "../../download/Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
 
 export function Datenfakten({
   data,
@@ -340,13 +342,13 @@ export function Datenfakten({
                 an didaktischer Weiterbildung. Eine Langfassung wird in Kürze verfügbar sein.
               </p>
               <p className="mb-2">
-                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-primary btn-icon">                  
+                <a href={PdfDidaktik} target="_blank" className="btn-primary btn-icon">                  
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
                   <span>Download Kurzfassung</span>
                 </a>
               </p>
               <p className="text-xs">
-                PDF, xy KB
+                PDF, ca. 235KB
               </p>
             </div>
           </div>
@@ -377,13 +379,13 @@ export function Datenfakten({
                 Langfassung wird in Kürze verfügbar sein.
               </p>
               <p className="mb-2">
-                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-primary btn-icon">                  
+                <a href={PdfDiversitaet} target="_blank" className="btn-primary btn-icon">                  
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
                   <span>Download Kurzfassung</span>
                 </a>
               </p>
               <p className="text-xs">
-                PDF, xy KB
+                PDF, ca. 260KB
               </p>
             </div>
           </div>
