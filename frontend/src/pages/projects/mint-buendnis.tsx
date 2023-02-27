@@ -85,10 +85,30 @@ export function MintPakt({ data }) {
                   </span>
                   <div className="my-3 mx-4">
                     <span className="block text-xs text-neutral-600 uppercase">
-                      PDF 0,3 MB
+                      PDF 0,2 MB
                     </span>
                     <div>
                       <p>Leitbild Bündnis für Frauen</p>
+                    </div>
+                  </div>
+                  <div className="icon w-8 h-8 mb-2 m-4 ml-auto">
+                    <Icon type={IconType.Download} width="32" height="32" />
+                  </div>
+                </a>
+                <a
+                  href="https://cms.mint-vernetzt.de/app/uploads/2023/02/empowerMINT_Kommunikationskit.pdf"
+                  target="_blank"
+                  className="flex item-center bg-beige-300 border border-neutral-400 rounded-lg"
+                >
+                  <span className="icon w-8 h-8 mb-2 m-4 mr-0">
+                    <Icon type={IconType.FilePDF} width="32" height="32" />
+                  </span>
+                  <div className="my-3 mx-4">
+                    <span className="block text-xs text-neutral-600 uppercase">
+                      PDF 0,2 MB
+                    </span>
+                    <div>
+                      <p>#empowerMINT Kommunikationskit</p>
                     </div>
                   </div>
                   <div className="icon w-8 h-8 mb-2 m-4 ml-auto">
