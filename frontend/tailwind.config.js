@@ -54,6 +54,7 @@ module.exports = {
     lineHeight: {
       ...defaultTheme.lineHeight,
       snug: "1.333333",
+      "5": "1.375rem",
     },
     flex: {
       ...defaultTheme.flex,
