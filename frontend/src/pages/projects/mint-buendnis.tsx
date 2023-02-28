@@ -161,11 +161,11 @@ export function MintPakt({ data }) {
             </p>
             <p className="lg:text-xl text-neutral-600 mb-16">
               Um die Aufmerksamkeit und Sichtbarkeit zu erhöhen, haben wir
-              passend zum gemeinsamen Hashtag #empowerMINT eine gemeinsame
-              Bildsprache entwickelt. Dafür haben wir ein Kommunikations-Kit
-              erstellt, das wir Ihnen gerne zusenden. Ein Infosheet zur
-              #empowerMINT-Kampagne finden Sie zudem an der Seite zum Download
-              bereit. Bei Fragen melden Sie sich gerne bei{" "}
+              passend zum Hashtag #empowerMINT eine gemeinsame Bildsprache
+              entwickelt. Dafür haben wir ein Kommunikations-Kit erstellt, das
+              wir Ihnen gerne zusenden. Ein Infosheet zur #empowerMINT-Kampagne
+              finden Sie zudem an der Seite zum Download bereit. Bei Fragen
+              melden Sie sich bei{" "}
               <a
                 className="text-lilac-500 hover:underline"
                 href="mailto:nele.gerkens@mint-vernetzt.de"
