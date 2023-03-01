@@ -171,18 +171,17 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
             {event.id === "cG9zdDoxODg3" && (
               <div
                 id="livestream-container"
-                className="mb-8 bg-blue-500 md:aspect-16/9 flex items-center"                
+                className="mb-8 bg-blue-500 md:aspect-16/9 flex items-center"
               >
-                
                 <iframe
                   id="livestream-embed"
                   style={{
-                    display: "none",                      
+                    display: "none",
                     border: 0,
                     width: "100%",
                     height: "100%",
                   }}
-                  data-src="https://www.youtube-nocookie.com/embed/RDTV-g0XG9E"
+                  data-src="https://www.youtube-nocookie.com/embed/ccClwGLoy1Q"
                   title="Live Stream"
                   allowfullscreen="true"
                   allow="autoplay"
@@ -193,7 +192,9 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                       Livestream der Jahrestagung
                     </h2>
                     <p className="text-white">
-                      Mit dem Klick auf den Button wird ein Youtube-Video geöffnet und Ihr willigt ausdrücklich ein, Inhalte von Youtube angezeigt zu bekommen. 
+                      Mit dem Klick auf den Button wird ein Youtube-Video
+                      geöffnet und Ihr willigt ausdrücklich ein, Inhalte von
+                      Youtube angezeigt zu bekommen.
                     </p>
                     <p>
                       <button
@@ -221,20 +222,22 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                       >
                         Externen Inhalt anzeigen
                       </button>
-                      </p> 
+                    </p>
                     <p className="text-white mb-0">
-                      Beim Abspielen des Videos werden Daten an die Server von Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
+                      Beim Abspielen des Videos werden Daten an die Server von
+                      Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
                       <a
                         href="https://www.google.com/intl/de/policies/privacy/"
                         target="_blank"
                         className="underline underline-offset-1"
                       >
-                        Datenschutzerklärung (www.google.com/intl/de/policies/privacy/)
+                        Datenschutzerklärung
+                        (www.google.com/intl/de/policies/privacy/)
                       </a>
                       .
                     </p>
                   </div>
-                </div>                
+                </div>
               </div>
             )}
             <div
