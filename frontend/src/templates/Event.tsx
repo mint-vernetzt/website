@@ -181,7 +181,7 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                     width: "100%",
                     height: "100%",
                   }}
-                  data-src="https://www.youtube-nocookie.com/embed/ccClwGLoy1Q"
+                  data-src="https://www.youtube-nocookie.com/embed/Pm4Z-of9SgM"
                   title="Live Stream"
                   allowfullscreen="true"
                   allow="autoplay"
