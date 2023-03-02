@@ -168,78 +168,91 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
           <div className="flex-100 md:flex-2/3 pb-8 md:pb-0 md:px-2 lg:px-6">
             {event.parent && <H1 like="h0">{event.title}</H1>}
 
-            {event.id === "cG9zdDoxODg3" && (
-              <div
-                id="livestream-container"
-                className="mb-8 bg-blue-500 md:aspect-16/9 flex items-center"
-              >
-                <iframe
-                  id="livestream-embed"
-                  style={{
-                    display: "none",
-                    border: 0,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  data-src="https://www.youtube-nocookie.com/embed/Pm4Z-of9SgM"
-                  title="Live Stream"
-                  allowfullscreen="true"
-                  allow="autoplay"
-                ></iframe>
-                <div id="livestream-optin" className="flex p-8 lg:px-16">
-                  <div className="text-center">
-                    <h2 className="text-white mb-8">
-                      Livestream der Jahrestagung
-                    </h2>
-                    <p className="text-white">
-                      Mit dem Klick auf den Button wird ein Youtube-Video
-                      geöffnet und Ihr willigt ausdrücklich ein, Inhalte von
-                      Youtube angezeigt zu bekommen.
-                    </p>
-                    <p>
-                      <button
-                        className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-white text-blue-500 my-2"
-                        onClick={() => {
-                          const embeddiv = document.querySelector(
-                            "#livestream-container"
-                          ) as HTMLDivElement;
+            {event.id === "cG9zdDoxODg3" &&
+              ["RDTV-g0XG9E", "ccClwGLoy1Q"].map((code, index) => (
+                <div
+                  id={`livestream-container${index}`}
+                  className="mb-8 bg-blue-500 md:aspect-16/9 flex items-center"
+                  key={code}
+                >
+                  <iframe
+                    id={`livestream-embed${index}`}
+                    style={{
+                      display: "none",
+                      border: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    data-src={`https://www.youtube-nocookie.com/embed/${code}?autoplay=1`}
+                    title="Live Stream"
+                    allowfullscreen="true"
+                    allow="autoplay"
+                  ></iframe>
+                  <div
+                    id={`livestream-optin${index}`}
+                    className="flex p-8 lg:px-16"
+                  >
+                    <div className="text-center">
+                      <h2 className="text-white mb-1">
+                        Stream der Jahrestagung
+                        <br />
+                      </h2>
+                      <h4 className="text-white mb-8">Tag {index + 1}</h4>
 
-                          const embed = document.querySelector(
-                            "#livestream-embed"
-                          ) as HTMLDivElement;
-                          if (embed) {
-                            embed.setAttribute("src", embed.dataset?.src ?? "");
-                            embed.style.display = "block";
-                            const optIn = document.querySelector(
-                              "#livestream-optin"
+                      <p className="text-white">
+                        Mit dem Klick auf den Button wird ein Youtube-Video
+                        geöffnet und Ihr willigt ausdrücklich ein, Inhalte von
+                        Youtube angezeigt zu bekommen.
+                      </p>
+                      <p>
+                        <button
+                          className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-white text-blue-500 my-2"
+                          onClick={() => {
+                            const embeddiv = document.querySelector(
+                              `#livestream-container${index}`
                             ) as HTMLDivElement;
-                            if (optIn) {
-                              embeddiv.classList.add("aspect-16/9");
-                              optIn.style.display = "none";
+
+                            const embed = document.querySelector(
+                              `#livestream-embed${index}`
+                            ) as HTMLDivElement;
+                            if (embed) {
+                              embed.setAttribute(
+                                "src",
+                                embed.dataset?.src ?? ""
+                              );
+                              embed.style.display = "block";
+
+                              const optIn = document.querySelector(
+                                `#livestream-optin${index}`
+                              ) as HTMLDivElement;
+                              if (optIn) {
+                                embeddiv.classList.add("aspect-16/9");
+                                optIn.style.display = "none";
+                              }
                             }
-                          }
-                        }}
-                      >
-                        Externen Inhalt anzeigen
-                      </button>
-                    </p>
-                    <p className="text-white mb-0">
-                      Beim Abspielen des Videos werden Daten an die Server von
-                      Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
-                      <a
-                        href="https://www.google.com/intl/de/policies/privacy/"
-                        target="_blank"
-                        className="underline underline-offset-1"
-                      >
-                        Datenschutzerklärung
-                        (www.google.com/intl/de/policies/privacy/)
-                      </a>
-                      .
-                    </p>
+                          }}
+                        >
+                          Externen Inhalt anzeigen
+                        </button>
+                      </p>
+                      <p className="text-white mb-0">
+                        Beim Abspielen des Videos werden Daten an die Server von
+                        Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
+                        <a
+                          href="https://www.google.com/intl/de/policies/privacy/"
+                          target="_blank"
+                          className="underline underline-offset-1"
+                        >
+                          Datenschutzerklärung
+                          (www.google.com/intl/de/policies/privacy/)
+                        </a>
+                        .
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              ))}
+
             <div
               className="event-description"
               dangerouslySetInnerHTML={{
