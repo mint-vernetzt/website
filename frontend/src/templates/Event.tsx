@@ -194,7 +194,7 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
                   >
                     <div className="text-center">
                       <h2 className="text-white mb-1">
-                        Livestream der Jahrestagung
+                        Stream der Jahrestagung
                         <br />
                       </h2>
                       <h4 className="text-white mb-8">Tag {index + 1}</h4>
