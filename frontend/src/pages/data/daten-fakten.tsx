@@ -396,33 +396,45 @@ export function Datenfakten({
         <header>
           <H3 like="h2">MINT-Stimmungsbarometer</H3>
           <p className="md:px-8 lg:px-20 ">
-            Das MINT-Stimmungsbarometer ist eine Befragung von MINTvernetzt, bei der Vertreter:innen aus Bildung, 
-            Wissenschaft, Wirtschaft und öffentlichem Sektor zu ihren persönlichen Einschätzungen und Eindrücken 
-            zur MINT-Bildung in Deutschland befragt werden.
+            Das MINT-Stimmungsbarometer ist eine jährliche Befragung von MINTvernetzt, bei der Vertreter:innen aus Bildung, 
+            Wissenschaft und Wirtschaft zu ihren persönlichen Einschätzungen und Eindrücken zur MINT-Bildung in Deutschland 
+            befragt werden.
           </p>
         </header>
         <div className="max-w-4xl mx-auto md:relative">
           <MoodCarousel items={moodslides} />
         </div>  
       </section> 
-      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">
-        
+      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">        
           <p>
-            Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch ist das Engagement der einzelnen Sektoren? Und welche 
-            Veränderungen sind notwendig, um die MINT-Bildung in Deutschland voranzubringen?
+            Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch ist das Engagement der einzelnen Sektoren? Und 
+            welche Veränderungen sind notwendig, um die MINT-Bildung in Deutschland voranzubringen? 
           </p>
-          <p>
+          <p>  
             Mit diesen und anderen Fragen bildet das MINT-Stimmungsbarometer neben einem Gesamtüberblick auch die unterschiedlichen 
             sektoralen Perspektiven auf die MINT-Bildung in Deutschland ab. 
-          </p>  
+          </p>
           <p>
-            Erstmals in diesem Jahr werden hierfür in einer anonymisierten Befragung Vertreter:innen aus Bildung, Wirtschaft, Wissenschaft 
-            und öffentlichem Sektor eingeladen, ihre Einschätzungen und Eindrücke zur MINT-Bildung in Deutschland zu teilen. Das 
-            MINT-Stimmungsbarometer soll Trends und Herausforderungen in der MINT-Bildung sichtbar machen und Handlungsfelder für 
+            Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der MINT-Bildung sichtbar machen und Handlungsfelder für 
             die unterschiedlichen Akteur:innen in der MINT-Bildungslandschaft aufzeigen.
           </p>      
       </section>        
-      
+      <section id="MINTStimmungsbarometer-2023" className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
+        <div className="bg-primary text-white pt-16 pb-6 px-8 lg:pt-32 lg:pb-20 lg:px-16">
+          <header className="mb-0 text-center">
+            <H3 like="h2" className="text-white">MINT-Stimmungsbarometer 2023</H3>
+            <p className="pt-4">
+              Jetzt teilnehmen und Eure Einschätzung zur MINT-Bildung abgeben.
+            </p>
+            <p className="pt-8 pb-0">
+              <a href="https://survey.lamapoll.de/MINT-Stimmungsbarometer-2023/" target="_blank" className="btn-outline-primary btn-icon bg-white">
+                  <Icon type={IconType.ExternalLink} />                  
+                  Zur Umfrage 2023
+              </a>
+            </p>
+          </header>
+        </div>                
+      </section>
     </Layout>
   );
 }
