@@ -416,7 +416,7 @@ export function Datenfakten({
           </p>
           <p className="md:break-inside-avoid-column">
             Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der MINT-Bildung sichtbar machen und Handlungsfelder für 
-            die unterschiedlichen Akteur:innen in der MINT-Bildungslandschaft aufzeigen.
+            die unterschiedlichen Akteur:innen in der <span className="whitespace-nowrap">MINT-Bildungslandschaft</span> aufzeigen.
           </p>      
       </section>        
       <section id="MINTstimmungsbarometer-2023" className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
@@ -424,7 +424,7 @@ export function Datenfakten({
           <header className="mb-0 text-center">
             <H3 like="h2" className="text-white">MINT-Stimmungsbarometer 2023</H3>
             <p className="pt-4">
-              Jetzt teilnehmen und Eure Einschätzung zur MINT-Bildung abgeben.
+              Jetzt teilnehmen und Eure Einschätzung zur <span className="whitespace-nowrap">MINT-Bildung</span> abgeben.
             </p>
             <p className="pt-8 pb-0">
               <a href="https://survey.lamapoll.de/MINT-Stimmungsbarometer-2023/" target="_blank" className="btn-outline-primary btn-icon bg-white">
