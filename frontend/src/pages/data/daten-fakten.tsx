@@ -406,20 +406,20 @@ export function Datenfakten({
         </div>  
       </section> 
       <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">        
-          <p>
+          <p className="md:break-inside-avoid-column">
             Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch ist das Engagement der einzelnen Sektoren? Und 
             welche Veränderungen sind notwendig, um die MINT-Bildung in Deutschland voranzubringen? 
           </p>
-          <p>  
+          <p className="md:break-inside-avoid-column">  
             Mit diesen und anderen Fragen bildet das MINT-Stimmungsbarometer neben einem Gesamtüberblick auch die unterschiedlichen 
             sektoralen Perspektiven auf die MINT-Bildung in Deutschland ab. 
           </p>
-          <p>
+          <p className="md:break-inside-avoid-column">
             Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der MINT-Bildung sichtbar machen und Handlungsfelder für 
             die unterschiedlichen Akteur:innen in der MINT-Bildungslandschaft aufzeigen.
           </p>      
       </section>        
-      <section id="MINTStimmungsbarometer-2023" className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
+      <section id="MINTstimmungsbarometer-2023" className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
         <div className="bg-primary text-white pt-16 pb-6 px-8 lg:pt-32 lg:pb-20 lg:px-16">
           <header className="mb-0 text-center">
             <H3 like="h2" className="text-white">MINT-Stimmungsbarometer 2023</H3>
