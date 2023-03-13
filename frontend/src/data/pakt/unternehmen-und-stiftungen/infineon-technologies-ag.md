@@ -8,7 +8,7 @@ citeAuthorFunction: ""
 citeQuote: ""
 ---
 
-Die Infineon Technologies AG ist ein weltweit führender Anbieter von Halbleiterlösungen, die das Leben einfacher, sicherer, und umweltfreundlicher machen, wie z.B. in den Bereichen Automobilelektronik, Leistungshalbleiter und Chipkarten / Sicherheit. Mikroelektronik von Infineon ist der Schlüssel für eine lebenswerte Zukunft. Infineon beschäftigt weltweit etwa 37.500 Mitarbeitende.
+Die Infineon Technologies AG ist ein weltweit führender Anbieter von Halbleiterlösungen, die das Leben einfacher, sicherer, und umweltfreundlicher machen, wie z.B. in den Bereichen Automobilelektronik, Leistungshalbleiter und Chipkarten / Sicherheit. Mikroelektronik von Infineon ist der Schlüssel für eine lebenswerte Zukunft. Infineon beschäftigt weltweit etwa 50.000 Mitarbeitende.
 
 Diversity ist ein wesentlicher Bestandteil der Personalstrategie von Infineon. Wir haben es und zur Aufgabe gemacht, attraktive Arbeitswelten zu schaffen; in diesem Kontext bildet die Gleichberechtigung von Frauen und Männern einen besonderen Schwerpunkt. Diesbezüglich wurden bereits viele Maßnahmen ins Leben gerufen. Infineon möchte somit weiterhin die Nachwuchsförderung in naturwissenschaftlichen sowie technischen Berufen tatkräftig unterstützen.
 
