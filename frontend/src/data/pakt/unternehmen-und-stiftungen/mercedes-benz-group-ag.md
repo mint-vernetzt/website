@@ -1,31 +1,30 @@
 ---
 name: "Mercedes-Benz Group AG"
 slug: "unternehmen-und-stiftungen/mercedes-benz-group-ag"
-logo: "../logos/Platzhalter-kein-Logo.png"
+logo: "../logos/Mercedes-Benz-Group-AG.png"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
 citeQuote: ""
 ---
 
-Die Firmengründer Gottlieb Daimler und Carl Benz haben mit der Erfindung des Automobils im Jahr 1886 Geschichte geschrieben. Heute ist die Daimler AG eines der erfolgreichsten Automobilunternehmen der Welt. Mit den Geschäftsfeldern Mercedes-Benz Cars, Daimler Trucks, Mercedes-Benz Vans, Daimler Buses und Daimler Financial Services (Finanzierung, Leasing, Versicherungen und Flottenmanagement) gehört der Fahrzeughersteller zu den größten Anbietern von Premium-Pkw und ist der größte weltweit aufgestellte Nutzfahrzeug-Hersteller.
+#### Unternehmensporträt
 
-Als Pionier des Automobilbaus gestaltet die Mercedes-Benz Group auch heute die Zukunft der Mobilität: Das Unternehmen setzt dabei auf innovative und grüne Technologien sowie auf sichere und hochwertige Fahrzeuge, die ihre Kundschaft faszinieren und begeistern. Die Mercedes-Benz Group investiert bei der Entwicklung alternativer Antriebe als einziger Automobilhersteller sowohl in den Hybrid-, als auch in den Elektromotor und in die Brennstoffzelle mit dem Ziel, langfristig das emissionsfreie Fahren zu ermöglichen. Denn die Mercedes-Benz Group betrachtet es als Anspruch und Verpflichtung, seiner Verantwortung für Gesellschaft und Umwelt gerecht zu werden.
+Die Mercedes-Benz Group AG ist eines der erfolgreichsten Automobilunternehmen der Welt. Mit der Mercedes-Benz AG gehört der Fahrzeughersteller zu den größten Anbietern von Premium- und Luxus-Pkw und Vans. Die Mercedes-Benz Mobility AG bietet Finanzierung, Leasing, Fahrzeugabos und –miete, Flottenmanagement, digitale Services rund um Laden und Bezahlen, die Vermittlung von Versicherungen sowie innovative Mobilitätsdienstleistungen an.
 
-Die Mercedes-Benz Group vertreibt seine Fahrzeuge und Dienstleistungen in nahezu allen Ländern der Welt und hat Produktionsstätten auf fünf Kontinenten.
+Die Firmengründer Gottlieb Daimler und Carl Benz haben mit der Erfindung des Automobils im Jahr 1886 Geschichte geschrieben. Als Pionier des Automobilbaus ist es für Mercedes-Benz Motivation und Verpflichtung, die Zukunft der Mobilität sicher und nachhaltig zu gestalten. Das Unternehmen setzt dabei auf innovative und grüne Technologien sowie auf sichere und hochwertige Fahrzeuge, die faszinieren und begeistern. Mercedes-Benz sucht regelmäßig neue Talente im Bereich Informatik und in technischen Bereichen wie Elektrotechnik, Chemie oder Mechatronik. Eine Übersicht über die vielfältigen Einstiegs- und Entwicklungsmöglichkeiten bei Mercedes-Benz gibt es  [hier](https://group.mercedes-benz.com/karriere/).
 
-Zum heutigen Markenportfolio zählen neben Mercedes-Benz, der wertvollsten Automobilmarke der Welt, die Marken smart, Maybach, Freightliner, Western Star, Fuso, Setra, Orion und Thomas Built Buses.
+Die Förderung von Frauen ist Mercedes-Benz besonders wichtig. Das Unternehmen möchte mehr Frauen in Führungspositionen und hat sich zum Ziel gesetzt, leitende Führungspositionen bis 2030 zu 30 Prozent mit Frauen zu besetzen. Frauenförderung beginnt dabei schon beim Nachwuchs. Mercedes-Benz beteiligt sich beispielsweise an zahlreichen Berufsinformationstagen und dem jährlich stattfindenden „Girls’ Day“, an dem jungen Frauen und Mädchen Einblicke in technische Ausbildungsberufe erhalten können.
 
-#### Aktivitäten im MINT-Bereich
+Außerdem hat das Unternehmen die Bildungsinitiative „Genius“ ins Leben gerufen, um Schülerinnen und Schüler für Naturphänomene, Technologien, Mobilität und Digitalisierung zu begeistern.</br>[Genius - Die junge WissensCommunity von Mercedes-Benz (genius-community.com)](https://www.genius-community.com/).
 
-Mit der Bildungsinitiative [Genius](https://www.genius-community.com/), die junge WissensCommunity, möchte das Unternehmen vor allem Mädchen für technische Berufe begeistern und den ingenieurswissenschaftlichen Nachwuchs fördern. So haben im vergangenen Jahr Ingenieurinnen und Ingenieure der Mercedes-Benz Group im Rahmen von „tech@school“ rund 100 Gymnasien an unseren deutschen Standorten besucht und von ihrem Arbeitsalltag berichtet.
+###### Kontakt
 
-Unter dem Motto "Automobile Leidenschaft leben. Mit Ihnen." finden regelmäßig die „Daimler Women Days“ statt. Zielgruppe sind alle Frauen mit einem Ingenieur- oder IT-Hintergrund. Sie haben dort die Möglichkeit, ihre Ideen, ihr Können und ihre persönlichen Berufsvorstellungen einzubringen und gemeinsam mit Führungskräften und Personalexperten zu besprechen, wie sie ihre Karriere bei der Mercedes-Benz Group gestalten können. Darüber hinaus bieten die ‚Daimler Women Days’ interessante Workshops, zukunftsweisende Fachvorträge und spannende Insider-Einblicke. Abgesehen von der eigenen Initiative beteiligt sich Daimler zudem an Recruiting-Events und Publikationen, die sich speziell an Frauen richten.
-
-Mit dem Daimler Knowledge College bietet das Unternehmen unter dem Titel „Stärken stärken – Selfmarketing für Frauen“ Studentinnen in technischen Studiengängen regelmäßig Workshops an. In den 2-tägigen Veranstaltungen lernen sie, wie sie von anderen wahrgenommen werden und wie sie aus ihren eigenen Fähigkeiten einen überzeugenden Auftritt formen.
-
-Darüber hinaus ist die Mercedes-Benz Group AG Gründungsmitglied und kooperiert seit über 10 Jahren mit Femtec, dem Hochschulkarrierezentrum für Frauen aus den Ingenieur- und Naturwissenschaften. Die Femtec’lerinnen werden gezielt auf die berufliche Praxis und auf künftige Führungsaufgaben vorbereitet.
-
-Der Bertha Benz-Preis der Daimler und Benz Stiftung richtet sich speziell an junge Ingenieurwissenschaftlerinnen. In Anlehnung an Bertha Benz, die sich als visionäre und engagierte Pionierin für das Automobil einsetzte, können Doktorandinnen von ihren Hochschulen oder Forschungseinrichtungen nominiert werden. Die Daimler und Benz Stiftung wählt jedes Jahr eine Kandidatin, die mit den Ergebnissen ihrer Dissertation einen zukunftsweisenden gesellschaftlichen Mehrwert geschaffen hat.
+Mercedes-Benz Group AG</br>
+Mercedesstraße 120</br>
+70372 Stuttgart</br>
+Deutschland
 
 [https://group.mercedes-benz.com/karriere/](https://group.mercedes-benz.com/karriere/)
+
+E-Mail: [dialog@mercedes-benz.com](mailto:dialog@mercedes-benz.com)
