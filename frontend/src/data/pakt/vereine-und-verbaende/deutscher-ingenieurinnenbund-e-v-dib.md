@@ -1,5 +1,5 @@
 ---
-name: "deutscher ingenieurinnenbund e.V.- dib"
+name: "deutscher ingenieurinnenbund e.V. (dib)"
 slug: "vereine-und-verbaende/deutscher-ingenieurinnenbund-e-v-dib"
 logo: "../logos/dib-1.png"
 category: "Vereine und Verbände"
