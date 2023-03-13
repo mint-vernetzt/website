@@ -27,6 +27,8 @@ Das Projekt ist an insgesamt zehn Universitäten und Hochschulen in Rheinland-Pf
 
 Das Ada-Lovelace-Projekt wird vom Europäischen Sozialfonds Plus, dem Ministerium für Wissenschaft und Gesundheit Rheinland-Pfalz sowie dem Ministerium für Familie, Frauen, Kultur und Integration Rheinland-Pfalz gefördert.
 
+#### Aktivitäten im MINT-Bereich
+
 Kern des Ada-Lovelace-Projekts ist das Mentoring-Prinzip: Die Mentorinnen des Projekts geben in monoedukativen und außerschulischen Lernsettings niederschwellige, nahbare und ganz persönliche Einblicke in MINT-Berufsfelder und regen zum Entdecken und Ausprobieren der eigenen Talente an. Dies findet zum Beispiel in Form von Workshops, Schul-AGs, Feriencamps, beim Schnupperstudium, auf Messen oder Aktionstagen statt – in der Schule oder im Universitätslabor, in der Waldökostation oder im Zeltlager.
 
 Das Kursangebot deckt die vier MINT-Bereiche – Mathematik, Informatik, Naturwissenschaften und Technik – ab und reicht von Lötkursen, Angeboten im Bereich von Coding und Robotik, 3D-Druck, Webdesign, Naturkosmetik bis hin zum Bau eines Insektenhotels oder der Entwicklung einer eigenen App.
