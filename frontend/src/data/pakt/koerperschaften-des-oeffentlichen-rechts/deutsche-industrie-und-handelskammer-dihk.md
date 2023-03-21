@@ -1,6 +1,6 @@
 ---
-name: "Deutscher Industrie- und Handelskammertag (DIHK)"
-slug: "arbeitgeber-und-arbeitnehmerverbaende/deutscher-industrie-und-handelskammertag-dihk"
+name: "Deutsche Industrie- und Handelskammer (DIHK)"
+slug: "koerperschaften-des-oeffentlichen-rechts/deutsche-industrie-und-handelskammer-dihk"
 logo: "../logos/DIHK.png"
 category: "Arbeitgeber- und Arbeitnehmerverbände"
 citeAuthor: ""

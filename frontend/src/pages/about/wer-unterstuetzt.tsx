@@ -33,7 +33,7 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
       },
       {
         name: "Jana Heiberger",
-        organisation: "Deutscher Industrie- und Handelskammertag",
+        organisation: "Deutsche Industrie- und Handelskammer",
       },
       {
         name: "Dr. Kirsten Kielbassa-Schnepp",
