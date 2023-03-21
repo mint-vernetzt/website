@@ -35,5 +35,5 @@ Das Kursangebot deckt die vier MINT-Bereiche – Mathematik, Informatik, Naturwi
 
 Dabei setzt das Projekt auf starke Partnerschaften und kooperiert unter anderem mit Schulen, Unternehmen, kommunalen Bildungseinrichtungen, Forschungsinstituten, regionalen und überregionalen Akteuren im MINT-Bereich, bundesweiten Initiativen und vielen mehr. Ein eigener Förderverein unterstützt die Arbeit des Projekts und vernetzt Ehemalige, Freund:innen und Förderer.
 
-**Weitere Informationen unter [www.ada-lovelace.com](https://ada-lovelace.de/)
+**Weitere Informationen unter [www.ada-lovelace.de](https://ada-lovelace.de/)
 Ihre Ansprechpartnerin:** Angela Doms, Leiterin der Zentralen Koordinierungsstelle ([doms@uni-koblenz.de](mailto:doms@uni-koblenz.de))
