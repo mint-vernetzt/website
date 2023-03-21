@@ -8,8 +8,6 @@ citeAuthorFunction: ""
 citeQuote: ""
 ---
 
-#### Unternehmensporträt
-
 Die Mercedes-Benz Group AG ist eines der erfolgreichsten Automobilunternehmen der Welt. Mit der Mercedes-Benz AG gehört der Fahrzeughersteller zu den größten Anbietern von Premium- und Luxus-Pkw und Vans. Die Mercedes-Benz Mobility AG bietet Finanzierung, Leasing, Fahrzeugabos und –miete, Flottenmanagement, digitale Services rund um Laden und Bezahlen, die Vermittlung von Versicherungen sowie innovative Mobilitätsdienstleistungen an.
 
 Die Firmengründer Gottlieb Daimler und Carl Benz haben mit der Erfindung des Automobils im Jahr 1886 Geschichte geschrieben. Als Pionier des Automobilbaus ist es für Mercedes-Benz Motivation und Verpflichtung, die Zukunft der Mobilität sicher und nachhaltig zu gestalten. Das Unternehmen setzt dabei auf innovative und grüne Technologien sowie auf sichere und hochwertige Fahrzeuge, die faszinieren und begeistern. Mercedes-Benz sucht regelmäßig neue Talente im Bereich Informatik und in technischen Bereichen wie Elektrotechnik, Chemie oder Mechatronik. Eine Übersicht über die vielfältigen Einstiegs- und Entwicklungsmöglichkeiten bei Mercedes-Benz gibt es  [hier](https://group.mercedes-benz.com/karriere/).
