@@ -1,6 +1,6 @@
 ---
-name: "BASF SE"
-slug: "unternehmen-und-stiftungen/basf-se"
+name: "BASF"
+slug: "unternehmen-und-stiftungen/basf"
 logo: "../logos/BASF_Logo.png"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
