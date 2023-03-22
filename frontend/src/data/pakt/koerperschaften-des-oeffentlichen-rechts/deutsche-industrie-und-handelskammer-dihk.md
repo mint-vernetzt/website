@@ -2,7 +2,7 @@
 name: "Deutsche Industrie- und Handelskammer (DIHK)"
 slug: "koerperschaften-des-oeffentlichen-rechts/deutsche-industrie-und-handelskammer-dihk"
 logo: "../logos/DIHK.png"
-category: "Arbeitgeber- und Arbeitnehmerverbände"
+category: "Körperschaften des öffentlichen Rechts"
 citeAuthor: ""
 citeAuthorFunction: ""
 citeQuote: ""
