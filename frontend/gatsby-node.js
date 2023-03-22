@@ -146,6 +146,24 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/basf-se/",
+    toPath: "/pakt/unternehmen-und-stiftungen/basf/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/arbeitgeber-und-arbeitnehmerverbaende/deutscher-industrie-und-handelskammertag-dihk/",
+    toPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/deutsche-industrie-und-handelskammer-dihk/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/trilux-gigital-solutions-gmb-h/",
+    toPath: "/pakt/unternehmen-und-stiftungen/trilux-digital-solutions-gmb-h/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/vdi-vde-innovation-technik-gmb-h-vdi-vde-it/",
     toPath: "/404/",
     redirectInBrowser: true,
