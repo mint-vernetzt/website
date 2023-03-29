@@ -169,6 +169,12 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/cluster/",
+    toPath: "/news/cluster",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
