@@ -164,6 +164,12 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/i3-e-v-mit-dem-projekt-hacker-school/",
+    toPath: "/pakt/unternehmen-und-stiftungen/hacker-school/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/vdi-vde-innovation-technik-gmb-h-vdi-vde-it/",
     toPath: "/404/",
     redirectInBrowser: true,
