@@ -1,7 +1,7 @@
 ---
-name: "NTT DATA Deutschland"
-slug: "unternehmen-und-stiftungen/ntt-data-deutschland"
-logo: "../logos/Platzhalter-kein-Logo.png"
+name: "NTT DATA Deutschland AG"
+slug: "unternehmen-und-stiftungen/ntt-data-deutschland-ag"
+logo: "../logos/NTT_DATA_Logo.jpg"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
