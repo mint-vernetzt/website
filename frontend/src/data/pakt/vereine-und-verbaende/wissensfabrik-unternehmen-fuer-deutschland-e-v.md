@@ -1,6 +1,6 @@
 ---
 name: "Wissensfabrik - Unternehmen für Deutschland e. V."
-slug: "vereine-und-verbaende/wissensfabrik-unternehmen-für-deutschland-e-v"
+slug: "vereine-und-verbaende/wissensfabrik-unternehmen-fuer-deutschland-e-v"
 logo: "../logos/Wissensfabrik_Unternehmen_fuer_Deutschland_Logo.png"
 category: "Vereine und Verbände"
 citeAuthor: ""
