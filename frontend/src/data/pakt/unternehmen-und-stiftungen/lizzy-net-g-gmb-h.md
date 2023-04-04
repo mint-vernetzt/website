@@ -1,7 +1,7 @@
 ---
 name: "LizzyNet gGmbH"
 slug: "unternehmen-und-stiftungen/lizzy-net-g-gmb-h"
-logo: "../logos/LizzyNet-1.png"
+logo: "../logos/LizzyNet-1.jpg"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
