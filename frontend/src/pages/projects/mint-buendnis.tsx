@@ -62,7 +62,9 @@ export function MintPakt({ data }) {
             <ContactCard
               classes="contact-card my-10"
               headline="Ansprechpartner:in"
-              name={`${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`}
+              name={`${data.wpContact.contactInformations.title || ""} ${
+                data.wpContact.contactInformations.firstName
+              } ${data.wpContact.contactInformations.lastName}`.trim()}
               position={data.wpContact.contactInformations.position}
               phone={data.wpContact.contactInformations.phone}
               email={data.wpContact.contactInformations.email}
@@ -268,6 +270,7 @@ export const pageQuery = graphql`
         lastName
         email
         position
+        title
         photo {
           altText
           localFile {
