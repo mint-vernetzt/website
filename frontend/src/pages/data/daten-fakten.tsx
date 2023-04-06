@@ -7,6 +7,7 @@ import MoodCarousel from "../../components/MoodCarousel";
 import Icon, { IconType } from "../../components/Icon/Icon";
 import PdfDidaktik from "../../download/Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf";
 import PdfDiversitaet from "../../download/Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
+import PdfDiversitaetLong from "../../download/Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
 
 export function Datenfakten({
   data,
@@ -269,44 +270,55 @@ export function Datenfakten({
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <header>
           <p className="text-xl md:px-8 lg:px-20 ">
-            Auf dieser Seite lassen wir Fakten sprechen: Wir sammeln für Euch von A wie Analysen bis Z wie Zahlen – alles, 
-            was mit MINT zu tun hat. Ihr findet im MINT-DataLab statistische Kennzahlen, in unseren Auftragsstudien 
-            Rechercheergebnisse zu ausgewählten Themen und im MINT-Stimmungsbarometer ein aktuelles Stimmungsbild zur 
-            MINT-Bildung in Deutschland.
+            Auf dieser Seite lassen wir Fakten sprechen: Wir sammeln für Euch
+            von A wie Analysen bis Z wie Zahlen – alles, was mit MINT zu tun
+            hat. Ihr findet im MINT-DataLab statistische Kennzahlen, in unseren
+            Auftragsstudien Rechercheergebnisse zu ausgewählten Themen und im
+            MINT-Stimmungsbarometer ein aktuelles Stimmungsbild zur MINT-Bildung
+            in Deutschland.
           </p>
         </header>
       </section>
 
       <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <div className="flex flex-wrap content-center items-center md:-mx-4">
-          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">            
+          <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
             <GatsbyImage
-              image={
-                data.dataLabImage?.childImageSharp?.gatsbyImageData
-              }
+              image={data.dataLabImage?.childImageSharp?.gatsbyImageData}
               className="w-full h-auto"
               alt="MINT-DataLab (Betaversion)"
-            />            
+            />
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H2 like="h1">
-                MINT-DataLab (Betaversion)
-              </H2>
+              <H2 like="h1">MINT-DataLab (Betaversion)</H2>
               <p>
-                Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab umfasst statistische Kennzahlen von der nationalen bis zur 
-                regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie Daten zum Ausbildungs- und Arbeitsmarkt. Es stehen stets zwei 
-                Fragen im Vordergrund: Wie hoch ist der MINT-Anteil in den unterschiedlichen Bereichen? Und wie hoch ist der jeweilige 
-                Frauenanteil? Je nach Verfügbarkeit der Daten kann z. B. nach einzelnen MINT-Fächern und Bereichen gefiltert werden. 
-                In der Regel können die Daten für den Zeitraum vom Jahr 2000 bis heute abgerufen werden.
+                Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab
+                umfasst statistische Kennzahlen von der nationalen bis zur
+                regionalen Ebene, etwa Schul- und Hochschulstatistiken sowie
+                Daten zum Ausbildungs- und Arbeitsmarkt. Es stehen stets zwei
+                Fragen im Vordergrund: Wie hoch ist der MINT-Anteil in den
+                unterschiedlichen Bereichen? Und wie hoch ist der jeweilige
+                Frauenanteil? Je nach Verfügbarkeit der Daten kann z. B. nach
+                einzelnen MINT-Fächern und Bereichen gefiltert werden. In der
+                Regel können die Daten für den Zeitraum vom Jahr 2000 bis heute
+                abgerufen werden.
               </p>
               <p className="-m-2">
-                <a href="https://mint-vernetzt.shinyapps.io/datalab/" target="_blank" className="btn-primary btn-icon m-2">                  
-                  <Icon type={IconType.ExternalLink} />                  
+                <a
+                  href="https://mint-vernetzt.shinyapps.io/datalab/"
+                  target="_blank"
+                  className="btn-primary btn-icon m-2"
+                >
+                  <Icon type={IconType.ExternalLink} />
                   Zum MINT-DataLab
                 </a>
-                <a href="https://survey.lamapoll.de/MINT-DataLab_Feedback/" target="_blank" className="btn-outline-primary m-2 btn-icon">
-                  <Icon type={IconType.ExternalLink} />                  
+                <a
+                  href="https://survey.lamapoll.de/MINT-DataLab_Feedback/"
+                  target="_blank"
+                  className="btn-outline-primary m-2 btn-icon"
+                >
+                  <Icon type={IconType.ExternalLink} />
                   Feedback geben
                 </a>
               </p>
@@ -317,7 +329,7 @@ export function Datenfakten({
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
         <H2 like="h1" className="text-center mb-14">
-          <span className="font-bold">MINT</span>vernetzt-Studien 
+          <span className="font-bold">MINT</span>vernetzt-Studien
         </H2>
         <div className="flex flex-wrap content-center items-center md:-mx-4">
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 md:order-2">
@@ -336,20 +348,24 @@ export function Datenfakten({
                 Didaktik an außerschulischen Lernorten
               </H3>
               <p>
-                Lehrende haben oft fachliche Expertise und praktische Erfahrung, aber nicht zwingend einen 
-                pädagogischen Hintergrund. Entsprechend selten kommen didaktische Konzepte zum Einsatz. Die 
-                Studie zeigt die Besonderheiten außerschulischer Lernorte auf und ermittelt konkrete Bedarfe 
-                an didaktischer Weiterbildung. Eine Langfassung wird in Kürze verfügbar sein.
+                Lehrende haben oft fachliche Expertise und praktische Erfahrung,
+                aber nicht zwingend einen pädagogischen Hintergrund.
+                Entsprechend selten kommen didaktische Konzepte zum Einsatz. Die
+                Studie zeigt die Besonderheiten außerschulischer Lernorte auf
+                und ermittelt konkrete Bedarfe an didaktischer Weiterbildung.
+                Eine Langfassung wird in Kürze verfügbar sein.
               </p>
               <p className="mb-2">
-                <a href={PdfDidaktik} target="_blank" className="btn-primary btn-icon">                  
-                  <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
+                <a
+                  href={PdfDidaktik}
+                  target="_blank"
+                  className="btn-primary btn-icon"
+                >
+                  <Icon type={IconType.DownloadIcon} width="12" height="15" />
                   <span>Download Kurzfassung</span>
                 </a>
               </p>
-              <p className="text-xs">
-                PDF, ca. 235KB
-              </p>
+              <p className="text-xs">PDF, ca. 235KB</p>
             </div>
           </div>
         </div>
@@ -373,20 +389,36 @@ export function Datenfakten({
                 Diversität in der MINT-Bildung
               </H3>
               <p>
-                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung 
-                von Kindern und Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, 
-                um mehr Chancengleichheit zu schaffen und so die Diversität in MINT-Berufen zu verbessern. Eine 
-                Langfassung wird in Kürze verfügbar sein.
+                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale
+                Herkunft“ auf die MINT-Bildung von Kindern und Jugendlichen hat.
+                Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis,
+                um mehr Chancengleichheit zu schaffen und so die Diversität in
+                MINT-Berufen zu verbessern.
               </p>
-              <p className="mb-2">
-                <a href={PdfDiversitaet} target="_blank" className="btn-primary btn-icon">                  
-                  <Icon type={IconType.DownloadIcon} width="12" height="15" />                  
-                  <span>Download Kurzfassung</span>
-                </a>
-              </p>
-              <p className="text-xs">
-                PDF, ca. 260KB
-              </p>
+              <div className="flex flex-row justify-start flex-wrap">
+                <div className="my-2 ml-0 mr-4">
+                  <a
+                    href={PdfDiversitaet}
+                    target="_blank"
+                    className="btn-primary btn-icon mb-2"
+                  >
+                    <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                    <span>Download Kurzfassung</span>
+                  </a>
+                  <p className="mb-2 text-xs">PDF, ca. 260KB</p>
+                </div>
+                <div className="m-2 ml-0">
+                  <a
+                    href={PdfDiversitaetLong}
+                    target="_blank"
+                    className="btn-outline-primary btn-icon mb-2"
+                  >
+                    <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                    <span>Download Langfassung</span>
+                  </a>
+                  <p className="mb-2 text-xs">PDF, ca. 580KB</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -396,44 +428,60 @@ export function Datenfakten({
         <header>
           <H3 like="h2">MINT-Stimmungsbarometer</H3>
           <p className="md:px-8 lg:px-20 ">
-            Das MINT-Stimmungsbarometer ist eine jährliche Befragung von MINTvernetzt, bei der Vertreter:innen aus Bildung, 
-            Wissenschaft und Wirtschaft zu ihren persönlichen Einschätzungen und Eindrücken zur MINT-Bildung in Deutschland 
-            befragt werden.
+            Das MINT-Stimmungsbarometer ist eine jährliche Befragung von
+            MINTvernetzt, bei der Vertreter:innen aus Bildung, Wissenschaft und
+            Wirtschaft zu ihren persönlichen Einschätzungen und Eindrücken zur
+            MINT-Bildung in Deutschland befragt werden.
           </p>
         </header>
         <div className="max-w-4xl mx-auto md:relative">
           <MoodCarousel items={moodslides} />
-        </div>  
-      </section> 
-      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">        
-          <p className="md:break-inside-avoid-column">
-            Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch ist das Engagement der einzelnen Sektoren? Und 
-            welche Veränderungen sind notwendig, um die MINT-Bildung in Deutschland voranzubringen? 
-          </p>
-          <p className="md:break-inside-avoid-column">  
-            Mit diesen und anderen Fragen bildet das MINT-Stimmungsbarometer neben einem Gesamtüberblick auch die unterschiedlichen 
-            sektoralen Perspektiven auf die MINT-Bildung in Deutschland ab. 
-          </p>
-          <p className="md:break-inside-avoid-column">
-            Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der MINT-Bildung sichtbar machen und Handlungsfelder für 
-            die unterschiedlichen Akteur:innen in der <span className="whitespace-nowrap">MINT-Bildungslandschaft</span> aufzeigen.
-          </p>      
-      </section>        
-      <section id="MINTstimmungsbarometer-2023" className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
+        </div>
+      </section>
+      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">
+        <p className="md:break-inside-avoid-column">
+          Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch
+          ist das Engagement der einzelnen Sektoren? Und welche Veränderungen
+          sind notwendig, um die MINT-Bildung in Deutschland voranzubringen?
+        </p>
+        <p className="md:break-inside-avoid-column">
+          Mit diesen und anderen Fragen bildet das MINT-Stimmungsbarometer neben
+          einem Gesamtüberblick auch die unterschiedlichen sektoralen
+          Perspektiven auf die MINT-Bildung in Deutschland ab.
+        </p>
+        <p className="md:break-inside-avoid-column">
+          Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der
+          MINT-Bildung sichtbar machen und Handlungsfelder für die
+          unterschiedlichen Akteur:innen in der{" "}
+          <span className="whitespace-nowrap">MINT-Bildungslandschaft</span>{" "}
+          aufzeigen.
+        </p>
+      </section>
+      <section
+        id="MINTstimmungsbarometer-2023"
+        className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative"
+      >
         <div className="bg-primary text-white pt-16 pb-6 px-8 lg:pt-32 lg:pb-20 lg:px-16">
           <header className="mb-0 text-center">
-            <H3 like="h2" className="text-white">MINT-Stimmungsbarometer 2023</H3>
+            <H3 like="h2" className="text-white">
+              MINT-Stimmungsbarometer 2023
+            </H3>
             <p className="pt-4">
-              Jetzt teilnehmen und Eure Einschätzung zur <span className="whitespace-nowrap">MINT-Bildung</span> abgeben.
+              Jetzt teilnehmen und Eure Einschätzung zur{" "}
+              <span className="whitespace-nowrap">MINT-Bildung</span> abgeben.
             </p>
             <p className="pt-8 pb-0">
-              <a href="https://survey.lamapoll.de/MINT-Stimmungsbarometer-2023/" target="_blank" className="btn-outline-primary btn-icon bg-white">
-                  <Icon type={IconType.ExternalLink} />                  
-                  Zur Umfrage 2023
+              <a
+                href="https://survey.lamapoll.de/MINT-Stimmungsbarometer-2023/"
+                target="_blank"
+                className="btn-outline-primary btn-icon bg-white"
+              >
+                <Icon type={IconType.ExternalLink} />
+                Zur Umfrage 2023
               </a>
             </p>
           </header>
-        </div>                
+        </div>
       </section>
     </Layout>
   );
