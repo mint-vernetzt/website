@@ -260,7 +260,7 @@ export const pageQuery = graphql`
       }
     }
 
-    wpContact(contactInformations: { lastName: { eq: "Kowitz-Harms" } }) {
+    wpContact(contactInformations: { lastName: { eq: "Gerkens" } }) {
       id
       contactInformations {
         phone
