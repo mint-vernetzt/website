@@ -1,7 +1,7 @@
 ---
 name: "Tech4Girls* - TechEducation gGmbH"
 slug: "unternehmen-und-stiftungen/tech4girls-techeducation-g-gmb-h"
-logo: "../logos/Platzhalter-kein-Logo.png"
+logo: "../logos/Tech4Girls-Logo.jpg"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
