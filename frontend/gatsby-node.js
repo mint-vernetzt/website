@@ -225,7 +225,13 @@ exports.createPages = async (props) => {
   });
   createRedirect({
     fromPath: "/cluster/",
-    toPath: "/news/cluster",
+    toPath: "/news/cluster/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen-co-universitaet-leipzig/",
+    toPath: "/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen",
     redirectInBrowser: true,
     isPermanent: true,
   });

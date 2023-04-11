@@ -1,6 +1,6 @@
 ---
-name: "Koordinierungsstelle Chancengleichheit Sachsen c/o Universität Leipzig"
-slug: "wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen-co-universitaet-leipzig"
+name: "Koordinierungsstelle Chancengleichheit Sachsen"
+slug: "wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen"
 logo: "../logos/Koordinierungsstelle-Chancengleichheit-Sachsen.png"
 category: "Wissenschaftseinrichtungen, Hochschulen und Hochschulverbände"
 citeAuthor: ""
