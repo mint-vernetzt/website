@@ -235,6 +235,372 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-bayern-vertreten-durch-das-staatsministerium-fuer-wissenschaft-forschung-und-kunst/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-sachsen/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-thueringen/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-baden-wuerttemberg/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-berlin/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-freie-hansestadt-bremen/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-niedersachsen/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/nordrhein-westfalen/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/rheinland-pfalz/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/bundesamt-fuer-verfassungsschutz/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/landschaftsverband-rheinland-lvr/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/wupperverband/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/elsevier-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/jungvornweg-kinder-und-jugendkommunikation/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/med-engineering/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/orange-yc-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/x-study-se-mit-studieren-de/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/accenture-dienstleistungen-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/actemium-deutschland/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/aixtron-se/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/alstom-deutschland-ag/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/be-one-hamburg-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/birkle-it-ag/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/boge-kompressoren-otto-boge-gmb-h-and-co-kg/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/btc-business-technology-consulting-ag/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/common-solutions-gmb-h-and-co-kg/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/d-s-automotive-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/d-space-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/dream-it-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/einstieg-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/eltromat-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/eucon-group/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/fdm-group-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/frimo-group-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gerhard-roesch-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gf-k-se/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/goodgame-studios/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gpdm-mb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/hdo-druckguss-und-oberflaechentechnik-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/hmg-systems-engineering-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/incony-ag/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/integ-g-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/it-s-owl-clustermanagement-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/jonas-and-redmann-group-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mediaprint-solutions-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mgm-technology-partners-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mps-bildung-und-forschung-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/national-instruments-germany-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/oase-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/phoenix-contact-deutschland-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/pro-wirtschaft-gt-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/run-kom-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/security-division-und-ntt-ltd/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/sim-and-learn/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/stadtwerke-guetersloh-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/te-connectivity-germany-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/team-gmb-h/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/architektinnen-initiative-nw/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/initiative-fuer-beschaeftigung-owl-e-v/",
+    toPath: "/404/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
