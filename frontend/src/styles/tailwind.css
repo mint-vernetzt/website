@@ -133,7 +133,8 @@ section.container header:not(.text-left) p.lead {
 .event-description > ul,
 .wp-block-create-block-schedule-item div ul,
 .blog-post-content ul,
-.content ul {
+.content ul,
+.project-item-text ul {
   @apply list-disc list-outside leading-6 mb-6 pl-5;
 }
 
@@ -358,8 +359,6 @@ ol {
   outline: none;
 }
 
-
-
 .form-control .textarea:not(:placeholder-shown),
 .form-control .input:not(:placeholder-shown) {
     @apply bg-white;
@@ -428,8 +427,7 @@ ol {
   }
 }
 
-
-
+.project-swiper,
 .mood-carousel {
   @apply overflow-visible !important;
   --swiper-pagination-bullet-height: 1rem;
@@ -438,10 +436,15 @@ ol {
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-bullet-inactive-opacity: 1;
 }  
+.project-swiper {
+  --swiper-pagination-color: #154194;
+}  
+.project-swiper .swiper-wrapper,
 .mood-carousel .swiper-wrapper {
   @apply items-stretch;
 }  
 
+.project-swiper .swiper-slide,
 .mood-carousel .swiper-slide {
   height: auto !important;
 }  
@@ -449,4 +452,15 @@ ol {
 .mood-carousel .swiper-pagination {
   bottom: auto !important;
   top: calc(100% + 10px);
+}
+
+.project-swiper .swiper-pagination {
+  bottom: auto !important;
+  top: calc(100% + 48px);
+}
+
+@screen lg {
+  .project-swiper .swiper-pagination {
+    top: calc(100% + 32px);
+  }  
 }

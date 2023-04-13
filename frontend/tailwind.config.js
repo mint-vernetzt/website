@@ -91,7 +91,8 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1.5rem",
+        DEFAULT: '1rem',
+        lg: '1.5rem',
       },
     },
     screens: {
