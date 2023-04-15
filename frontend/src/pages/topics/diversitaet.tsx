@@ -7,6 +7,8 @@ import Icon, { IconType } from "../../components/Icon/Icon";
 import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
 import { formatDate } from "../../components/EventFeed/utils";
 import ProjectSwiper from "../../components/ProjectSwiper";
+import { getNewsItems } from "../../utils/dataTransformer";
+import NewsSwiper from "../../components/NewsSwiper/NewsSwiper";
 
 export function Diversity({
   data,
@@ -15,7 +17,12 @@ export function Diversity({
 }) {
 
   const now = new Date();
-
+  const newsItems = getNewsItems(data.news).map((item) => {
+    item.body = (
+      <span dangerouslySetInnerHTML={{ __html: item.body as string }} />
+    );
+    return item;
+  });
   const events = data.events.nodes
     .filter((event) =>
       isBeforeOneDayAfterDate(now, new Date(event.eventInformations.endDate))
@@ -160,45 +167,18 @@ export function Diversity({
       
       {data.news.nodes.length > 0 && (
         <section className="bg-lilac-400 pt-16 pb-20 lg:pt-24 lg:pb-28">
-          <div className="container xl:flex xl:justify-center">
-            <div className="xl:w-10/12">
-              <H2 like="h3" className="uppercase text-center mb-12 tracking-widest text-white">Aktuelle News</H2>            
-              <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {data.news.nodes.map((news, index) => (
-                  <div
-                    key={`news-${index}`}
-                    className="rounded-lg bg-neutral-200 shadow-lg"
-                  >
-                    <Link to={`/news/${news.slug}`} className="flex flex-col h-100">
-                      <div className="news-teaser-image">                        
-                        {news.featuredImage?.childImageSharp?.gatsbyImageData !== undefined ? (
-                          <GatsbyImage
-                            image={news.featuredImage.childImageSharp.gatsbyImageData}
-                            className=""
-                            alt="Diversität: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
-                          />
-                        ) : null}
-                      </div>
-                      <div className="p-8">
-                        <H4 className="lg:leading-snug">{news.title}</H4>
-                        <div
-                          className="line-clamp-3"
-                          dangerouslySetInnerHTML={{
-                            __html: news.excerpt as string,
-                          }}
-                        />
-                        
-                      </div>                      
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>  
+          <div className="container">            
+            <H2 like="h3" className="uppercase text-center mb-12 tracking-widest text-white">Aktuelle News</H2>            
+            <div className="">
+              <NewsSwiper
+                newsSwiperItemsProps={newsItems}                  
+              />              
+            </div>            
           </div>   
         </section>     
       )}
 
-      <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28 relative hidden">
+      <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28 relative">
         <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-yellow-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 784 649" className="absolute left-[50%] w-[70%] rotate-[-0deg] aspect-[1.2]">
             <path stroke="currentColor" stroke-width="3" d="M173.132 566.549C-155.751 445.81 42.189-23.058 323.981 3.049 451.258 14.84 428.398 69.097 516.076 125.654c126.1 81.342 397.154 81.342 190.917 387.849-18.394 27.336-83.747 87.752-114.315 106.098-66.069 39.654-146.207 47.296-419.546-53.052Z"/>
@@ -445,7 +425,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 744)
       }
     }
-    news: allWpNewsItem(limit: 3, filter: {tags: {nodes: {elemMatch: {slug: {eq: "networking"}}}}}) {
+    news: allWpNewsItem(limit: 9, filter: {tags: {nodes: {elemMatch: {slug: {eq: "networking"}}}}}) {
       nodes {
         title
         slug
@@ -461,7 +441,7 @@ export const pageQuery = graphql`
           node {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1488, aspectRatio: 1.5)
+                gatsbyImageData(width: 1488)
               }
             }
           }

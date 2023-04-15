@@ -25,7 +25,7 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
   const { title, logo, projectinfo, projectproblems, communityvalue, networklink, projectlink } = props;
 
   return (
-    <div className="project-item h-full bg-neutral-200 rounded-lg shadow-lg p-4 pb-8 lg:p-8">
+    <div className="project-item h-full bg-neutral-200 rounded-lg shadow-sm p-4 pb-8 lg:p-8">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-40 lg:shrink-0 mb-8">{logo}</div>
         <div className="project-item-text lg:pl-16">
@@ -80,11 +80,11 @@ export function ProjectSwiper(props: ProjectSwiperProps) {
       <div className="flex items-stretch -mx-4">
         <div className="lg:w-1/12 relative px-4 hidden lg:flex">
           {items?.length > 1 && (
-            <div className="prev-slide h-full absolute right-4 top-0 w-10 lg:w-16 flex items-center z-10 md:pl-2 lg:pl-6 hover:text-blue-400">
+            <div className="prev-slide absolute inset-0 flex items-center justify-end z-10 lg:pr-4 text-primary hover:text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="33"
+                width="28"
+                height="48"
                 viewBox="0 0 18 33"
               >
                 <path d="M17.143.86a1.214 1.214 0 0 1 0 1.718L3.433 16.284l13.71 13.708a1.216 1.216 0 1 1-1.719 1.72L.857 17.142a1.214 1.214 0 0 1 0-1.719L15.424.857a1.214 1.214 0 0 1 1.72 0v.002Z" />
@@ -142,13 +142,13 @@ export function ProjectSwiper(props: ProjectSwiperProps) {
             )}
           </Swiper>
         </div>  
-        <div className="hidden lg:flex lg:w-1/12 relative">
+        <div className="hidden lg:flex lg:w-1/12 px-4 relative">
           {items?.length > 1 && (
-            <div className="next-slide h-full absolute left-4 top-0 w-full lg:w-16 flex justify-end items-center z-10 md:pr-2 lg:pr-6 hover:text-blue-400">
+            <div className="next-slide absolute inset-0 flex items-center justify-start z-10 lg:pl-4 text-primary hover:text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="33"
+                width="28"
+                height="48"
                 viewBox="0 0 18 33"
               >
                 <path d="M.857 31.707a1.214 1.214 0 0 1 0-1.72l13.71-13.705L.857 2.574A1.216 1.216 0 1 1 2.576.854l14.567 14.569a1.214 1.214 0 0 1 0 1.719L2.576 31.709a1.214 1.214 0 0 1-1.72 0v-.002Z" />
