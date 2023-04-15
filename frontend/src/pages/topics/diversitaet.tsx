@@ -186,7 +186,7 @@ export function Diversity({
         </div>
         <div className="container relative z-20">          
           <div className="md:flex md:items-center md:justify-center -mx-4">
-            <div className="md:w-4/12 px-4">
+            <div className="md:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6">Chance Diversität</H2>
               <p className="text-xl leading-snug text-primary">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
@@ -262,10 +262,10 @@ export function Diversity({
                       <a
                         href="https://www.google.com/intl/de/policies/privacy/"
                         target="_blank"
-                        className="underline underline-offset-1"
+                        className="underline underline-offset-1 "
                       >
-                        Datenschutzerklärung
-                        (www.google.com/intl/de/policies/privacy/)
+                        Datenschutzerklärung<br />
+                        <span className="break-all">(www.google.com/intl/de/policies/privacy/)</span>
                       </a>
                       .
                     </p>
