@@ -266,7 +266,7 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/bundeslaender/land-freie-hansestadt-bremen/",
+    fromPath: "/pakt/bundeslaender/land-mecklenburg-vorpommern/",
     toPath: "/404/",
     redirectInBrowser: true,
     isPermanent: true,
