@@ -171,55 +171,55 @@ exports.createPages = async (props) => {
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/vdi-vde-innovation-technik-gmb-h-vdi-vde-it/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/e-c-s-systems-and-software-solution-gmb-h-and-co-kg/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/emc-deutschland-gmb-h/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/ghett-omedia-marketing-and-kommunikation/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/hunting-her-hr-partners-kg/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/isios-gmb-h/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/novoluto-gmb-h/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/travis-foundation-g-ug/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
     fromPath: "/pakt/vereine-und-verbaende/berufsmentoring-fuer-schueler-e-v-bildungsinitiative-jump-in-mint/",
-    toPath: "/404/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
@@ -232,6 +232,372 @@ exports.createPages = async (props) => {
   createRedirect({
     fromPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen-co-universitaet-leipzig/",
     toPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-bayern-vertreten-durch-das-staatsministerium-fuer-wissenschaft-forschung-und-kunst/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-sachsen/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/freistaat-thueringen/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-baden-wuerttemberg/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-berlin/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-mecklenburg-vorpommern/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/land-niedersachsen/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/nordrhein-westfalen/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/bundeslaender/rheinland-pfalz/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/bundesamt-fuer-verfassungsschutz/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/landschaftsverband-rheinland-lvr/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/wupperverband/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/elsevier-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/jungvornweg-kinder-und-jugendkommunikation/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/med-engineering/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/orange-yc-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/x-study-se-mit-studieren-de/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/accenture-dienstleistungen-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/actemium-deutschland/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/aixtron-se/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/alstom-deutschland-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/be-one-hamburg-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/birkle-it-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/boge-kompressoren-otto-boge-gmb-h-and-co-kg/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/btc-business-technology-consulting-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/common-solutions-gmb-h-and-co-kg/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/d-s-automotive-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/d-space-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/dream-it-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/einstieg-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/eltromat-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/eucon-group/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/fdm-group-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/frimo-group-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gerhard-roesch-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gf-k-se/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/goodgame-studios/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/gpdm-mb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/hdo-druckguss-und-oberflaechentechnik-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/hmg-systems-engineering-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/incony-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/integ-g-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/it-s-owl-clustermanagement-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/jonas-and-redmann-group-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mediaprint-solutions-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mgm-technology-partners-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/mps-bildung-und-forschung-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/national-instruments-germany-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/oase-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/phoenix-contact-deutschland-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/pro-wirtschaft-gt-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/run-kom-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/security-division-und-ntt-ltd/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/sim-and-learn/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/stadtwerke-guetersloh-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/te-connectivity-germany-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/team-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/architektinnen-initiative-nw/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/initiative-fuer-beschaeftigung-owl-e-v/",
+    toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });

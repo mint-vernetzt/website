@@ -14,7 +14,7 @@ Das Land Berlin engagiert sich seit Jahren durch verschiedene Aktivitäten in de
 
 **a) Schnittstelle Schule - Hochschule / Berufausbildung**
 
-- Jährliche Unterstützung des Girls'Days durch ein landesweites Aktionsbündnis und Förderung der Landeskoordinierungsstelle ([www .berlin.de/frauen/girlsday](https://www.berlin.de/sen/frauen/bildung/girls-day/))
+- Jährliche Unterstützung des Girls'Days durch ein landesweites Aktionsbündnis und Förderung der Landeskoordinierungsstelle ([www.berlin.de/frauen/girlsday](https://www.berlin.de/sen/frauen/bildung/girls-day/))
 - [Girls'Day Preisverleihung](https://www.berlin.de/sen/frauen/bildung/girls-day/wettbewerb/) / Plakatkampagne Girls'Day – Gut für Berlin
 
 **MINT-Initiativen der Berliner Hochschulen:**
