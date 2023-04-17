@@ -286,7 +286,7 @@ export function Diversity({
                 {events.map((event, index) => (
                   <div
                     key={`event-${index}`}
-                    className="rounded-lg bg-neutral-200 shadow-lg"
+                    className="rounded-lg bg-neutral-200 shadow-sm"
                   >
                     <Link to={event.url} className="flex flex-col h-100">
                       <div className="event-teaser-image">
