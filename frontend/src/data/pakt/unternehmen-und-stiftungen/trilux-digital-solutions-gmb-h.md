@@ -1,7 +1,7 @@
 ---
 name: "TRILUX Digital Solutions GmbH"
 slug: "unternehmen-und-stiftungen/trilux-digital-solutions-gmb-h"
-logo: "../logos/TRILUX.png"
+logo: "../logos/TDS.png"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
