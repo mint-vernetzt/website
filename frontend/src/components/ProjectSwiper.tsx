@@ -27,29 +27,31 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
   return (
     <div className="project-item h-full bg-neutral-200 rounded-lg shadow-sm p-4 pb-8 lg:p-8">
       <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-40 lg:shrink-0 mb-8">{logo}</div>
+        <div className="lg:w-40 lg:shrink-0 mb-8">
+          <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-4 flex items-center justify-center">{logo}</div>
+        </div>
         <div className="project-item-text lg:pl-16">
           <div className="">
-            <H2 className="mb-8 lg:mb-10">
+            <H2 className="mb-8 lg:mb-10 font-bold">
               {title}
             </H2>
             {projectinfo !== null ? (
-              <>
+              <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
                 <H5 className="text-lg mb-2 leading-snug">Zum Projekt:</H5>
                 {projectinfo}
-              </>
+              </div>
             ) : null}
             {projectproblems !== null ? (
-              <>
-                <H5 className="text-lg mb-2 mt-12 leading-snug">Hürden für Diversität in der MINT-Praxis::</H5>
+              <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
+                <H5 className="text-lg mb-2 leading-snug">Hürden für Diversität in der MINT-Praxis::</H5>
                 {projectproblems}
-              </>
+              </div>
             ) : null}
             {communityvalue !== null ? (
-              <>
-                <H5 className="text-lg mb-2 mt-12 leading-snug">Mehrwert für die Community:</H5>
+              <div className="text-lg pb-6 mb-6">
+                <H5 className="text-lg mb-2 leading-snug">Mehrwert für die Community:</H5>
                 {communityvalue}
-              </>
+              </div>
             ) : null}
             <p className="mt-8 -m-2">
               {networklink !== null ? (                

@@ -132,8 +132,8 @@ export function Diversity({
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
         <div className="container pt-16 pb-12">          
           <div className="md:w-1/2">            
-            <H1 like="h0">Diversität</H1>
-            <p className="font-bold text-primary lg:text-3xl lg:leading-snug">
+            <H1 like="h0" className="font-black">Diversität</H1>
+            <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
               Themenseite mit Erkenntnissen aus Wissenschaft und Praxis
             </p>            
           </div>
@@ -154,11 +154,11 @@ export function Diversity({
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
-            <H2 like="h3" className="uppercase text-center mb-8 lg:mb-12 tracking-widest">EINE HEADLINE</H2>
-            <p className="text-3xl leading-snug text-primary">
-              Wir brauchen <span className="bg-lilac-400">mehr Diversität in der MINT-Bildung</span> – aber wie stellen wir das an? 
+            <H2 like="h3" className="all-small-caps text-center mb-8 lg:mb-12 tracking-widest font-semibold">EINE HEADLINE</H2>
+            <p className="text-3xl leading-snug text-primary font-semibold">
+              Wir brauchen <span className="bg-lilac-200">mehr Diversität in der MINT-Bildung</span> – aber wie stellen wir das an? 
               Auf dieser Themenseite bündeln wir für Euch Beiträge und Veranstaltungen mit Tipps 
-              und Hintergrundwissen, damit sich zukünftig <span className="bg-lilac-400">alle Kinder und Jugendliche von 
+              und Hintergrundwissen, damit sich zukünftig <span className="bg-lilac-200">alle Kinder und Jugendliche von 
               MINT-Bildungsprojekten gleichermaßen angesprochen fühlen.</span>
             </p>  
           </div>  
@@ -168,7 +168,7 @@ export function Diversity({
       {data.news.nodes.length > 0 && (
         <section className="bg-lilac-400 pt-16 pb-20 lg:pt-24 lg:pb-28">
           <div className="container">            
-            <H2 like="h3" className="uppercase text-center mb-12 tracking-widest text-white">Aktuelle News</H2>            
+            <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest text-white">Aktuelle News</H2>            
             <div className="">
               <NewsSwiper
                 newsSwiperItemsProps={newsItems}                  
@@ -188,7 +188,7 @@ export function Diversity({
           <div className="md:flex md:items-center md:justify-center -mx-4">
             <div className="md:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6">Chance Diversität</H2>
-              <p className="text-xl leading-snug text-primary">
+              <p className="text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
                 im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
                 Innovation in Deutschland zu erhalten.
@@ -281,7 +281,7 @@ export function Diversity({
         <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
           <div className="container xl:flex xl:justify-center">
             <div className="xl:w-10/12">
-              <H2 like="h3" className="uppercase text-center mb-12 tracking-widest">Aktuelle Events</H2>            
+              <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Aktuelle Events</H2>            
               <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">            
                 {events.map((event, index) => (
                   <div
@@ -298,7 +298,7 @@ export function Diversity({
                           <time className="ml-2">{formatDate(event.date)}</time>
                         </div>
                         <H4 className="lg:leading-snug">{event.headline}</H4>
-                        <p className="line-clamp-3">{event.body}</p>
+                        <p className="line-clamp-3 text-neutral-700">{event.body}</p>
                       </div>  
                     </Link>
                   </div>
@@ -323,7 +323,7 @@ export function Diversity({
             </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
               <H2 className="mb-6">Chance Diversität</H2>
-              <p className="text-xl leading-snug text-primary">
+              <p className="text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
                 im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
                 Innovation in Deutschland zu erhalten.
@@ -338,14 +338,14 @@ export function Diversity({
       </section> 
 
       <section className="bg-beige-500 pt-16 pb-28 lg:pt-24 lg:pb-40 relative">
-        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-salmon-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 784 649" className="absolute w-[100%] rotate-[10deg] aspect-[1.2]">
-            <path stroke="#B16FAB" stroke-width="3" d="M173.132 566.549C-155.751 445.81 42.189-23.058 323.981 3.049 451.258 14.84 428.398 69.097 516.076 125.654c126.1 81.342 397.154 81.342 190.917 387.849-18.394 27.336-83.747 87.752-114.315 106.098-66.069 39.654-146.207 47.296-419.546-53.052Z"/>
+            <path stroke="currentColor" stroke-width="3" d="M173.132 566.549C-155.751 445.81 42.189-23.058 323.981 3.049 451.258 14.84 428.398 69.097 516.076 125.654c126.1 81.342 397.154 81.342 190.917 387.849-18.394 27.336-83.747 87.752-114.315 106.098-66.069 39.654-146.207 47.296-419.546-53.052Z"/>
           </svg>
         </div>
         <div className="container relative z-20">          
-          <H2 like="h3" className="uppercase text-center mb-12 tracking-widest">Tipps aus der Projektarbeit</H2> 
-          <div className="">
+          <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Tipps aus der Projektarbeit</H2> 
+          <div className="text-neutral-700">
             <ProjectSwiper items={projectslides} />
           </div>            
         </div>    
@@ -358,7 +358,7 @@ export function Diversity({
             </div>
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6">Chance Diversität</H2>
-              <p className="text-xl leading-snug text-primary">
+              <p className="text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
                 im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
                 Innovation in Deutschland zu erhalten.
