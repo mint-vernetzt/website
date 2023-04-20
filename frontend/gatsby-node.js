@@ -601,6 +601,156 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/pakt/kooperationen/min-tmagie/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/kooperationen/mint-zukunft-schaffen/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/forschungsorganisationen-und-forschungsverbuende/deutsche-physikalische-gesellschaft-e-v-dpg/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/brigitte/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/die-zeit/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/medien/emotion-das-frauenmagazin/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/adidas-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/ask-a-woman-com-ug/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/audi-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/carl-zeiss-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/deutsche-telekom-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/deutsches-zentrum-fuer-hochschul-und-wissenschaftsforschung-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/e-on/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/ergo-group-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/hewlett-packard-enterprise-hpe/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/ibm-deutschland-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/jugend-denkt-zukunft-ifok-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/microsoft-deutschland-gmb-h/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/osram/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/volkswagen-ag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/unternehmen-und-stiftungen/wayfair-stores-ltd/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/bundesarbeitsgemeinschaft-der-kommunalen-frauenbueros-und-gleichstellungsstellen-bag/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/business-and-professional-women-germany-e-v-bpw/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/vereine-und-verbaende/fab-lab-region-nuernberg-e-v/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/ha-wtech-hochschul-allianz-fuer-angewandte-wissenschaften/",
+    toPath: "/projects/mint-buendnis/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
