@@ -9,6 +9,7 @@ import { formatDate } from "../../components/EventFeed/utils";
 import ProjectSwiper from "../../components/ProjectSwiper";
 import { getNewsItems } from "../../utils/dataTransformer";
 import NewsSwiper from "../../components/NewsSwiper/NewsSwiper";
+import { ReactComponent as HeaderImage } from "../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
 
 export function Diversity({
   data,
@@ -131,7 +132,7 @@ export function Diversity({
       />      
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
         <div className="container pt-16 pb-12">          
-          <div className="md:w-1/2">            
+          <div className="md:w-1/2 md:pr-8">            
             <H1 like="h0" className="font-black">Diversität</H1>
             <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
               Themenseite mit Erkenntnissen aus Wissenschaft und Praxis
@@ -140,13 +141,12 @@ export function Diversity({
         </div>
 
         <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">
-          {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
-            <GatsbyImage
-              image={data.HeroImage.childImageSharp.gatsbyImageData}
-              className=""
-              alt="Diversität: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
-            />
-          ) : null}
+          <div className="max-w-xs md:max-w-none mx-auto md:mx-0">
+            <HeaderImage />
+          </div>  
+          <div className="absolute right-0 bottom-0">
+            <div className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700" style={{ writingMode: 'vertical-rl' }}>iStock / cienpies</div>
+          </div>
         </div>    
 
       </section>
@@ -387,7 +387,7 @@ export default Diversity;
 
 export const pageQuery = graphql`
   query DiversityPage {
-    HeroImage: file(relativePath: { eq: "topics-diversitaet-hero.png" }) {
+    HeroImage: file(relativePath: { eq: "MINTvernetzt_Key_Visual_Diversitaet.svg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(width: 1488)
