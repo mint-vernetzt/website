@@ -197,7 +197,11 @@ export const getTeasersData = (data: GatsbyTypes.LandingPageQuery) => {
       ),
       headline: teaser.title,
       excerpt: teaser.excerpt.replace(/<[^>]*>/g, ""),
-      url: (
+      url: url.startsWith("http") ? (
+        <a href={url} target="_blank" rel="noreferrer" className="btn-primary">
+          {teaser.teaserInformations.buttonText || "Erfahre mehr"}
+        </a>
+      ) : (
         <Link to={url} className="btn-primary">
           {teaser.teaserInformations.buttonText || "Erfahre mehr"}
         </Link>
