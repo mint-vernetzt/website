@@ -9,16 +9,17 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import { H2, H5 } from "./Heading/Heading";
+import Icon, { IconType } from "./Icon/Icon";
 
 /* eslint-disable-next-line */
 export interface ProjectItemProps {
   title: React.ReactNode;  
-  logo: React.ReactNode;
-  projectinfo: React.ReactNode;
-  projectproblems: React.ReactNode;
-  communityvalue: React.ReactNode;
-  networklink: React.ReactNode;
-  projectlink: React.ReactNode;
+  logo?: React.ReactNode;
+  projectinfo?: React.ReactNode;
+  projectproblems?: React.ReactNode;
+  communityvalue?: React.ReactNode;
+  networklink?: React.ReactNode;
+  projectlink?: React.ReactNode;
 }
 
 export function ProjectSwiperItem(props: ProjectItemProps) {
@@ -27,9 +28,11 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
   return (
     <div className="project-item h-full bg-neutral-200 rounded-lg shadow-sm p-4 pb-8 lg:p-8">
       <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-40 lg:shrink-0 mb-8">
-          <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-4 flex items-center justify-center">{logo}</div>
-        </div>
+        {logo !== undefined ? (
+          <div className="lg:w-40 lg:shrink-0 mb-8">
+            <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-4 flex items-center justify-center">{logo}</div>
+          </div>
+        ) : null}
         <div className="project-item-text lg:pl-16">
           <div className="">
             <H2 className="mb-8 lg:mb-10 font-bold">
@@ -37,30 +40,32 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
             </H2>
             {projectinfo !== null ? (
               <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug">Zum Projekt:</H5>
+                <H5 className="text-lg mb-2 leading-snug font-bold">Zum Projekt:</H5>
                 {projectinfo}
               </div>
             ) : null}
             {projectproblems !== null ? (
               <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug">Hürden für Diversität in der MINT-Praxis::</H5>
+                <H5 className="text-lg mb-2 leading-snug font-bold">Hürden für Diversität in der MINT-Praxis::</H5>
                 {projectproblems}
               </div>
             ) : null}
             {communityvalue !== null ? (
               <div className="text-lg pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug">Mehrwert für die Community:</H5>
+                <H5 className="text-lg mb-2 leading-snug font-bold">Mehrwert für die Community:</H5>
                 {communityvalue}
               </div>
             ) : null}
-            <p className="mt-8 -m-2">
+            <p className="mt-8 -m-2 flex items-center">
               {networklink !== null ? (                
                 <>
-                  <a href={networklink} target="_blank" className="btn btn-primary m-2">Jetzt vernetzen</a>                                  
+                  <a href={networklink} target="_blank" className="btn-primary m-2">Jetzt vernetzen</a>                                  
                 </>  
               ) : null}
               {projectlink !== null ? (                
-                <a href={projectlink} target="_blank" className="btn btn-outline-primary m-2">Zur Projekt-Website</a>                
+                <a href={projectlink} target="_blank" className="btn-outline-primary m-2 btn-icon">
+                  <Icon type={IconType.ExternalLink} />
+                  Zur Projekt-Website</a>                
               ) : null}
             </p>
           </div>

@@ -47,7 +47,44 @@ export function Diversity({
       {
         logo: (
           <GatsbyImage
-            image={data.Dossier1TeaserImage.childImageSharp.gatsbyImageData}
+            image={data.StudyImage.childImageSharp.gatsbyImageData}
+            className="w-full h-auto"
+            alt="MINT-Stimmungsbarometer 2022"
+          />
+        ),
+
+        title: `Little Lab`,
+        projectinfo: (
+          <p>
+            Little Lab setzt sich dafür ein allen Kindern Naturwissenschaften, Technik und Informatik in 
+            kreativen, lustigen und praktischen Experimenten nahe zu bringen. Insbesondere spricht
+            Little Lab Kinder an, die aus unterschiedlichen Gründen einen weiteren Weg zu guter Bildung 
+            haben – mit dem Ziel, dass alle Kinder die MINT-Fächer nicht nur verstehen, sondern auch lieben. 
+          </p>  
+        ),            
+        projectproblems: (
+          <ul>
+            <li>Die Zielgruppe – Kinder im Kita- und Grundschulalter vor allem aus benachteiligten Milieus – 
+              um Jugendliche aus gleichen Milieus erweitern. Sie nehmen kaum offene außerschulische Angebote 
+              in ihrer Freizeit wahr.</li>
+          </ul>  
+        ),
+        communityvalue: (
+          <ul>
+            <li>Kooperationen mit Ganztagsschulen: Schul-AGs, Projekte außerhalb der Schule, aber mit Anmeldung für Gruppen</li>
+            <li>Kooperationen mit Jugendtreffs</li>
+            <li>Leichte Sprache in der Kommunikation der Angebote</li>
+            <li>Angebote und Inhalte, die an die Zielgruppen angepasst sind (selbst machbar, kreativ, alltagsbezogen)</li>
+            <li>Dauerhafte Präsenz, Zuverlässigkeit, Offenheit, Beziehungsarbeit </li>
+          </ul>  
+        ),
+        networklink: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
+        projectlink: `https://www.little-lab.de/verein/`,
+      }, 
+      {
+        logo: (
+          <GatsbyImage
+            image={data.StudyImage.childImageSharp.gatsbyImageData}
             className="w-full h-auto"
             alt="MINT-Stimmungsbarometer 2022"
           />
@@ -56,68 +93,62 @@ export function Diversity({
         title: `Schülerforschungszentrum Nordhausen`,
         projectinfo: (
           <p>
-            Das Schülerforschungszentrum Nordhausen ist eines von ca. 100 Schülerforschungszentren deutschlandweit. 
-            Wir schaffen außerschulische MINT-Bildungsangebote in der Region Nordthüringen, sowohl niedrigschwellig 
-            als auch herausfordernder. Dabei ist uns besonders wichtig, dass jedes Kind/jede:r Jugendliche:r, die 
-            sich für MINT-Themen interessieren, an unseren Angeboten teilnehmen können.
+            Das Schülerforschungszentrum Nordhausen schafft außerschulische MINT-Bildungsangebote 
+            in der Region Nordthüringen. Dabei ist dem Team besonders wichtig, dass alle Kinder 
+            und Jugendlichen, die sich für MINT-Themen interessieren, an den Angeboten teilnehmen 
+            können. 
           </p>  
         ),            
         projectproblems: (
           <ul>
-            <li>Barrierefreie Lernorte und Lernmaterialien (Labore, Programmieroberflächen etc.)</li>
-            <li>Klischeebild "MINT ist etwas für die Streber/Nerds/Elite"</li>
-            <li>Diverse Vorbilder</li>
+            <li>Barrierefreie Lernorte und Lernmaterialien</li>
+            <li>Das negative Klischeebild der MINT-Fächer</li>
+            <li>Diverse Vorbilder finden und integrieren </li>
           </ul>  
         ),
         communityvalue: (
           <ul>
-            <li>Projekt "Inklusiver Forschernachmittag": Barrierefreie Überarbeitung von niedrigschwelligen 
-              Experimenten (Anleitungen bebildert in einfacher Sprache, Materialien für motorische Einschränkungen, 
-              barrierefreie Räumlichkeiten), Zusammenarbeit mit Studierenden der Heilpädagogik</li>
-              <li>Starke Zusammenarbeit mit dem Inklusionsnetzwerk Nordhausen und der offenen Jugendarbeit. Tipp: 
-                Sucht euch Netzwerke und Partner:innen, die euch unterstützen können! Ihr bringt MINT mit, jemand 
-                anderes vielleicht Heilpädagogik. Die beiden Bereiche schließen sich nicht aus, sondern ergänzen sich!</li>
+            <li>Überarbeitung von niedrigschwelligen Experimenten im Projekt „Inklusiver Forschernachmittag". 
+              Dabei wurde darauf geachtet, dass Anleitungen in einfacher Sprache bebildert sind und 
+              Materialien für motorische Einschränkungen sowie barrierefreie Räumlichkeiten bereitgestellt 
+              sind</li>
+            <li>Zusammenarbeit mit Studierenden der Heilpädagogik</li>
+            <li>Enge Zusammenarbeit mit dem Inklusionsnetzwerk Nordhausen und der offenen Jugendarbeit. 
+              Tipp: Netzwerke und Partner:innen suchen, die unterstützen können und an Kooperationen 
+              interessiert sind. </li>
           </ul>  
         ),
         networklink: `https://community.mint-vernetzt.de/profile/josephineroehner`,
         projectlink: `https://www.hs-nordhausen.de/forschung/schuelerforschungszentrum/`,
-      }, 
+      },   
       {
-        logo: (
-          <GatsbyImage
-            image={data.Dossier1TeaserImage.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-
-        title: `Zweites Projekt`,
+        title: `meerMINT`,
         projectinfo: (
           <p>
-            Erklärungstext
+            meerMINT ist ein Projekt, in dem MINT für Kinder und Jugendlichen zwischen 
+            10 und 16 Jahren in Bremen und Bremerhaven erlebbar wird. Es wird gemeinsam 
+            getüftelt, programmiert, geforscht, experimentiert und gebastelt. meerMINT 
+            ist eins von 53 regionalen MINT-Clustern, die aktuell vom Bundesministerium 
+            für Bildung und Forschung (BMBF) gefördert werden.
           </p>  
         ),            
         projectproblems: (
           <ul>
-            <li>Punkt 3</li>
-            <li>Punkt 2</li>
-            <li>Punkt 1</li>
+            <li>Erreichbarkeit einer diversen Zielgruppe geht nur langsam voran, bildungsnahe Familien kommen am ehesten</li>
+            <li>Räume sind nicht barrierefrei und schwierig umzubauen</li>
+            <li>Sprachliche Barrieren bleiben, auch wenn wir schon einige Mitarbeitende mit verschiedenen Sprachkenntnissen vor Ort haben</li>
           </ul>  
         ),
         communityvalue: (
           <ul>
-            <li>Sehr, sehr langer Punkt 1, der auch mal über mehrere Zeilen geht. Um das zu beweisen wurde 
-              der erste und vermutlich acuh der zweite Satz kopiert. Sehr, sehr langer Punkt 1, der auch 
-              mal über mehrere Zeilen geht. Um das zu beweisen wurde der erste und vermutlich acuh der 
-              Zweite Satz kopiert.</li>
-            <li>Sehr, sehr, sehr langer Punkt 2, der auch mal über mehrere Zeilen geht. Um das zu beweisen wurde 
-              der erste und vermutlich acuh der zweite Satz kopiert. Sehr, sehr langer Punkt 1, der auch 
-              mal über mehrere Zeilen geht. Um das zu beweisen wurde der erste und vermutlich acuh der 
-              Zweite Satz kopiert.</li>
+            <li>Wir gehen mit unseren Angeboten dorthin, wo die jungen Menschen sind, insbesondere Mädchen-/Jugendtreffs 
+              und Stadtteilbibliotheken, dies bringt uns näher an die Zielgruppe</li>
+            <li>Wir versuchen, auch andere Sprachen über die Mitarbeitenden in die Veranstaltungen zu bringen z.B. 
+              über internationale Studierende</li>
           </ul>  
         ),
-        networklink: `https://community.mint-vernetzt.de/`,
-        projectlink: `https://www.hs-nordhausen.de/forschung/schuelerforschungszentrum/`,
+        networklink: `https://community.mint-vernetzt.de/profile/hanneballhausen`,
+        projectlink: `https://www.meermint.de/ `,
       },               
   ];
 
@@ -154,7 +185,7 @@ export function Diversity({
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
-            <H2 like="h3" className="all-small-caps text-center mb-8 lg:mb-12 tracking-widest font-semibold">EINE HEADLINE</H2>
+            <H2 like="h3" className="all-small-caps text-center mb-8 lg:mb-12 tracking-widest font-semibold">MINT und Diversität</H2>
             <p className="text-3xl leading-snug text-primary font-semibold">
               Wir brauchen <span className="bg-lilac-200">mehr Diversität in der MINT-Bildung</span> – aber wie stellen wir das an? 
               Auf dieser Themenseite bündeln wir für Euch Beiträge und Veranstaltungen mit Tipps 
@@ -187,7 +218,7 @@ export function Diversity({
         <div className="container relative z-20">          
           <div className="md:flex md:items-center md:justify-center -mx-4">
             <div className="md:w-4/12 px-4 mb-8 md:mb-0">
-              <H2 className="mb-6">Chance Diversität</H2>
+              <H2 className="mb-6 font-bold">Chance Diversität</H2>
               <p className="text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
                 im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
@@ -217,7 +248,7 @@ export function Diversity({
                   className="flex p-8"
                 >
                   <div className="text-center">
-                    <h3 className="text-white mb-8">
+                    <h3 className="text-white mb-8 font-bold">
                       Diversity Keynote Jahrestagung
                     </h3>
                     <p className="text-white">
@@ -312,21 +343,31 @@ export function Diversity({
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
           <div className="md:flex md:items-center -mx-4">
-            <div className="md:w-6/12 px-4 mb-8 md:mb-0">              
-              <GatsbyImage
-                image={data?.StudyImage?.childImageSharp?.gatsbyImageData}
-                className="w-full h-auto"
-                alt=""
-              />
+            <div className="md:w-6/12 px-4 mb-8 md:mb-0 flex justify-center relative">
+              <div className="absolute inset-0 text-salmon-400 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 655 418">
+                  <path fill="currentColor" d="M378.948 11.1C237.002 57.323 38.234 97.368 6.514 153.865c-15.86 28.248-2.345 83.864 66.84 150.371C188.6 415.024 265.997 421.811 342.19 416.529c76.193-5.282 362.284-203.55 304.405-312.815C596.837 9.776 463.628-16.476 378.948 11.1Z"/>
+                </svg>
+              </div>              
+              <div className="relative max-w-[180px] md:max-w-[260px] lg:max-w-[360px] my-8">
+                <GatsbyImage
+                  image={data?.StudyImage?.childImageSharp?.gatsbyImageData}
+                  className=""
+                  alt=""
+                />
+                <div className="absolute right-0 bottom-[-1px]">
+                  <div className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 " style={{ writingMode: 'vertical-rl' }}>Unsplash/ John Schaidler</div>
+                </div>
+              </div>  
             </div> 
             <div className="lg:w-1/12 px-4">              
             </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
-              <H2 className="mb-6">Chance Diversität</H2>
+              <H2 className="mb-6 font-bold">Studie: Mehr Diversität in der MINT-Bildung</H2>
               <p className="text-xl leading-snug text-neutral-700">
-                In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
-                im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
-                Innovation in Deutschland zu erhalten.
+                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung von Kindern 
+                und Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, um mehr Chancengleichheit 
+                zu schaffen. 
               </p>  
               <p>
                 <button className="btn-primary">Zur Studie</button>
@@ -357,24 +398,33 @@ export function Diversity({
             <div className="hidden lg:flex lg:w-1/12 px-4 ">              
             </div>
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
-              <H2 className="mb-6">Chance Diversität</H2>
+              <H2 className="mb-6 font-bold">Glossar Diversität</H2>
               <p className="text-xl leading-snug text-neutral-700">
-                In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
-                im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
-                Innovation in Deutschland zu erhalten.
+                Ableismus, Intersektionalität und Klassismus – schonmal gehört?! In unserem Glossar findet 
+                Ihr wichtige Begriffe zum Thema Diversität zum Nachlesen. 
               </p>  
               <p className="mb-0">
-                <button className="btn-primary">Zur Studie</button>
+                <Link to="/topics/diversitaet_glossar" className="btn-primary">Zum Glossar</Link>
               </p>  
             </div>
             <div className="hidden lg:flex lg:w-1/12 px-4">              
             </div>
-            <div className="md:w-5/12 px-4">              
-              <GatsbyImage
-                image={data?.StudyImage?.childImageSharp?.gatsbyImageData}
-                className="w-full h-auto"
-                alt=""
-              />
+            <div className="md:w-5/12 px-4 flex justify-center relative">                     
+              <div className="absolute inset-0 text-salmon-400 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 270 215">
+                  <path fill="#FCC433" d="M.788 101.52c5.95-38.838 66.074-68.85 90.186-78.903l.264-.11C119.315 10.799 154.14-3.723 196.675.87c27.153 2.932 83.398 42.996 71.761 110.422-11.637 67.426-96.976 114.331-177.462 101.628C27.48 202.898-5.636 143.45.788 101.52Z"/>
+                </svg>                
+              </div>              
+              <div className="relative max-w-[180px] md:max-w-[260px] lg:max-w-[360px] my-8">
+                <GatsbyImage
+                  image={data?.GlossarImage?.childImageSharp?.gatsbyImageData}
+                  className=""
+                  alt=""
+                />
+                <div className="absolute right-0 bottom-[-1px]">
+                  <div className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 " style={{ writingMode: 'vertical-rl' }}>Unsplash/ Surendran MP</div>
+                </div>
+              </div>  
             </div>                                        
           </div>          
         </div>   
@@ -395,36 +445,22 @@ export const pageQuery = graphql`
     }
     StudyImage: file(
       relativePath: {
-        eq: "topic-diversity/example-6col.png"
+        eq: "topic-diversity/Studie_Teaser_Diversitaet_480x480.jpg"
       }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 744)
+        gatsbyImageData(width: 480)
       }
     }
-    Dossier1TeaserImage: file(
+    GlossarImage: file(
       relativePath: {
-        eq: "themenspezial-artikel-maedchen-fuer-programmieren-begeistern.jpg"
+        eq: "topic-diversity/Glossar_Teaser_480x480.jpg"
       }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 744)
+        gatsbyImageData(width: 480)
       }
-    }
-    Dossier2TeaserImage: file(
-      relativePath: { eq: "themenspezial-artikel-maedchen-wettbewerb.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(width: 744)
-      }
-    }
-    Dossier3TeaserImage: file(
-      relativePath: { eq: "card_abbau-von-geschlechterunterschieden.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(width: 744)
-      }
-    }
+    }        
     news: allWpNewsItem(limit: 9, filter: {tags: {nodes: {elemMatch: {slug: {eq: "networking"}}}}}) {
       nodes {
         title
@@ -441,7 +477,7 @@ export const pageQuery = graphql`
           node {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1488)
+                gatsbyImageData(width: 640)
               }
             }
           }

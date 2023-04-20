@@ -51,7 +51,7 @@ export function NewsSwiper({
                 slidesPerView: 2,
                 slidesPerGroup: 2,
               },
-              1024: {
+              1280: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
               },
