@@ -30,10 +30,16 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
       <div className="flex flex-col lg:flex-row">
         {logo !== undefined ? (
           <div className="lg:w-40 lg:shrink-0 mb-8">
-            <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-4 flex items-center justify-center">{logo}</div>
+            <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-8 flex items-center justify-center">{logo}</div>
           </div>
         ) : null}
-        <div className="project-item-text lg:pl-16">
+        <div 
+          className={`project-item-text ${
+            logo !== undefined
+              ? "lg:pl-16"
+              : ""
+          }`}
+        >
           <div className="">
             <H2 className="mb-8 lg:mb-10 font-bold">
               {title}

@@ -45,14 +45,14 @@ export function Diversity({
     const projectslides =
     [
       {
-        logo: (
+        /*logo: (
           <GatsbyImage
             image={data.StudyImage.childImageSharp.gatsbyImageData}
             className="w-full h-auto"
             alt="MINT-Stimmungsbarometer 2022"
           />
         ),
-
+        */
         title: `Little Lab`,
         projectinfo: (
           <p>
@@ -82,14 +82,6 @@ export function Diversity({
         projectlink: `https://www.little-lab.de/verein/`,
       }, 
       {
-        logo: (
-          <GatsbyImage
-            image={data.StudyImage.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-
         title: `Schülerforschungszentrum Nordhausen`,
         projectinfo: (
           <p>
@@ -238,7 +230,7 @@ export function Diversity({
                     width: "100%",
                     height: "100%",
                   }}
-                  data-src={`https://www.youtube-nocookie.com/embed/ccClwGLoy1Q?autoplay=1`}
+                  data-src={`https://www.youtube-nocookie.com/embed/K5oReyP1Jx0?autoplay=1`}
                   title="Live Stream"
                   allowfullscreen="true"
                   allow="autoplay"
@@ -461,7 +453,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 480)
       }
     }        
-    news: allWpNewsItem(limit: 9, filter: {tags: {nodes: {elemMatch: {slug: {eq: "networking"}}}}}) {
+    news: allWpNewsItem(limit: 9, filter: {tags: {nodes: {elemMatch: {slug: {eq: "diversitaet"}}}}}) {
       nodes {
         title
         slug

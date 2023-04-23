@@ -25,8 +25,8 @@ export function NewsSwiper({
   return (
     <>      
       <div className="flex items-stretch -mx-4">
-        <div className="lg:w-1/12 relative px-4 hidden lg:flex">
-          {newsSwiperItemsProps?.length > 1 && (
+        <div className="xl:w-1/12 relative px-4 hidden xl:flex">
+          {newsSwiperItemsProps?.length > 3 && (
             <div className="prev-slide absolute inset-0 flex items-center justify-end z-10 lg:pr-4 pb-16 text-white hover:text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ export function NewsSwiper({
             </div>
           )}  
         </div>
-        <div className="w-full lg:w-10/12 relative">
+        <div className="w-full xl:w-10/12 relative">
           <Swiper
             modules={[Navigation, Pagination, A11y, EffectFade, Autoplay]}
             effect="slide"
@@ -90,8 +90,8 @@ export function NewsSwiper({
             })}            
           </Swiper>
         </div>  
-        <div className="hidden lg:flex lg:w-1/12 relative">
-          {newsSwiperItemsProps?.length > 1 && (
+        <div className="hidden xl:flex xl:w-1/12 relative">
+          {newsSwiperItemsProps?.length > 3 && (
             <div className="next-slide absolute inset-0 flex items-center justify-start z-10 lg:pl-4 pb-16 text-white hover:text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
