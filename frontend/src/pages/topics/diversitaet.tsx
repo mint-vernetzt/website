@@ -2,14 +2,14 @@ import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { H1, H2, H4 } from "../../components/Heading/Heading";
-import Icon, { IconType } from "../../components/Icon/Icon";
+import { H1, H2 } from "../../components/Heading/Heading";
 import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
-import { formatDate } from "../../components/EventFeed/utils";
+
 import ProjectSwiper from "../../components/ProjectSwiper";
 import { getNewsItems } from "../../utils/dataTransformer";
 import NewsSwiper from "../../components/NewsSwiper/NewsSwiper";
 import { ReactComponent as HeaderImage } from "../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
+import EventCards from "../../components/EventCards/EventCards";
 
 export function Diversity({
   data,
@@ -39,6 +39,9 @@ export function Diversity({
       ),
       date: new Date(event.eventInformations.startDate),
       url: `/event/${event.slug}/`,
+      image: (
+        <GatsbyImage image={event.featuredImage.node.localFile.childImageSharp.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
+      ),            
     }))
     .slice(0, 3);
 
@@ -302,32 +305,18 @@ export function Diversity({
 
       {events.length > 0 && (
         <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
-          <div className="container xl:flex xl:justify-center">
-            <div className="xl:w-10/12">
-              <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Aktuelle Events</H2>            
-              <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">            
-                {events.map((event, index) => (
-                  <div
-                    key={`event-${index}`}
-                    className="rounded-lg bg-neutral-200 shadow-sm"
-                  >
-                    <Link to={event.url} className="flex flex-col h-100">
-                      <div className="event-teaser-image">
-
-                      </div>
-                      <div className="p-8">
-                        <div className="text-neutral-800 leading-tight text-xs font-semibold flex items-center mb-2">
-                          <Icon type={IconType.Calendar} />{" "}
-                          <time className="ml-2">{formatDate(event.date)}</time>
-                        </div>
-                        <H4 className="lg:leading-snug">{event.headline}</H4>
-                        <p className="line-clamp-3 text-neutral-700">{event.body}</p>
-                      </div>  
-                    </Link>
-                  </div>
-                ))}
-              </div>           
-            </div>   
+          <div className="container">
+            <div className="-mx-4 xl:flex xl:justify-center">
+              <div className="xl:w-10/12 px-4">
+                <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Aktuelle Events</H2>            
+                <EventCards
+                    eventCardItemsProps={events}
+                    onChipClick={(slug) =>
+                      addTagClickHandler(slug, allowedTagSlugs, afterTagClick)
+                    }
+                />         
+              </div>   
+            </div>  
           </div>
         </section>  
       )}
@@ -477,7 +466,9 @@ export const pageQuery = graphql`
       }
     }    
     events: allWpEvent(
-      filter: { parentId: { eq: null }}
+      limit: 3
+      skip: 1
+      filter: { parentId: { eq: null }, tags: {nodes: {elemMatch: {slug: {eq: "diversitaet"}}}}}
       sort: { fields: eventInformations___startDate, order: ASC }
     ) {
       nodes {
@@ -488,8 +479,23 @@ export const pageQuery = graphql`
           endTime
           endDate
         }
+        tags {
+          nodes {
+            name
+            slug
+          }
+        }
         title
         slug
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 640, aspectRatio: 1.77777777778)
+              }
+            }
+          }
+        }
       }
     }
   }
