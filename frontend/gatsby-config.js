@@ -76,6 +76,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "diversity_glossary",
+        path: "src/data/diversity/glossary/",
+      },
+    },
+    {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: `${process.env.MATOMO_SITE_ID}`,

@@ -486,3 +486,19 @@ ol {
 .all-small-caps {
   font-variant-caps: all-small-caps;
 }
+
+.glossary.active > .glossary-icon {
+  transform: rotate(90deg);
+}
+
+.glossary.active > button {
+  @apply text-white bg-primary rounded-b-none;
+}
+
+.glossary.active .glossary-content {
+  max-height: 100%;
+}
+
+.glossary-content-body {
+  @apply p-4 md:p-8 bg-white rounded-b-lg;
+}

@@ -28,22 +28,27 @@ export function Diversity({
     .filter((event) =>
       isBeforeOneDayAfterDate(now, new Date(event.eventInformations.endDate))
     )
-    .map((event) => ({
-      headline: event.title,
+    .map((event) => {
+
+      return {
+      headline: event?.title ?? 'NO HEADLINE SET',
       body: (
         <span
           dangerouslySetInnerHTML={{
-            __html: event.excerpt.replace(/<[^>]*>/g, "").substr(0, 250),
+            __html: (event?.excerpt ?? '').replace(/<[^>]*>/g, "").substr(0, 250),
           }}
         />
       ),
-      date: new Date(event.eventInformations.startDate),
+      date: new Date(event?.eventInformations?.startDate ?? ''),
       url: `/event/${event.slug}/`,
-      image: (
-        <GatsbyImage image={event.featuredImage.node.localFile.childImageSharp.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
-      ),            
-    }))
-    .slice(0, 3);
+      slug: event.slug,
+      image: (        
+        <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData ?? data?.StudyImage?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
+      ),
+      tags: event?.tags?.nodes?.map(tag => ({title: tag?.name, slug: tag?.slug}))
+      
+    }})
+    ;
 
     const projectslides =
     [
@@ -311,9 +316,7 @@ export function Diversity({
                 <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Aktuelle Events</H2>            
                 <EventCards
                     eventCardItemsProps={events}
-                    onChipClick={(slug) =>
-                      addTagClickHandler(slug, allowedTagSlugs, afterTagClick)
-                    }
+                    onChipClick={() => {}}
                 />         
               </div>   
             </div>  
@@ -418,12 +421,6 @@ export default Diversity;
 
 export const pageQuery = graphql`
   query DiversityPage {
-    HeroImage: file(relativePath: { eq: "MINTvernetzt_Key_Visual_Diversitaet.svg" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    }
     StudyImage: file(
       relativePath: {
         eq: "topic-diversity/Studie_Teaser_Diversitaet_480x480.jpg"
@@ -467,7 +464,6 @@ export const pageQuery = graphql`
     }    
     events: allWpEvent(
       limit: 3
-      skip: 1
       filter: { parentId: { eq: null }, tags: {nodes: {elemMatch: {slug: {eq: "diversitaet"}}}}}
       sort: { fields: eventInformations___startDate, order: ASC }
     ) {

@@ -11,7 +11,6 @@ export interface EventCardItemProps {
   body: string | Element | React.ReactElement;
   slug: string;
   date: Date;
-  category: string;
   tags: ChipProps[];
   onChipClick?: ChipClickHandler;
   image?: ImageType;
@@ -22,7 +21,6 @@ export function EventCardItem({
   body,
   slug,
   date,
-  category,
   tags = [],
   image,
   onChipClick,
@@ -44,7 +42,7 @@ export function EventCardItem({
           <p className="line-clamp-3 text-neutral-700">{body}</p>
           <ul className="flex flex-wrap md:order-4 z-10 relative">
             {tags.map((tag, index) => (
-              <li key={`event-taglist-${index}-${tag.slug}`}>
+              <li key={`event-taglist-${index}-${tag.slug}`}>                
                 <Chip title={tag.title} slug={tag.slug} onClick={onChipClick} />
               </li>
             ))}
