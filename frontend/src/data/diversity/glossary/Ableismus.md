@@ -1,11 +1,11 @@
 ---
 title: "Ableismus"
 links:
-  - author: Amadeu Antonio Stiftung
-    title: Abwertung von Menschen mit Behinderung
+  - author: "Amadeu Antonio Stiftung"
+    title: "Abwertung von Menschen mit Behinderung"
     url: https://www.amadeu-antonio-stiftung.de/publikationen/abwertung-von-menschen-mit-behinderung/
-  - author: Deutsches Institut für Menschenrechte
-    title: Rechte von Menschen mit Behinderungen
+  - author: "Deutsches Institut für Menschenrechte"
+    title: "Rechte von Menschen mit Behinderungen"
     url: https://www.institut-fuer-menschenrechte.de/themen/rechte-von-menschen-mit-behinderungen
 ---
 
