@@ -14,6 +14,34 @@ export type PaktDataByCategory = {
   }[];
 };
 
+export type GlossaryItemsByAlphaCategory = {
+  category: string;
+  entries: GatsbyTypes.GlossarPageQuery["glossaryData"]["nodes"];
+}[];
+
+export const getGlossaryItemsByAlphaCategories = (
+  alphaCategories: { from: string; to: string }[],
+  entries: GatsbyTypes.GlossarPageQuery["glossaryData"]["nodes"]
+): GlossaryItemsByAlphaCategory => {
+  let lookup: { [key: string]: string[] };
+  let result: GlossaryItemsByAlphaCategory = [];
+  alphaCategories.forEach((alphaCategory) => {
+    const from = alphaCategory.from.toUpperCase();
+    const to = alphaCategory.to.toUpperCase();
+    const category = `${from}-${to}`;
+    const filteredEntries = entries.filter((i) => {
+      const entryAlpha = i.frontmatter?.title
+        ? i.frontmatter.title[0].toUpperCase()
+        : "";
+      return entryAlpha >= from && entryAlpha <= to;
+    });
+
+    result.push({ category, entries: filteredEntries });
+  });
+
+  return result;
+};
+
 export const getPaktDataByCategory = (
   paktData: GatsbyTypes.AboutPageQuery["paktData"]["edges"]
 ): PaktDataByCategory => {
