@@ -163,12 +163,15 @@ export function Diversity({
       />      
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
         <div className="container pt-16 pb-12">          
-          <div className="md:w-1/2 md:pr-8">            
-            <H1 like="h0" className="font-black">Diversität</H1>
-            <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
-              Themenseite mit Erkenntnissen aus Wissenschaft und Praxis
-            </p>            
-          </div>
+          <div className="-mx-4 flex">          
+            <div className="hidden lg:flex lg:w-1/12 px-4 "></div>
+            <div className="md:w-5/12 px-4 md:pr-8">            
+              <H1 like="h0" className="font-black">Diversität</H1>
+              <p className="font-semibold text-primary text-lg lg:text-3xl lg:leading-snug">
+                Themenseite mit Erkenntnissen aus Wissenschaft und Praxis
+              </p>            
+            </div>
+          </div>  
         </div>
 
         <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">

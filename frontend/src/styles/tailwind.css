@@ -491,14 +491,15 @@ ol {
   transform: rotate(90deg);
 }
 
-.glossary.active > button {
+.glossary button.active {
   @apply text-white bg-primary rounded-b-none;
 }
 
-.glossary.active .glossary-content {
-  max-height: 100%;
+.glossary button.active + .glossary-content {
+  max-height: none;
+  @apply py-4 md:py-8;
 }
 
 .glossary-content-body {
-  @apply p-4 md:p-8 bg-white rounded-b-lg;
+  
 }

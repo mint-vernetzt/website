@@ -6,6 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H3, H5 } from "../../components/Heading/Heading";
 import { ReactComponent as HeaderImage } from "../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
 import { getGlossaryItemsByAlphaCategories } from "../../utils/dataTransformer";
+import Icon, { IconType } from "../../components/Icon/Icon";
 
 export function DiversityGlossar({
   data,
@@ -14,10 +15,10 @@ export function DiversityGlossar({
 }) {
   React.useEffect(() => {
     // accordeon toggle
-    document.querySelectorAll(".glossary").forEach(($glossary) => {
+    document.querySelectorAll(".glossary button").forEach(($glossary) => {
       $glossary.addEventListener("click", (event) => {
         // event.preventDefault();
-        document.querySelectorAll(".glossary.active").forEach(($active) => {
+        document.querySelectorAll(".glossary button.active").forEach(($active) => {
           if ($glossary !== $active) {
             $active.classList.remove("active");
           }
@@ -49,31 +50,57 @@ export function DiversityGlossar({
         children=""
       />
 
-      <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
-        <div className="container pt-16 pb-12">
-          <div className="md:w-1/2 md:pr-8">
-            <H1 like="h0" className="font-black">
-              Diversität
-            </H1>
-            <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
-              Begriffe zum Thema verständlich erklärt
-            </p>
-          </div>
+      <section className="bg-lilac-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-yellow-500">
+          <svg width="763" height="480" viewBox="0 0 763 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[42%] w-[60%] h-[110%] rotate-[-0deg]">
+            <path d="M637.862 11.3002C973.1 143.765 753.674 642.111 463.915 611.176C333.039 597.203 358.384 539.535 269.807 478.208C142.414 390.005 -137.123 387.055 85.5645 62.1148C105.425 33.1347 174.794 -30.646 206.917 -49.8974C276.347 -91.5078 359.242 -98.7927 637.862 11.3002Z" stroke="currentColor" stroke-width="3"/>
+          </svg>
         </div>
-
-        <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">
-          <div className="max-w-xs md:max-w-none mx-auto md:mx-0">
-            <HeaderImage />
-          </div>
-          <div className="absolute right-0 bottom-0">
-            <div
-              className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
-              style={{ writingMode: "vertical-rl" }}
+        <div className="container pt-8 pb-4 md:pb-12 relative z-20">
+          <div className="">
+            <a
+              className="inline-block border border-primary py-2 px-4 text-primary font-semibold rounded-lg text-sm leading-[22px]"
+              href="/topics/diversitaet/"
             >
-              iStock / cienpies
+              <span className="flex items-center">
+                <span className="mr-2">
+                  <Icon type={IconType.ChevronLeft} />
+                </span>
+                zur Übersicht
+              </span>
+            </a>
+          </div>  
+          <div className="-mx-4 mt-8 md:-mt-[24px] mb-4 md:flex md:items-center">
+            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+              <H1 like="h0" className="font-black">
+                Glossar Diversität
+              </H1>
+              <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
+                Begriffe zum Thema verständlich erklärt
+              </p>
             </div>
-          </div>
-        </div>
+            
+            {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
+              <div className="hero-image md:w-1/2 px-4">
+                <div className="max-w-xs md:max-w-none mx-auto md:mx-0 relative">              
+                  <GatsbyImage
+                    image={data.HeroImage.childImageSharp.gatsbyImageData}
+                    className="w-full  md:h-[384px] object-fit"
+                    alt="Didaktik: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
+                  />  
+                  <div className="absolute right-0 bottom-0">
+                    <div
+                      className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
+                      style={{ writingMode: "vertical-rl" }}
+                    >
+                      Unsplash/ Surendran MP
+                    </div>
+                  </div>        
+                </div>                
+              </div>  
+            ) : null}               
+          </div>  
+        </div>        
       </section>
 
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
@@ -102,62 +129,65 @@ export function DiversityGlossar({
         </div>
       </section>
 
-      {glossaryEntriesByCategory.map((entrysByCategory) => (
-        <section
-          key={`section${entrysByCategory.category}`}
-          id={entrysByCategory.category}
-          className="bg-lilac-400 pt-16 lg:pt-24"
-        >
-          <div className="container">
-            <div className="flex justify-center -mx-4">
-              <div className="lg:w-6/12 px-4">
-                <H3 className="text-white font-bold mb-8">
-                  {entrysByCategory.category}
-                </H3>
-                <ul className="glossary-entries">
-                  {entrysByCategory.entries.map((entry) => (
-                    <>
-                      <li className="glossary relative overflow-hidden mb-8">
-                        <button className="font-bold text-primary md:text-lg md:leading-snug px-8 py-4 flex items-center justify-between bg-white w-full rounded-lg hover:bg-primary hover:text-white">
-                          {entry.frontmatter?.title}
-                        </button>
-                        <div className="glossary-content max-h-0 overflow-hidden transition-all ease-in-out duration-300">
-                          <div className="glossary-content-body">
-                            <div
-                              dangerouslySetInnerHTML={{ __html: entry.html }}
-                            />
-                            {entry.frontmatter?.links?.length > 0 && (
-                              <div className="mt-8">
-                                <p className="mb-4 font-bold">
-                                  Zum Weiterlesen:
-                                </p>
-                                <ul className="list-disc list-outside leading-6 mb-6 pl-5">
-                                  {entry.frontmatter?.links?.map((link) => (
-                                    <li>
-                                      {link?.author}:{" "}
-                                      <a
-                                        href={link?.url}
-                                        target="_blank"
-                                        className="font-bold text-secondary"
-                                      >
-                                        {link?.title}
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
+      <section className="bg-lilac-400 pb-12 pt-4 lg:pt-12 lg:pb-20 -mb-20">
+        <div className="container">
+          <div className="flex justify-center -mx-4">
+            <div className="lg:w-6/12 px-4">
+              {glossaryEntriesByCategory.map((entrysByCategory) => (
+                <div
+                  key={`section${entrysByCategory.category}`}
+                  id={entrysByCategory.category}
+                  className="mt-12"
+                >
+          
+                  <H3 className="text-white font-bold mb-8">
+                    {entrysByCategory.category}
+                  </H3>
+                  <ul className="glossary-entries">
+                    {entrysByCategory.entries.map((entry) => (
+                      <>
+                        <li className="glossary relative overflow-hidden mb-8">
+                          <button className="font-bold text-primary md:text-lg md:leading-snug px-8 py-4 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                            {entry.frontmatter?.title}
+                          </button>
+                          <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
+                            <div className="glossary-content-body">
+                              <div
+                                dangerouslySetInnerHTML={{ __html: entry.html }}
+                              />
+                              {entry.frontmatter?.links?.length > 0 && (
+                                <div className="mt-8">
+                                  <p className="mb-4 font-bold">
+                                    Zum Weiterlesen:
+                                  </p>
+                                  <ul className="list-disc list-outside leading-6 mb-6 pl-5">
+                                    {entry.frontmatter?.links?.map((link) => (
+                                      <li>
+                                        {link?.author}:{" "}
+                                        <a
+                                          href={link?.url}
+                                          target="_blank"
+                                          className="font-bold text-secondary"
+                                        >
+                                          {link?.title}
+                                        </a>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </>
-                  ))}
-                </ul>
-              </div>
+                        </li>
+                      </>
+                    ))}
+                  </ul>
+                </div>
+              ))}  
             </div>
           </div>
-        </section>
-      ))}
+        </div>
+      </section>      
     </Layout>
   );
 }
@@ -167,11 +197,11 @@ export default DiversityGlossar;
 export const pageQuery = graphql`
   query GlossarPage {
     HeroImage: file(
-      relativePath: { eq: "MINTvernetzt_Key_Visual_Diversitaet.svg" }
+      relativePath: { eq: "topic-diversity/Glossar_Stage_1280x720.jpg" }
     ) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 1280)
       }
     }
     StudyImage: file(

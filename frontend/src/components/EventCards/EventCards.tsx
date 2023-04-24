@@ -12,7 +12,7 @@ export function EventCards({
 }: EventCardsProps) {
   return (
     <>
-      <div className="grid gap-4 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">            
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">            
         
         {eventCardItemsProps.map((eventCardItemProps, index) => {
           return (
