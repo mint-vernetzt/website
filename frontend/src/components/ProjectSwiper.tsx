@@ -62,7 +62,7 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
                 {communityvalue}
               </div>
             ) : null}
-            <p className="mt-8 -m-2 flex items-center">
+            <p className="mt-8 -m-2 flex items-center flex-wrap">
               {networklink !== null ? (                
                 <>
                   <a href={networklink} target="_blank" className="btn-primary m-2">Jetzt vernetzen</a>                                  

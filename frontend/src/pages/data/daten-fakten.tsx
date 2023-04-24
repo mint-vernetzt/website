@@ -327,7 +327,7 @@ export function Datenfakten({
         </div>
       </section>
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
+      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20" id="mint-studien">
         <H2 like="h1" className="text-center mb-14">
           <span className="font-bold">MINT</span>vernetzt-Studien
         </H2>
@@ -372,7 +372,7 @@ export function Datenfakten({
       </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <div className="flex flex-wrap content-center items-center md:-mx-4">
+        <div className="flex flex-wrap content-center items-center md:-mx-4"  id="mint-studie-diversitaet">
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
             <div className="overflow-hidden rounded-lg">
               <GatsbyImage
@@ -456,33 +456,7 @@ export function Datenfakten({
           <span className="whitespace-nowrap">MINT-Bildungslandschaft</span>{" "}
           aufzeigen.
         </p>
-      </section>
-      <section
-        id="MINTstimmungsbarometer-2023"
-        className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative"
-      >
-        <div className="bg-primary text-white pt-16 pb-6 px-8 lg:pt-32 lg:pb-20 lg:px-16">
-          <header className="mb-0 text-center">
-            <H3 like="h2" className="text-white">
-              MINT-Stimmungsbarometer 2023
-            </H3>
-            <p className="pt-4">
-              Jetzt teilnehmen und Eure Einschätzung zur{" "}
-              <span className="whitespace-nowrap">MINT-Bildung</span> abgeben.
-            </p>
-            <p className="pt-8 pb-0">
-              <a
-                href="https://survey.lamapoll.de/MINT-Stimmungsbarometer-2023/"
-                target="_blank"
-                className="btn-outline-primary btn-icon bg-white"
-              >
-                <Icon type={IconType.ExternalLink} />
-                Zur Umfrage 2023
-              </a>
-            </p>
-          </header>
-        </div>
-      </section>
+      </section>      
     </Layout>
   );
 }

@@ -164,7 +164,7 @@ export function Diversity({
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
         <div className="container pt-16 pb-12">          
           <div className="-mx-4 flex">          
-            <div className="hidden lg:flex lg:w-1/12 px-4 "></div>
+            <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-5/12 px-4 md:pr-8">            
               <H1 like="h0" className="font-black">Diversität</H1>
               <p className="font-semibold text-primary text-lg lg:text-3xl lg:leading-snug">
@@ -331,7 +331,7 @@ export function Diversity({
         <div className="container">
           <div className="md:flex md:items-center -mx-4">
             <div className="md:w-6/12 px-4 mb-8 md:mb-0 flex justify-center relative">
-              <div className="absolute inset-0 text-salmon-400 flex justify-center">
+              <div className="absolute inset-4 md:inset-0 text-salmon-400 flex justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 655 418">
                   <path fill="currentColor" d="M378.948 11.1C237.002 57.323 38.234 97.368 6.514 153.865c-15.86 28.248-2.345 83.864 66.84 150.371C188.6 415.024 265.997 421.811 342.19 416.529c76.193-5.282 362.284-203.55 304.405-312.815C596.837 9.776 463.628-16.476 378.948 11.1Z"/>
                 </svg>
@@ -347,17 +347,16 @@ export function Diversity({
                 </div>
               </div>  
             </div> 
-            <div className="lg:w-1/12 px-4">              
-            </div>
+            <div className="lg:w-1/12 px-4"> </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
               <H2 className="mb-6 font-bold">Studie: Mehr Diversität in der MINT-Bildung</H2>
               <p className="text-xl leading-snug text-neutral-700">
-                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung von Kindern 
-                und Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, um mehr Chancengleichheit 
-                zu schaffen. 
+                Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung von Kindern und 
+                Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, um mehr Chancengleichheit 
+                zu schaffen.  
               </p>  
               <p>
-                <button className="btn-primary">Zur Studie</button>
+                <a href="/data/daten-fakten#mint-studie-diversitaet" className="btn-primary">Zur Studie</a>
               </p>  
             </div>  
              

@@ -70,8 +70,9 @@ export function DiversityGlossar({
               </span>
             </a>
           </div>  
-          <div className="-mx-4 mt-8 md:-mt-[24px] mb-4 md:flex md:items-center">
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div className="-mx-4 mt-8 md:-mt-[24px] mb-4 md:flex md:items-center">               
+            <div className="hidden lg:flex lg:w-1/12 px-4"></div>
+            <div className="md:w-5/12 px-4 mb-8 md:mb-0">
               <H1 like="h0" className="font-black">
                 Glossar Diversität
               </H1>
@@ -147,8 +148,13 @@ export function DiversityGlossar({
                     {entrysByCategory.entries.map((entry) => (
                       <>
                         <li className="glossary relative overflow-hidden mb-8">
-                          <button className="font-bold text-primary md:text-lg md:leading-snug px-8 py-4 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
-                            {entry.frontmatter?.title}
+                          <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                            <span>{entry.frontmatter?.title}</span>
+                            <span className="glossary-btton-icon">                              
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="w-6 h-6">
+                                <path d="M13.3 10a.626.626 0 0 0-.23-.49S7.93 4.9 7.93 4.9c-.07-.06-.15-.11-.24-.14s-.18-.05-.27-.05-.18.02-.27.05-.17.08-.24.14c-.07.06-.13.14-.16.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22L11.5 10l-4.59 4.12c-.07.06-.13.14-.17.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22.07.06.15.11.23.14.09.03.18.05.27.05s.18-.02.27-.05c.09-.03.17-.08.23-.14s5.14-4.61 5.14-4.61c.07-.06.13-.14.17-.22a.66.66 0 0 0 .06-.27Z" fill="currentColor"/>
+                              </svg>
+                            </span>
                           </button>
                           <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                             <div className="glossary-content-body">
