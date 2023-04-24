@@ -52,8 +52,8 @@ export function DiversityGlossar({
 
       <section className="bg-lilac-50 relative overflow-hidden">
         <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-yellow-500">
-          <svg width="763" height="480" viewBox="0 0 763 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[42%] w-[60%] h-[110%] rotate-[-0deg]">
-            <path d="M637.862 11.3002C973.1 143.765 753.674 642.111 463.915 611.176C333.039 597.203 358.384 539.535 269.807 478.208C142.414 390.005 -137.123 387.055 85.5645 62.1148C105.425 33.1347 174.794 -30.646 206.917 -49.8974C276.347 -91.5078 359.242 -98.7927 637.862 11.3002Z" stroke="currentColor" stroke-width="3"/>
+          <svg width="809" height="695" viewBox="0 0 809 695" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute mt-[60%] md:mt-0 left-[5%] md:left-[42%] w-[90%] md:w-[60%] h-[80%] md:h-[110%] xl:h-[150%] rotate-[-0deg]">
+            <path d="M637.862 91.3002C973.1 223.765 753.674 722.111 463.915 691.176C333.039 677.203 358.384 619.535 269.807 558.208C142.414 470.005 -137.123 467.055 85.5645 142.115C105.425 113.135 174.794 49.354 206.917 30.1026C276.347 -11.5078 359.242 -18.7927 637.862 91.3002Z" stroke="currentColor" stroke-width="3"/>
           </svg>
         </div>
         <div className="container pt-8 pb-4 md:pb-12 relative z-20">
