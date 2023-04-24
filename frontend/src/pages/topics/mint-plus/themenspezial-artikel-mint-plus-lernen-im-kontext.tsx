@@ -219,10 +219,10 @@ export function DossierLernen({
               auch an entsprechenden Räumen und Mitteln.<sup>5</sup> Eine
               Möglichkeit, trotzdem authentische Einblicke zu vermitteln, ist
               die Ergänzung des Unterrichtsstoffs mit medialen Elementen.
-              Studien haben gezeigt, dass sogenannte mediale Kontextanker1
-              helfen können, das Lernen in möglichst authentische Szenarien
-              einzubetten – zum Beispiel durch Zeitungsartikel oder Videoclips,
-              die ein reales Problem abbilden, das es zu lösen gilt.
+              Studien haben gezeigt, dass sogenannte mediale Kontextanker helfen
+              können, das Lernen in möglichst authentische Szenarien einzubetten
+              – zum Beispiel durch Zeitungsartikel oder Videoclips, die ein
+              reales Problem abbilden, das es zu lösen gilt.
               <sup>4, 6, 8</sup>{" "}
             </p>
 
