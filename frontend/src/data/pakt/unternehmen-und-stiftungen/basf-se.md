@@ -1,7 +1,7 @@
 ---
 name: "BASF"
 slug: "unternehmen-und-stiftungen/basf"
-logo: "../logos/BASF_Logo.png"
+logo: "../logos/Platzhalter-kein-Logo.png"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
