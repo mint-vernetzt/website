@@ -142,10 +142,10 @@ export function Diversity({
         ),
         communityvalue: (
           <ul>
-            <li>Wir gehen mit unseren Angeboten dorthin, wo die jungen Menschen sind, insbesondere Mädchen-/Jugendtreffs 
-              und Stadtteilbibliotheken, dies bringt uns näher an die Zielgruppe.</li>
-            <li>Wir versuchen, auch andere Sprachen über die Mitarbeitenden in die Veranstaltungen zu bringen z.B. 
-              über internationale Studierende.</li>
+            <li>meerMINT geht mit den Angeboten dorthin, wo die jungen Menschen sind, insbesondere 
+              Mädchen-/Jugendtreffs und Stadtteilbibliotheken, dies bringt das Projekt näher an die Zielgruppe.</li>
+            <li>meerMINT versucht, auch andere Sprachen über die Mitarbeitenden in die Veranstaltungen 
+              zu bringen z.B. über internationale Studierende.</li>
           </ul>  
         ),
         networklink: `https://community.mint-vernetzt.de/profile/hanneballhausen`,

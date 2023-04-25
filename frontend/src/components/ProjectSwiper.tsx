@@ -115,8 +115,7 @@ export function ProjectSwiper(props: ProjectSwiperProps) {
             navigation={{
               nextEl: ".next-slide",
               prevEl: ".prev-slide",
-            }}
-            autoplay={{ delay: 5000 }}
+            }}            
             loop={true}
             pagination={{
               clickable: true,
