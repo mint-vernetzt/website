@@ -189,7 +189,7 @@ export function Diversity({
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
-            <H2 like="h3" className="all-small-caps text-center mb-8 lg:mb-12 tracking-widest font-semibold">MINT und Diversität</H2>
+            <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">MINT und Diversität</H2>
             <p className="text-3xl leading-snug text-primary font-semibold">
               Wir brauchen <span className="bg-lilac-200">mehr Diversität in der MINT-Bildung</span> – aber wie stellen wir das an? 
               Auf dieser Themenseite bündeln wir für Euch Beiträge und Veranstaltungen mit Tipps 
@@ -203,7 +203,7 @@ export function Diversity({
       {data.news.nodes.length > 0 && (
         <section className="bg-lilac-400 pt-16 pb-20 lg:pt-24 lg:pb-28">
           <div className="container">            
-            <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest text-white">Aktuelle News</H2>            
+            <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold text-white">Aktuelle News</H2>            
             <div className="">
               <NewsSwiper
                 newsSwiperItemsProps={newsItems}                  
@@ -317,7 +317,7 @@ export function Diversity({
           <div className="container">
             <div className="-mx-4 xl:flex xl:justify-center">
               <div className="xl:w-10/12 px-4">
-                <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Aktuelle Events</H2>            
+                <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">Aktuelle Events</H2>            
                 <EventCards
                     eventCardItemsProps={events}
                     onChipClick={() => {}}
@@ -372,7 +372,7 @@ export function Diversity({
           </svg>
         </div>
         <div className="container relative z-20">          
-          <H2 like="h3" className="all-small-caps text-center mb-12 tracking-widest">Tipps aus der Projektarbeit</H2> 
+          <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">Tipps aus der Projektarbeit</H2> 
           <div className="text-neutral-700">
             <ProjectSwiper items={projectslides} />
           </div>            

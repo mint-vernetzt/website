@@ -70,9 +70,9 @@ export function DiversityGlossar({
               </span>
             </a>
           </div>  
-          <div className="-mx-4 mt-8 md:-mt-[24px] mb-4 md:flex md:items-center">               
+          <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">               
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-5/12 px-4 mb-8 md:mb-0">
+            <div className="md:w-1/2 lg:w-5/12 px-4 mb-8 md:mb-0">
               <H1 like="h0" className="font-black">
                 Glossar Diversität
               </H1>
@@ -83,10 +83,10 @@ export function DiversityGlossar({
             
             {data.HeroImage?.childImageSharp?.gatsbyImageData !== undefined ? (
               <div className="hero-image md:w-1/2 px-4">
-                <div className="max-w-xs md:max-w-none mx-auto md:mx-0 relative">              
+                <div className="relative">              
                   <GatsbyImage
                     image={data.HeroImage.childImageSharp.gatsbyImageData}
-                    className="w-full  md:h-[384px] object-fit"
+                    className="w-full h-auto aspect-[16/9]"
                     alt="Didaktik: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
                   />  
                   <div className="absolute right-0 bottom-0">
