@@ -40,7 +40,7 @@ export function EventCardItem({
           </div>
           <H4 className="lg:leading-snug">{headline}</H4>
           <p className="line-clamp-3 text-neutral-700">{body}</p>
-          <ul className="flex flex-wrap md:order-4 z-10 relative">
+          <ul className="flex flex-nowrap w-full overflow-auto -my-2">
             {tags.map((tag, index) => (
               <li key={`event-taglist-${index}-${tag.slug}`}>                
                 <Chip title={tag.title} slug={tag.slug} onClick={onChipClick} />
