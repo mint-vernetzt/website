@@ -61,7 +61,7 @@ export function NewsSwiper({
               nextEl: ".next-slide",
               prevEl: ".prev-slide",
             }}
-            autoplay={{ delay: 5000 }}
+            //autoplay={{ delay: 5000 }}
             loop={true}
             pagination={{
               clickable: true,

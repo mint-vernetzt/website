@@ -32,7 +32,7 @@ export function NewsSwiperItem({
     <div
       className="rounded-lg bg-neutral-200 shadow-sm overflow-hidden h-full"
     >
-      <a href={slug} className="flex flex-col">        
+      <a href={slug} className="flex flex-col h-full">        
         {image !== undefined ? (
           <div className="news-teaser-image">
             <Image
@@ -55,7 +55,7 @@ export function NewsSwiperItem({
             >
               {formattedDate}
             </time>
-            <ul className="flex flex-nowrap w-full overflow-auto -my-2">
+            <ul className="flex flex-wrap -my-2">
               {tags.map((tag, index) => {
                 return (
                   <li key={`tag-${index}`}>
