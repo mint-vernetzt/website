@@ -150,10 +150,10 @@ export function DiversityGlossar({
                         <li className="glossary relative overflow-hidden mb-8">
                           <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                             <span>{entry.frontmatter?.title}</span>
-                            <span className="glossary-btton-icon">                              
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="w-6 h-6">
-                                <path d="M13.3 10a.626.626 0 0 0-.23-.49S7.93 4.9 7.93 4.9c-.07-.06-.15-.11-.24-.14s-.18-.05-.27-.05-.18.02-.27.05-.17.08-.24.14c-.07.06-.13.14-.16.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22L11.5 10l-4.59 4.12c-.07.06-.13.14-.17.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22.07.06.15.11.23.14.09.03.18.05.27.05s.18-.02.27-.05c.09-.03.17-.08.23-.14s5.14-4.61 5.14-4.61c.07-.06.13-.14.17-.22a.66.66 0 0 0 .06-.27Z" fill="currentColor"/>
-                              </svg>
+                            <span className="glossary-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">                              
+                              <svg xmlns="http://www.w3.org/2000/svg" className="w-2 h-3" viewBox="0 0 8 12">
+                                <path fill="currentColor" fill-rule="evenodd" d="M7.3 6a.626.626 0 0 0-.23-.49L1.93.9a.722.722 0 0 0-.24-.14.857.857 0 0 0-.27-.05c-.09 0-.18.02-.27.05C1.06.79.98.84.91.9c-.07.06-.13.14-.16.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22L5.5 6 .91 10.12c-.07.06-.13.14-.17.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22.07.06.15.11.23.14.09.03.18.05.27.05.09 0 .18-.02.27-.05.09-.03.17-.08.23-.14l5.14-4.61c.07-.06.13-.14.17-.22A.66.66 0 0 0 7.27 6h.03Z"/>
+                              </svg>                              
                             </span>
                           </button>
                           <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
