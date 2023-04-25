@@ -42,11 +42,8 @@ export function Diversity({
       date: new Date(event?.eventInformations?.startDate ?? ''),
       url: `/event/${event.slug}/`,
       slug: event.slug,
-      image: (        
-        /* 
-        <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData ?? data?.StudyImage?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
-        */
-        <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
+      image: (                
+        <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData ?? data?.StudyImage?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt={event?.title} />      
       ),
       tags: event?.tags?.nodes?.map(tag => ({title: tag?.name, slug: tag?.slug}))
       
