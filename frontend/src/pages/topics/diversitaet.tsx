@@ -79,11 +79,11 @@ export function Diversity({
         ),
         communityvalue: (
           <ul>
-            <li>Kooperationen mit Ganztagsschulen: Schul-AGs, Projekte außerhalb der Schule, aber mit Anmeldung für Gruppen</li>
-            <li>Kooperationen mit Jugendtreffs</li>
-            <li>Leichte Sprache in der Kommunikation der Angebote</li>
-            <li>Angebote und Inhalte, die an die Zielgruppen angepasst sind (selbst machbar, kreativ, alltagsbezogen)</li>
-            <li>Dauerhafte Präsenz, Zuverlässigkeit, Offenheit, Beziehungsarbeit </li>
+            <li>Kooperationen mit Ganztagsschulen: Schul-AGs, Projekte außerhalb der Schule, aber mit Anmeldung für Gruppen.</li>
+            <li>Kooperationen mit Jugendtreffs.</li>
+            <li>Leichte Sprache in der Kommunikation der Angebote.</li>
+            <li>Angebote und Inhalte, die an die Zielgruppen angepasst sind (selbst machbar, kreativ, alltagsbezogen).</li>
+            <li>Dauerhafte Präsenz, Zuverlässigkeit, Offenheit, Beziehungsarbeit.</li>
           </ul>  
         ),
         networklink: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
@@ -101,9 +101,9 @@ export function Diversity({
         ),            
         projectproblems: (
           <ul>
-            <li>Barrierefreie Lernorte und Lernmaterialien</li>
-            <li>Das negative Klischeebild der MINT-Fächer</li>
-            <li>Diverse Vorbilder finden und integrieren </li>
+            <li>Barrierefreie Lernorte und Lernmaterialien.</li>
+            <li>Das negative Klischeebild der MINT-Fächer.</li>
+            <li>Diverse Vorbilder finden und integrieren.</li>
           </ul>  
         ),
         communityvalue: (
@@ -111,8 +111,8 @@ export function Diversity({
             <li>Überarbeitung von niedrigschwelligen Experimenten im Projekt „Inklusiver Forschernachmittag". 
               Dabei wurde darauf geachtet, dass Anleitungen in einfacher Sprache bebildert sind und 
               Materialien für motorische Einschränkungen sowie barrierefreie Räumlichkeiten bereitgestellt 
-              sind</li>
-            <li>Zusammenarbeit mit Studierenden der Heilpädagogik</li>
+              sind.</li>
+            <li>Zusammenarbeit mit Studierenden der Heilpädagogik.</li>
             <li>Enge Zusammenarbeit mit dem Inklusionsnetzwerk Nordhausen und der offenen Jugendarbeit. 
               Tipp: Netzwerke und Partner:innen suchen, die unterstützen können und an Kooperationen 
               interessiert sind. </li>
@@ -134,17 +134,18 @@ export function Diversity({
         ),            
         projectproblems: (
           <ul>
-            <li>Erreichbarkeit einer diversen Zielgruppe geht nur langsam voran, bildungsnahe Familien kommen am ehesten</li>
-            <li>Räume sind nicht barrierefrei und schwierig umzubauen</li>
-            <li>Sprachliche Barrieren bleiben, auch wenn wir schon einige Mitarbeitende mit verschiedenen Sprachkenntnissen vor Ort haben</li>
+            <li>Erreichbarkeit einer diversen Zielgruppe geht nur langsam voran, bildungsnahe Familien kommen am ehesten.</li>
+            <li>Räume sind nicht barrierefrei und schwierig umzubauen.</li>
+            <li>Sprachliche Barrieren bleiben, auch wenn bereits einige Mitarbeitende mit verschiedenen 
+              Sprachkenntnissen vor Ort arbeiten.</li>
           </ul>  
         ),
         communityvalue: (
           <ul>
             <li>Wir gehen mit unseren Angeboten dorthin, wo die jungen Menschen sind, insbesondere Mädchen-/Jugendtreffs 
-              und Stadtteilbibliotheken, dies bringt uns näher an die Zielgruppe</li>
+              und Stadtteilbibliotheken, dies bringt uns näher an die Zielgruppe.</li>
             <li>Wir versuchen, auch andere Sprachen über die Mitarbeitenden in die Veranstaltungen zu bringen z.B. 
-              über internationale Studierende</li>
+              über internationale Studierende.</li>
           </ul>  
         ),
         networklink: `https://community.mint-vernetzt.de/profile/hanneballhausen`,

@@ -52,7 +52,7 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
             ) : null}
             {projectproblems !== null ? (
               <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug font-bold">Hürden für Diversität in der MINT-Praxis::</H5>
+                <H5 className="text-lg mb-2 leading-snug font-bold">Hürden für Diversität in der MINT-Praxis:</H5>
                 {projectproblems}
               </div>
             ) : null}
