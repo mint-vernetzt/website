@@ -442,7 +442,11 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 480)
       }
     }        
-    news: allWpNewsItem(limit: 9, filter: {tags: {nodes: {elemMatch: {slug: {eq: "diversitaet"}}}}}) {
+    news: allWpNewsItem(
+      limit: 9, 
+      filter: {tags: {nodes: {elemMatch: {slug: {eq: "diversitaet"}}}}}
+      sort: { fields: date, order: DESC }
+    ) {
       nodes {
         title
         slug
