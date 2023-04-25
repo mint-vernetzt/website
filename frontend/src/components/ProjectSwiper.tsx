@@ -45,20 +45,20 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
               {title}
             </H2>
             {projectinfo !== null ? (
-              <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug font-bold">Zum Projekt:</H5>
+              <div className="lg:text-lg border-b border-neutral-400 pb-6 mb-6">
+                <H5 className="lg:text-lg mb-2 leading-snug font-bold">Zum Projekt:</H5>
                 {projectinfo}
               </div>
             ) : null}
             {projectproblems !== null ? (
-              <div className="text-lg border-b border-neutral-400 pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug font-bold">Hürden für Diversität in der MINT-Praxis:</H5>
+              <div className="lg:text-lg border-b border-neutral-400 pb-6 mb-6">
+                <H5 className="lg:text-lg mb-2 leading-snug font-bold">Hürden für Diversität in der MINT-Praxis:</H5>
                 {projectproblems}
               </div>
             ) : null}
             {communityvalue !== null ? (
-              <div className="text-lg pb-6 mb-6">
-                <H5 className="text-lg mb-2 leading-snug font-bold">Mehrwert für die Community:</H5>
+              <div className="lg:text-lg pb-6 mb-6">
+                <H5 className="lg:text-lg mb-2 leading-snug font-bold">Mehrwert für die Community:</H5>
                 {communityvalue}
               </div>
             ) : null}

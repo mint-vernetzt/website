@@ -44,7 +44,7 @@ export function NewsSwiperItem({
         ) : null}        
         <div className="p-8 pb-4">
           <H3 className="lg:leading-snug mb-4 font-bold">{headline}</H3>
-          <div className="line-clamp-3 mb-8 text-lg">
+          <div className="line-clamp-3 mb-8 lg:text-lg">
             {body}
           </div>
           <div className="border-t border-neutral-400 pt-4">

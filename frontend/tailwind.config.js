@@ -53,6 +53,7 @@ module.exports = {
     },
     lineHeight: {
       ...defaultTheme.lineHeight,
+      "1": "1.1",
       snug: "1.333333",
       "5": "1.375rem",
     },

@@ -39,7 +39,7 @@ export function EventCardItem({
             <time className="ml-2">{formattedDate}</time>
           </div>
           <H3 className="lg:leading-snug mb-4 font-bold">{headline}</H3>
-          <div className="line-clamp-3 mb-8 text-lg">{body}</div>
+          <div className="line-clamp-3 mb-8 lg:text-lg">{body}</div>
           <div className="border-t border-neutral-400 pt-4">
             <ul className="flex flex-wrap -my-2">
               {tags.map((tag, index) => (

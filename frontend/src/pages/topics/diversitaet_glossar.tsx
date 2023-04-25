@@ -72,7 +72,7 @@ export function DiversityGlossar({
           </div>  
           <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">               
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-1/2 lg:w-5/12 px-4 mb-8 md:mb-0">
+            <div className="md:w-1/2 lg:w-5/12 px-4 py-12 mb-8 md:mb-0">
               <H1 like="h0" className="font-black">
                 Glossar Diversität
               </H1>

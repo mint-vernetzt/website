@@ -43,7 +43,10 @@ export function Diversity({
       url: `/event/${event.slug}/`,
       slug: event.slug,
       image: (        
+        /* 
         <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData ?? data?.StudyImage?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
+        */
+        <GatsbyImage image={event?.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData} className="w-full h-auto aspect-[16/9]" alt="" />
       ),
       tags: event?.tags?.nodes?.map(tag => ({title: tag?.name, slug: tag?.slug}))
       
@@ -223,7 +226,7 @@ export function Diversity({
           <div className="md:flex md:items-center md:justify-center -mx-4">
             <div className="md:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Chance Diversität</H2>
-              <p className="text-xl leading-snug text-neutral-700">
+              <p className="lg:text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit" spricht Janina Kugel darüber, was Diversität 
                 im eigenen Erleben bedeutet. Und warum wir vielfältige Perspektiven benötigen, um Wohlstand und 
                 Innovation in Deutschland zu erhalten.
@@ -351,7 +354,7 @@ export function Diversity({
             <div className="lg:w-1/12 px-4"> </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
               <H2 className="mb-6 font-bold">Studie: Mehr Diversität in der MINT-Bildung</H2>
-              <p className="text-xl leading-snug text-neutral-700">
+              <p className="md:text-xl leading-snug text-neutral-700">
                 Diese Studie untersucht, welchen Einfluss die Dimension „Soziale Herkunft“ auf die MINT-Bildung von Kindern und 
                 Jugendlichen hat. Sie liefert gleichzeitig konkrete Empfehlungen für die Praxis, um mehr Chancengleichheit 
                 zu schaffen.  
