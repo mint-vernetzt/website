@@ -23,7 +23,6 @@ export const getGlossaryItemsByAlphaCategories = (
   alphaCategories: { from: string; to: string }[],
   entries: GatsbyTypes.GlossarPageQuery["glossaryData"]["nodes"]
 ): GlossaryItemsByAlphaCategory => {
-  let lookup: { [key: string]: string[] };
   let result: GlossaryItemsByAlphaCategory = [];
   alphaCategories.forEach((alphaCategory) => {
     const from = alphaCategory.from.toUpperCase();
@@ -31,8 +30,9 @@ export const getGlossaryItemsByAlphaCategories = (
     const category = `${from}-${to}`;
     const filteredEntries = entries.filter((i) => {
       const entryAlpha = i.frontmatter?.title
-        ? i.frontmatter.title[0].toUpperCase()
+        ? i.frontmatter.title.replace(/[\W_]+/g, "").toUpperCase()
         : "";
+
       return entryAlpha >= from && entryAlpha <= to;
     });
 
