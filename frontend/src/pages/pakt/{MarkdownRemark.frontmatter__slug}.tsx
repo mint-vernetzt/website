@@ -9,6 +9,11 @@ import { H1 } from "../../components/Heading/Heading";
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
+  if (frontmatter.slug === null) {
+    return null;
+  }
+
   const hasCite =
     frontmatter.citeAuthor &&
     frontmatter.citeAuthorFunction &&

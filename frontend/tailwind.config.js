@@ -53,6 +53,7 @@ module.exports = {
     },
     lineHeight: {
       ...defaultTheme.lineHeight,
+      "1": "1.1",
       snug: "1.333333",
       "5": "1.375rem",
     },
@@ -91,7 +92,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1.5rem",
+        DEFAULT: '1rem',        
       },
     },
     screens: {
@@ -101,9 +102,13 @@ module.exports = {
     boxShadow: {
       ...defaultTheme.boxShadow,
       DEFAULT: "0 2px 16px 0 rgba(0, 0, 0, 0.17)",
+      sm: "0px 8px 16px rgba(0, 0, 0, 0.1)",
       md: "0 2px 16px 0 rgba(0, 0, 0, 0.37)",
-      lg: "0 7px 38px -4px rgba(0, 0, 0, 0.2)",
+      lg: "0 7px 38px -4px rgba(0, 0, 0, 0.2)",      
     },
+    dropShadow: {
+      sm: "0px 8px 16px rgba(0, 0, 0, 0.1)",      
+    }
   },
   variants: {
     extend: {

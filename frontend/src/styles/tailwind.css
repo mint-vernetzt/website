@@ -8,6 +8,8 @@
   @import "@fontsource/source-sans-pro/400-italic.css";
   @import "@fontsource/source-sans-pro/600.css";
   @import "@fontsource/source-sans-pro/600-italic.css";
+  @import "@fontsource/source-sans-pro/700.css";
+  @import "@fontsource/source-sans-pro/900.css";
 
   html, body { 
     scroll-behavior: smooth;
@@ -29,7 +31,7 @@
   }
   h2,
   .h2 {
-    @apply text-4xl lg:text-6xl lg:mb-4;
+    @apply text-5xl lg:text-6xl lg:mb-4 leading-1;
   }
   h3,
   .h3 {
@@ -55,10 +57,10 @@
   }
 
   p {
-    @apply leading-6 mb-6;
+    @apply leading-normal mb-6;
   }
   ul {
-    @apply leading-6 mb-6;
+    @apply leading-normal mb-6;
   }
 }
 
@@ -133,7 +135,8 @@ section.container header:not(.text-left) p.lead {
 .event-description > ul,
 .wp-block-create-block-schedule-item div ul,
 .blog-post-content ul,
-.content ul {
+.content ul,
+.project-item-text ul {
   @apply list-disc list-outside leading-6 mb-6 pl-5;
 }
 
@@ -358,8 +361,6 @@ ol {
   outline: none;
 }
 
-
-
 .form-control .textarea:not(:placeholder-shown),
 .form-control .input:not(:placeholder-shown) {
     @apply bg-white;
@@ -427,21 +428,31 @@ ol {
     left: auto;
   }
 }
-
-
-
+.project-swiper,
 .mood-carousel {
   @apply overflow-visible !important;
+}  
+.card-swiper,
+.project-swiper,
+.mood-carousel {
   --swiper-pagination-bullet-height: 1rem;
   --swiper-pagination-bullet-width: 1rem;
   --swiper-pagination-color: #454C5C;
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-bullet-inactive-opacity: 1;
 }  
+.card-swiper,
+.project-swiper {
+  --swiper-pagination-color: #154194;
+}  
+.card-swiper .swiper-wrapper,
+.project-swiper .swiper-wrapper,
 .mood-carousel .swiper-wrapper {
   @apply items-stretch;
 }  
 
+.card-swiper .swiper-slide,
+.project-swiper .swiper-slide,
 .mood-carousel .swiper-slide {
   height: auto !important;
 }  
@@ -449,4 +460,46 @@ ol {
 .mood-carousel .swiper-pagination {
   bottom: auto !important;
   top: calc(100% + 10px);
+}
+
+.project-swiper .swiper-pagination {
+  bottom: auto !important;
+  top: calc(100% + 48px);
+}
+
+@screen lg {
+  .project-swiper .swiper-pagination {
+    top: calc(100% + 32px);
+  }  
+}
+
+.card-swiper {
+  padding-bottom: 4rem !important;  
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.card-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.all-small-caps {
+  font-variant-caps: all-small-caps;
+}
+
+.glossary button.active > .glossary-button-icon {
+  transform: rotate(90deg);
+}
+
+.glossary button.active {
+  @apply text-white bg-primary rounded-b-none;
+}
+
+.glossary button.active + .glossary-content {
+  max-height: none;
+  @apply py-4 md:py-8;
+}
+
+.glossary-content-body {
+  
 }

@@ -249,6 +249,7 @@ export default MintPakt;
 export const pageQuery = graphql`
   query MintPaktPage {
     paktData: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/pakt/"}}
       sort: { fields: [frontmatter___category, frontmatter___slug], order: ASC }
     ) {
       edges {

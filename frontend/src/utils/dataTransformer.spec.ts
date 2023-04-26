@@ -11,7 +11,57 @@ import {
   getUserCardsProps,
   getParentEventItems,
   createDateTimeFrom,
+  getGlossaryItemsByAlphaCategories,
+  GlossaryItemsByAlphaCategory,
 } from "./dataTransformer";
+
+describe("diversity glossary", () => {
+  const glossaryData: GatsbyTypes.GlossarPageQuery["glossaryData"]["nodes"] = [
+    {
+      frontmatter: {
+        title: "A",
+        links: [],
+      },
+      html: "",
+    },
+    {
+      frontmatter: {
+        title: "B",
+        links: [],
+      },
+      html: "",
+    },
+    {
+      frontmatter: {
+        title: "Z",
+        links: [],
+      },
+      html: "",
+    },
+  ];
+
+  const glossaryByAlphaCategories = getGlossaryItemsByAlphaCategories(
+    [
+      { from: "A", to: "F" },
+      { from: "G", to: "Z" },
+    ],
+    glossaryData
+  );
+
+  const expected: GlossaryItemsByAlphaCategory = [
+    {
+      category: "A-F",
+      entries: [glossaryData[0], glossaryData[1]],
+    },
+    {
+      category: "G-Z",
+      entries: [glossaryData[2]],
+    },
+  ];
+  test("correct grouping", () => {
+    expect(glossaryByAlphaCategories).toStrictEqual(expected);
+  });
+});
 
 describe("getPaktDataByCategory", () => {
   const edges: GatsbyTypes.AboutPageQuery["paktData"]["edges"] = [

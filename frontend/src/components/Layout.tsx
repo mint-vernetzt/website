@@ -17,11 +17,11 @@ function Layout(props: LayoutProps) {
         Überblick über alle Sessions und wie Ihr teilnehmen könnt.
       </Banner>
       ) : null} */}
-      <header>
+      <header className="z-20 relative">
         <Header />
       </header>
 
-      <main className="flex-1 pb-20">{props.children}</main>
+      <main className="flex-1 pb-20 z-10 relative">{props.children}</main>
 
       <footer>
         <Footer />
