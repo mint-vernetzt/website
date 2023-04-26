@@ -178,9 +178,11 @@ export function DiversityGlossar({
                           <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                             <div className="glossary-content-body md:text-lg">
                               <div
-                                dangerouslySetInnerHTML={{ __html: entry.html }}
+                                dangerouslySetInnerHTML={{
+                                  __html: entry.html ?? "",
+                                }}
                               />
-                              {entry.frontmatter?.links?.length > 0 && (
+                              {(entry.frontmatter?.links ?? "").length > 0 && (
                                 <div className="mt-8">
                                   <p className="mb-4 font-bold">
                                     Zum Weiterlesen:
