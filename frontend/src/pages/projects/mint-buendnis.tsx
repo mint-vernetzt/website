@@ -97,26 +97,6 @@ export function MintPakt({ data }) {
                     <Icon type={IconType.Download} width="32" height="32" />
                   </div>
                 </a>
-                <a
-                  href="https://cms.mint-vernetzt.de/app/uploads/2023/02/empowerMINT_Kommunikationskit.pdf"
-                  target="_blank"
-                  className="flex item-center bg-beige-300 border border-neutral-400 rounded-lg"
-                >
-                  <span className="icon w-8 h-8 mb-2 m-4 mr-0">
-                    <Icon type={IconType.FilePDF} width="32" height="32" />
-                  </span>
-                  <div className="my-3 mx-4">
-                    <span className="block text-xs text-neutral-600 uppercase">
-                      PDF 0,2 MB
-                    </span>
-                    <div>
-                      <p>#empowerMINT Kommunikationskit</p>
-                    </div>
-                  </div>
-                  <div className="icon w-8 h-8 mb-2 m-4 ml-auto">
-                    <Icon type={IconType.Download} width="32" height="32" />
-                  </div>
-                </a>
               </li>
             </ul>
           </div>
@@ -147,34 +127,71 @@ export function MintPakt({ data }) {
               MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.
             </p>
             <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
-              #empowerMINT-Kampagne 2023
+              Angebote für Mitglieder
             </p>
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Zusammen mit den Mitgliedern des Bündnisses möchten wir auf das
-              Engagement für Frauen in MINT-Berufen aufmerksam machen - und das
-              in einer möglichst breiten Öffentlichkeit. Denn noch immer
-              entscheiden sich zu wenige Frauen für eine MINT-Ausbildung oder
-              ein -Studium. Das wollen wir ändern! Zum Weltfrauentag am 8. März
-              2023 starten wir daher eine zweiwöchige Social-Media-Offensive
-              unter dem gemeinsamen Hashtag #empowerMINT. Wir wollen zeigen,
-              welche Unternehmen und Organisationen bereits aktiv sind, was sie
-              antreibt und wie sie sich konkret engagieren. Wir freuen uns,
-              gemeinsam laut zu werden!
+              Exklusiv für Bündnis-Mitglieder und Interessierte bieten wir
+              regelmäßig Veranstaltungen und Vernetzungsmöglichkeiten rund um
+              das Thema Mädchen und Frauen in MINT an.
+            </p>
+
+            <p className="lg:text-xl text-neutral-600 mb-4">
+              Aktuell veranstalten wir eine vierteilige Workshopreihe „Von der
+              Vision zur Wirklichkeit – Klischeefrei MINT-Talente von morgen
+              gewinnen“ gemeinsam mit der Initiative Klischeefrei. Bei den
+              bisherigen Workshops stand das Thema „Sensibilisierung und
+              Haltung“ im Vordergrund. Am 24. Mai erarbeiten wir zum Thema
+              „Generationen, Familie, Vereinbarkeitskulturen“ gemeinsam konkrete
+              Maßnahmen, damit die Vision einer klischeefreien Arbeitswelt in
+              der Praxis lebendig wird. Am 21. Juni schließen wir die Reihe mit
+              zahlreichen Best-Practice-Beispielen aus unseren Netzwerken. Für
+              die Anmeldung für verbleibende Termine wenden Sie sich gerne an{" "}
+              <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
+                className="text-lilac-500 hover:underline"
+              >
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
+              </a>
+              .
             </p>
             <p className="lg:text-xl text-neutral-600 mb-16">
-              Um die Aufmerksamkeit und Sichtbarkeit zu erhöhen, haben wir
-              passend zum Hashtag #empowerMINT eine gemeinsame Bildsprache
-              entwickelt. Dafür haben wir ein Kommunikations-Kit erstellt, das
-              wir Ihnen gerne zusenden. Ein Infosheet zur #empowerMINT-Kampagne
-              finden Sie zudem an der Seite zum Download bereit. Bei Fragen
-              melden Sie sich bei{" "}
+              In unserem Newsletter informieren wir Sie zudem zu aktuellen
+              Aktionen und Veranstaltungen rund um das Bündnis für Frauen in
+              MINT-Berufen. Die Anmeldung ist über{" "}
               <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
                 className="text-lilac-500 hover:underline"
-                href="mailto:nele.gerkens@mint-vernetzt.de"
               >
-                Dr. Nele Gerkens
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
               </a>{" "}
-              – wir unterstützen Sie gerne auch bei der Umsetzung.
+              möglich.
+            </p>
+
+            <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
+              Interesse an Mitgliedschaft
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnis
+              und möchten sich als Mitglied engagieren? Dann schicken Sie bitte
+              eine{" "}
+              <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
+                className="text-lilac-500 hover:underline"
+              >
+                E-Mail an{" "}
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
+              </a>
+              . Wir melden uns persönlich bei Ihnen zurück. Bitte lesen Sie
+              vorher das Leitbild und melden Sie sich gerne bei Fragen bei uns.
+              Die Mitgliedschaft ist kostenfrei. Ihr Beitritt zum Bündnis für
+              Frauen in MINT-Berufen wird erst mit der schriftlichen Bestätigung
+              durch MINTvernetzt wirksam.
             </p>
 
             <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
@@ -216,27 +233,6 @@ export function MintPakt({ data }) {
                 );
               })}
             </ul>
-            <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
-              Interesse an Mitgliedschaft
-            </p>
-            <p className="lg:text-xl text-neutral-600 mb-16">
-              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnis
-              und möchten sich als Mitglied engagieren? Dann schicken Sie bitte
-              eine{" "}
-              <a
-                href={`mailto:${data.wpContact.contactInformations.email}`}
-                className="text-lilac-500 hover:underline"
-              >
-                E-Mail
-              </a>{" "}
-              an{" "}
-              {`${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`}
-              . Wir melden uns persönlich bei Ihnen zurück. Bitte lesen Sie
-              vorher das Leitbild und melden Sie sich gerne bei Fragen bei uns.
-              Die Mitgliedschaft ist kostenfrei. Ihr Beitritt zum Bündnis für
-              Frauen in MINT-Berufen wird erst mit der schriftlichen Bestätigung
-              durch MINTvernetzt wirksam.
-            </p>
           </div>
         </div>
       </section>
@@ -249,7 +245,7 @@ export default MintPakt;
 export const pageQuery = graphql`
   query MintPaktPage {
     paktData: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/pakt/"}}
+      filter: { fileAbsolutePath: { regex: "/pakt/" } }
       sort: { fields: [frontmatter___category, frontmatter___slug], order: ASC }
     ) {
       edges {
