@@ -136,16 +136,23 @@ export function MintPakt({ data }) {
             </p>
 
             <p className="lg:text-xl text-neutral-600 mb-4">
-              Aktuell veranstalten wir eine vierteilige Workshopreihe „Von der
-              Vision zur Wirklichkeit – Klischeefrei MINT-Talente von morgen
-              gewinnen“ gemeinsam mit der Initiative Klischeefrei. Bei den
-              bisherigen Workshops stand das Thema „Sensibilisierung und
-              Haltung“ im Vordergrund. Am 24. Mai erarbeiten wir zum Thema
-              „Generationen, Familie, Vereinbarkeitskulturen“ gemeinsam konkrete
-              Maßnahmen, damit die Vision einer klischeefreien Arbeitswelt in
-              der Praxis lebendig wird. Am 21. Juni schließen wir die Reihe mit
-              zahlreichen Best-Practice-Beispielen aus unseren Netzwerken. Für
-              die Anmeldung für verbleibende Termine wenden Sie sich gerne an{" "}
+              Aktuell veranstalten wir eine vierteilige{" "}
+              <a
+                // https://mint-vernetzt.de
+                href="/event/workshop-reihe-von-der-vision-zur-wirklichkeit-klischeefrei-mint-talente-von-morgen-gewinnen"
+                className="text-lilac-500 hover:underline"
+              >
+                Workshopreihe „Von der Vision zur Wirklichkeit – Klischeefrei
+                MINT-Talente von morgen gewinnen“
+              </a>{" "}
+              gemeinsam mit der Initiative Klischeefrei. Bei den bisherigen
+              Workshops stand das Thema „Sensibilisierung und Haltung“ im
+              Vordergrund. Am 24. Mai erarbeiten wir zum Thema „Generationen,
+              Familie, Vereinbarkeitskulturen“ gemeinsam konkrete Maßnahmen,
+              damit die Vision einer klischeefreien Arbeitswelt in der Praxis
+              lebendig wird. Am 21. Juni schließen wir die Reihe mit zahlreichen
+              Best-Practice-Beispielen aus unseren Netzwerken. Für die Anmeldung
+              für verbleibende Termine wenden Sie sich gerne an{" "}
               <a
                 href={`mailto:${data.wpContact.contactInformations.email}`}
                 className="text-lilac-500 hover:underline"
@@ -175,7 +182,7 @@ export function MintPakt({ data }) {
               Interesse an Mitgliedschaft
             </p>
             <p className="lg:text-xl text-neutral-600 mb-16">
-              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnis
+              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnisses
               und möchten sich als Mitglied engagieren? Dann schicken Sie bitte
               eine{" "}
               <a
