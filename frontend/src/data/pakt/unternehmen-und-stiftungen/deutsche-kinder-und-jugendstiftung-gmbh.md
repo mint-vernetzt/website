@@ -1,7 +1,7 @@
 ---
 name: "Deutsche Kinder- und Jugendstiftung GmbH mit dem Programm Wir stärken Mädchen"
 slug: "unternehmen-und-stiftungen/deutsche-kinder-und-jugendstiftung-gmbh"
-logo: "../logos/Deutsche-Kinder-Jugendstiftung-Logo.jpg"
+logo: "../logos/Deutsche-Kinder-Jugendstiftung-Logo.png"
 category: "Unternehmen und Stiftungen"
 citeAuthor: ""
 citeAuthorFunction: ""
