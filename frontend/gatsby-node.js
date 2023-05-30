@@ -608,12 +608,6 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/kooperationen/mint-zukunft-schaffen/",
-    toPath: "/projects/mint-buendnis/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  });
-  createRedirect({
     fromPath: "/pakt/forschungsorganisationen-und-forschungsverbuende/deutsche-physikalische-gesellschaft-e-v-dpg/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
@@ -632,12 +626,6 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/medien/emotion-das-frauenmagazin/",
-    toPath: "/projects/mint-buendnis/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  });
-  createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/adidas-ag/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
@@ -645,12 +633,6 @@ exports.createPages = async (props) => {
   });
   createRedirect({
     fromPath: "/pakt/unternehmen-und-stiftungen/ask-a-woman-com-ug/",
-    toPath: "/projects/mint-buendnis/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  });
-  createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/audi-ag/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -746,8 +728,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/ha-wtech-hochschul-allianz-fuer-angewandte-wissenschaften/",
-    toPath: "/projects/mint-buendnis/",
+    fromPath: "/pakt/unternehmen-und-stiftungen/stiftung-haus-der-kleinen-forscher/",
+    toPath: "/pakt/unternehmen-und-stiftungen/stiftung-kinder-forschen/",
     redirectInBrowser: true,
     isPermanent: true,
   });
