@@ -1,5 +1,135 @@
 [
   {
+    "key": "group_64770bba4ea47",
+    "title": "Partner Informations",
+    "fields": [
+      {
+        "key": "field_64770cb4b6f8e",
+        "label": "Cite Author",
+        "name": "citeAuthor",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "aria-label": "",
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_64770cd0b6f8f",
+        "label": "Cite Quote",
+        "name": "citeQuote",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "aria-label": "",
+        "default_value": "",
+        "maxlength": "",
+        "rows": "",
+        "placeholder": "",
+        "new_lines": ""
+      },
+      {
+        "key": "field_64770cdbb6f90",
+        "label": "Cite Author Function",
+        "name": "citeAuthorFunction",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "aria-label": "",
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_64771104859b5",
+        "label": "Bundesland",
+        "name": "state",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "aria-label": "",
+        "taxonomy": "state",
+        "add_term": 1,
+        "save_terms": 0,
+        "load_terms": 0,
+        "return_format": "id",
+        "field_type": "select",
+        "allow_null": 1,
+        "multiple": 0
+      },
+      {
+        "key": "field_64771f4903ce1",
+        "label": "Institutionsform",
+        "name": "institutionType",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "aria-label": "",
+        "taxonomy": "institution_type",
+        "add_term": 0,
+        "save_terms": 0,
+        "load_terms": 0,
+        "return_format": "id",
+        "field_type": "select",
+        "allow_null": 1,
+        "multiple": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "partner"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1
+  },
+  {
     "key": "group_633c494e03a47",
     "title": "Menu Informations",
     "fields": [

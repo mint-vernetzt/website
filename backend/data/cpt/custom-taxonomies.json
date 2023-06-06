@@ -44,7 +44,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["news"],
+    "object_types": [
+      "news"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "NewsCategory",
     "graphql_plural_name": "NewsCategories"
@@ -94,7 +96,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["events"],
+    "object_types": [
+      "events"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "EventCategory",
     "graphql_plural_name": "EventCategories"
@@ -144,7 +148,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["contact"],
+    "object_types": [
+      "contact"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "ContactCategory",
     "graphql_plural_name": "ContactCategories"
@@ -194,7 +200,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["organizations"],
+    "object_types": [
+      "organizations"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "OrganizationCategory",
     "graphql_plural_name": "OrganizationCategories"
@@ -245,7 +253,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["link_tree_items"],
+    "object_types": [
+      "link_tree_items"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "LinkTreeItemCategory",
     "graphql_plural_name": "LinkTreeItemCategories"
@@ -296,7 +306,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["projects"],
+    "object_types": [
+      "projects"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "Discipline",
     "graphql_plural_name": "Disciplines"
@@ -347,7 +359,10 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["events", "projects"],
+    "object_types": [
+      "events",
+      "projects"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "TargetGroup",
     "graphql_plural_name": "TargetGroups"
@@ -398,7 +413,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["events"],
+    "object_types": [
+      "events"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "EventType",
     "graphql_plural_name": "EventTypes"
@@ -449,7 +466,9 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["events"],
+    "object_types": [
+      "events"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "ExperienceLevel",
     "graphql_plural_name": "ExperienceLevels"
@@ -500,9 +519,125 @@
     },
     "meta_box_cb": "",
     "default_term": "",
-    "object_types": ["projects"],
+    "object_types": [
+      "projects"
+    ],
     "show_in_graphql": "1",
     "graphql_single_name": "Call",
     "graphql_plural_name": "Calls"
+  },
+  "state": {
+    "name": "state",
+    "label": "Bundesl\u00e4nder",
+    "singular_label": "Bundesland",
+    "description": "",
+    "public": "true",
+    "publicly_queryable": "true",
+    "hierarchical": "false",
+    "show_ui": "true",
+    "show_in_menu": "true",
+    "show_in_nav_menus": "true",
+    "query_var": "true",
+    "query_var_slug": "",
+    "rewrite": "true",
+    "rewrite_slug": "",
+    "rewrite_withfront": "1",
+    "rewrite_hierarchical": "0",
+    "show_admin_column": "false",
+    "show_in_rest": "true",
+    "show_tagcloud": "false",
+    "sort": "false",
+    "show_in_quick_edit": "",
+    "rest_base": "",
+    "rest_controller_class": "",
+    "rest_namespace": "",
+    "labels": {
+      "menu_name": "",
+      "all_items": "",
+      "edit_item": "",
+      "view_item": "",
+      "update_item": "",
+      "add_new_item": "",
+      "new_item_name": "",
+      "parent_item": "",
+      "parent_item_colon": "",
+      "search_items": "",
+      "popular_items": "",
+      "separate_items_with_commas": "",
+      "add_or_remove_items": "",
+      "choose_from_most_used": "",
+      "not_found": "",
+      "no_terms": "",
+      "items_list_navigation": "",
+      "items_list": "",
+      "back_to_items": "",
+      "name_field_description": "",
+      "parent_field_description": "",
+      "slug_field_description": "",
+      "desc_field_description": ""
+    },
+    "meta_box_cb": "",
+    "default_term": "",
+    "object_types": [
+      "partner"
+    ]
+  },
+  "institution_type": {
+    "name": "institution_type",
+    "label": "Institutionsformen",
+    "singular_label": "Institutionsform",
+    "description": "",
+    "public": "true",
+    "publicly_queryable": "true",
+    "hierarchical": "false",
+    "show_ui": "true",
+    "show_in_menu": "true",
+    "show_in_nav_menus": "true",
+    "query_var": "true",
+    "query_var_slug": "",
+    "rewrite": "true",
+    "rewrite_slug": "",
+    "rewrite_withfront": "1",
+    "rewrite_hierarchical": "0",
+    "show_admin_column": "false",
+    "show_in_rest": "true",
+    "show_tagcloud": "false",
+    "sort": "false",
+    "show_in_quick_edit": "",
+    "rest_base": "",
+    "rest_controller_class": "",
+    "rest_namespace": "",
+    "labels": {
+      "menu_name": "",
+      "all_items": "",
+      "edit_item": "",
+      "view_item": "",
+      "update_item": "",
+      "add_new_item": "",
+      "new_item_name": "",
+      "parent_item": "",
+      "parent_item_colon": "",
+      "search_items": "",
+      "popular_items": "",
+      "separate_items_with_commas": "",
+      "add_or_remove_items": "",
+      "choose_from_most_used": "",
+      "not_found": "",
+      "no_terms": "",
+      "items_list_navigation": "",
+      "items_list": "",
+      "back_to_items": "",
+      "name_field_description": "",
+      "parent_field_description": "",
+      "slug_field_description": "",
+      "desc_field_description": ""
+    },
+    "meta_box_cb": "",
+    "default_term": "",
+    "object_types": [
+      "partner"
+    ]
   }
 }
+
+
