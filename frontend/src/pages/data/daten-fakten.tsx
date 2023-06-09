@@ -72,7 +72,7 @@ export function Datenfakten({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H2 like="h1">MINT-DataLab (Betaversion)</H2>
+              <H2 like="h1" className="font-bold">MINT-DataLab (Betaversion)</H2>
               <p>
                 Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab
                 umfasst statistische Kennzahlen von der nationalen bis zur
@@ -125,7 +125,7 @@ export function Datenfakten({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
-              <H3 like="h2" className="mb-6">
+              <H3 like="h2" className="mb-6 font-bold">
                 Didaktik an außerschulischen Lernorten
               </H3>
               <p>
@@ -166,7 +166,7 @@ export function Datenfakten({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center md:order-1">
             <div>
-              <H3 like="h2" className="mb-6">
+              <H3 like="h2" className="font-bold mb-6">
                 Diversität in der MINT-Bildung
               </H3>
               <p>
@@ -223,8 +223,8 @@ export function Datenfakten({
         </div>
         <div className="max-w-4xl mx-auto md:relative mb-20">
           <p className="md:text-center">
-            Laden Sie sich die Ergebnisse des Stimmungsbarometer 2023 hier herunter als PDF. 
-            Darüber hinaus können Sie auch die Grafiken, die Sie hier sehen, herunterladen.
+            Hier können die Ergebnisse des MINT-Stimmungsbarometers als PDF oder Einzelgrafiken 
+            heruntergeladen werden.
           </p>
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
             <div>
