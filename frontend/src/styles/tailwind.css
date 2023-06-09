@@ -460,6 +460,7 @@ ol {
 .mood-carousel .swiper-pagination {
   bottom: auto !important;
   top: calc(100% + 10px);
+  line-height: 1rem;
 }
 
 .project-swiper .swiper-pagination {

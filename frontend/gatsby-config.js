@@ -57,6 +57,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "downloads",
+        path: `${__dirname}/src/downloads`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-typegen",
       options: {
         outputPath: "src/__generated__/gatsby-types.d.ts",

@@ -3,11 +3,14 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
-import MoodCarousel from "../../components/MoodCarousel";
+import Mood2022 from "../../components/MoodCarousel/Mood2022";
+import Mood2023 from "../../components/MoodCarousel/Mood2023";
 import Icon, { IconType } from "../../components/Icon/Icon";
-import PdfDidaktik from "../../download/Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf";
-import PdfDiversitaet from "../../download/Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
-import PdfDiversitaetLong from "../../download/Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
+import PdfDidaktik from "../../downloads/Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf";
+import PdfDiversitaet from "../../downloads/Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
+import PdfDiversitaetLong from "../../downloads/Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
+import PdfStimmung2023 from "../../downloads/MINT_Simmungsbarometer2023.pdf";
+
 
 export function Datenfakten({
   data,
@@ -15,229 +18,7 @@ export function Datenfakten({
   data: GatsbyTypes.DatenfaktenPageQuery;
 }) {
   
-  const moodslides =
-    [
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide1Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-
-        headline: `MINT-Stimmungsbarometer 2022 `,
-        excerpt: ``,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide2Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-
-        headline: `MINT-Stimmungsbarometer 2022 `,
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide3Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Die Qualität der MINT-Bildung steigt entlang der Bildungskette an"
-          />
-        ),
-
-        headline: `Die Qualität der MINT-Bildung steigt entlang der Bildungskette an`,
-        excerpt: `Über die Qualität der MINT-Bildung entlang der Bildungskette gehen die Meinungen auseinander: 
-        Während in der vorschulischen Bildung nur jede:r fünfte Befragte die MINT-Bildung positiv bewertet, sind 
-        es im schulischen und außerschulischen Bereich ein Drittel bis knapp die Hälfte der Befragten. Die 
-        MINT-Hochschulbildung wird zu über 90% als eher gut bzw. sehr gut empfunden.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide4Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Keine einheitliche Meinung zu der MINT-Freundlichkeit Deutschlands"
-          />
-        ),
-
-        headline: `Keine einheitliche Meinung zu der MINT-Freundlichkeit Deutschlands`,
-        excerpt: `Während über zwei Drittel der Befragten aus der Kategorie öffentlicher Sektor Deutschland als ein 
-        MINT-freundliches Land einschätzen, stimmen dieser Aussage weniger als die Hälfte der befragten Unternehmen zu.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide5Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Der Stand der MINT-Bildung in Deutschland wird schlechter bewertet"
-          />
-        ),
-
-        headline: `Der Stand der MINT-Bildung in Deutschland wird schlechter bewertet`,
-        excerpt: `Zwei Drittel der Befragten schätzt die MINT-Bildung in Deutschland weniger 
-        gut ein als die MINT-Bildung in anderen Industrienationen.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide6Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="In der allgemeinen Wahrnehmung muss sich die Politik mehr für die MINT-Bildung einsetzen"
-          />
-        ),
-
-        headline: `In der allgemeinen Wahrnehmung muss sich die Politik mehr für die MINT-Bildung einsetzen`,
-        excerpt: `Insgesamt empfinden fast 80 % der Befragten das Engagement der Politik für die MINT-Bildung 
-        als zu niedrig. Ein gutes Zeugnis erhalten hingegen die Wirtschaft und die Zivilgesellschaft: Beiden 
-        Sektoren wird ein ähnlich hohes Engagement von über 70% zugeschrieben.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide7Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Kompetenzen sichern die Zukunft Deutschlands"
-          />
-        ),
-
-        headline: `MINT-Kompetenzen sichern die Zukunft Deutschlands`,
-        excerpt: `Die große Mehrheit von 75% verbindet mit dem Begriff MINT zuallererst wichtige Zukunftskompetenzen, 
-        um den Wirtschafts- und Innovationsstandort Deutschland zu sichern. Weitere Assoziationen mit MINT sind, dass 
-        es sich hierbei um Berufsfelder mit guten Perspektiven handelt, es zugleich aber im Bereich Frauen- und 
-        Mädchenförderung Handlungsbedarf gibt.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide8Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Die gesellschaftliche und alltägliche Relevanz von MINT-Themen muss verdeutlicht werden"
-          />
-        ),
-        headline: `Die gesellschaftliche und alltägliche Relevanz von MINT-Themen muss verdeutlicht werden`,
-        excerpt: `Die Antworten bestätigten den aktuellen Diskurs, dass Interdisziplinarität und Kontextualisierung von 
-        MINT-Fächern notwendig sind, um bisher nicht erreichte Zielgruppen für MINT zu begeistern. Auch eine Verknüpfung 
-        von MINT-Themen mit Alltagsthemen wird als Maßnahme empfohlen, um Gruppen zu erreichen, die sich durch reine 
-        MINT-Themen vielleicht nicht angesprochen fühlen.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide9Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT birgt viele Herausforderungen"
-          />
-        ),
-
-        headline: `MINT birgt viele Herausforderungen`,
-        excerpt: `Die größten Herausforderungen sehen die Befragten in der Kombination aus technologischem Wandel und den 
-        damit verbundenen Kompetenzlücken, dicht gefolgt von der lückenhaften MINT-Bildung entlang der Bildungskette. Weiter 
-        gilt es, die Fachkräfteengpässe bei MINT-Berufen zu bewältigen.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide10Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Klare Meinung: Deutschlands MINT-Kompetenzen liegen eher in der Spitze als in der Breite"
-          />
-        ),
-
-        headline: `Klare Meinung: Deutschlands MINT-Kompetenzen liegen eher in der Spitze als in der Breite`,
-        excerpt: `Fast zwei Drittel der Befragten sehen die Stärke Deutschlands bei den MINT-Kompetenzen eher in der Spitze, 
-        nur jede:r Vierte ist der Meinung, dass MINT-Kompetenzen eher in der Breite ausgeprägt sind.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide11Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Deutschlands Stärke liegt in der MINT-Forschung und dem dualen Ausbildungssystem"
-          />
-        ),
-
-        headline: `Deutschlands Stärke liegt in der MINT-Forschung und dem dualen Ausbildungssystem`,
-        excerpt: `Deutschland punktet mit seiner Forschung sowie mit seinem dualen Ausbildungssystem. Die Breitenförderung 
-        hingegen landet auf dem letzten Platz.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide12Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Klarer Auftrag: das Potential weiblicher Fachkräfte berücksichtigen"
-          />
-        ),
-
-        headline: `Klarer Auftrag: das Potential weiblicher Fachkräfte berücksichtigen`,
-        excerpt: `Der Berücksichtigung weiblicher Fachkräftepotentiale wird im Zusammenhang mit der Fachkräftesicherung die 
-        wichtigste Rolle zugeteilt. Ähnlich wichtig ist eine Verbesserung der Berufsorientierung, um mehr MINT-Fachkräfte 
-        zu gewinnen. Im Bildungsbereich ist eine mögliche Lösung, mehr Durchlässigkeit innerhalb von MINT-Bildungswegen, 
-        z.B. zwischen beruflichen und akademischen Bildungswegen, zuzulassen.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide13Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Die Digitalisierung wird als größte Herausforderung der kommenden Jahre vermutet"
-          />
-        ),
-
-        headline: `Die Digitalisierung wird als größte Herausforderung der kommenden Jahre vermutet`,
-        excerpt: `Bei dieser offenen Frage wurde 170-mal die Digitalisierung als größte Herausforderung für die MINT-Bildung 
-        genannt. Weitere häufig genannte Begriffe sind der Klimawandel, erneuerbare Energien sowie künstliche Intelligenz 
-        und Robotik.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide14Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="Konkrete Änderungsvorschläge für das Bildungssystem"
-          />
-        ),
-
-        headline: `Konkrete Änderungsvorschläge für das Bildungssystem`,
-        excerpt: `Bei dieser offenen Frage wurden über 400 Antworten geclustert und zusammengefasst. Die neun häufigsten 
-        Änderungsvorschläge betreffen vorrangig die Schulbildung – von den MINT-Lehrkräften bis zum MINT-Unterricht. 
-        Aber auch die Verzahnung von MINT-Bildungsangeboten wird als wichtiges To-do erwähnt.`,            
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide15Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-        headline: `MINT-Stimmungsbarometer 2022 `,          
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide16Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-        headline: `MINT-Stimmungsbarometer 2022 `,        
-      },
-      {
-        image: (
-          <GatsbyImage
-            image={data.Slide17Image.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-        headline: `MINT-Stimmungsbarometer 2022 `,
-      },      
-  ];
+  
 
   return (
     <Layout>
@@ -424,39 +205,65 @@ export function Datenfakten({
         </div>
       </section>
 
-      <section className="container mt-8 md:mt-10 lg:mt-10 mb-20 relative">
-        <header>
-          <H3 like="h2">MINT-Stimmungsbarometer</H3>
-          <p className="md:px-8 lg:px-20 ">
+      <section className="container mt-8 md:mt-10 lg:mt-10 mb-12 lg:mb-16 relative">
+        <header className="max-w-4xl mx-auto">
+          <H3 like="h2" className="font-bold">MINT-Stimmungsbarometer</H3>
+          <p className="">
             Das MINT-Stimmungsbarometer ist eine jährliche Befragung von
             MINTvernetzt, bei der Vertreter:innen aus Bildung, Wissenschaft und
             Wirtschaft zu ihren persönlichen Einschätzungen und Eindrücken zur
             MINT-Bildung in Deutschland befragt werden.
           </p>
         </header>
-        <div className="max-w-4xl mx-auto md:relative">
-          <MoodCarousel items={moodslides} />
+      </section>  
+      <section className="container lg:mt-10 mb-16">
+        <H4 className="mb-4 md:text-center font-semibold">Stimmungsbarometer 2023</H4>
+        <div className="max-w-4xl mx-auto relative mb-20">
+          <Mood2023 />
+        </div>
+        <div className="max-w-4xl mx-auto md:relative mb-20">
+          <p className="md:text-center">
+            Laden Sie sich die Ergebnisse des Stimmungsbarometer 2023 hier herunter als PDF. 
+            Darüber hinaus können Sie auch die Grafiken, die Sie hier sehen, herunterladen.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
+            <div>
+              <p className="mb-2">
+                <a
+                  href={PdfStimmung2023}
+                  target="_blank"
+                  className="btn-primary btn-icon"
+                >
+                  <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                  <span>Download Ergebnisse</span>
+                </a>
+              </p>
+              <p className="text-xs mb-0">PDF, ca. 1,7MB</p>
+            </div>
+            <div>
+              <p className="mb-2">
+                <a
+                    href={data.Stimmung2023Zip?.publicURL}
+                    target="_blank"
+                    className="btn-outline-primary btn-icon mb-2"
+                >
+                  <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                  <span>Download Grafiken</span>
+                </a>                  
+              </p>
+              <p className="text-xs">ZIP, ca. 18,4MB</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 md:columns-2 md:gap-8">
-        <p className="md:break-inside-avoid-column">
-          Wie steht es um die Qualität der MINT-Bildung in Deutschland? Wie hoch
-          ist das Engagement der einzelnen Sektoren? Und welche Veränderungen
-          sind notwendig, um die MINT-Bildung in Deutschland voranzubringen?
-        </p>
-        <p className="md:break-inside-avoid-column">
-          Mit diesen und anderen Fragen bildet das MINT-Stimmungsbarometer neben
-          einem Gesamtüberblick auch die unterschiedlichen sektoralen
-          Perspektiven auf die MINT-Bildung in Deutschland ab.
-        </p>
-        <p className="md:break-inside-avoid-column">
-          Das MINT-Stimmungsbarometer soll Trends und Herausforderungen in der
-          MINT-Bildung sichtbar machen und Handlungsfelder für die
-          unterschiedlichen Akteur:innen in der{" "}
-          <span className="whitespace-nowrap">MINT-Bildungslandschaft</span>{" "}
-          aufzeigen.
-        </p>
-      </section>      
+
+      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 relative">   
+        <H4 className="mb-4 md:text-center font-semibold">Stimmungsbarometer 2022</H4>     
+        <div className="max-w-4xl mx-auto relative">
+          <Mood2022 />
+        </div>
+      </section>
+         
     </Layout>
   );
 }
@@ -487,109 +294,10 @@ export const pageQuery = graphql`
       childImageSharp {
         gatsbyImageData(width: 744)
       }
-    }    
-    Slide1Image: file(relativePath: { eq: "stimmungsbarometer/1.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide2Image: file(relativePath: { eq: "stimmungsbarometer/2.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide3Image: file(relativePath: { eq: "stimmungsbarometer/3.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide4Image: file(relativePath: { eq: "stimmungsbarometer/4.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide5Image: file(relativePath: { eq: "stimmungsbarometer/5.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide6Image: file(relativePath: { eq: "stimmungsbarometer/6.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide7Image: file(relativePath: { eq: "stimmungsbarometer/7.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide8Image: file(relativePath: { eq: "stimmungsbarometer/8.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide9Image: file(relativePath: { eq: "stimmungsbarometer/9.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide10Image: file(relativePath: { eq: "stimmungsbarometer/10.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide11Image: file(relativePath: { eq: "stimmungsbarometer/11.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide12Image: file(relativePath: { eq: "stimmungsbarometer/12.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide13Image: file(relativePath: { eq: "stimmungsbarometer/13.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide14Image: file(relativePath: { eq: "stimmungsbarometer/14.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide15Image: file(relativePath: { eq: "stimmungsbarometer/15.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide16Image: file(relativePath: { eq: "stimmungsbarometer/16.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
-    Slide17Image: file(relativePath: { eq: "stimmungsbarometer/17.png" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(width: 1488)
-      }
-    } 
+    }  
+    Stimmung2023Zip: file(relativePath: { eq: "MINT_Simmungsbarometer2023_Grafiken.zip" }) {
+      publicURL      
+    }  
   }
 `;
 
