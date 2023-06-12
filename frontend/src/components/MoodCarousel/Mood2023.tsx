@@ -221,13 +221,11 @@ export function Mood2023() {
           />
         ),
         headline: `Die Relevanz von Kooperationen variiert je nach Kooperationspartner`,
-        excerpt: `Insgesamt herrscht Einigkeit über die Wichtigkeit von Kooperationen zwischen den unterschiedlichen 
-        Bildungsakteur:innen. Dennoch sind die differenzierten Antworten der potenziellen Kooperationspartner teilweise 
-        unterschiedlich: Aus der Perspektive außerschulischer Bildungsakteur:innen werden beispielsweise Kooperationen 
-        mit Unternehmen von mehr als der Hälfte als „sehr wichtig“ angesehen, während diese Einschätzung umgekehrt aus 
-        Sicht der Unternehmen von weniger als einem Viertel der Befragten geteilt wird.  
+        excerpt: `Aus der Perspektive außerschulischer Bildungsakteur:innen werden beispielsweise Kooperationen mit 
+        Unternehmen von mehr als der Hälfte als „sehr wichtig“ angesehen, während diese Einschätzung umgekehrt aus 
+        Sicht der Unternehmen von weniger als einem Viertel der Befragten geteilt wird.
         Bei den Antworten schulischer Bildungsakteur:innen fällt auf, dass mehr als ein Viertel der Befragten 
-        Kooperationen zwischen Schulen und sowohl frühkindlichen Bildungseinrichtungen als auch Berufsschulen 
+        Kooperationen zwischen Schulen und sowohl frühkindlichen Bildungseinrichtungen als auch Berufsschulen
         eher unwichtig findet.`,            
       },
       {
@@ -301,13 +299,11 @@ export function Mood2023() {
         ),
 
         headline: `MINT braucht einen Image-Wandel und erhöhte Aufmerksamkeit`,
-        excerpt: `Bei dieser offenen Frage wurden mehr als 600 Antworten geclustert und zusammengefasst. Die Mehrzahl 
-        der Antworten, die den Veränderungsbedarf in der Gesellschaft betreffen, beziehen sich auf eine Verbesserung 
-        des MINT-Images. Dazu braucht es ein Aufweichen der Rollenzuschreibungen und einen Abbau von Gender- und 
-        MINT-Stereotypen. Die gesellschaftspolitische Bedeutung von MINT muss seitens der Politik durch mehr 
-        Ressourcen und Unterstützung verdeutlicht werden. Die Wirtschaft sollte sich mit mehr Engagement und 
-        Kooperationsbereitschaft, z. B. durch Praktika und familienfreundliche Arbeitsbedingungen für die Gewinnung 
-        von MINT-Fachkräften einsetzen.`,            
+        excerpt: `Bei dieser offenen Frage wurden mehr als 600 Antworten geclustert. In der Gesellschaft bedarf 
+        es einer Verbesserung des MINT-Images z.B. durch einen Abbau von Gender- und MINT-Stereotypen. Die 
+        gesellschaftspolitische Bedeutung von MINT muss seitens der Politik durch mehr Ressourcen verdeutlicht 
+        werden. Die Wirtschaft sollte sich mit mehr Engagement und Kooperationsbereitschaft, z. B. durch 
+        Praktika für die Gewinnung von MINT-Fachkräften einsetzen.`,            
       },
       {
         image: (

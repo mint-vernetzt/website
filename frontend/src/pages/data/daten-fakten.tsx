@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
 import Layout from "../../components/Layout";
@@ -6,10 +6,7 @@ import SEO from "../../components/SEO";
 import Mood2022 from "../../components/MoodCarousel/Mood2022";
 import Mood2023 from "../../components/MoodCarousel/Mood2023";
 import Icon, { IconType } from "../../components/Icon/Icon";
-import PdfDidaktik from "../../downloads/Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf";
-import PdfDiversitaet from "../../downloads/Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
-import PdfDiversitaetLong from "../../downloads/Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf";
-import PdfStimmung2023 from "../../downloads/MINT_Simmungsbarometer2023.pdf";
+
 
 
 export function Datenfakten({
@@ -17,9 +14,6 @@ export function Datenfakten({
 }: {
   data: GatsbyTypes.DatenfaktenPageQuery;
 }) {
-  
-  
-
   return (
     <Layout>
       <SEO
@@ -138,7 +132,7 @@ export function Datenfakten({
               </p>
               <p className="mb-2">
                 <a
-                  href={PdfDidaktik}
+                  href={data.PdfDidaktik?.publicURL}
                   target="_blank"
                   className="btn-primary btn-icon"
                 >
@@ -179,7 +173,7 @@ export function Datenfakten({
               <div className="flex flex-row justify-start flex-wrap">
                 <div className="my-2 ml-0 mr-4">
                   <a
-                    href={PdfDiversitaet}
+                    href={data.PdfDiversitaet?.publicURL}
                     target="_blank"
                     className="btn-primary btn-icon mb-2"
                   >
@@ -190,7 +184,7 @@ export function Datenfakten({
                 </div>
                 <div className="m-2 ml-0">
                   <a
-                    href={PdfDiversitaetLong}
+                    href={data.PdfDiversitaetLong?.publicURL}
                     target="_blank"
                     className="btn-outline-primary btn-icon mb-2"
                   >
@@ -230,7 +224,7 @@ export function Datenfakten({
             <div>
               <p className="mb-2">
                 <a
-                  href={PdfStimmung2023}
+                  href={data.PdfStimmung2023?.publicURL}
                   target="_blank"
                   className="btn-primary btn-icon"
                 >
@@ -251,7 +245,7 @@ export function Datenfakten({
                   <span>Download Grafiken</span>
                 </a>                  
               </p>
-              <p className="text-xs">ZIP, ca. 18,4MB</p>
+              <p className="text-xs">ZIP, ca. 11,9MB</p>
             </div>
           </div>
         </div>
@@ -275,25 +269,49 @@ export const pageQuery = graphql`
     heroImage: file(relativePath: { eq: "daten_fakten_hero.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(
+          width: 1488
+          placeholder: BLURRED
+        )
       }
     }
     dataLabImage: file(relativePath: { eq: "daten_und_fakten_mockup_datalab.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 744)
+        gatsbyImageData(
+          width: 744
+          placeholder: BLURRED
+        )
       }
     }
     didaktikImage: file(relativePath: { eq: "daten-fakten_didaktik.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 744)
+        gatsbyImageData(
+          width: 744
+          placeholder: BLURRED
+        )
       }
     }    
     diversityImage: file(relativePath: { eq: "daten-fakten_diversity.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 744)
+        gatsbyImageData(
+          width: 744
+          placeholder: BLURRED
+        )
       }
+    }
+    PdfDidaktik: file(relativePath: { eq: "Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf" }) {
+      publicURL      
+    }  
+    PdfDiversitaet: file(relativePath: { eq: "Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf" }) {
+      publicURL      
+    }  
+    PdfDiversitaetLong: file(relativePath: { eq: "Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf" }) {
+      publicURL      
+    }  
+    PdfStimmung2023: file(relativePath: { eq: "MINT_Simmungsbarometer2023.pdf" }) {
+      publicURL      
     }  
     Stimmung2023Zip: file(relativePath: { eq: "MINT_Simmungsbarometer2023_Grafiken.zip" }) {
       publicURL      
