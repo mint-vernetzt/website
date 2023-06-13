@@ -34,3 +34,4 @@ deployer/inventory.yml
 # Dumpfiles
 dump.sql.gz
 dump.sql
+backend/.idea/
