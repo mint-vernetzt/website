@@ -173,7 +173,7 @@ export function Header() {
                             viewBox="0 0 16 16"
                           >
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
@@ -223,7 +223,7 @@ export function Header() {
                   )}
                 </li>
               ))}
-                <li className="lg:ml-auto py-3">
+              <li className="lg:ml-auto py-3">
                 <div>
                   <a
                     className="inline-block py-2 px-6 rounded-lg text-sm leading-6 bg-blue-500 text-neutral-200 my-2"
@@ -233,7 +233,7 @@ export function Header() {
                     Zur Community-Plattform
                   </a>
                 </div>
-                </li>
+              </li>
             </ul>
             <div className="lg:hidden bg-[#EFE8E6] rounded-br-2xl px-6">
               <ul className="main-teaser pt-6">
@@ -244,7 +244,7 @@ export function Header() {
                 ))}
               </ul>
             </div>
-          </nav>          
+          </nav>
           <button
             className="h-5 w-5 lg:hidden ml-auto z-30"
             onClick={() => toggleExpansion(!isExpanded)}
@@ -277,7 +277,7 @@ export function Header() {
             </span>
           </button>
         </div>
-      </div>      
+      </div>
     </div>
   );
 }

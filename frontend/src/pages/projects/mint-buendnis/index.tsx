@@ -1,16 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
-import { ReactComponent as PaktOverview } from "../../images/project_pakt.svg";
+import Layout from "../../../components/Layout";
+import SEO from "../../../components/SEO";
+import { ReactComponent as PaktOverview } from "../../../images/project_pakt.svg";
 
 import {
   getPaktDataByCategory,
   PaktDataByCategory,
-} from "../../utils/dataTransformer";
-import { H1 } from "../../components/Heading/Heading";
-import ContactCard from "../../components/ContactCard/ContactCard";
-import Icon, { IconType } from "../../components/Icon/Icon";
+} from "../../../utils/dataTransformer";
+import { H1 } from "../../../components/Heading/Heading";
+import ContactCard from "../../../components/ContactCard/ContactCard";
+import Icon, { IconType } from "../../../components/Icon/Icon";
 
 /* eslint-disable-next-line */
 export interface MintPaktProps {}
@@ -205,6 +205,8 @@ export function MintPakt({ data }) {
               Liste der aktuellen Mitglieder im Bündnis für Frauen in
               MINT-Berufen:
             </p>
+
+            <Link to={"list"}>Liste</Link>
 
             <ul className="pakt-list">
               {categories.map((category, index) => {
