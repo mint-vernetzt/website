@@ -42,7 +42,7 @@ export function MintPaktList({
       if ($partner) {
         setTimeout(() => {
           $partner.scrollIntoView({ behavior: "instant", block: "center" });
-        }, 5);
+        }, 50);
       }
     }
   }, []);
