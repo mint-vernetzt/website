@@ -37,6 +37,12 @@ exports.createPages = async (props) => {
           slug
         }
       }
+      allWpPartner {
+        nodes {
+          id
+          slug
+        }
+      }
     }
   `);
   result.data.allWpNewsItem.nodes.forEach((node) => {
@@ -69,6 +75,15 @@ exports.createPages = async (props) => {
     });
   });
 
+  result.data.allWpPartner.nodes.forEach((node) => {
+    createPage({
+      path: `/projects/mint-buendnis/${node.slug}`,
+      component: path.resolve(`./src/templates/Partner.tsx`),
+      context: {
+        id: node.id,
+      },
+    });
+  });
 
   const { createRedirect } = actions;
 
@@ -152,31 +167,37 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/arbeitgeber-und-arbeitnehmerverbaende/deutscher-industrie-und-handelskammertag-dihk/",
-    toPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/deutsche-industrie-und-handelskammer-dihk/",
+    fromPath:
+      "/pakt/arbeitgeber-und-arbeitnehmerverbaende/deutscher-industrie-und-handelskammertag-dihk/",
+    toPath:
+      "/pakt/koerperschaften-des-oeffentlichen-rechts/deutsche-industrie-und-handelskammer-dihk/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/trilux-gigital-solutions-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/trilux-gigital-solutions-gmb-h/",
     toPath: "/pakt/unternehmen-und-stiftungen/trilux-digital-solutions-gmb-h/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/vereine-und-verbaende/i3-e-v-mit-dem-projekt-hacker-school/",
+    fromPath:
+      "/pakt/vereine-und-verbaende/i3-e-v-mit-dem-projekt-hacker-school/",
     toPath: "/pakt/unternehmen-und-stiftungen/hacker-school/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/vdi-vde-innovation-technik-gmb-h-vdi-vde-it/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/vdi-vde-innovation-technik-gmb-h-vdi-vde-it/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/e-c-s-systems-and-software-solution-gmb-h-and-co-kg/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/e-c-s-systems-and-software-solution-gmb-h-and-co-kg/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -188,7 +209,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/ghett-omedia-marketing-and-kommunikation/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/ghett-omedia-marketing-and-kommunikation/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -218,7 +240,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/vereine-und-verbaende/berufsmentoring-fuer-schueler-e-v-bildungsinitiative-jump-in-mint/",
+    fromPath:
+      "/pakt/vereine-und-verbaende/berufsmentoring-fuer-schueler-e-v-bildungsinitiative-jump-in-mint/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -230,13 +253,16 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen-co-universitaet-leipzig/",
-    toPath: "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen",
+    fromPath:
+      "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen-co-universitaet-leipzig/",
+    toPath:
+      "/pakt/wissenschaftseinrichtungen-hochschulen-und-hochschulverbaende/koordinierungsstelle-chancengleichheit-sachsen",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/bundeslaender/freistaat-bayern-vertreten-durch-das-staatsministerium-fuer-wissenschaft-forschung-und-kunst/",
+    fromPath:
+      "/pakt/bundeslaender/freistaat-bayern-vertreten-durch-das-staatsministerium-fuer-wissenschaft-forschung-und-kunst/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -290,13 +316,15 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/bundesamt-fuer-verfassungsschutz/",
+    fromPath:
+      "/pakt/koerperschaften-des-oeffentlichen-rechts/bundesamt-fuer-verfassungsschutz/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/koerperschaften-des-oeffentlichen-rechts/landschaftsverband-rheinland-lvr/",
+    fromPath:
+      "/pakt/koerperschaften-des-oeffentlichen-rechts/landschaftsverband-rheinland-lvr/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -338,7 +366,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/accenture-dienstleistungen-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/accenture-dienstleistungen-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -374,31 +403,36 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/boge-kompressoren-otto-boge-gmb-h-and-co-kg/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/boge-kompressoren-otto-boge-gmb-h-and-co-kg/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/code-x-gmb-h-internet-und-marketing/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/btc-business-technology-consulting-ag/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/btc-business-technology-consulting-ag/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/common-solutions-gmb-h-and-co-kg/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/common-solutions-gmb-h-and-co-kg/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -476,7 +510,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/hdo-druckguss-und-oberflaechentechnik-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/hdo-druckguss-und-oberflaechentechnik-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -500,7 +535,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/it-s-owl-clustermanagement-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/it-s-owl-clustermanagement-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -524,13 +560,15 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/mps-bildung-und-forschung-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/mps-bildung-und-forschung-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/national-instruments-germany-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/national-instruments-germany-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -542,7 +580,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/phoenix-contact-deutschland-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/phoenix-contact-deutschland-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -596,7 +635,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/vereine-und-verbaende/initiative-fuer-beschaeftigung-owl-e-v/",
+    fromPath:
+      "/pakt/vereine-und-verbaende/initiative-fuer-beschaeftigung-owl-e-v/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -608,7 +648,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/forschungsorganisationen-und-forschungsverbuende/deutsche-physikalische-gesellschaft-e-v-dpg/",
+    fromPath:
+      "/pakt/forschungsorganisationen-und-forschungsverbuende/deutsche-physikalische-gesellschaft-e-v-dpg/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -650,7 +691,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/deutsches-zentrum-fuer-hochschul-und-wissenschaftsforschung-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/deutsches-zentrum-fuer-hochschul-und-wissenschaftsforschung-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -668,7 +710,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/hewlett-packard-enterprise-hpe/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/hewlett-packard-enterprise-hpe/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -680,7 +723,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/jugend-denkt-zukunft-ifok-gmb-h/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/jugend-denkt-zukunft-ifok-gmb-h/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -710,13 +754,15 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/vereine-und-verbaende/bundesarbeitsgemeinschaft-der-kommunalen-frauenbueros-und-gleichstellungsstellen-bag/",
+    fromPath:
+      "/pakt/vereine-und-verbaende/bundesarbeitsgemeinschaft-der-kommunalen-frauenbueros-und-gleichstellungsstellen-bag/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/vereine-und-verbaende/business-and-professional-women-germany-e-v-bpw/",
+    fromPath:
+      "/pakt/vereine-und-verbaende/business-and-professional-women-germany-e-v-bpw/",
     toPath: "/projects/mint-buendnis/",
     redirectInBrowser: true,
     isPermanent: true,
@@ -728,7 +774,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/pakt/unternehmen-und-stiftungen/stiftung-haus-der-kleinen-forscher/",
+    fromPath:
+      "/pakt/unternehmen-und-stiftungen/stiftung-haus-der-kleinen-forscher/",
     toPath: "/pakt/unternehmen-und-stiftungen/stiftung-kinder-forschen/",
     redirectInBrowser: true,
     isPermanent: true,

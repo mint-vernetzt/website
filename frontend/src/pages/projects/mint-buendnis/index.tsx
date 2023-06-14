@@ -1,14 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { H1, H2, H4 } from "../../components/Heading/Heading";
-import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
-import TestimonialSwiper from "../../components/ProjectSwiper";
-import { ReactComponent as HeaderImage } from "../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
-import EventCards from "../../components/EventCards/EventCards";
-import Icon, { IconType } from "../../components/Icon/Icon";
+import Layout from "../../../components/Layout";
+import SEO from "../../../components/SEO";
+import { ReactComponent as PaktOverview } from "../../../images/project_pakt.svg";
+
+import {
+  getPaktDataByCategory,
+  PaktDataByCategory,
+} from "../../../utils/dataTransformer";
+import { H1 } from "../../../components/Heading/Heading";
+import ContactCard from "../../../components/ContactCard/ContactCard";
+import Icon, { IconType } from "../../../components/Icon/Icon";
 
 export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
   const now = new Date();
@@ -518,33 +520,128 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />
                   <span>Download</span>
                 </a>
-              </p>
-              <p className="text-xs">PDF, ca. 200KB</p>              
-            </div>
-            <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-5/12 px-4 flex justify-center relative">
-              <div className="absolute inset-0 text-salmon-400 flex justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 270 215"
-                >
-                  <path
-                    fill="#FCC433"
-                    d="M.788 101.52c5.95-38.838 66.074-68.85 90.186-78.903l.264-.11C119.315 10.799 154.14-3.723 196.675.87c27.153 2.932 83.398 42.996 71.761 110.422-11.637 67.426-96.976 114.331-177.462 101.628C27.48 202.898-5.636 143.45.788 101.52Z"
-                  />
-                </svg>
-              </div>
-              <div className="relative max-w-[180px] md:max-w-[260px] lg:max-w-[360px] my-8">
-                <GatsbyImage
-                  image={data?.GlossarImage?.childImageSharp?.gatsbyImageData}
-                  className=""
-                  alt=""
-                />
-                <div className="absolute right-0 bottom-[-1px]">
-                  <div
-                    className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 "
-                    style={{ writingMode: "vertical-rl" }}
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex-100 lg:flex-2/3 lg:px-10 lg:order-1">
+            <H1 like="h0">Bündnis für Frauen in MINT-Berufen</H1>
+            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
+              #empowerMINT #FrauenInMINT
+            </p>
+
+            <p className="lg:text-xl text-neutral-600 mb-4">
+              Das Bündnis für Frauen in MINT-Berufen hat es sich in einem
+              gemeinsamen Leitbild zum Ziel gesetzt, Mädchen und junge Frauen
+              für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern und
+              in ihrem Werdegang zu unterstützen. So trägt das Bündnis zu mehr
+              Teilhabe in der Gesellschaft, zur Sicherung des Innovations- und
+              Wirtschaftsstandorts Deutschland und zur Lösung globaler
+              Herausforderungen bei.
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
+              Forschung initiiert und wird seit September 2021 von der
+              Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
+              300 Mitglieder aus rund 260 verschiedenen Institutionen aus
+              Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
+              sich seither im Bündnis zusammengeschlossen, um gemeinsam einen
+              Beitrag dafür zu leisten, Mädchen und Frauen stärker für
+              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.
+            </p>
+            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
+              Angebote für Mitglieder
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-4">
+              Exklusiv für Bündnis-Mitglieder und Interessierte bieten wir
+              regelmäßig Veranstaltungen und Vernetzungsmöglichkeiten rund um
+              das Thema Mädchen und Frauen in MINT an.
+            </p>
+
+            <p className="lg:text-xl text-neutral-600 mb-4">
+              Aktuell veranstalten wir eine vierteilige{" "}
+              <a
+                // https://mint-vernetzt.de
+                href="/event/workshop-reihe-von-der-vision-zur-wirklichkeit-klischeefrei-mint-talente-von-morgen-gewinnen"
+                className="text-lilac-500 hover:underline"
+              >
+                Workshopreihe „Von der Vision zur Wirklichkeit – Klischeefrei
+                MINT-Talente von morgen gewinnen“
+              </a>{" "}
+              gemeinsam mit der Initiative Klischeefrei. Bei den bisherigen
+              Workshops stand das Thema „Sensibilisierung und Haltung“ im
+              Vordergrund. Am 24. Mai erarbeiten wir zum Thema „Generationen,
+              Familie, Vereinbarkeitskulturen“ gemeinsam konkrete Maßnahmen,
+              damit die Vision einer klischeefreien Arbeitswelt in der Praxis
+              lebendig wird. Am 21. Juni schließen wir die Reihe mit zahlreichen
+              Best-Practice-Beispielen aus unseren Netzwerken. Für die Anmeldung
+              für verbleibende Termine wenden Sie sich gerne an{" "}
+              <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
+                className="text-lilac-500 hover:underline"
+              >
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
+              </a>
+              .
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              In unserem Newsletter informieren wir Sie zudem zu aktuellen
+              Aktionen und Veranstaltungen rund um das Bündnis für Frauen in
+              MINT-Berufen. Die Anmeldung ist über{" "}
+              <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
+                className="text-lilac-500 hover:underline"
+              >
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
+              </a>{" "}
+              möglich.
+            </p>
+
+            <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
+              Interesse an Mitgliedschaft
+            </p>
+            <p className="lg:text-xl text-neutral-600 mb-16">
+              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnisses
+              und möchten sich als Mitglied engagieren? Dann schicken Sie bitte
+              eine{" "}
+              <a
+                href={`mailto:${data.wpContact.contactInformations.email}`}
+                className="text-lilac-500 hover:underline"
+              >
+                E-Mail an{" "}
+                {`${data.wpContact.contactInformations.title || ""} ${
+                  data.wpContact.contactInformations.firstName
+                } ${data.wpContact.contactInformations.lastName}`.trim()}
+              </a>
+              . Wir melden uns persönlich bei Ihnen zurück. Bitte lesen Sie
+              vorher das Leitbild und melden Sie sich gerne bei Fragen bei uns.
+              Die Mitgliedschaft ist kostenfrei. Ihr Beitritt zum Bündnis für
+              Frauen in MINT-Berufen wird erst mit der schriftlichen Bestätigung
+              durch MINTvernetzt wirksam.
+            </p>
+
+            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
+              Liste der aktuellen Mitglieder im Bündnis für Frauen in
+              MINT-Berufen:
+            </p>
+
+            <Link to={"list"}>Liste</Link>
+
+            <ul className="pakt-list">
+              {categories.map((category, index) => {
+                const categorySlug = getCategorySlugFromMember(
+                  paktDataByCategory[category][0].slug
+                );
+
+                return (
+                  <li
+                    key={category}
+                    id={categorySlug}
+                    className="pakt-category relative overflow-hidden"
                   >
                     Unsplash/ Surendran MP
                   </div>
