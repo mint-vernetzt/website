@@ -7,8 +7,6 @@ import Mood2022 from "../../components/MoodCarousel/Mood2022";
 import Mood2023 from "../../components/MoodCarousel/Mood2023";
 import Icon, { IconType } from "../../components/Icon/Icon";
 
-
-
 export function Datenfakten({
   data,
 }: {
@@ -66,7 +64,9 @@ export function Datenfakten({
           </div>
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 flex items-center">
             <div>
-              <H2 like="h1" className="font-bold">MINT-DataLab (Betaversion)</H2>
+              <H2 like="h1" className="font-bold">
+                MINT-DataLab (Betaversion)
+              </H2>
               <p>
                 Die Betaversion des MINT-DataLabs ist online! Das MINT-DataLab
                 umfasst statistische Kennzahlen von der nationalen bis zur
@@ -102,7 +102,10 @@ export function Datenfakten({
         </div>
       </section>
 
-      <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20" id="mint-studien">
+      <section
+        className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20"
+        id="mint-studien"
+      >
         <H2 like="h1" className="text-center mb-14">
           <span className="font-bold">MINT</span>vernetzt-Studien
         </H2>
@@ -147,7 +150,10 @@ export function Datenfakten({
       </section>
 
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20">
-        <div className="flex flex-wrap content-center items-center md:-mx-4"  id="mint-studie-diversitaet">
+        <div
+          className="flex flex-wrap content-center items-center md:-mx-4"
+          id="mint-studie-diversitaet"
+        >
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4">
             <div className="overflow-hidden rounded-lg">
               <GatsbyImage
@@ -201,7 +207,9 @@ export function Datenfakten({
 
       <section className="container mt-8 md:mt-10 lg:mt-10 mb-12 lg:mb-16 relative">
         <header className="max-w-4xl mx-auto">
-          <H3 like="h2" className="font-bold">MINT-Stimmungsbarometer</H3>
+          <H3 id="MINTstimmungsbarometer-2023" like="h2" className="font-bold">
+            MINT-Stimmungsbarometer
+          </H3>
           <p className="">
             Das MINT-Stimmungsbarometer ist eine jährliche Befragung von
             MINTvernetzt, bei der Vertreter:innen aus Bildung, Wissenschaft und
@@ -209,16 +217,18 @@ export function Datenfakten({
             MINT-Bildung in Deutschland befragt werden.
           </p>
         </header>
-      </section>  
+      </section>
       <section className="container lg:mt-10 mb-16">
-        <H4 className="mb-4 md:text-center font-semibold">Stimmungsbarometer 2023</H4>
+        <H4 className="mb-4 md:text-center font-semibold">
+          Stimmungsbarometer 2023
+        </H4>
         <div className="max-w-4xl mx-auto relative mb-20">
           <Mood2023 />
         </div>
         <div className="max-w-4xl mx-auto md:relative mb-20">
           <p className="md:text-center">
-            Hier können die Ergebnisse des MINT-Stimmungsbarometers als PDF oder Einzelgrafiken 
-            heruntergeladen werden.
+            Hier können die Ergebnisse des MINT-Stimmungsbarometers als PDF oder
+            Einzelgrafiken heruntergeladen werden.
           </p>
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
             <div>
@@ -237,13 +247,13 @@ export function Datenfakten({
             <div>
               <p className="mb-2">
                 <a
-                    href={data.Stimmung2023Zip?.publicURL}
-                    target="_blank"
-                    className="btn-outline-primary btn-icon mb-2"
+                  href={data.Stimmung2023Zip?.publicURL}
+                  target="_blank"
+                  className="btn-outline-primary btn-icon mb-2"
                 >
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />
                   <span>Download Grafiken</span>
-                </a>                  
+                </a>
               </p>
               <p className="text-xs">ZIP, ca. 11,9MB</p>
             </div>
@@ -251,13 +261,14 @@ export function Datenfakten({
         </div>
       </section>
 
-      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 relative">   
-        <H4 className="mb-4 md:text-center font-semibold">Stimmungsbarometer 2022</H4>     
+      <section className="container mt-8 md:mt-10 lg:mt-10 mb-8 md:mb-10 lg:mb-20 relative">
+        <H4 className="mb-4 md:text-center font-semibold">
+          Stimmungsbarometer 2022
+        </H4>
         <div className="max-w-4xl mx-auto relative">
           <Mood2022 />
         </div>
       </section>
-         
     </Layout>
   );
 }
@@ -269,53 +280,56 @@ export const pageQuery = graphql`
     heroImage: file(relativePath: { eq: "daten_fakten_hero.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(
-          width: 1488
-          placeholder: BLURRED
-        )
+        gatsbyImageData(width: 1488, placeholder: BLURRED)
       }
     }
-    dataLabImage: file(relativePath: { eq: "daten_und_fakten_mockup_datalab.png" }) {
+    dataLabImage: file(
+      relativePath: { eq: "daten_und_fakten_mockup_datalab.png" }
+    ) {
       childImageSharp {
-        gatsbyImageData(
-          width: 744
-          placeholder: BLURRED
-        )
+        gatsbyImageData(width: 744, placeholder: BLURRED)
       }
     }
     didaktikImage: file(relativePath: { eq: "daten-fakten_didaktik.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(
-          width: 744
-          placeholder: BLURRED
-        )
+        gatsbyImageData(width: 744, placeholder: BLURRED)
       }
-    }    
+    }
     diversityImage: file(relativePath: { eq: "daten-fakten_diversity.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(
-          width: 744
-          placeholder: BLURRED
-        )
+        gatsbyImageData(width: 744, placeholder: BLURRED)
       }
     }
-    PdfDidaktik: file(relativePath: { eq: "Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf" }) {
-      publicURL      
-    }  
-    PdfDiversitaet: file(relativePath: { eq: "Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf" }) {
-      publicURL      
-    }  
-    PdfDiversitaetLong: file(relativePath: { eq: "Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf" }) {
-      publicURL      
-    }  
-    PdfStimmung2023: file(relativePath: { eq: "MINT_Simmungsbarometer2023.pdf" }) {
-      publicURL      
-    }  
-    Stimmung2023Zip: file(relativePath: { eq: "MINT_Simmungsbarometer2023_Grafiken.zip" }) {
-      publicURL      
-    }  
+    PdfDidaktik: file(
+      relativePath: { eq: "Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf" }
+    ) {
+      publicURL
+    }
+    PdfDiversitaet: file(
+      relativePath: {
+        eq: "Kurzfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf"
+      }
+    ) {
+      publicURL
+    }
+    PdfDiversitaetLong: file(
+      relativePath: {
+        eq: "Langfassung_Studie_Diversitaet-in-der-MINT-Bildung.pdf"
+      }
+    ) {
+      publicURL
+    }
+    PdfStimmung2023: file(
+      relativePath: { eq: "MINT_Simmungsbarometer2023.pdf" }
+    ) {
+      publicURL
+    }
+    Stimmung2023Zip: file(
+      relativePath: { eq: "MINT_Simmungsbarometer2023_Grafiken.zip" }
+    ) {
+      publicURL
+    }
   }
 `;
-
