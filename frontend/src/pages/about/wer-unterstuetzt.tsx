@@ -17,7 +17,7 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
       },
       {
         name: "Michael Fritz",
-        organisation: "Haus der kleinen Forscher",
+        organisation: "Stiftung Kinder forschen",
       },
       {
         name: "Dr. Sven Günther",
@@ -33,14 +33,14 @@ export function WerUnterstuetzt({ data }: { data: GatsbyTypes.WerPageQuery }) {
       },
       {
         name: "Jana Heiberger",
-        organisation: "Deutsche Industrie- und Handelskammer",
+        organisation: "Deutscher Industrie- und Handelskammertag",
       },
       {
         name: "Dr. Kirsten Kielbassa-Schnepp",
         organisation: "Zentralverband des Deutschen Handwerks",
       },
       {
-        name: "Pauline Blombeck",
+        name: "Pauline Bombeck",
         organisation: "#SheTransformsIT",
       },
       {
