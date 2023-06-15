@@ -12,10 +12,13 @@ import Icon, { IconType } from "../../../components/Icon/Icon";
 
 export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
   const now = new Date();
-  
+
   const events = data.events.nodes
     .filter((event) =>
-      isBeforeOneDayAfterDate(now, new Date(event.eventInformations.endDate))
+      isBeforeOneDayAfterDate(
+        now,
+        new Date(event?.eventInformations?.endDate || "")
+      )
     )
     .map((event) => {
       return {
@@ -39,7 +42,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               data?.MemberImage?.childImageSharp?.gatsbyImageData
             }
             className="w-full h-auto aspect-[16/9]"
-            alt={event?.title}
+            alt={event?.title || ""}
           />
         ),
         tags: event?.tags?.nodes?.map((tag) => ({
@@ -61,14 +64,17 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       provider_position: `Head of Personal and Organisational Development bei Deichmann SE`,
       testimonial_text: (
         <p>
-            Chancengleichheit und Teilhabe sind der Motor für gesellschaftliches Wachstum. Gesellschaftliche Veränderungen können aber nur 
-            gemeinsam erreicht werden und leben von wahrnehmbaren Vorbildern. Vielfalt ist für uns als Unternehmen ein wichtiger 
-            Erfolgsfaktor. Dabei ist das Bündnis für uns eine ideale Möglichkeit für Austausch, gemeinsame Ideen und Aktionen. 
+          Chancengleichheit und Teilhabe sind der Motor für gesellschaftliches
+          Wachstum. Gesellschaftliche Veränderungen können aber nur gemeinsam
+          erreicht werden und leben von wahrnehmbaren Vorbildern. Vielfalt ist
+          für uns als Unternehmen ein wichtiger Erfolgsfaktor. Dabei ist das
+          Bündnis für uns eine ideale Möglichkeit für Austausch, gemeinsame
+          Ideen und Aktionen.
         </p>
-      ),      
+      ),
       provider_profile: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
       projectlink: `https://www.little-lab.de/verein/`,
-    },    
+    },
     {
       provider_foto: (
         <GatsbyImage
@@ -81,32 +87,36 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       provider_position: `Geschäftsführerin cekaso GmbH und Co-Vorsitzende MINT-Kommission VdU`,
       testimonial_text: (
         <p>
-          Ich möchte, dass Frauen aufhören aus MINT-Themen einen Mythos zu machen, den nur Männer verstehen. Die Zukunft gehört denen, die 
-          die Technologie gestalten. Lassen Sie uns sicherstellen, dass Frauen eine entscheidende Rolle dabei spielen! 
+          Ich möchte, dass Frauen aufhören aus MINT-Themen einen Mythos zu
+          machen, den nur Männer verstehen. Die Zukunft gehört denen, die die
+          Technologie gestalten. Lassen Sie uns sicherstellen, dass Frauen eine
+          entscheidende Rolle dabei spielen!
         </p>
-      ),      
+      ),
       provider_profile: `https://community.mint-vernetzt.de/profile/fatimecetinkaya-ld2ybdza`,
       projectlink: `https://www.cekaso.com/`,
-    },    
+    },
   ];
-  
+
   React.useEffect(() => {
     // accordeon toggle
-    document.querySelectorAll(".accordion-item button").forEach(($accordion) => {
-      $accordion.addEventListener("click", (event) => {
-        // event.preventDefault();
-        document
-          .querySelectorAll(".accordion-item button.active")
-          .forEach(($active) => {
-            if ($accordion !== $active) {
-              $active.classList.remove("active");
-            }
-          });
-        $accordion.classList.toggle("active");
+    document
+      .querySelectorAll(".accordion-item button")
+      .forEach(($accordion) => {
+        $accordion.addEventListener("click", (event) => {
+          // event.preventDefault();
+          document
+            .querySelectorAll(".accordion-item button.active")
+            .forEach(($active) => {
+              if ($accordion !== $active) {
+                $active.classList.remove("active");
+              }
+            });
+          $accordion.classList.toggle("active");
+        });
       });
-    });
   }, []);
-  
+
   return (
     <Layout>
       <SEO
@@ -125,7 +135,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 Bündnis für Frauen in MINT-Berufen
               </H1>
               <p className="font-semibold text-primary text-lg lg:text-3xl lg:leading-snug">
-                Gemeinsam mehr Frauen für MINT begeistern 
+                Gemeinsam mehr Frauen für MINT begeistern
               </p>
             </div>
           </div>
@@ -150,12 +160,17 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
             <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">
-              Ein gemeinsames Ziel 
+              Ein gemeinsames Ziel
             </H2>
             <p className="text-3xl leading-snug text-primary font-semibold">
-              Mehr Frauen und Mädchen in MINT! Das Bündnis für Frauen in MINT-Berufen ist ein{" "}
-              <span className="bg-lilac-200">Zusammenschluss von mehr als 300 Organisationen</span>, die gemeinsam dazu beitragen, 
-              dass Mädchen und Frauen stärker für Naturwissenschaft, Technik oder Informatik begeistert und für MINT-Berufe gewonnen werden.
+              Mehr Frauen und Mädchen in MINT! Das Bündnis für Frauen in
+              MINT-Berufen ist ein{" "}
+              <span className="bg-lilac-200">
+                Zusammenschluss von mehr als 300 Organisationen
+              </span>
+              , die gemeinsam dazu beitragen, dass Mädchen und Frauen stärker
+              für Naturwissenschaft, Technik oder Informatik begeistert und für
+              MINT-Berufe gewonnen werden.
             </p>
           </div>
         </div>
@@ -179,10 +194,13 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         <div className="container relative z-20">
           <div className="md:flex md:items-center md:justify-center -mx-4">
             <div className="md:w-4/12 px-4 mb-8 md:mb-0">
-              <H2 className="mb-6 font-bold">Das ist das Bündnis für Frauen in MINT-Berufen </H2>
+              <H2 className="mb-6 font-bold">
+                Das ist das Bündnis für Frauen in MINT-Berufen{" "}
+              </H2>
               <p className="lg:text-xl leading-snug text-neutral-700">
-                Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was sich hinter dem Bündnis 
-                verbirgt und warum es heute noch starke Bündnisse braucht?
+                Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was
+                sich hinter dem Bündnis verbirgt und warum es heute noch starke
+                Bündnisse braucht?
               </p>
             </div>
             <div className="md:w-8/12 xl:w-6/12 px-4">
@@ -264,7 +282,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           </div>
         </div>
       </section>
-      
+
       <section className="bg-primary pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
           <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold text-white">
@@ -321,8 +339,10 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 Liste der aktuellen Bündnis-Mitglieder
               </H2>
               <p className="md:text-xl leading-snug text-neutral-700">
-                Bereits mehr als 300 Mitglieder aus Wirtschaft, Bildung, Wissenschaft, Medien und Politik setzen sich dafür ein, 
-                mehr Mädchen und Frauen für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern. 
+                Bereits mehr als 300 Mitglieder aus Wirtschaft, Bildung,
+                Wissenschaft, Medien und Politik setzen sich dafür ein, mehr
+                Mädchen und Frauen für MINT-Ausbildungen, -Studiengänge und
+                -Berufe zu begeistern.
               </p>
               <p>
                 <Link to={"list"} className="btn-primary">
@@ -332,7 +352,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             </div>
           </div>
         </div>
-      </section>      
+      </section>
 
       {events.length > 0 && (
         <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
@@ -357,16 +377,21 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       )}
 
       <section className="bg-beige-500 pt-16 pb-28 lg:pt-24 lg:pb-40 relative">
-        <div className="absolute inset-0 absolute z-10 overflow-hidden flex items-center justify-center text-lilac-400">
-          <svg xmlns="http://www.w3.org/2000/svg" 
-            width="1440" 
-            height="708" 
-            fill="none" 
+        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-lilac-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1440"
+            height="708"
+            fill="none"
             viewBox="0 0 1440 708"
             className="absolute w-[100%] h-[100%] inset-x-0"
           >
-            <path stroke="currentColor" stroke-width="3" d="M282.617 682.382C-500.026 481.566 95.879-101.491 784.292-29.966 1095.23 2.34 1026.38 69.816 1229.41 155.03c292 122.554 959.97 158.712 381.06 529.615-51.63 33.08-226.62 102.894-306.18 122.664-171.96 42.731-371.21 41.974-1021.673-124.926Z"/>
-          </svg>          
+            <path
+              stroke="currentColor"
+              stroke-width="3"
+              d="M282.617 682.382C-500.026 481.566 95.879-101.491 784.292-29.966 1095.23 2.34 1026.38 69.816 1229.41 155.03c292 122.554 959.97 158.712 381.06 529.615-51.63 33.08-226.62 102.894-306.18 122.664-171.96 42.731-371.21 41.974-1021.673-124.926Z"
+            />
+          </svg>
         </div>
         <div className="container relative z-20">
           <div className="lg:w-10/12 mb-8 lg:mb-16 mx-auto">
@@ -374,10 +399,11 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               Motivation und Erfolge – deshalb sind wir dabei!
             </H2>
             <p className="text-center px-8">
-              Mehr Frauen für MINT gewinnen – wie gelingt das? Und warum lohnt sich der Einsatz, gesellschaftlich oder 
-              für einzelne Unternehmen oder Teams? Das sagen Bündnismitglieder: 
+              Mehr Frauen für MINT gewinnen – wie gelingt das? Und warum lohnt
+              sich der Einsatz, gesellschaftlich oder für einzelne Unternehmen
+              oder Teams? Das sagen Bündnismitglieder:
             </p>
-          </div>  
+          </div>
           <div className="text-neutral-700">
             <TestimonialSwiper items={testimonials} />
           </div>
@@ -391,9 +417,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               Informationen zum Bündnis für Frauen in MINT-Berufen
             </H2>
             <p className="text-center mb-8 lg:mb-12 text-white">
-              Hier finden Sie die wichtigsten Antworten. 
+              Hier finden Sie die wichtigsten Antworten.
             </p>
-            <ul className="accordion">              
+            <ul className="accordion">
               <li className="accordion-item relative overflow-hidden mb-8">
                 <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>Wer kann Mitglied werden?</span>
@@ -416,7 +442,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     Hier kommt ein Text rein
                   </div>
                 </div>
-              </li>           
+              </li>
               <li className="accordion-item relative overflow-hidden mb-8">
                 <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>Was ist der Mehrwert einer Bündnismitgliedschaft?</span>
@@ -436,14 +462,18 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </button>
                 <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
-                    Bündnismitglieder profitieren von Vernetzungsmöglichkeiten, Austauschformaten und Unterstützungsangeboten. Die Mitgliedsinstitutionen 
-                    erhalten für sich und ihr Engagement für Mädchen und Frauen in MINT eine höhere Sichtbarkeit.
+                    Bündnismitglieder profitieren von Vernetzungsmöglichkeiten,
+                    Austauschformaten und Unterstützungsangeboten. Die
+                    Mitgliedsinstitutionen erhalten für sich und ihr Engagement
+                    für Mädchen und Frauen in MINT eine höhere Sichtbarkeit.
                   </div>
                 </div>
               </li>
               <li className="accordion-item relative overflow-hidden mb-8">
                 <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
-                  <span>Wie kann ich mit meiner Organisation Mitglied werden?</span>
+                  <span>
+                    Wie kann ich mit meiner Organisation Mitglied werden?
+                  </span>
                   <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -466,7 +496,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               </li>
               <li className="accordion-item relative overflow-hidden mb-8">
                 <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
-                  <span>Wie erfahre ich von den Aktivitäten des Bündnisses?</span>
+                  <span>
+                    Wie erfahre ich von den Aktivitäten des Bündnisses?
+                  </span>
                   <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -486,8 +518,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     Hier kommt ein Text rein
                   </div>
                 </div>
-              </li>     
-            </ul>            
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -499,9 +531,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Unser Leitbild</H2>
               <p className="text-xl leading-snug text-neutral-700">
-                Gemeinsam aktiv sein: Damit aus Worten Taten werden, verpflichten sich die 
-                Bündnis-Mitglieder zu einem Leitbild mit Ideen für konkrete Fördermöglichkeiten 
-                von Mädchen und Frauen. 
+                Gemeinsam aktiv sein: Damit aus Worten Taten werden,
+                verpflichten sich die Bündnis-Mitglieder zu einem Leitbild mit
+                Ideen für konkrete Fördermöglichkeiten von Mädchen und Frauen.
               </p>
               <p className="mb-2">
                 <a
@@ -512,129 +544,33 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />
                   <span>Download</span>
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex-100 lg:flex-2/3 lg:px-10 lg:order-1">
-            <H1 like="h0">Bündnis für Frauen in MINT-Berufen</H1>
-            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
-              #empowerMINT #FrauenInMINT
-            </p>
-
-            <p className="lg:text-xl text-neutral-600 mb-4">
-              Das Bündnis für Frauen in MINT-Berufen hat es sich in einem
-              gemeinsamen Leitbild zum Ziel gesetzt, Mädchen und junge Frauen
-              für MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern und
-              in ihrem Werdegang zu unterstützen. So trägt das Bündnis zu mehr
-              Teilhabe in der Gesellschaft, zur Sicherung des Innovations- und
-              Wirtschaftsstandorts Deutschland und zur Lösung globaler
-              Herausforderungen bei.
-            </p>
-            <p className="lg:text-xl text-neutral-600 mb-16">
-              Das Bündnis wurde 2008 vom Bundesministerium für Bildung und
-              Forschung initiiert und wird seit September 2021 von der
-              Kompetenz- und Vernetzungsstelle MINTvernetzt koordiniert. Über
-              300 Mitglieder aus rund 260 verschiedenen Institutionen aus
-              Wirtschaft, Bildung und Wissenschaft, Medien und Politik haben
-              sich seither im Bündnis zusammengeschlossen, um gemeinsam einen
-              Beitrag dafür zu leisten, Mädchen und Frauen stärker für
-              MINT-Ausbildungen, -Studiengänge und -Berufe zu begeistern.
-            </p>
-            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
-              Angebote für Mitglieder
-            </p>
-            <p className="lg:text-xl text-neutral-600 mb-4">
-              Exklusiv für Bündnis-Mitglieder und Interessierte bieten wir
-              regelmäßig Veranstaltungen und Vernetzungsmöglichkeiten rund um
-              das Thema Mädchen und Frauen in MINT an.
-            </p>
-
-            <p className="lg:text-xl text-neutral-600 mb-4">
-              Aktuell veranstalten wir eine vierteilige{" "}
-              <a
-                // https://mint-vernetzt.de
-                href="/event/workshop-reihe-von-der-vision-zur-wirklichkeit-klischeefrei-mint-talente-von-morgen-gewinnen"
-                className="text-lilac-500 hover:underline"
-              >
-                Workshopreihe „Von der Vision zur Wirklichkeit – Klischeefrei
-                MINT-Talente von morgen gewinnen“
-              </a>{" "}
-              gemeinsam mit der Initiative Klischeefrei. Bei den bisherigen
-              Workshops stand das Thema „Sensibilisierung und Haltung“ im
-              Vordergrund. Am 24. Mai erarbeiten wir zum Thema „Generationen,
-              Familie, Vereinbarkeitskulturen“ gemeinsam konkrete Maßnahmen,
-              damit die Vision einer klischeefreien Arbeitswelt in der Praxis
-              lebendig wird. Am 21. Juni schließen wir die Reihe mit zahlreichen
-              Best-Practice-Beispielen aus unseren Netzwerken. Für die Anmeldung
-              für verbleibende Termine wenden Sie sich gerne an{" "}
-              <a
-                href={`mailto:${data.wpContact.contactInformations.email}`}
-                className="text-lilac-500 hover:underline"
-              >
-                {`${data.wpContact.contactInformations.title || ""} ${
-                  data.wpContact.contactInformations.firstName
-                } ${data.wpContact.contactInformations.lastName}`.trim()}
-              </a>
-              .
-            </p>
-            <p className="lg:text-xl text-neutral-600 mb-16">
-              In unserem Newsletter informieren wir Sie zudem zu aktuellen
-              Aktionen und Veranstaltungen rund um das Bündnis für Frauen in
-              MINT-Berufen. Die Anmeldung ist über{" "}
-              <a
-                href={`mailto:${data.wpContact.contactInformations.email}`}
-                className="text-lilac-500 hover:underline"
-              >
-                {`${data.wpContact.contactInformations.title || ""} ${
-                  data.wpContact.contactInformations.firstName
-                } ${data.wpContact.contactInformations.lastName}`.trim()}
-              </a>{" "}
-              möglich.
-            </p>
-
-            <p className="lg:text-3xl mb-2 lg:mb-4 font-bold">
-              Interesse an Mitgliedschaft
-            </p>
-            <p className="lg:text-xl text-neutral-600 mb-16">
-              Sie und Ihre Organisation unterstützen die Vorhaben des Bündnisses
-              und möchten sich als Mitglied engagieren? Dann schicken Sie bitte
-              eine{" "}
-              <a
-                href={`mailto:${data.wpContact.contactInformations.email}`}
-                className="text-lilac-500 hover:underline"
-              >
-                E-Mail an{" "}
-                {`${data.wpContact.contactInformations.title || ""} ${
-                  data.wpContact.contactInformations.firstName
-                } ${data.wpContact.contactInformations.lastName}`.trim()}
-              </a>
-              . Wir melden uns persönlich bei Ihnen zurück. Bitte lesen Sie
-              vorher das Leitbild und melden Sie sich gerne bei Fragen bei uns.
-              Die Mitgliedschaft ist kostenfrei. Ihr Beitritt zum Bündnis für
-              Frauen in MINT-Berufen wird erst mit der schriftlichen Bestätigung
-              durch MINTvernetzt wirksam.
-            </p>
-
-            <p className="lg:text-3xl lg:leading-snug text-neutral-600 mb-4 font-bold">
-              Liste der aktuellen Mitglieder im Bündnis für Frauen in
-              MINT-Berufen:
-            </p>
-
-            <Link to={"list"}>Liste</Link>
-            <Link to={"submit"}>Liste</Link>
-
-            <ul className="pakt-list">
-              {categories.map((category, index) => {
-                const categorySlug = getCategorySlugFromMember(
-                  paktDataByCategory[category][0].slug
-                );
-
-                return (
-                  <li
-                    key={category}
-                    id={categorySlug}
-                    className="pakt-category relative overflow-hidden"
+              </p>
+              <p className="text-xs">PDF, ca. 200KB</p>
+            </div>
+            <div className="hidden lg:flex lg:w-1/12 px-4"></div>
+            <div className="md:w-5/12 px-4 flex justify-center relative">
+              <div className="absolute inset-0 text-salmon-400 flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 270 215"
+                >
+                  <path
+                    fill="#FCC433"
+                    d="M.788 101.52c5.95-38.838 66.074-68.85 90.186-78.903l.264-.11C119.315 10.799 154.14-3.723 196.675.87c27.153 2.932 83.398 42.996 71.761 110.422-11.637 67.426-96.976 114.331-177.462 101.628C27.48 202.898-5.636 143.45.788 101.52Z"
+                  />
+                </svg>
+              </div>
+              <div className="relative max-w-[180px] md:max-w-[260px] lg:max-w-[360px] my-8">
+                <GatsbyImage
+                  image={data?.GlossarImage?.childImageSharp?.gatsbyImageData}
+                  className=""
+                  alt=""
+                />
+                <div className="absolute right-0 bottom-[-1px]">
+                  <div
+                    className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 "
+                    style={{ writingMode: "vertical-rl" }}
                   >
                     Unsplash/ Surendran MP
                   </div>
@@ -652,27 +588,39 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">
                 Ansprechpartnerin
               </H2>
-              
+
               <div className="rounded-lg bg-neutral-50 shadow-sm p-8">
                 <div className="flex gap-8 md:gap-16 flex-col md:flex-row md:items-center">
                   <div className="flex justify-center">
                     <GatsbyImage
-                      image={data.wpContact.contactInformations.photo.localFile.childImageSharp?.gatsbyImageData}
+                      image={
+                        data.wpContact.contactInformations.photo.localFile
+                          .childImageSharp?.gatsbyImageData
+                      }
                       className="rounded-full w-[120px] h-[120px]"
                       alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
                     />
                   </div>
                   <div className="">
-                    <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.wpContact.contactInformations.title || ""} ${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`.trim()}</p>
-                    <p className="text-base md:text-lg text-primary">{data.wpContact.contactInformations.position}</p>
+                    <p className="font-semibold text-primary mb-2 md:text-3xl">
+                      {`${data.wpContact.contactInformations.title || ""} ${
+                        data.wpContact.contactInformations.firstName
+                      } ${data.wpContact.contactInformations.lastName}`.trim()}
+                    </p>
+                    <p className="text-base md:text-lg text-primary">
+                      {data.wpContact.contactInformations.position}
+                    </p>
                     <p className="text-base md:text-lg">
-                      <a href={`mailto:${data.wpContact.contactInformations.email}`} className="flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
+                      <a
+                        href={`mailto:${data.wpContact.contactInformations.email}`}
+                        className="flex items-center rounded-lg bg-neutral-100 p-4 text-primary"
+                      >
                         <span className="icon w-4 h-4 mr-2 ">
                           <Icon type={IconType.Mail} />
                         </span>
                         <span>{data.wpContact.contactInformations.email}</span>
                       </a>
-                    </p>                      
+                    </p>
                   </div>
                 </div>
               </div>
@@ -688,9 +636,7 @@ export default Alliance;
 
 export const pageQuery = graphql`
   query AlliancePage {
-    ProviderFischer: file(
-      relativePath: { eq: "buendnis/susann_fischer.jpg" }
-    ) {
+    ProviderFischer: file(relativePath: { eq: "buendnis/susann_fischer.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
@@ -718,15 +664,11 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 480)
       }
     }
-    ContactImage: file(
-      relativePath: {
-        eq: "contact_nele_gerkens.jpeg"
-      }
-    ) {
+    ContactImage: file(relativePath: { eq: "contact_nele_gerkens.jpeg" }) {
       childImageSharp {
         gatsbyImageData(width: 480)
       }
-    }    
+    }
     events: allWpEvent(
       limit: 3
       filter: {

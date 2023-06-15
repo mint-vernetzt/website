@@ -54,7 +54,8 @@ export default function PaktPartner({
 
         <div className="flex flex-wrap items-center md:-mx-4 lg:-mx-6 ">
           <div className="flex-100 md:flex-1/3 pb-8 md:pb-0 md:px-4 lg:px-6 md:order-2">
-            {partner.featuredImage && (
+            {partner.featuredImage?.node?.localFile?.childImageSharp
+              ?.gatsbyImageData && (
               <GatsbyImage
                 image={
                   partner.featuredImage.node?.localFile?.childImageSharp
