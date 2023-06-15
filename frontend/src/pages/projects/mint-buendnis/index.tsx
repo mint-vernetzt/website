@@ -398,7 +398,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <H2 className="all-small-caps text-center mb-8 text-4xl md:text-5xl tracking-widest font-semibold">
               Motivation und Erfolge – deshalb sind wir dabei!
             </H2>
-            <p className="text-center px-8">
+            <p className="text-center px-8 lg:text-xl">
               Mehr Frauen für MINT gewinnen – wie gelingt das? Und warum lohnt sich der Einsatz, gesellschaftlich oder 
               für einzelne Unternehmen oder Teams? Das sagen Bündnismitglieder: 
             </p>
@@ -415,7 +415,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <H2 className="text-center mb-8 text-white">
               Informationen zum Bündnis für Frauen in MINT-Berufen
             </H2>
-            <p className="text-center mb-8 lg:mb-12 text-white">
+            <p className="text-center mb-8 lg:mb-12 text-white lg:text-xl">
               Hier finden Sie die wichtigsten Antworten.
             </p>
             <ul className="accordion mb-16">              
