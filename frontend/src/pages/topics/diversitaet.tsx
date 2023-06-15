@@ -239,7 +239,7 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
               für Euch Beiträge und Veranstaltungen mit Tipps und
               Hintergrundwissen, damit sich zukünftig{" "}
               <span className="bg-lilac-200">
-                alle Kinder und Jugendliche von MINT-Bildungsprojekten
+                alle Kinder und Jugendlichen von MINT-Bildungsprojekten
                 gleichermaßen angesprochen fühlen.
               </span>
             </p>
