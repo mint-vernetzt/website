@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2 } from "../../components/Heading/Heading";
 import { isBeforeOneDayAfterDate } from "../../utils/eventFilter";
 
-import ProjectSwiper from "../../components/ProjectSwiper";
+import ProjectSwiper from "../../components/Swiper/ProjectSwiper";
 import { getNewsItems } from "../../utils/dataTransformer";
 import NewsSwiper from "../../components/NewsSwiper/NewsSwiper";
 import { ReactComponent as HeaderImage } from "../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";

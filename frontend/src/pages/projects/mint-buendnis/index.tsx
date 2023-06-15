@@ -5,7 +5,7 @@ import SEO from "../../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2, H4 } from "../../../components/Heading/Heading";
 import { isBeforeOneDayAfterDate } from "../../../utils/eventFilter";
-import TestimonialSwiper from "../../../components/ProjectSwiper";
+import TestimonialSwiper from "../../../components/Swiper/TestimonialSwiper";
 import { ReactComponent as HeaderImage } from "../../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
 import EventCards from "../../../components/EventCards/EventCards";
 import Icon, { IconType } from "../../../components/Icon/Icon";
@@ -335,7 +335,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       </section>      
 
       {events.length > 0 && (
-        <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28" id="events">
           <div className="container">
             <div className="-mx-4 xl:flex xl:justify-center">
               <div className="xl:w-10/12 px-4">
@@ -374,7 +374,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               Motivation und Erfolge – deshalb sind wir dabei!
             </H2>
             <p className="text-center px-8">
-              Mehr Frauen für MINT gewinnen – wie gelingt das? Und warum lohnt sich der Einsatz, gesellschaftlich oder 
+              Mehr Frauen für MINT gewinnen– wie gelingt das? Und warum lohnt sich der Einsatz, gesellschaftlich oder 
               für einzelne Unternehmen oder Teams? Das sagen Bündnismitglieder: 
             </p>
           </div>  
@@ -386,14 +386,14 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
 
       <section className="bg-lilac-400 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
-          <div className="lg:w-1/2 mb-8 lg:mb-16 mx-auto">
+          <div className="lg:w-1/2 mx-auto">
             <H2 className="text-center mb-8 text-white">
               Informationen zum Bündnis für Frauen in MINT-Berufen
             </H2>
             <p className="text-center mb-8 lg:mb-12 text-white">
               Hier finden Sie die wichtigsten Antworten. 
             </p>
-            <ul className="accordion">              
+            <ul className="accordion mb-16">              
               <li className="accordion-item relative overflow-hidden mb-8">
                 <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>Wer kann Mitglied werden?</span>
@@ -413,7 +413,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </button>
                 <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
-                    Hier kommt ein Text rein
+                    Die Mitgliedschaft steht allen Organisationen offen, die die Vorhaben des Bündnisses unterstützen und sich im Sinne des gemeinsamen {" "}  
+                    <a href="#leitbild" className="text-lilac-500 hover:underline">Leitbilds</a> engagieren möchten. Eine Mitgliedschaft für Einzelpersonen ist nicht möglich. 
                   </div>
                 </div>
               </li>           
@@ -437,7 +438,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
                     Bündnismitglieder profitieren von Vernetzungsmöglichkeiten, Austauschformaten und Unterstützungsangeboten. Die Mitgliedsinstitutionen 
-                    erhalten für sich und ihr Engagement für Mädchen und Frauen in MINT eine höhere Sichtbarkeit.
+                    erhalten für sich und ihr Engagement für Mädchen und Frauen in MINT eine höhere Sichtbarkeit. Durch die Einbettung des Bündnisses 
+                    in die MINT-Community in Deutschland und die damit verbundenen Aktivitäten von MINTvernetzt entstehen Synergien und Kooperationen. 
                   </div>
                 </div>
               </li>
@@ -460,7 +462,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </button>
                 <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
-                    Hier kommt ein Text rein
+                    Der Aufnahmeprozess ist niedrigschwellig. Eine erste Kontaktaufnahme ist über unser{" "}
+                    <Link to="buendnis/contact" className="text-lilac-500 hover:underline">Formular</Link> möglich. Wir melden 
+                    uns daraufhin bei Ihnen und begleiten Sie durch die nächsten Schritte.
                   </div>
                 </div>
               </li>
@@ -483,25 +487,37 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </button>
                 <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
-                    Hier kommt ein Text rein
+                    Mitglieder erhalten regelmäßig einen Newsletter und Mailings, die über Neuigkeiten, Veranstaltungen und Veröffentlichungen informieren.{" "}
+                    {events.length > 0 && (
+                      <>
+                        <a href="#events" className="text-lilac-500 hover:underline">Hier</a> 
+                        sind zudem immer unsere aktuellen Events zu finden. 
+                      </>  
+                    )}  
                   </div>
                 </div>
               </li>     
-            </ul>            
+            </ul>      
+            <p className="mb-0 text-center">
+              <Link to="buendnis/contact"
+                className="btn-primary"
+              >                
+                Zum Kontaktformular
+              </Link>
+            </p>      
           </div>
         </div>
       </section>
 
-      <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28" id="leitbild">
         <div className="container">
           <div className="md:flex md:items-center -mx-4">
             <div className="hidden lg:flex lg:w-1/12 px-4 "></div>
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Unser Leitbild</H2>
               <p className="text-xl leading-snug text-neutral-700">
-                Gemeinsam aktiv sein: Damit aus Worten Taten werden, verpflichten sich die 
-                Bündnis-Mitglieder zu einem Leitbild mit Ideen für konkrete Fördermöglichkeiten 
-                von Mädchen und Frauen. 
+                Gemeinsam aktiv sein: Damit aus Worten Taten werden, verpflichten sich die Bündnismitglieder zu einem Leitbild mit Ideen 
+                für konkrete Unterstützungsmöglichkeiten von Mädchen und Frauen. 
               </p>
               <p className="mb-2">
                 <a
@@ -510,7 +526,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   className="btn-primary btn-icon"
                 >
                   <Icon type={IconType.DownloadIcon} width="12" height="15" />
-                  <span>Download</span>
+                  <span>Download Leitbild</span>
                 </a>
               </p>
               <p className="text-xs">PDF, ca. 200KB</p>              
@@ -562,15 +578,15 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   <div className="flex justify-center">
                     <GatsbyImage
                       image={data.wpContact.contactInformations.photo.localFile.childImageSharp?.gatsbyImageData}
-                      className="rounded-full w-[120px] h-[120px]"
+                      className="rounded-full w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
                       alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
                     />
                   </div>
-                  <div className="">
+                  <div className="flex-auto">
                     <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.wpContact.contactInformations.title || ""} ${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`.trim()}</p>
                     <p className="text-base md:text-lg text-primary">{data.wpContact.contactInformations.position}</p>
                     <p className="text-base md:text-lg">
-                      <a href={`mailto:${data.wpContact.contactInformations.email}`} className="flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
+                      <a href={`mailto:${data.wpContact.contactInformations.email}`} className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
                         <span className="icon w-4 h-4 mr-2 ">
                           <Icon type={IconType.Mail} />
                         </span>
