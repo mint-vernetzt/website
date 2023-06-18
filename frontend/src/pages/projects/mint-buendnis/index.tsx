@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../../../components/Layout";
 import SEO from "../../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { H1, H2, H4 } from "../../../components/Heading/Heading";
+import { H1, H2 } from "../../../components/Heading/Heading";
 import { isBeforeOneDayAfterDate } from "../../../utils/eventFilter";
 import TestimonialSwiper from "../../../components/Swiper/TestimonialSwiper";
 import { ReactComponent as HeaderImage } from "../../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
@@ -290,7 +290,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           </H2>
           <div className="flex justify-center gap-8">
             <div className="w-60 text-white text-center">
-              <div className="h0">200+</div>
+              <div className="h0">300+</div>
               <p>Mitglieder</p>
             </div>
             <div className="w-60 text-white text-center">

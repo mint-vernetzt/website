@@ -1,6 +1,6 @@
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { H1, H2, H3, H4 } from "../../components/Heading/Heading";
+import { H1, H2, H3 } from "../../components/Heading/Heading";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { ReactComponent as BadgeRocket } from "../../images/Badge_02Rocket.svg";

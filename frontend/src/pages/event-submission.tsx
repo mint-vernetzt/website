@@ -458,7 +458,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                   <p className="text-mb text-neutral-800 mb-2">
                     <a
                       href={`mailto:${data?.PageContact?.contactInformations?.email}`}
-                      className="flex items-center px-4 py-3 bg-neutral-300"
+                      className="flex items-center px-4 py-3 bg-1300"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Envelope} />
@@ -471,7 +471,7 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                   <p className="text-md text-neutral-800 mb-2">
                     <a
                       href={`tel:${data?.PageContact?.contactInformations?.phone}`}
-                      className="flex items-center px-4 py-3 bg-neutral-300"
+                      className="flex items-center px-4 py-3 bg-neutral-100"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Telephone} />
