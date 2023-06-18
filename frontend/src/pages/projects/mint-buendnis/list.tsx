@@ -164,7 +164,7 @@ export function MintPaktList({
         </div>
       </section>
               
-      <section className="bg-beige-500 py-16 border-b-2 border-b-white">
+      <section className="bg-beige-500 py-12 md:py-16 border-b-2 border-b-white">
         <div className="container flex justify-center mintpaktlist-filter">
           <div className="lg:w-10/12">
             <form>
@@ -210,7 +210,7 @@ export function MintPaktList({
         </div>    
       </section>
 
-      <section className="bg-beige-500 pt-16 pb-20 lg:pb-28">
+      <section className="bg-beige-500 pt-12 lg:pt-16 pb-20 lg:pb-28">
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
             {filteredPartners.length === 0 ? (
@@ -229,10 +229,10 @@ export function MintPaktList({
                     >
                       <Link
                         to={`/projects/mint-buendnis/${partner.slug ?? ""}`}
-                        className="font-semibold text-primary md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white shadow-sm"
+                        className="font-semibold text-primary md:leading-7 py-4 px-8 flex flex-col md:flex-row md:items-center md:justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white shadow-sm"
                       >
-                        <span className="text-3xl">{partner.title}</span>
-                        <span className="flex ml-8 items-center gap-4 flex-nowrap whitespace-nowrap">
+                        <span className="text-lg lg:text-3xl mb-4 md:mb-0">{partner.title}</span>
+                        <span className="flex md:ml-8 items-center gap-4 flex-nowrap whitespace-nowrap">
                           <span className="">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
