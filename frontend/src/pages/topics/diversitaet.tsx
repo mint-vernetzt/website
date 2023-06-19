@@ -53,7 +53,8 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
           slug: tag?.slug,
         })),
       };
-    });
+    }).slice(0, 3);
+
   const projectslides = [
     {
       /*logo: (
@@ -579,8 +580,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    events: allWpEvent(
-      limit: 3
+    events: allWpEvent(      
       filter: {
         parentId: { eq: null }
         tags: { nodes: { elemMatch: { slug: { eq: "diversitaet" } } } }
