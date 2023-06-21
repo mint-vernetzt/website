@@ -90,12 +90,13 @@ const Checkbox = React.forwardRef(
 
 const RadioGroup = React.forwardRef(
   (props: InputProps<HTMLInputElement>, ref) => {
-    const { errorMessage, name, ...generalProps } = props;
+    const { errorMessage, name, id, ...generalProps } = props;
     const errorClass = errorMessage ? "border-rose-500" : "";
     return (
       <>
         <input
-          id={name}
+          id={id || name}
+          name={name}
           type="radio"
           className={`radiogroup ${errorClass}`}
           {...generalProps}
@@ -177,6 +178,14 @@ export function Submission({
   } = useForm<PaktFormData>({
     mode: "all",
     resolver: yupResolver(yupSchema),
+    defaultValues: {
+      institution: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
 
   const termsAccepted = ["true", true].includes(watch("terms_accepted"));
@@ -220,7 +229,6 @@ export function Submission({
         image=""
         children=""
       />
-      <pre>{JSON.stringify(errors)}</pre>
       <section className="container mt-8 md:mb-10 lg:mt-10 mb-8 lg:mb-20">
         <div className="flex flex-wrap md:flex-nowrap md:-mx-4 my-10">
           <div className="order-2 md:order-1 flex-100 pb-8 md:pb-0 md:flex-1/2 lg:flex-2/3 md:px-4">
@@ -256,7 +264,7 @@ export function Submission({
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FormRow>
                   <FormLabel
-                    htmlFor="title"
+                    htmlFor="institution"
                     required
                     error={errors.institution !== undefined}
                   >
@@ -291,6 +299,7 @@ export function Submission({
                       <Input
                         {...field}
                         errorMessage={errors.firstName?.message}
+                        autoComplete="given-name"
                       />
                     )}
                   />
@@ -311,6 +320,7 @@ export function Submission({
                       <Input
                         {...field}
                         errorMessage={errors.lastName?.message}
+                        autoComplete="family-name"
                       />
                     )}
                   />
@@ -329,7 +339,11 @@ export function Submission({
                     name="email"
                     control={control}
                     render={({ field }) => (
-                      <Input {...field} errorMessage={errors.email?.message} />
+                      <Input
+                        {...field}
+                        errorMessage={errors.email?.message}
+                        autoComplete="email"
+                      />
                     )}
                   />
                 </FormRow>
@@ -347,13 +361,21 @@ export function Submission({
                     name="phone"
                     control={control}
                     render={({ field }) => (
-                      <Input {...field} errorMessage={errors.phone?.message} />
+                      <Input
+                        {...field}
+                        errorMessage={errors.phone?.message}
+                        autoComplete="tel-national"
+                      />
                     )}
                   />
                 </FormRow>
 
                 <FormRow>
-                  <FormLabel required error={errors.reachableBy !== undefined}>
+                  <FormLabel
+                    htmlFor="reachableBy"
+                    required
+                    error={errors.reachableBy !== undefined}
+                  >
                     Wie sind Sie am besten zu erreichen?
                   </FormLabel>
                   <Controller
@@ -365,6 +387,8 @@ export function Submission({
                           <label>
                             <RadioGroup
                               {...field}
+                              name="reachableBy"
+                              id="reachableByEmail"
                               errorMessage={errors.reachableBy?.message}
                               value={"email"}
                               checked={reachableBy === "email"}
@@ -374,6 +398,8 @@ export function Submission({
                           <label>
                             <RadioGroup
                               {...field}
+                              id="reachableByphone"
+                              name="reachableBy"
                               errorMessage={errors.reachableBy?.message}
                               value={"phone"}
                               checked={reachableBy === "phone"}
