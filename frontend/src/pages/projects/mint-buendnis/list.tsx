@@ -32,7 +32,8 @@ export function MintPaktList({
 
   React.useEffect(() => {
     navigate(
-      "?" + new URLSearchParams({ q, state, institutionType }).toString()
+      "?" + new URLSearchParams({ q, state, institutionType }).toString(),
+      { state: { noScrollRestauration: true } }
     );
   }, [q, state, institutionType]);
 
@@ -155,21 +156,23 @@ export function MintPaktList({
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
             <p className="mb-0 text-white text-3xl">
-              Bereits mehr als 200 Mitglieder aus den Bereichen Wirtschaft, Bildung und Wissenschaft sowie Medien und 
-              Politik haben sich bereits dem Leitbild des Bündnisses für Frauen in MINT-Berufen verpflichtet. Hier 
-              stellen wir die mehr als 260 Institutionen vor und geben einen Einblick, in welchen Bereichen sie 
-              Frauen in MINT konkret fördern und unterstützen.
+              Bereits mehr als 200 Mitglieder aus den Bereichen Wirtschaft,
+              Bildung und Wissenschaft sowie Medien und Politik haben sich
+              bereits dem Leitbild des Bündnisses für Frauen in MINT-Berufen
+              verpflichtet. Hier stellen wir die mehr als 260 Institutionen vor
+              und geben einen Einblick, in welchen Bereichen sie Frauen in MINT
+              konkret fördern und unterstützen.
             </p>
-          </div>  
+          </div>
         </div>
       </section>
-              
+
       <section className="bg-beige-500 py-12 md:py-16 border-b-2 border-b-white">
         <div className="container flex justify-center mintpaktlist-filter">
           <div className="lg:w-10/12">
             <form>
-              <div className="flex flex flex-wrap -mx-4">
-                <div className="flex-100 lg:flex-1/2 px-4">                
+              <div className="flex flex-wrap -mx-4">
+                <div className="flex-100 lg:flex-1/2 px-4">
                   <Selector
                     name="state"
                     options={states}
@@ -190,24 +193,24 @@ export function MintPaktList({
                     value={institutionType}
                     handleReset={() => setInstitutionType("")}
                   />
-                </div>                
-              </div>  
+                </div>
+              </div>
               <div className="flex-100">
-                  <fieldset>
-                    <Input
-                      name="q"
-                      label="Suche"
-                      value={q}
-                      onChange={(e: React.SyntheticEvent<HTMLInputElement>) =>
-                        setQ(e.currentTarget.value)
-                      }
-                      handleReset={() => setQ("")}
-                    />
-                  </fieldset>
-                </div>  
+                <fieldset>
+                  <Input
+                    name="q"
+                    label="Suche"
+                    value={q}
+                    onChange={(e: React.SyntheticEvent<HTMLInputElement>) =>
+                      setQ(e.currentTarget.value)
+                    }
+                    handleReset={() => setQ("")}
+                  />
+                </fieldset>
+              </div>
             </form>
           </div>
-        </div>    
+        </div>
       </section>
 
       <section className="bg-beige-500 pt-12 lg:pt-16 pb-20 lg:pb-28">
@@ -231,7 +234,9 @@ export function MintPaktList({
                         to={`/projects/mint-buendnis/${partner.slug ?? ""}`}
                         className="font-semibold text-primary md:leading-7 py-4 px-8 flex flex-col md:flex-row md:items-center md:justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white shadow-sm"
                       >
-                        <span className="text-lg lg:text-3xl mb-4 md:mb-0">{partner.title}</span>
+                        <span className="text-lg lg:text-3xl mb-4 md:mb-0">
+                          {partner.title}
+                        </span>
                         <span className="flex md:ml-8 items-center gap-4 flex-nowrap whitespace-nowrap">
                           <span className="">
                             <svg
@@ -253,9 +258,9 @@ export function MintPaktList({
                   );
                 })}
               </ul>
-            )}              
+            )}
           </div>
-        </div>    
+        </div>
       </section>
 
       <section className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28 -mb-20">
@@ -269,21 +274,42 @@ export function MintPaktList({
               <div className="rounded-lg bg-neutral-50 shadow-sm p-8">
                 <div className="flex gap-8 md:gap-16 flex-col md:flex-row md:items-center">
                   <div className="flex justify-center">
-                    <GatsbyImage
-                      image={data.wpContact.contactInformations.photo.localFile.childImageSharp?.gatsbyImageData}
-                      className="rounded-full w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
-                      alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
-                    />
+                    {data.wpContact?.contactInformations?.photo?.localFile
+                      ?.childImageSharp?.gatsbyImageData !== undefined && (
+                      <GatsbyImage
+                        image={
+                          data.wpContact.contactInformations.photo.localFile
+                            .childImageSharp?.gatsbyImageData
+                        }
+                        className="rounded-full w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
+                        alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
+                      />
+                    )}
                   </div>
                   <div className="flex-auto">
-                    <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.wpContact.contactInformations.title || ""} ${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}`.trim()}</p>
-                    <p className="text-base md:text-lg text-primary">{data.wpContact.contactInformations.position}</p>
+                    <p className="font-semibold text-primary mb-2 md:text-3xl">
+                      {`${data.wpContact?.contactInformations?.title ?? ""} ${
+                        data.wpContact?.contactInformations?.firstName ?? ""
+                      } ${
+                        data.wpContact?.contactInformations?.lastName ?? ""
+                      }`.trim()}
+                    </p>
+                    <p className="text-base md:text-lg text-primary">
+                      {data.wpContact?.contactInformations?.position ?? ""}
+                    </p>
                     <p className="text-base md:text-lg">
-                      <a href={`mailto:${data.wpContact.contactInformations.email}`} className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
+                      <a
+                        href={`mailto:${
+                          data.wpContact?.contactInformations?.email ?? ""
+                        }`}
+                        className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary"
+                      >
                         <span className="icon w-4 h-4 mr-2 ">
                           <Icon type={IconType.Mail} />
                         </span>
-                        <span>{data.wpContact.contactInformations.email}</span>
+                        <span>
+                          {data.wpContact?.contactInformations?.email ?? ""}
+                        </span>
                       </a>
                     </p>
                   </div>
@@ -308,7 +334,7 @@ export const pageQuery = graphql`
       childImageSharp {
         gatsbyImageData(width: 1280)
       }
-    }    
+    }
     states: allWpState {
       nodes {
         slug

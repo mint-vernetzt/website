@@ -5,3 +5,14 @@ exports.onRouteUpdate = () => {
   window.locations.push(window.location.pathname);
   window.previousPath = window.locations[window.locations.length - 2];
 };
+
+exports.shouldUpdateScroll = ({
+  routerProps: { location },
+  getSavedScrollPosition,
+}) => {
+  if (location.state.noScrollRestauration ?? false) {
+    return false;
+  }
+
+  return true;
+};
