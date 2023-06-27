@@ -123,7 +123,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         title={`Bündnis für Frauen in MINT-Berufen`}
         slug={`/projects/mint-buendnis/`}
         description="Gemeinsam mehr Frauen für MINT begeistern"
-        image={data?.HeroImage?.publicURL}
+        image={data?.MemberImage?.publicURL}
         children=""
       />
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
@@ -700,6 +700,7 @@ export const pageQuery = graphql`
         eq: "topic-diversity/Studie_Teaser_Diversitaet_480x480.jpg"
       }
     ) {
+      publicURL
       childImageSharp {
         gatsbyImageData(width: 480)
       }
@@ -707,11 +708,6 @@ export const pageQuery = graphql`
     GlossarImage: file(
       relativePath: { eq: "topic-diversity/Glossar_Teaser_480x480.jpg" }
     ) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    ContactImage: file(relativePath: { eq: "contact_nele_gerkens.jpeg" }) {
       childImageSharp {
         gatsbyImageData(width: 480)
       }

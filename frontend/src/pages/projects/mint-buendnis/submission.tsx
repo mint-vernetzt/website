@@ -39,7 +39,7 @@ type InputProps<T> = React.HTMLProps<T> & {
 };
 const Input = React.forwardRef((props: InputProps<HTMLInputElement>, ref) => {
   const { errorMessage, name, ...restProps } = props;
-  const errorClass = errorMessage ? "border-salmon-500 bg-[#F35F5F]" : "";
+  const errorClass = errorMessage ? "error" : "";
   return (
     <>
       <input
@@ -56,7 +56,7 @@ const Input = React.forwardRef((props: InputProps<HTMLInputElement>, ref) => {
 const Textarea = React.forwardRef(
   (props: InputProps<HTMLTextAreaElement>, ref) => {
     const { errorMessage, name, ...restProps } = props;
-    const errorClass = errorMessage ? "border-rose-500" : "";
+    const errorClass = errorMessage ? "error" : "";
     return (
       <>
         <textarea
@@ -74,13 +74,13 @@ const Textarea = React.forwardRef(
 const Checkbox = React.forwardRef(
   (props: InputProps<HTMLInputElement>, ref) => {
     const { errorMessage, name, ...generalProps } = props;
-    const errorClass = errorMessage ? "border-rose-500" : "";
+    const errorClass = errorMessage ? "error" : "";
     return (
       <>
         <input
           id={name}
           type="checkbox"
-          className={`checkbox ${errorClass}`}
+          className={`checkbox checkbox-primary ${errorClass}`}
           {...generalProps}
         />
       </>
@@ -91,7 +91,7 @@ const Checkbox = React.forwardRef(
 const RadioGroup = React.forwardRef(
   (props: InputProps<HTMLInputElement>, ref) => {
     const { errorMessage, name, id, ...generalProps } = props;
-    const errorClass = errorMessage ? "border-rose-500" : "";
+    const errorClass = errorMessage ? "error" : "";
     return (
       <>
         <input
@@ -101,6 +101,7 @@ const RadioGroup = React.forwardRef(
           className={`radiogroup ${errorClass}`}
           {...generalProps}
         />
+
       </>
     );
   }
@@ -122,14 +123,24 @@ const FormLabel = function (props: FormLabelProps) {
   return (
     <label
       {...generalProps}
-      className={`label ${additionalClassName}`}
-      style={{ justifyContent: "space-between" }}
+      className={`label justify-between items-center flex-nowrap ${additionalClassName}`}      
     >
       <div>
         {children}
         {required === true && <sup>*</sup>}
       </div>
-      {error && "ERROR ICON"}
+      {error && (
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+          <g clip-path="url(#clip0_6512_207)">
+            <path fill="#F06A68" d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 5a1.131 1.131 0 0 0-1.125 1.244l.438 4.383a.69.69 0 0 0 1.374 0l.438-4.383A1.131 1.131 0 0 0 10 5Zm.002 7.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_6512_207">
+              <path fill="#fff" d="M0 0h20v20H0z"/>
+            </clipPath>
+          </defs>
+        </svg>
+      )}
     </label>
   );
 };
@@ -250,7 +261,7 @@ export function Submission({
           <div className="">
             <a
               className="inline-block border border-primary py-2 px-4 text-primary font-semibold rounded-lg text-sm leading-[22px]"
-              href="/projects/mint-buendins/"
+              href="/projects/mint-buendnis/"
             >
               <span className="flex items-center">
                 <span className="mr-2">
@@ -452,6 +463,7 @@ export function Submission({
                     htmlFor="reachableBy"
                     required
                     error={errors.reachableBy !== undefined}
+                    className="radio-label"
                   >
                     Wie sind Sie am besten zu erreichen?
                   </FormLabel>
@@ -460,8 +472,8 @@ export function Submission({
                     control={control}
                     render={({ field }) => (
                       <>
-                        <div className="flex gap-x-3">
-                          <label>
+                        <div className="flex gap-8">
+                          <label htmlFor="reachableByEmail" className="flex items-center">
                             <RadioGroup
                               {...field}
                               name="reachableBy"
@@ -470,9 +482,9 @@ export function Submission({
                               value={"email"}
                               checked={reachableBy === "email"}
                             />{" "}
-                            per E-Mail
+                            <span className="font-semibold">per E-Mail</span>
                           </label>
-                          <label>
+                          <label htmlFor="reachableByphone" className="flex items-center">
                             <RadioGroup
                               {...field}
                               id="reachableByphone"
@@ -481,7 +493,7 @@ export function Submission({
                               value={"phone"}
                               checked={reachableBy === "phone"}
                             />{" "}
-                            telefonisch
+                            <span className="font-semibold">telefonisch</span>
                           </label>
                         </div>
                         <ErrorMessage message={errors.reachableBy?.message} />
@@ -512,59 +524,62 @@ export function Submission({
                 <FormRowCheckbox>
                   <FormLabel
                     htmlFor="terms_accepted"
-                    error={errors.terms_accepted !== undefined}
+                    error={errors.terms_accepted !== undefined}         
+                    className="checkbox-nowrap"           
                   >
-                    <Controller
-                      name="terms_accepted"
-                      control={control}
-                      render={({ field }) => (
-                        <>
-                          <Checkbox
-                            {...field}
-                            errorMessage={errors.terms_accepted?.message}
-                            value={"true"}
-                            checked={termsAccepted}
-                          />
-                        </>
-                      )}
-                    />
+                    <div className="flex">
+                      <Controller
+                        name="terms_accepted"
+                        control={control}
+                        render={({ field }) => (
+                          <>
+                            <Checkbox
+                              {...field}
+                              errorMessage={errors.terms_accepted?.message}
+                              value={"true"}
+                              checked={termsAccepted}
+                            />
+                          </>
+                        )}
+                      />
 
-                    <span className="label-text">
-                      Ich stimme der Verwendung meiner eingegebnenen Daten
-                      entsprechend der{" "}
-                      <a className="underline" href="/privacy" target="_blank">
-                        Datenschutzerklärung
-                      </a>{" "}
-                      zu
-                    </span>
+                      <span className="label-text">
+                        Ich stimme der Verwendung meiner eingegebnenen Daten
+                        entsprechend der{" "}
+                        <a className="underline" href="/privacy" target="_blank">
+                          Datenschutzerklärung
+                        </a>{" "}
+                        zu
+                      </span>
+                    </div>  
                   </FormLabel>
                   <ErrorMessage message={errors.terms_accepted?.message} />
                 </FormRowCheckbox>
 
                 <div className="flex gap-6 justify-end mt-10">
-                  <button
-                    type="reset"
-                    onClick={() => {
-                      reset({
-                        institution: "",
-                        firstName: "",
-                        lastName: "",
-                        email: "",
-                        phone: "",
-                        message: "",
-                        reachableBy: "",
-                        terms_accepted: "true",
-                      });
-                    }}
+                  <a
+                    className="btn-outline-primary"
+                    href="/projects/mint-buendnis/"
                   >
-                    Abbrechen
-                  </button>
+                    <span className="flex items-center">
+                      <span className="mr-2">
+                        <Icon type={IconType.ChevronLeft} />
+                      </span>
+                      Zurück zur Übersicht
+                    </span>
+                  </a>
+                  
                   <button
-                    className={`btn-primary ${!isValid ? "opacity-50" : ""}`}
+                    className={`btn-icon ${!isValid ? "btn btn-disabled" : "btn-primary"}`}
                     type="submit"
                     disabled={!isValid || isSubmitting}
                   >
-                    {isSubmitting ? "sende ..." : "Senden"}
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                        <path fill="currentColor" d="M0 5.5A2.5 2.5 0 0 1 2.5 3h15A2.5 2.5 0 0 1 20 5.5v10a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 0 15.5v-10Zm2.5-1.25A1.25 1.25 0 0 0 1.25 5.5v.271l8.75 5.25 8.75-5.25V5.5a1.25 1.25 0 0 0-1.25-1.25h-15Zm16.25 2.979-5.885 3.531 5.885 3.621V7.23Zm-.043 8.595-7.05-4.339-1.657.994-1.658-.994-7.05 4.338a1.25 1.25 0 0 0 1.208.927h15a1.25 1.25 0 0 0 1.207-.926ZM1.25 14.38l5.885-3.621L1.25 7.229v7.152Z"/>
+                      </svg>
+                    </span>
+                    <span>{isSubmitting ? "sende ..." : "Senden"}</span>                    
                   </button>
                 </div>
                 <div className="text-right mt-10">
