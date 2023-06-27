@@ -216,7 +216,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     width: "100%",
                     height: "100%",
                   }}
-                  data-src={`https://www.youtube-nocookie.com/embed/K5oReyP1Jx0?autoplay=1`}
+                  data-src={`https://www.youtube-nocookie.com/embed/QrDYldBVjAA?autoplay=1`}
                   title="Live Stream"
                   allowFullScreen="true"
                   allow="autoplay"
