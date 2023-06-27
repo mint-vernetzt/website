@@ -121,7 +121,7 @@ export function MintPaktList({
           <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-1/2 lg:w-5/12 px-4 py-12 mb-8 md:mb-0">
-              <H1 like="h0" className="font-black">
+              <H1 like="h1" className="font-black">
                 Aktuelle Bündnis-Mitglieder
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">

@@ -6,7 +6,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { H1, H2 } from "../../../components/Heading/Heading";
 import { isBeforeOneDayAfterDate } from "../../../utils/eventFilter";
 import TestimonialSwiper from "../../../components/Swiper/TestimonialSwiper";
-import { ReactComponent as HeaderImage } from "../../../images/MINTvernetzt_Key_Visual_Diversitaet.svg";
 import EventCards from "../../../components/EventCards/EventCards";
 import Icon, { IconType } from "../../../components/Icon/Icon";
 
@@ -123,7 +122,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         title={`Bündnis für Frauen in MINT-Berufen`}
         slug={`/projects/mint-buendnis/`}
         description="Gemeinsam mehr Frauen für MINT begeistern"
-        image={data?.MemberImage?.publicURL}
+        image={data?.HeroImage?.publicURL}
         children=""
       />
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
@@ -143,7 +142,11 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
 
         <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">
           <div className="max-w-xs md:max-w-none mx-auto md:mx-0">
-            <HeaderImage />
+            <GatsbyImage
+              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              className="w-full h-auto text-right"
+              alt="Bündnis für Frauen in MINT-Berufen (iStock / cienpies)"
+            />
           </div>
           <div className="absolute right-0 bottom-0">
             <div
@@ -682,7 +685,13 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
 export default Alliance;
 
 export const pageQuery = graphql`
-  query AlliancePage {
+  query AlliancePage {    
+    HeroImage: file(relativePath: { eq: "buendnis/buendnis_index_hero.png" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(height: 480)
+      }
+    }
     ProviderFischer: file(relativePath: { eq: "buendnis/susann_fischer.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 400)
