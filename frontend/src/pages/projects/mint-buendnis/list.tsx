@@ -100,7 +100,7 @@ export function MintPaktList({
             <path
               d="M637.862 91.3002C973.1 223.765 753.674 722.111 463.915 691.176C333.039 677.203 358.384 619.535 269.807 558.208C142.414 470.005 -137.123 467.055 85.5645 142.115C105.425 113.135 174.794 49.354 206.917 30.1026C276.347 -11.5078 359.242 -18.7927 637.862 91.3002Z"
               stroke="currentColor"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </div>
@@ -108,7 +108,7 @@ export function MintPaktList({
           <div className="">
             <a
               className="inline-block border border-primary py-2 px-4 text-primary font-semibold rounded-lg text-sm leading-[22px]"
-              href="/topics/diversitaet/"
+              href="/projects/mint-buendnis/"
             >
               <span className="flex items-center">
                 <span className="mr-2">

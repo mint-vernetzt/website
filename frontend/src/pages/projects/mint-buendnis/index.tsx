@@ -186,7 +186,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           >
             <path
               stroke="currentColor"
-              stroke-width="3"
+              strokeWidth="3"
               d="M173.132 566.549C-155.751 445.81 42.189-23.058 323.981 3.049 451.258 14.84 428.398 69.097 516.076 125.654c126.1 81.342 397.154 81.342 190.917 387.849-18.394 27.336-83.747 87.752-114.315 106.098-66.069 39.654-146.207 47.296-419.546-53.052Z"
             />
           </svg>
@@ -218,7 +218,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   }}
                   data-src={`https://www.youtube-nocookie.com/embed/QrDYldBVjAA?autoplay=1`}
                   title="Live Stream"
-                  allowFullScreen="true"
+                  allowFullScreen={true}
                   allow="autoplay"
                 ></iframe>
                 <div id={`imagefilm-optin`} className="flex p-8">
@@ -391,7 +391,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           >
             <path
               stroke="currentColor"
-              stroke-width="3"
+              strokeWidth="3"
               d="M282.617 682.382C-500.026 481.566 95.879-101.491 784.292-29.966 1095.23 2.34 1026.38 69.816 1229.41 155.03c292 122.554 959.97 158.712 381.06 529.615-51.63 33.08-226.62 102.894-306.18 122.664-171.96 42.731-371.21 41.974-1021.673-124.926Z"
             />
           </svg>

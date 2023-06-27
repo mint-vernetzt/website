@@ -508,14 +508,19 @@ ol {
   font-variant-caps: all-small-caps;
 }
 
+
+.accordion-item button.active > .accordion-button-icon,
 .glossary button.active > .glossary-button-icon {
   transform: rotate(90deg);
 }
 
+.accordion-item button.active,
 .glossary button.active {
   @apply text-white bg-primary rounded-b-none;
 }
 
+
+.accordion-item button.active + .accordion-item-content,
 .glossary button.active + .glossary-content {
   max-height: none;
   @apply py-4 md:py-8;
