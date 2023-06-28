@@ -54,7 +54,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
     {
       provider_foto: (
         <GatsbyImage
-          image={data.ProviderFischer.childImageSharp.gatsbyImageData}
+          image={data?.ProviderFischer?.childImageSharp?.gatsbyImageData}
           className="w-full h-auto"
           alt="Susann Fischer"
         />
@@ -77,7 +77,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
     {
       provider_foto: (
         <GatsbyImage
-          image={data.ProviderCetinkaya.childImageSharp.gatsbyImageData}
+          image={data?.ProviderCetinkaya?.childImageSharp?.gatsbyImageData}
           className="w-full h-auto"
           alt="Digitalexpertin Fatime Cetinkaya"
         />
@@ -122,7 +122,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         title={`Bündnis für Frauen in MINT-Berufen`}
         slug={`/projects/mint-buendnis/`}
         description="Gemeinsam mehr Frauen für MINT begeistern"
-        image={data?.HeroImage?.publicURL}
+        image={data.HeroImage?.publicURL}
         children=""
       />
       <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
@@ -143,7 +143,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">
           <div className="max-w-xs md:max-w-none mx-auto md:mx-0">
             <GatsbyImage
-              image={data.HeroImage.childImageSharp.gatsbyImageData}
+              image={data.HeroImage?.childImageSharp?.gatsbyImageData}
               className="w-full h-auto text-right"
               alt="Bündnis für Frauen in MINT-Berufen (iStock / cienpies)"
             />
@@ -644,8 +644,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   <div className="flex justify-center">
                     <GatsbyImage
                       image={
-                        data.wpContact.contactInformations.photo.localFile
-                          .childImageSharp?.gatsbyImageData
+                        data.wpContact?.contactInformations?.photo?.localFile?.childImageSharp?.gatsbyImageData
                       }
                       className="rounded-full w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
                       alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
@@ -653,22 +652,22 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                   </div>
                   <div className="flex-auto">
                     <p className="font-semibold text-primary mb-2 md:text-3xl">
-                      {`${data.wpContact.contactInformations.title || ""} ${
-                        data.wpContact.contactInformations.firstName
-                      } ${data.wpContact.contactInformations.lastName}`.trim()}
+                      {`${data.wpContact?.contactInformations?.title || ""} ${
+                        data.wpContact?.contactInformations?.firstName
+                      } ${data.wpContact?.contactInformations?.lastName}`.trim()}
                     </p>
                     <p className="text-base md:text-lg text-primary">
-                      {data.wpContact.contactInformations.position}
+                      {data.wpContact?.contactInformations?.position}
                     </p>
                     <p className="text-base md:text-lg">
                       <a
-                        href={`mailto:${data.wpContact.contactInformations.email}`}
+                        href={`mailto:${data.wpContact?.contactInformations?.email}`}
                         className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary"
                       >
                         <span className="icon w-4 h-4 mr-2 ">
                           <Icon type={IconType.Mail} />
                         </span>
-                        <span>{data.wpContact.contactInformations.email}</span>
+                        <span>{data.wpContact?.contactInformations?.email}</span>
                       </a>
                     </p>
                   </div>

@@ -8,7 +8,7 @@ import * as schema from "../../../data/submission/paktvalidation.schema.json";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { buildYup } from "schema-to-yup";
 
-import { H1, H2, H3, H4, H5 } from "../../../components/Heading/Heading";
+import { H1, H2 } from "../../../components/Heading/Heading";
 import Layout from "../../../components/Layout";
 import SEO from "../../../components/SEO";
 
@@ -603,20 +603,20 @@ export function Submission({
                 <div className="flex gap-8 md:gap-16 flex-col md:flex-row md:items-center">
                   <div className="flex justify-center">
                     <GatsbyImage
-                      image={data.PageContact.contactInformations.photo.localFile.childImageSharp?.gatsbyImageData}
+                      image={data.PageContact?.contactInformations?.photo?.localFile?.childImageSharp?.gatsbyImageData}
                       className="rounded-full w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
                       alt="${data.wpContact.contactInformations.firstName} ${data.wpContact.contactInformations.lastName}"
                     />
                   </div>
                   <div className="flex-auto">
-                    <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.PageContact.contactInformations.title || ""} ${data.PageContact.contactInformations.firstName} ${data.PageContact.contactInformations.lastName}`.trim()}</p>
-                    <p className="text-base md:text-lg text-primary">{data.PageContact.contactInformations.position}</p>
+                    <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.PageContact?.contactInformations?.title || ""} ${data.PageContact?.contactInformations?.firstName} ${data.PageContact?.contactInformations?.lastName}`.trim()}</p>
+                    <p className="text-base md:text-lg text-primary">{data.PageContact?.contactInformations?.position}</p>
                     <p className="text-base md:text-lg">
-                      <a href={`mailto:${data.PageContact.contactInformations.email}`} className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
+                      <a href={`mailto:${data.PageContact?.contactInformations?.email}`} className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
                         <span className="icon w-4 h-4 mr-2 ">
                           <Icon type={IconType.Mail} />
                         </span>
-                        <span>{data.PageContact.contactInformations.email}</span>
+                        <span>{data.PageContact?.contactInformations?.email}</span>
                       </a>
                     </p>
                   </div>
@@ -644,6 +644,7 @@ export const pageQuery = graphql`
       contactInformations: { lastName: { eq: "Gerkens" } }
     ) {
       contactInformations {
+        title
         firstName
         lastName
         position
