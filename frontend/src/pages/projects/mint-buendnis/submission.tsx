@@ -278,7 +278,7 @@ export function Submission({
                 Sie möchten Mitglied im Bündnis für Frauen in MINT-Berufen werden?
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
-                Dann nehmen Sie Kontakt zu uns auf! 
+                Dann nehmen Sie Kontakt zu uns auf!
               </p>
             </div>
 
@@ -288,14 +288,14 @@ export function Submission({
                   <GatsbyImage
                     image={data.HeroImage.childImageSharp.gatsbyImageData}
                     className="w-full h-auto aspect-[16/9]"
-                    alt="Didaktik: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
+                    alt="Sie möchten Mitglied im Bündnis für Frauen in MINT-Berufen werden? (Unsplash / Nik)"
                   />
                   <div className="absolute right-0 bottom-0">
                     <div
                       className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
                       style={{ writingMode: "vertical-rl" }}
                     >
-                      Unsplash / Towfiqu Barbhuiya
+                      Unsplash / Nik
                     </div>
                   </div>
                 </div>
@@ -633,7 +633,7 @@ export function Submission({
 export const pageQuery = graphql`
   query PaktSubmission {
     HeroImage: file(
-      relativePath: { eq: "buendnis/mitglieder_Stage_1280x720.jpg" }
+      relativePath: { eq: "buendnis/Anmeldeformular_Stage_1280x720.jpg" }
     ) {
       publicURL
       childImageSharp {

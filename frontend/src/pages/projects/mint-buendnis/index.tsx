@@ -145,7 +145,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <GatsbyImage
               image={data.HeroImage?.childImageSharp?.gatsbyImageData}
               className="w-full h-auto text-right"
-              alt="Bündnis für Frauen in MINT-Berufen (iStock / cienpies)"
+              alt="Bündnis für Frauen in MINT-Berufen (istock / Anastasia Usenko)"
             />
           </div>
           <div className="absolute right-0 bottom-0">
@@ -153,7 +153,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
               style={{ writingMode: "vertical-rl" }}
             >
-              iStock / cienpies
+              istock / Anastasia Usenko
             </div>
           </div>
         </div>
@@ -324,14 +324,14 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 <GatsbyImage
                   image={data?.MemberImage?.childImageSharp?.gatsbyImageData}
                   className=""
-                  alt=""
+                  alt="Liste der aktuellen Bündnis-Mitglieder (Unsplash / Omar Flores)"
                 />
                 <div className="absolute right-0 bottom-[-1px]">
                   <div
                     className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 "
                     style={{ writingMode: "vertical-rl" }}
                   >
-                    Unsplash/ John Schaidler
+                    Unsplash / Omar Flores
                   </div>
                 </div>
               </div>
@@ -613,16 +613,16 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               </div>
               <div className="relative max-w-[180px] md:max-w-[260px] lg:max-w-[360px] my-8">
                 <GatsbyImage
-                  image={data?.GlossarImage?.childImageSharp?.gatsbyImageData}
+                  image={data?.LeitbildImage?.childImageSharp?.gatsbyImageData}
                   className=""
-                  alt=""
+                  alt="(Unsplash / krakenimages)"
                 />
                 <div className="absolute right-0 bottom-[-1px]">
                   <div
                     className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700 "
                     style={{ writingMode: "vertical-rl" }}
                   >
-                    Unsplash/ Surendran MP
+                    Unsplash / krakenimages 
                   </div>
                 </div>
               </div>
@@ -685,27 +685,30 @@ export default Alliance;
 
 export const pageQuery = graphql`
   query AlliancePage {    
-    HeroImage: file(relativePath: { eq: "buendnis/buendnis_index_hero.png" }) {
+    HeroImage: file(relativePath: { eq: "buendnis/MINTvernetzt_Key_Visual_Buendnis_Dummy.png" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(height: 480)
+        gatsbyImageData(height: 1280)
       }
     }
-    ProviderFischer: file(relativePath: { eq: "buendnis/susann_fischer.jpg" }) {
+    ProviderFischer: file(relativePath: { eq: "buendnis/Statements_Profil_Susann_Fischer_480x480.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 400)
+        gatsbyImageData(width: 480)
       }
     }
-    ProviderCetinkaya: file(
-      relativePath: { eq: "buendnis/fatime_cetinkaya_cekaso.jpg" }
-    ) {
+    ProviderCetinkaya: file(relativePath: { eq: "buendnis/Statements_Profil_Fatime-Cetinkaya_480x480.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 400)
+        gatsbyImageData(width: 480)
+      }
+    }
+    ProviderBusch: file(relativePath: { eq: "buendnis/Statements_Profil_Carsten-Busch_480x480.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 480)
       }
     }
     MemberImage: file(
       relativePath: {
-        eq: "topic-diversity/Studie_Teaser_Diversitaet_480x480.jpg"
+        eq: "buendnis/Mitglieder-Datenbank_Teaser_480x480.jpg"
       }
     ) {
       publicURL
@@ -713,8 +716,8 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 480)
       }
     }
-    GlossarImage: file(
-      relativePath: { eq: "topic-diversity/Glossar_Teaser_480x480.jpg" }
+    LeitbildImage: file(
+      relativePath: { eq: "buendnis/Leitbild_Teaser_480x480.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 480)
@@ -724,7 +727,7 @@ export const pageQuery = graphql`
       limit: 3
       filter: {
         parentId: { eq: null }
-        tags: { nodes: { elemMatch: { slug: { eq: "diversitaet" } } } }
+        tags: { nodes: { elemMatch: { slug: { eq: "gender" } } } }
       }
       sort: { fields: eventInformations___startDate, order: ASC }
     ) {

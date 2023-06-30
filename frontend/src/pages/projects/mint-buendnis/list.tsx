@@ -136,14 +136,14 @@ export function MintPaktList({
                   <GatsbyImage
                     image={data.HeroImage.childImageSharp.gatsbyImageData}
                     className="w-full h-auto aspect-[16/9]"
-                    alt="Didaktik: Themenseite mit Erkenntnissen aus Wissenschaft und Praxis"
+                    alt="Aktuelle Bündnis-Mitglieder (Unsplash / Omar Flores)"
                   />
                   <div className="absolute right-0 bottom-0">
                     <div
                       className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
                       style={{ writingMode: "vertical-rl" }}
                     >
-                      Unsplash / Towfiqu Barbhuiya
+                      Unsplash / Omar Flores
                     </div>
                   </div>
                 </div>
@@ -329,7 +329,7 @@ export default MintPaktList;
 export const pageQuery = graphql`
   query MintPaktList {
     HeroImage: file(
-      relativePath: { eq: "buendnis/mitglieder_Stage_1280x720.jpg" }
+      relativePath: { eq: "buendnis/Mitglieder-Datenbank_Stage_1280x720.jpg" }
     ) {
       publicURL
       childImageSharp {
