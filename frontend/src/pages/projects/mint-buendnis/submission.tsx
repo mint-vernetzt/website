@@ -653,7 +653,7 @@ export const pageQuery = graphql`
         photo {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 64)
+              gatsbyImageData(width: 320)
             }
           }
         }
