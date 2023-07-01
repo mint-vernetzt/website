@@ -130,7 +130,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           <div className="-mx-4 flex">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-5/12 px-4 md:pr-8">
-              <H1 like="h0" className="font-black">
+              <H1 className="font-black text-5xl lg:text-8xl">
                 Bündnis für Frauen in MINT-Berufen
               </H1>
               <p className="font-semibold text-primary text-lg lg:text-3xl lg:leading-snug">
@@ -185,7 +185,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 784 649"
-            className="absolute left-[50%] w-[70%] rotate-[-0deg] aspect-[1.2]"
+            className="absolute left-0 md:left-[50%] top-[40%] md:top-0 w-[120%] md:w-[70%] rotate-[-0deg] aspect-[1.2]"
           >
             <path
               stroke="currentColor"
@@ -291,13 +291,13 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold text-white">
             Das Bündnis in Zahlen
           </H2>
-          <div className="flex justify-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="w-60 text-white text-center">
-              <div className="h0">300+</div>
+              <div className="h0 text-[4rem] md:text-[5rem]">300+</div>
               <p>Mitglieder</p>
             </div>
             <div className="w-60 text-white text-center">
-              <div className="h0">1</div>
+              <div className="h0 text-[4rem] md:text-[5rem]">1</div>
               <p>Ziel</p>
             </div>
           </div>
@@ -390,7 +390,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             height="708"
             fill="none"
             viewBox="0 0 1440 708"
-            className="absolute w-[100%] h-[100%] inset-x-0"
+            className="absolute  w-[150%] h-[100%] rotate-[25deg] md:rotate-0 md:w-[100%] md:h-[100%] -left-[25%] -bottom-[25%] md:inset-0"
           >
             <path
               stroke="currentColor"
@@ -427,9 +427,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             </p>
             <ul className="accordion mb-16">
               <li className="accordion-item relative overflow-hidden mb-8">
-                <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>Wer kann Mitglied werden?</span>
-                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-2 h-3"
@@ -443,7 +443,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     </svg>
                   </span>
                 </button>
-                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
+                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 md:px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
                     Die Mitgliedschaft steht allen Organisationen offen, die die
                     Vorhaben des Bündnisses unterstützen und sich im Sinne des
@@ -460,9 +460,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </div>
               </li>
               <li className="accordion-item relative overflow-hidden mb-8">
-                <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>Was ist der Mehrwert einer Bündnismitgliedschaft?</span>
-                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-2 h-3"
@@ -476,7 +476,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     </svg>
                   </span>
                 </button>
-                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
+                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
                     Bündnismitglieder profitieren von Vernetzungsmöglichkeiten,
                     Austauschformaten und Unterstützungsangeboten. Die
@@ -489,11 +489,11 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </div>
               </li>
               <li className="accordion-item relative overflow-hidden mb-8">
-                <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>
                     Wie kann ich mit meiner Organisation Mitglied werden?
                   </span>
-                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-2 h-3"
@@ -507,7 +507,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     </svg>
                   </span>
                 </button>
-                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
+                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
                     Der Aufnahmeprozess ist niedrigschwellig. Eine erste
                     Kontaktaufnahme ist über unser{" "}
@@ -523,11 +523,11 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 </div>
               </li>
               <li className="accordion-item relative overflow-hidden mb-8">
-                <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                   <span>
                     Wie erfahre ich von den Aktivitäten des Bündnisses?
                   </span>
-                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                  <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-2 h-3"
@@ -541,7 +541,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     </svg>
                   </span>
                 </button>
-                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
+                <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 bg-white rounded-b-lg">
                   <div className="accordion-item-content-body md:text-lg">
                     Mitglieder erhalten regelmäßig einen Newsletter und
                     Mailings, die über Neuigkeiten, Veranstaltungen und
@@ -723,8 +723,7 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 480)
       }
     }
-    events: allWpEvent(
-      limit: 3
+    events: allWpEvent(      
       filter: {
         parentId: { eq: null }
         tags: { nodes: { elemMatch: { slug: { eq: "gender" } } } }

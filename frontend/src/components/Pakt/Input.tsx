@@ -10,7 +10,7 @@ export const Input = (props: Props) => {
         <label className="label">{label}</label>
       )}
       <div className="relative">
-        <input className="input" {...props} />
+        <input className="input search" {...props} />
         {label == "Suche" && (
           <div className="search-icon absolute top-0 left-2 h-[36px] w-8 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -18,19 +18,7 @@ export const Input = (props: Props) => {
             </svg>
           </div>
         )}
-      </div>    
-      {props.value !== "" && (
-        <div className="p-4">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              props.handleReset();
-            }}
-          >
-            x
-          </button>
-        </div>
-      )}
+      </div>      
     </div>
   );
 };

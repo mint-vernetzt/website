@@ -119,10 +119,10 @@ export function MintPaktList({
             </a>
           </div>
           
-          <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">
+          <div className="-mx-4 mt-8 md:-mt-6 md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 mb-0">
-              <H1 like="h1" className="font-black">
+            <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 md:py-10">
+              <H1 like="h1" className="font-black leading-1">
                 Aktuelle Bündnis-Mitglieder
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
@@ -156,7 +156,7 @@ export function MintPaktList({
       <section className="bg-primary pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
-            <p className="mb-0 text-white text-3xl">
+            <p className="mb-0 text-white text-3xl leading-snug">
               Bereits mehr als 200 Mitglieder aus den Bereichen Wirtschaft,
               Bildung und Wissenschaft sowie Medien und Politik haben sich
               bereits dem Leitbild des Bündnisses für Frauen in MINT-Berufen

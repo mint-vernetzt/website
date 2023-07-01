@@ -173,12 +173,11 @@ ol {
 }
 
 .btn-primary {
-  @apply px-4 py-2 rounded-lg bg-primary border border-primary text-neutral-200 leading-5  font-semibold inline-block;
+  @apply px-6 py-2 rounded-lg bg-primary border border-primary text-white leading-5 font-semibold inline-block text-sm tracking-wide;
 }
 
-.btn-outline-primary {
-  /* @apply px-4 py-2 rounded-lg text-primary border border-primary font-semibold text-sm leading-5 inline-block; */
-  @apply px-4 py-2 rounded-lg text-primary border border-primary leading-5 font-semibold inline-block;
+.btn-outline-primary {  
+  @apply px-6 py-2 rounded-lg text-primary border border-primary leading-5 font-semibold inline-block text-sm tracking-wide;
 }
 
 .btn-disabled {
@@ -375,6 +374,10 @@ ol {
   outline: none;
 }
 
+.form-control .input.search {
+  @apply pl-12;
+}
+
 .form-control .textarea:not(:placeholder-shown),
 .form-control .input:not(:placeholder-shown) {
     @apply bg-white;
@@ -547,13 +550,11 @@ ol {
   @apply text-white bg-primary rounded-b-none;
 }
 
-
-.accordion-item button.active + .accordion-item-content,
 .glossary button.active + .glossary-content {
   max-height: none;
   @apply py-4 md:py-8;
 }
-
-.glossary-content-body {
-  
+.accordion-item button.active + .accordion-item-content {
+  max-height: none;
+  @apply py-8;
 }

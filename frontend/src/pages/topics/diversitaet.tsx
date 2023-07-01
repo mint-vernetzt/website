@@ -199,7 +199,7 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
           <div className="-mx-4 flex">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-5/12 px-4 md:pr-8">
-              <H1 like="h0" className="font-black">
+              <H1 className="font-black text-5xl lg:text-8xl">
                 Diversität
               </H1>
               <p className="font-semibold text-primary text-lg lg:text-3xl lg:leading-snug">

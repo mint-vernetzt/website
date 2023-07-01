@@ -27,20 +27,7 @@ export const Selector = (props: Props) => {
             {option.name}
           </option>
         ))}
-      </select>
-      
-      {props.value !== "" && (
-        <div className="p-4">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              props.handleReset();
-            }}
-          >
-            {props.value} x
-          </button>
-        </div>
-      )}
+      </select>      
     </div>
   );
 };

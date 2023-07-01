@@ -241,7 +241,7 @@ export function Submission({
         children=""
       />
       <section className="bg-lilac-50 relative overflow-hidden">
-        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-lilac-400">
+        <div className="absolute inset-0 z-10 overflow-hidden flex items-center justify-center text-salmon-500">
           <svg
             width="809"
             height="695"
@@ -271,10 +271,10 @@ export function Submission({
               </span>
             </a>
           </div>
-          <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">
+          <div className="-mx-4 mt-8 md:-mt-6 md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 mb-0">
-              <H1 like="h1" className="font-black">
+            <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 md:py-10">
+              <H1 like="h1" className="font-black leading-1">
                 Sie möchten Mitglied im Bündnis für Frauen in MINT-Berufen werden?
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
@@ -308,7 +308,7 @@ export function Submission({
       <section className="bg-lilac-400 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
-            <p className="mb-0 text-white text-3xl">
+            <p className="mb-0 text-white text-3xl leading-snug">
               Sie engagieren Sich für Mädchen und Frauen in MINT und möchten dies im Bündnis sichtbar machen? Dannfüllen 
               Sie unser Kontaktformular aus, und wir melden uns im Anschluss mit allen notwendigen Informationen zum 
               Beitritt bei Ihnen.
