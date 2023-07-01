@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import CountUp from "react-countup";
 import Layout from "../../../components/Layout";
 import SEO from "../../../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -293,7 +294,16 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           </H2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="w-60 text-white text-center">
-              <div className="h0 text-[4rem] md:text-[5rem]">300+</div>
+              <div className="h0 text-[4rem] md:text-[5rem]">
+                <CountUp
+                  start={1}
+                  end={300}
+                  enableScrollSpy={true}
+                  scrollSpyDelay={100}
+                  scrollSpyOnce={true}     
+                  suffix="+"           
+                />
+              </div>
               <p>Mitglieder</p>
             </div>
             <div className="w-60 text-white text-center">
