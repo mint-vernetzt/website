@@ -347,7 +347,7 @@ export const pageQuery = graphql`
         name
       }
     }
-    partners: allWpPartner(sort: { fields: [title], order: ASC }) {
+    partners: allWpPartner(sort: { fields: [slug], order: ASC }) {
       nodes {
         title
         slug

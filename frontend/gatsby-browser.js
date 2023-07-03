@@ -10,7 +10,11 @@ exports.shouldUpdateScroll = ({
   routerProps: { location },
   getSavedScrollPosition,
 }) => {
-  if (location.state.noScrollRestauration ?? false) {
+  if (
+    false &&
+    location.pathname === "/projects/mint-buendnis/list" &&
+    location.state.noScrollRestauration
+  ) {
     return false;
   }
 
