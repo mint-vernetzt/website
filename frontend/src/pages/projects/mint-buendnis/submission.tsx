@@ -309,7 +309,7 @@ export function Submission({
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
             <p className="mb-0 text-white text-3xl leading-snug">
-              Sie engagieren Sich für Mädchen und Frauen in MINT und möchten dies im Bündnis sichtbar machen? Dannfüllen 
+              Sie engagieren Sich für Mädchen und Frauen in MINT und möchten dies im Bündnis sichtbar machen? Dann füllen 
               Sie unser Kontaktformular aus, und wir melden uns im Anschluss mit allen notwendigen Informationen zum 
               Beitritt bei Ihnen.
             </p>

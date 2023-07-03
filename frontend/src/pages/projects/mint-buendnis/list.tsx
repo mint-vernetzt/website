@@ -126,7 +126,7 @@ export function MintPaktList({
                 Aktuelle Bündnis-Mitglieder
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
-                Gemeinsam stark und laut für mehr Frauen in MINT
+                Gemeinsam stark und laut für mehr Mädchen und Frauen in MINT
               </p>
             </div>
 
@@ -157,11 +157,10 @@ export function MintPaktList({
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
             <p className="mb-0 text-white text-3xl leading-snug">
-              Bereits mehr als 200 Mitglieder aus den Bereichen Wirtschaft,
-              Bildung und Wissenschaft sowie Medien und Politik haben sich
-              bereits dem Leitbild des Bündnisses für Frauen in MINT-Berufen
-              verpflichtet. Hier stellen wir die mehr als 260 Institutionen vor
-              und geben einen Einblick, in welchen Bereichen sie Frauen in MINT
+              Mehr als 300 Mitglieder aus den Bereichen Wirtschaft, Bildung und Wissenschaft 
+              sowie Medien und Politik haben sich bereits dem Leitbild des Bündnisses für 
+              Frauen in MINT-Berufen verpflichtet. Hier stellen sich die Institutionen vor 
+              und geben einen Einblick, in welchen Bereichen sie Mädchen und Frauen in MINT 
               konkret fördern und unterstützen.
             </p>
           </div>

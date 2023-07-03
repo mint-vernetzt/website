@@ -96,6 +96,27 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       provider_profile: `https://community.mint-vernetzt.de/profile/fatimecetinkaya-ld2ybdza`,
       projectlink: `https://www.cekaso.com/`,
     },
+    {
+      provider_foto: (
+        <GatsbyImage
+          image={data?.ProviderBusch?.childImageSharp?.gatsbyImageData}
+          className="w-full h-auto"
+          alt="Prof. Dr.-Ing. Carsten Busch"
+        />
+      ),
+      provider_name: `Prof. Dr.-Ing. Carsten Busch`,
+      provider_position: `(HAWtech – HochschulAllianz für Angewandte Wissenschaften)`,
+      testimonial_text: (
+        <p>
+          Erfolgreiche Wissenschaft und Technik basiert auf Objektivität, Nachprüfbarkeit und 
+          Transparenz – zum Wohle der Menschheit. Dies einzulösen, erfordert die gleichberechtigte 
+          Beteiligung aller: Frauen, Männer, diverser Menschen. Also natürlich: Mehr Frauen in 
+          MINT-Berufe!
+        </p>
+      ),
+      provider_profile: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
+      projectlink: `https://www.little-lab.de/verein/`,
+    },
   ];
 
   React.useEffect(() => {
@@ -228,12 +249,11 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 <div id={`imagefilm-optin`} className="flex p-8">
                   <div className="text-center">
                     <h3 className="text-white mb-8 font-bold">
-                      Bündnis Image Film
+                      Bündnis für Frauen in MINT-Berufen
                     </h3>
                     <p className="text-white">
-                      Mit dem Klick auf den Button wird ein Youtube-Video
-                      geöffnet und Ihr willigt ausdrücklich ein, Inhalte von
-                      Youtube angezeigt zu bekommen.
+                      Mit dem Klick auf den Button wird ein Youtube-Video geöffnet und 
+                      Sie willigen ausdrücklich ein, Inhalte von Youtube angezeigt zu bekommen.
                     </p>
                     <p>
                       <button
@@ -264,8 +284,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                       </button>
                     </p>
                     <p className="text-white mb-0">
-                      Beim Abspielen des Videos werden Daten an die Server von
-                      Youtube übertragen. Weitere Infos dazu findet Ihr in der{" "}
+                      Beim Abspielen des Videos werden Daten an die Server von Youtube übertragen. 
+                      Weitere Infos dazu finden Sie in der{" "}
                       <a
                         href="https://www.google.com/intl/de/policies/privacy/"
                         target="_blank"
@@ -354,8 +374,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               <p className="md:text-xl leading-snug text-neutral-700">
                 Bereits mehr als 300 Mitglieder aus Wirtschaft, Bildung,
                 Wissenschaft, Medien und Politik setzen sich dafür ein, mehr
-                Mädchen und Frauen für MINT-Ausbildungen, -Studiengänge und
-                -Berufe zu begeistern.
+                Mädchen und Frauen für MINT-Ausbildungen, -Studiengänge und{" "}
+                <span className="whitespace-nowrap">-Berufe</span> zu begeistern.
               </p>
               <p>
                 <Link to={"list"} className="btn-primary">
