@@ -117,6 +117,24 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       provider_profile: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
       projectlink: `https://www.little-lab.de/verein/`,
     },
+    {
+      provider_foto: (
+        <GatsbyImage
+          image={data?.ProviderTuncer?.childImageSharp?.gatsbyImageData}
+          className="w-full h-auto"
+          alt="Prof.in Dr. Zeynep Tuncer"
+        />
+      ),
+      provider_name: `Prof.in Dr. Zeynep Tuncer`,
+      provider_position: `(Professorin für Medieninformatik und Mensch-Computer-Interaktion an der Wilhelm Büchner Hochschule, Sprecherin der Fachgruppe Medieninformatik, im Leitungsgremium des Fachbereiches Mensch-Computer-Interaktion (GI e.V.) und National Expert in der German UPA e.V.)`,
+      testimonial_text: (
+        <p>
+          Keine Frau in MINT ist selbstverständlich. Aber unser Ziel sollte es sein, dass es selbstverständlich wird! 
+        </p>
+      ),
+      provider_profile: `https://community.mint-vernetzt.de/profile/agnieszkaspizewska`,
+      projectlink: `https://www.little-lab.de/verein/`,
+    },
   ];
 
   React.useEffect(() => {
@@ -732,6 +750,11 @@ export const pageQuery = graphql`
       }
     }
     ProviderBusch: file(relativePath: { eq: "buendnis/Statements_Profil_Carsten-Busch_480x480.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 480)
+      }
+    }
+    ProviderTuncer: file(relativePath: { eq: "buendnis/Statements_Profil_Zeynep-Tuncer_480x480.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 480)
       }
