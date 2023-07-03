@@ -95,7 +95,7 @@ export function MintPaktList({
             viewBox="0 0 809 695"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute mt-[60%] md:mt-0 left-[5%] md:left-[42%] w-[90%] md:w-[60%] h-[80%] md:h-[110%] xl:h-[150%] rotate-[-0deg]"
+            className="absolute bottom-[-25%] md:bottom-[auto] left-[5%] md:left-[42%] w-[90%] md:w-[60%] h-[80%] md:h-[110%] xl:h-[150%] rotate-[-0deg]"
           >
             <path
               d="M637.862 91.3002C973.1 223.765 753.674 722.111 463.915 691.176C333.039 677.203 358.384 619.535 269.807 558.208C142.414 470.005 -137.123 467.055 85.5645 142.115C105.425 113.135 174.794 49.354 206.917 30.1026C276.347 -11.5078 359.242 -18.7927 637.862 91.3002Z"
