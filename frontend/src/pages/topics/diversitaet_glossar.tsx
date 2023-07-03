@@ -14,19 +14,21 @@ export function DiversityGlossar({
 }) {
   React.useEffect(() => {
     // accordeon toggle
-    document.querySelectorAll(".glossary button").forEach(($glossary) => {
-      $glossary.addEventListener("click", (event) => {
-        // event.preventDefault();
-        document
-          .querySelectorAll(".glossary button.active")
-          .forEach(($active) => {
-            if ($glossary !== $active) {
-              $active.classList.remove("active");
-            }
-          });
-        $glossary.classList.toggle("active");
+    document
+      .querySelectorAll(".accordion-item button")
+      .forEach(($accordion) => {
+        $accordion.addEventListener("click", (event) => {
+          // event.preventDefault();
+          document
+            .querySelectorAll(".accordion-item button.active")
+            .forEach(($active) => {
+              if ($accordion !== $active) {
+                $active.classList.remove("active");
+              }
+            });
+          $accordion.classList.toggle("active");
+        });
       });
-    });
   }, []);
 
   const glossaryEntriesByCategory = getGlossaryItemsByAlphaCategories(
@@ -155,13 +157,13 @@ export function DiversityGlossar({
                   <H3 className="text-white font-bold mb-8">
                     {entrysByCategory.category}
                   </H3>
-                  <ul className="glossary-entries">
+                  <ul className="accordion glossary-entries">
                     {entrysByCategory.entries.map((entry) => (
                       <>
-                        <li className="glossary relative overflow-hidden mb-8">
-                          <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                        <li className="glossary accordion-item relative overflow-hidden mb-8">
+                          <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                             <span>{entry.frontmatter?.title}</span>
-                            <span className="glossary-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                            <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-2 h-3"
@@ -175,8 +177,8 @@ export function DiversityGlossar({
                               </svg>
                             </span>
                           </button>
-                          <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
-                            <div className="glossary-content-body md:text-lg">
+                          <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 md:px-8 bg-white rounded-b-lg">
+                            <div className="accordion-item-content-body md:text-lg">
                               <div
                                 dangerouslySetInnerHTML={{
                                   __html: entry.html ?? "",
