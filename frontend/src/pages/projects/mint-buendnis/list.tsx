@@ -287,7 +287,7 @@ export function MintPaktList({
                     )}
                   </div>
                   <div className="flex-auto">
-                    <p className="font-semibold text-primary mb-2 md:text-3xl">
+                    <p className="font-semibold text-primary mb-2 text-lg md:text-3xl">
                       {`${data.wpContact?.contactInformations?.title ?? ""} ${
                         data.wpContact?.contactInformations?.firstName ?? ""
                       } ${

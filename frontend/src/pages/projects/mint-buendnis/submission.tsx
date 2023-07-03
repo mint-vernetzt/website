@@ -609,7 +609,9 @@ export function Submission({
                     />
                   </div>
                   <div className="flex-auto">
-                    <p className="font-semibold text-primary mb-2 md:text-3xl">{`${data.PageContact?.contactInformations?.title || ""} ${data.PageContact?.contactInformations?.firstName} ${data.PageContact?.contactInformations?.lastName}`.trim()}</p>
+                    <p className="font-semibold text-primary mb-2 text-lg md:text-3xl">
+                      {`${data.PageContact?.contactInformations?.title || ""} ${data.PageContact?.contactInformations?.firstName} ${data.PageContact?.contactInformations?.lastName}`.trim()}
+                    </p>
                     <p className="text-base md:text-lg text-primary">{data.PageContact?.contactInformations?.position}</p>
                     <p className="text-base md:text-lg">
                       <a href={`mailto:${data.PageContact?.contactInformations?.email}`} className="w-full flex items-center rounded-lg bg-neutral-100 p-4 text-primary">
