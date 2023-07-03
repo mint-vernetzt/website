@@ -35,21 +35,14 @@ export function MintPaktList({
       "?" + new URLSearchParams({ q, state, institutionType }).toString(),
       { state: { noScrollRestauration: true } }
     );
-  }, [q, state, institutionType]);
 
-  React.useEffect(() => {
-    if (
-      typeof document !== "undefined" &&
-      window.previousPath.includes("/projects/mint-buendnis/")
-    ) {
-      const $partner = document.querySelector(`[href='${window.previousPath}'`);
-      if ($partner) {
-        setTimeout(() => {
-          $partner.scrollIntoView({ behavior: "instant", block: "center" });
-        }, 50);
+    if (q !== "" || state !== "" || institutionType !== "") {
+      const $form = document.querySelector("form");
+      if ($form) {
+        $form.scrollIntoView();
       }
     }
-  }, []);
+  }, [q, state, institutionType]);
 
   const states = data.states.nodes.map((state) => ({
     id: state.slug ?? "",
@@ -118,7 +111,7 @@ export function MintPaktList({
               </span>
             </a>
           </div>
-          
+
           <div className="-mx-4 mt-8 md:-mt-6 md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 md:py-10">
@@ -157,11 +150,12 @@ export function MintPaktList({
         <div className="container">
           <div className="lg:w-1/2 mx-auto">
             <p className="mb-0 text-white text-3xl leading-snug">
-              Mehr als 300 Mitglieder aus den Bereichen Wirtschaft, Bildung und Wissenschaft 
-              sowie Medien und Politik haben sich bereits dem Leitbild des Bündnisses für 
-              Frauen in MINT-Berufen verpflichtet. Hier stellen sich die Institutionen vor 
-              und geben einen Einblick, in welchen Bereichen sie Mädchen und Frauen in MINT 
-              konkret fördern und unterstützen.
+              Mehr als 300 Mitglieder aus den Bereichen Wirtschaft, Bildung und
+              Wissenschaft sowie Medien und Politik haben sich bereits dem
+              Leitbild des Bündnisses für Frauen in MINT-Berufen verpflichtet.
+              Hier stellen sich die Institutionen vor und geben einen Einblick,
+              in welchen Bereichen sie Mädchen und Frauen in MINT konkret
+              fördern und unterstützen.
             </p>
           </div>
         </div>

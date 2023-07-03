@@ -11,7 +11,6 @@ exports.shouldUpdateScroll = ({
   getSavedScrollPosition,
 }) => {
   if (
-    false &&
     location.pathname === "/projects/mint-buendnis/list" &&
     location.state.noScrollRestauration
   ) {
