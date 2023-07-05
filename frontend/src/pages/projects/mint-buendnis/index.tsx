@@ -165,9 +165,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         image={data.HeroImage?.publicURL}
         children=""
       />
-      <section className="bg-lilac-50 relative md:h-[480px] md:flex md:items-center overflow-hidden">
-        <div className="container pt-16 pb-12">
-          <div className="-mx-4 flex">
+      <section className="bg-lilac-50 relative overflow-hidden">
+        <div className="container w-full  md:h-[480px] flex-col md:flex-row justify-between flex items-center xl:relative">
+          <div className="-mx-4 flex pt-16 pb-12 md:w-full flex-auto">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-5/12 px-4 md:pr-8">
               <H1 className="font-black text-5xl lg:text-8xl">
@@ -178,9 +178,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               </p>
             </div>
           </div>
-        </div>
 
-        <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2 lg:max-h-[480px] text-right">
+          <div className="hero-image md:absolute md:right-0 xl:right-auto xl:left-[50%] md:bottom-0 md:w-1/2 lg:max-h-[480px] text-right">
           <div className="max-w-xs md:max-w-none md:w-full md:h-full mx-auto md:mx-0">
             <GatsbyImage
               image={data.HeroImage?.childImageSharp?.gatsbyImageData}
@@ -200,6 +199,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             </div>
           </div>
         </div>
+        </div>        
       </section>
 
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
