@@ -274,8 +274,8 @@ export function Submission({
           <div className="-mx-4 mt-8 md:-mt-6 md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 md:py-10">
-              <H1 like="h1" className="font-black leading-1">
-                Sie möchten Mitglied im Bündnis für Frauen in MINT-Berufen werden?
+              <H1 like="h1" className="font-black leading-1 hyphens-manual">
+                Sie möchten Bündnis&shy;mitglied werden?
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
                 Dann nehmen Sie Kontakt zu uns auf!

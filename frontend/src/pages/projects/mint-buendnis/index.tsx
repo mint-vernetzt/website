@@ -243,7 +243,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               <p className="lg:text-xl leading-snug text-neutral-700">
                 Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was
                 sich hinter dem Bündnis verbirgt und warum es heute noch starke
-                Bündnisse braucht?
+                Bündnisse braucht.
               </p>
             </div>
             <div className="md:w-8/12 xl:w-6/12 px-4">
@@ -372,7 +372,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 <GatsbyImage
                   image={data?.MemberImage?.childImageSharp?.gatsbyImageData}
                   className=""
-                  alt="Liste der aktuellen Bündnis-Mitglieder (Unsplash / Omar Flores)"
+                  alt="Liste der aktuellen Bündnismitglieder (Unsplash / Omar Flores)"
                 />
                 <div className="absolute right-0 bottom-[-1px]">
                   <div
@@ -387,7 +387,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <div className="lg:w-1/12 px-4"> </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
               <H2 className="mb-6 font-bold">
-                Liste der aktuellen Bündnis-Mitglieder
+                Liste der aktuellen Bündnismitglieder
               </H2>
               <p className="md:text-xl leading-snug text-neutral-700">
                 Bereits mehr als 300 Mitglieder aus Wirtschaft, Bildung,

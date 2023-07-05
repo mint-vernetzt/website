@@ -123,7 +123,7 @@ export function MintPaktList({
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
             <div className="md:w-1/2 lg:w-5/12 px-4 pb-12 md:py-10">
               <H1 like="h1" className="font-black leading-1">
-                Aktuelle Bündnis-Mitglieder
+                Aktuelle Bündnismitglieder
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
                 Gemeinsam stark und laut für mehr Mädchen und Frauen in MINT
@@ -187,7 +187,7 @@ export function MintPaktList({
                   <Selector
                     name="institutionType"
                     options={institutionsTypes}
-                    label="Institutsform"
+                    label="Organisationsform"
                     placeholder="Bitte wählen"
                     onChange={(e) => setInstitutionType(e.currentTarget.value)}
                     value={institutionType}
