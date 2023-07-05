@@ -551,3 +551,7 @@ ol {
   max-height: none;
   @apply py-8;
 }
+
+.buendis-heroimage img {
+  @apply w-full h-auto  lg:w-auto lg:max-h-[480px] object-cover lg:object-contain lg:object-right-bottom;
+}

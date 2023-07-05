@@ -180,12 +180,15 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           </div>
         </div>
 
-        <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2">
-          <div className="max-w-xs md:max-w-none mx-auto md:mx-0">
+        <div className="hero-image md:absolute md:right-0 md:bottom-0 md:w-1/2 lg:max-h-[480px] text-right">
+          <div className="max-w-xs md:max-w-none md:w-full md:h-full mx-auto md:mx-0">
             <GatsbyImage
               image={data.HeroImage?.childImageSharp?.gatsbyImageData}
-              className="w-full h-auto text-right"
+              className="buendis-heroimage"
               alt="Bündnis für Frauen in MINT-Berufen (istock / Anastasia Usenko)"
+              objectFit="contain"
+              objectPosition="100% 100%"
+              style={{objectPosition: "right bottom"}}              
             />
           </div>
           <div className="absolute right-0 bottom-0">
