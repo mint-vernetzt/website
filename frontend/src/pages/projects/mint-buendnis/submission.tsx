@@ -556,7 +556,7 @@ export function Submission({
                   <ErrorMessage message={errors.terms_accepted?.message} />
                 </FormRowCheckbox>
 
-                <div className="flex gap-6 flex-col md:flex-row md:justify-end items-center mt-10">
+                <div className="flex gap-6 flex-col-reverse md:flex-row md:justify-end items-center mt-10">
                   <a
                     className="btn-outline-primary"
                     href="/projects/mint-buendnis/"
