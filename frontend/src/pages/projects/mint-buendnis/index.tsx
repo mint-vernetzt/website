@@ -126,7 +126,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         />
       ),
       provider_name: `Prof.in Dr. Zeynep Tuncer`,
-      provider_position: `(Professorin für Medieninformatik und Mensch-Computer-Interaktion an der Wilhelm Büchner Hochschule, Sprecherin der Fachgruppe Medieninformatik, im Leitungsgremium des Fachbereiches Mensch-Computer-Interaktion (GI e.V.) und National Expert in der German UPA e.V.)`,
+      provider_position: `(Professorin für Medieninformatik und Mensch-Computer-Interaktion an der Wilhelm Büchner Hochschule)`,
       testimonial_text: (
         <p>
           Keine Frau in MINT ist selbstverständlich. Aber unser Ziel sollte es sein, dass es selbstverständlich wird! 
@@ -243,7 +243,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               <H2 className="mb-6 font-bold">
                 Das ist das Bündnis für Frauen in MINT-Berufen{" "}
               </H2>
-              <p className="lg:text-xl leading-snug text-neutral-700">
+              <p className="md:text-xl leading-snug text-neutral-700">
                 Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was
                 sich hinter dem Bündnis verbirgt und warum es heute noch starke
                 Bündnisse braucht.
@@ -630,7 +630,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <div className="hidden lg:flex lg:w-1/12 px-4 "></div>
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Unser Leitbild</H2>
-              <p className="text-xl leading-snug text-neutral-700">
+              <p className="md:text-xl leading-snug text-neutral-700">
                 Gemeinsam aktiv sein: Damit aus Worten Taten werden,
                 verpflichten sich die Bündnismitglieder zu einem Leitbild mit
                 Ideen für konkrete Unterstützungsmöglichkeiten von Mädchen und

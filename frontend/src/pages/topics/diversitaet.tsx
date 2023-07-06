@@ -286,7 +286,7 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
           <div className="md:flex md:items-center md:justify-center -mx-4">
             <div className="md:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Chance Diversität</H2>
-              <p className="lg:text-xl leading-snug text-neutral-700">
+              <p className="md:text-xl leading-snug text-neutral-700">
                 In ihrer Keynote "MINT, Diversität und Chancengleichheit"
                 spricht Janina Kugel darüber, was Diversität im eigenen Erleben
                 bedeutet. Und warum wir vielfältige Perspektiven benötigen, um
@@ -482,7 +482,7 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
             <div className="hidden lg:flex lg:w-1/12 px-4 "></div>
             <div className="md:w-6/12 lg:w-4/12 px-4 mb-8 md:mb-0">
               <H2 className="mb-6 font-bold">Glossar Diversität</H2>
-              <p className="text-xl leading-snug text-neutral-700">
+              <p className="md:text-xl leading-snug text-neutral-700">
                 Ableismus, Intersektionalität und Klassismus – schonmal gehört?!
                 In unserem Glossar findet Ihr wichtige Begriffe zum Thema
                 Diversität zum Nachlesen.
