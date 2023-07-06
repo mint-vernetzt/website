@@ -50,7 +50,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           slug: tag?.slug,
         })),
       };
-    });
+    })
+    .slice(0, 3);
   const testimonials = [
     {
       provider_foto: (
@@ -205,7 +206,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container flex justify-center">
           <div className="lg:w-10/12">
-            <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">
+            <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-[1.9rem] md:text-[2.2rem] tracking-wider leading-none font-semibold">
               Ein gemeinsames Ziel
             </H2>
             <p className="text-3xl leading-snug text-primary font-semibold">
@@ -330,7 +331,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
 
       <section className="bg-primary pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="container">
-          <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold text-white">
+          <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-[1.9rem] md:text-[2.2rem] tracking-wider leading-none font-semibold text-white">
             Das Bündnis in Zahlen
           </H2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -416,7 +417,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           <div className="container">
             <div className="-mx-4 xl:flex xl:justify-center">
               <div className="xl:w-10/12 px-4">
-                <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">
+                <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-[1.9rem] md:text-[2.2rem] tracking-wider leading-none font-semibold">
                   Aktuelle Events
                 </H2>
                 <EventCards
@@ -452,7 +453,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         </div>
         <div className="container relative z-20">
           <div className="lg:w-10/12 mb-8 lg:mb-16 mx-auto">
-            <H2 className="all-small-caps text-center mb-8 text-4xl md:text-5xl tracking-widest font-semibold">
+            <H2 className="all-small-caps text-center mb-8 text-[1.9rem] md:text-[2.2rem] tracking-wider leading-none font-semibold">
               Motivation und Erfolge – deshalb sind wir dabei!
             </H2>
             <p className="text-center px-8 lg:text-xl">
@@ -686,7 +687,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         <div className="container">
           <div className="-mx-4 xl:flex xl:justify-center">
             <div className="xl:w-10/12 px-4">
-              <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-4xl md:text-5xl tracking-widest font-semibold">
+              <H2 className="all-small-caps text-center mb-8 lg:mb-12 text-[1.9rem] md:text-[2.2rem] tracking-wider leading-none font-semibold">
                 Ansprechpartnerin
               </H2>
 

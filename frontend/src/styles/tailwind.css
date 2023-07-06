@@ -536,8 +536,8 @@ ol {
 }
 
 .all-small-caps {
-  /* font-variant-caps: all-small-caps; */
-  text-transform: uppercase;
+  font-variant-caps: all-small-caps;  
+  
 }
 
 
