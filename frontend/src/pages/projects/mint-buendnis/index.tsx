@@ -106,7 +106,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         />
       ),
       provider_name: `Prof. Dr.-Ing. Carsten Busch`,
-      provider_position: `(HAWtech – HochschulAllianz für Angewandte Wissenschaften)`,
+      provider_position: `HAWtech – HochschulAllianz für Angewandte Wissenschaften`,
       testimonial_text: (
         <p>
           Erfolgreiche Wissenschaft und Technik basiert auf Objektivität, Nachprüfbarkeit und 
@@ -127,7 +127,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         />
       ),
       provider_name: `Prof.in Dr. Zeynep Tuncer`,
-      provider_position: `(Professorin für Medieninformatik und Mensch-Computer-Interaktion an der Wilhelm Büchner Hochschule)`,
+      provider_position: `Professorin für Medieninformatik und Mensch-Computer-Interaktion an der Wilhelm Büchner Hochschule`,
       testimonial_text: (
         <p>
           Keine Frau in MINT ist selbstverständlich. Aber unser Ziel sollte es sein, dass es selbstverständlich wird! 
