@@ -9,6 +9,7 @@ import { isBeforeOneDayAfterDate } from "../../../utils/eventFilter";
 import TestimonialSwiper from "../../../components/Swiper/TestimonialSwiper";
 import EventCards from "../../../components/EventCards/EventCards";
 import Icon, { IconType } from "../../../components/Icon/Icon";
+import { ReactComponent as HeaderImage } from "../../../images/buendnis/MINTvernetzt_Key_Visual_Buendnisseite.svg";
 
 export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
   const now = new Date();
@@ -84,8 +85,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           alt="Digitalexpertin Fatime Cetinkaya"
         />
       ),
-      provider_name: `Digitalexpertin Fatime Cetinkaya`,
-      provider_position: `Geschäftsführerin cekaso GmbH und Co-Vorsitzende MINT-Kommission VdU`,
+      provider_name: `Fatime Cetinkaya`,
+      provider_position: `Digitalexpertin, Geschäftsführerin cekaso GmbH und Co-Vorsitzende MINT-Kommission VdU`,
       testimonial_text: (
         <p>
           Ich möchte, dass Frauen aufhören aus MINT-Themen einen Mythos zu
@@ -181,26 +182,19 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
           </div>
 
           <div className="hero-image md:absolute md:right-0 xl:right-auto xl:left-[50%] md:bottom-0 md:w-1/2 lg:max-h-[480px] text-right">
-          <div className="max-w-xs md:max-w-none md:w-full md:h-full mx-auto md:mx-0">
-            <GatsbyImage
-              image={data.HeroImage?.childImageSharp?.gatsbyImageData}
-              className="buendis-heroimage"
-              alt="Bündnis für Frauen in MINT-Berufen (istock / Anastasia Usenko)"
-              objectFit="contain"
-              objectPosition="100% 100%"
-              style={{objectPosition: "right bottom"}}              
-            />
+            <div className="max-w-xs md:max-w-none md:w-full md:h-full mx-auto md:mx-0 text-right flex justify-end buendis-heroimage">
+              <HeaderImage />
+            </div>
           </div>
-          <div className="absolute right-0 bottom-0">
+        </div>   
+        <div className="absolute right-0 bottom-0">
             <div
               className="transform rotate-180 text-center px-1 py-2 bg-neutral-200/80 text-xs font-semibold text-neutral-700"
               style={{ writingMode: "vertical-rl" }}
             >
               istock / Anastasia Usenko
             </div>
-          </div>
-        </div>
-        </div>        
+        </div>     
       </section>
 
       <section className="bg-beige-100 pt-16 pb-20 lg:pt-24 lg:pb-28">
@@ -245,9 +239,9 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 Das ist das Bündnis für Frauen in MINT-Berufen{" "}
               </H2>
               <p className="md:text-xl leading-snug text-neutral-700">
-                Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was
-                sich hinter dem Bündnis verbirgt und warum es heute noch starke
-                Bündnisse braucht.
+                Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was 
+                sich hinter dem Bündnis verbirgt und warum ein gemeinsames Engagement 
+                wichtig ist.
               </p>
             </div>
             <div className="md:w-8/12 xl:w-6/12 px-4">
@@ -391,7 +385,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
             <div className="lg:w-1/12 px-4"> </div>
             <div className="md:w-6/12 lg:w-4/12 px-4">
               <H2 className="mb-6 font-bold">
-                Liste der aktuellen Bündnismitglieder
+                Liste der aktuellen Bündnis&shy;mit&shy;glieder
               </H2>
               <p className="md:text-xl leading-snug text-neutral-700">
                 Bereits mehr als 300 Mitglieder aus Wirtschaft, Bildung,
@@ -737,7 +731,7 @@ export default Alliance;
 
 export const pageQuery = graphql`
   query AlliancePage {    
-    HeroImage: file(relativePath: { eq: "buendnis/MINTvernetzt_Key_Visual_Buendnis_Dummy.png" }) {
+    HeroImage: file(relativePath: { eq: "buendnis/MINTvernetzt_Key_Visual_Buendnisseite.svg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(height: 1280)

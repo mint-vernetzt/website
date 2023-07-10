@@ -340,7 +340,7 @@ export function Submission({
 
               {isSubmitSuccessful && (
                 <>
-                  <p>Ihre Anmeldung wurde erfolgreich gesendet.</p>
+                  <p>Ihr Formular wurde erfolgreich gesendet.</p>
                   <button className="btn-primary" onClick={() => reset()}>
                     Zurück zum Formular
                   </button>
