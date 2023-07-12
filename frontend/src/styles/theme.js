@@ -26,9 +26,10 @@ const colors = {
   "neutral-600": "#454c5c",
   "neutral-500": "#b1b5c3",
   "neutral-400": "#e6e8ec",
-  "neutral-300": "#f4f5f6",
+  "neutral-300": "#BFC6D3",
   "neutral-200": "#fcfcfd",
-  "neutral-100": "#ffffff",
+  "neutral-100": "#F4F5F6",
+  "neutral-50": "#FCFCFD",
 };
 
 const extendedColors = {

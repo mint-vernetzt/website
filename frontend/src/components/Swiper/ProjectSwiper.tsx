@@ -8,8 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
-import { H2, H5 } from "./Heading/Heading";
-import Icon, { IconType } from "./Icon/Icon";
+import { H2, H5 } from "../Heading/Heading";
+import Icon, { IconType } from "../Icon/Icon";
 
 /* eslint-disable-next-line */
 export interface ProjectItemProps {

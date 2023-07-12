@@ -14,19 +14,21 @@ export function DiversityGlossar({
 }) {
   React.useEffect(() => {
     // accordeon toggle
-    document.querySelectorAll(".glossary button").forEach(($glossary) => {
-      $glossary.addEventListener("click", (event) => {
-        // event.preventDefault();
-        document
-          .querySelectorAll(".glossary button.active")
-          .forEach(($active) => {
-            if ($glossary !== $active) {
-              $active.classList.remove("active");
-            }
-          });
-        $glossary.classList.toggle("active");
+    document
+      .querySelectorAll(".accordion-item button")
+      .forEach(($accordion) => {
+        $accordion.addEventListener("click", (event) => {
+          // event.preventDefault();
+          document
+            .querySelectorAll(".accordion-item button.active")
+            .forEach(($active) => {
+              if ($accordion !== $active) {
+                $active.classList.remove("active");
+              }
+            });
+          $accordion.classList.toggle("active");
+        });
       });
-    });
   }, []);
 
   const glossaryEntriesByCategory = getGlossaryItemsByAlphaCategories(
@@ -84,8 +86,8 @@ export function DiversityGlossar({
           </div>
           <div className="-mx-4 mt-8 md:-mt-[24px] md:flex md:items-center">
             <div className="hidden lg:flex lg:w-1/12 px-4"></div>
-            <div className="md:w-1/2 lg:w-5/12 px-4 py-12 mb-8 md:mb-0">
-              <H1 like="h0" className="font-black">
+            <div className="md:w-1/2 lg:w-5/12 px-4 pb-8 md:py-12 md:mb-0">
+              <H1 className="font-black text-5xl lg:text-8xl">
                 Glossar Diversität
               </H1>
               <p className="font-semibold text-primary lg:text-3xl lg:leading-snug">
@@ -155,13 +157,13 @@ export function DiversityGlossar({
                   <H3 className="text-white font-bold mb-8">
                     {entrysByCategory.category}
                   </H3>
-                  <ul className="glossary-entries">
+                  <ul className="accordion glossary-entries">
                     {entrysByCategory.entries.map((entry) => (
                       <>
-                        <li className="glossary relative overflow-hidden mb-8">
-                          <button className="font-bold text-primary md:text-lg md:leading-snug p-4 md:px-8 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
+                        <li className="glossary accordion-item relative overflow-hidden mb-8">
+                          <button className="text-left font-bold text-primary md:text-lg md:leading-snug py-4 pl-8 pr-5 flex items-center justify-between bg-neutral-200 w-full rounded-lg transition-all ease-in-out duration-0 delay-0 hover:bg-primary hover:text-white">
                             <span>{entry.frontmatter?.title}</span>
-                            <span className="glossary-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0">
+                            <span className="accordion-button-icon transition-all ease-in-out duration-0 delay-0 rotate-0 ml-4">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-2 h-3"
@@ -169,14 +171,14 @@ export function DiversityGlossar({
                               >
                                 <path
                                   fill="currentColor"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="M7.3 6a.626.626 0 0 0-.23-.49L1.93.9a.722.722 0 0 0-.24-.14.857.857 0 0 0-.27-.05c-.09 0-.18.02-.27.05C1.06.79.98.84.91.9c-.07.06-.13.14-.16.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22L5.5 6 .91 10.12c-.07.06-.13.14-.17.22a.626.626 0 0 0 0 .54c.04.09.1.16.16.22.07.06.15.11.23.14.09.03.18.05.27.05.09 0 .18-.02.27-.05.09-.03.17-.08.23-.14l5.14-4.61c.07-.06.13-.14.17-.22A.66.66 0 0 0 7.27 6h.03Z"
                                 />
                               </svg>
                             </span>
                           </button>
-                          <div className="glossary-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-4 md:px-8 bg-white rounded-b-lg">
-                            <div className="glossary-content-body md:text-lg">
+                          <div className="accordion-item-content max-h-0 p-0 overflow-hidden transition-all ease-in-out delay-0 duration-150 px-8 md:px-8 bg-white rounded-b-lg">
+                            <div className="accordion-item-content-body md:text-lg">
                               <div
                                 dangerouslySetInnerHTML={{
                                   __html: entry.html ?? "",

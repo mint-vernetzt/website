@@ -173,12 +173,15 @@ ol {
 }
 
 .btn-primary {
-  @apply px-4 py-2 rounded-lg bg-primary border border-primary text-neutral-200 leading-5  font-semibold inline-block;
+  @apply px-6 py-2 rounded-lg bg-primary border border-primary text-white leading-5 font-semibold inline-block text-sm tracking-wide;
 }
 
-.btn-outline-primary {
-  /* @apply px-4 py-2 rounded-lg text-primary border border-primary font-semibold text-sm leading-5 inline-block; */
-  @apply px-4 py-2 rounded-lg text-primary border border-primary leading-5 font-semibold inline-block;
+.btn-outline-primary {  
+  @apply px-6 py-2 rounded-lg text-primary border border-primary leading-5 font-semibold inline-block text-sm tracking-wide;
+}
+
+.btn-disabled {
+  @apply px-4 py-2 rounded-lg bg-neutral-400 border border-neutral-400 text-[#8893A7] leading-5 font-semibold inline-block;
 }
 
 .btn-icon {
@@ -348,10 +351,20 @@ ol {
   @apply font-normal p-0;
 }
 
+.form-control .label.radio-label {
+  @apply font-normal text-base pb-4;
+}
+
 .form-control .input,
 .form-control .textarea,
 .form-control .select {
-  @apply w-full border-2 border-neutral-500 bg-neutral-300 text-neutral-900 px-4 py-0 font-semibold h-auto text-base leading-8 rounded-lg;
+  @apply w-full border-2 border-neutral-500 bg-neutral-100 text-neutral-900 px-4 py-0 font-semibold h-auto text-base leading-8 rounded-lg;
+}
+
+.form-control .input.error,
+.form-control .textarea.error,
+.form-control .select.error {
+  @apply border-salmon-500;
 }
 
 .form-control .input:focus,
@@ -359,6 +372,10 @@ ol {
 .form-control .select:focus {
   @apply bg-white;
   outline: none;
+}
+
+.form-control .input.search {
+  @apply pl-12;
 }
 
 .form-control .textarea:not(:placeholder-shown),
@@ -371,13 +388,24 @@ ol {
   @apply min-h-0;
   appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;  
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
   -webkit-appearance: none;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  background-image: linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position: calc(100% - 20px) calc(1px + 50%),calc(100% - 16px) calc(1px + 50%);
+  background-size: 4px 4px,4px 4px;
+  background-repeat: no-repeat;
+
 }
 .form-control .select[selected] {
   @apply bg-white;
 }
 .form-control option[value=""][disabled][selected] {
-  @apply bg-neutral-300;
+  @apply bg-neutral-100;
 }
 
 .form-control .textarea {
@@ -389,7 +417,21 @@ ol {
 }
 
 .form-control.checkbox .checkbox {
-  @apply mr-4 w-6 h-6 order-1 shrink-0;
+  @apply mr-4 w-6 h-6 order-1 shrink-0 border-2 border-neutral-500 bg-neutral-100;
+  border-width: 2px !important;
+}
+
+.form-control.checkbox .checkbox.error {
+  @apply border-salmon-500;
+}
+
+.form-control.checkbox label.checkbox-nowrap {
+  @apply flex-nowrap items-start gap-8;
+}
+
+.form-control .radiogroup {
+  @apply mr-2 w-4 h-4 border-2 border-neutral-500 bg-neutral-100;
+
 }
 
 .form-control.checkbox .error-message {
@@ -398,6 +440,15 @@ ol {
 
 .form-control.checkbox .label-text {
   @apply order-2 flex-auto;
+}
+
+.mintpaktlist-filter select:invalid,
+.mintpaktlist-filter .select option:first-child {
+  @apply text-neutral-300 bg-white;
+}
+
+.mintpaktlist-filter {
+
 }
 
 .gatsby-image-wrapper {
@@ -485,22 +536,23 @@ ol {
 }
 
 .all-small-caps {
-  font-variant-caps: all-small-caps;
+  font-variant-caps: all-small-caps;  
+  
 }
 
-.glossary button.active > .glossary-button-icon {
+
+.accordion-item button.active > .accordion-button-icon {
   transform: rotate(90deg);
 }
 
-.glossary button.active {
+.accordion-item button.active {
   @apply text-white bg-primary rounded-b-none;
 }
-
-.glossary button.active + .glossary-content {
+.accordion-item button.active + .accordion-item-content {
   max-height: none;
-  @apply py-4 md:py-8;
+  @apply py-8;
 }
 
-.glossary-content-body {
-  
+.buendis-heroimage svg {
+  @apply w-full h-auto  lg:w-auto lg:max-h-[480px] object-cover lg:object-contain lg:object-right-bottom;
 }

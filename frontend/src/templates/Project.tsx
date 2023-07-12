@@ -80,7 +80,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                   <p className="text-mb text-neutral-800 mb-2">
                     <a
                       href={`mailto:${project.projectInformations.email}`}
-                      className="flex items-center px-4 py-3 bg-neutral-300  hover:bg-neutral-400"
+                      className="flex items-center px-4 py-3 bg-neutral-100  hover:bg-neutral-400"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon type={IconType.Envelope} />
@@ -92,7 +92,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                     <p className="text-md text-neutral-800 mb-2">
                       <a
                         href={`tel:${project.projectInformations.phone}`}
-                        className="flex items-center px-4 py-3 bg-neutral-300 hover:bg-neutral-400"
+                        className="flex items-center px-4 py-3 bg-neutral-100 hover:bg-neutral-400"
                       >
                         <span className="icon w-4 h-4 mr-3">
                           <Icon type={IconType.Telephone} />
@@ -105,7 +105,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                     <Link
                       to={project.projectInformations.projectWebsite}
                       isExternal
-                      className="flex items-center px-4 py-3 bg-neutral-300 hover:bg-neutral-400"
+                      className="flex items-center px-4 py-3 bg-neutral-100 hover:bg-neutral-400"
                     >
                       <span className="icon w-4 h-4 mr-3">
                         <Icon
@@ -124,7 +124,7 @@ function Project({ data }: { data: GatsbyTypes.ProjectQuery }) {
                   {project.projectInformations.address !== null ? (
                     <>
                       <H5 className="font-semibold mb-6 mt-8">Anschrift</H5>
-                      <p className="text-md text-neutral-600 mb-2 flex px-4 py-3 bg-neutral-300 rounded-lg text-neutral-600">
+                      <p className="text-md text-neutral-600 mb-2 flex px-4 py-3 bg-neutral-100 rounded-lg text-neutral-600">
                         <span className="icon w-4 h-4 mr-3 mt-1">
                           <Icon
                             type={IconType.Location}
