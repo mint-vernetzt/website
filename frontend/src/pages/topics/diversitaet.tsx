@@ -53,7 +53,8 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
           slug: tag?.slug,
         })),
       };
-    });
+    }).slice(0, 3);
+
   const projectslides = [
     {
       /*logo: (
@@ -239,7 +240,7 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
               für Euch Beiträge und Veranstaltungen mit Tipps und
               Hintergrundwissen, damit sich zukünftig{" "}
               <span className="bg-lilac-200">
-                alle Kinder und Jugendliche von MINT-Bildungsprojekten
+                alle Kinder und Jugendlichen von MINT-Bildungsprojekten
                 gleichermaßen angesprochen fühlen.
               </span>
             </p>
@@ -579,8 +580,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    events: allWpEvent(
-      limit: 3
+    events: allWpEvent(      
       filter: {
         parentId: { eq: null }
         tags: { nodes: { elemMatch: { slug: { eq: "diversitaet" } } } }
