@@ -192,13 +192,25 @@ export function DiversityGlossar({
                                   <ul className="list-disc list-outside leading-6 mb-6 pl-5">
                                     {entry.frontmatter?.links?.map((link) => (
                                       <li>
-                                        {link?.author}:{" "}
+                                        {link?.author !== null ? (                     
+                                          <>
+                                            {link?.author}:{" "}
+                                          </>  
+                                        ) : null}   
                                         <a
                                           href={link?.url}
                                           target="_blank"
                                           className="font-bold text-secondary"
                                         >
-                                          {link?.title}
+                                          {link?.title !== null ? ( 
+                                            <>
+                                              {link?.title}
+                                            </>     
+                                          ) : (
+                                            <>
+                                              {link?.url}
+                                            </>
+                                          )}          
                                         </a>
                                       </li>
                                     ))}
