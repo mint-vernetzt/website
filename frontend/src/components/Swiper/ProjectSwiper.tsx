@@ -30,7 +30,7 @@ export function ProjectSwiperItem(props: ProjectItemProps) {
       <div className="flex flex-col lg:flex-row">
         {logo !== undefined ? (
           <div className="lg:w-40 lg:shrink-0 mb-8">
-            <div className="w-40 aspect-[1] rounded-full border border-neutral-400 p-8 flex items-center justify-center">{logo}</div>
+            <div className="w-40 aspect-[1] rounded-full overflow-hidden border border-neutral-400 flex items-center justify-center mx-auto">{logo}</div>
           </div>
         ) : null}
         <div 
