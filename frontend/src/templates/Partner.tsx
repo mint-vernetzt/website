@@ -85,9 +85,7 @@ export default function PaktPartner({
               <Testimonial
                 name={partner.partnerInformations?.citeauthor ?? ""}
                 jobTitle={partner.partnerInformations?.citeauthorfunction ?? ""}
-                description={
-                  partner.partnerInformations?.citeauthorfunction ?? ""
-                }
+                description={partner.partnerInformations?.citequote ?? ""}
               />
             )}
           </div>
