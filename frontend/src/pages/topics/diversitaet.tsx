@@ -57,14 +57,13 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
 
   const projectslides = [
     {
-      /*logo: (
-          <GatsbyImage
-            image={data.StudyImage.childImageSharp.gatsbyImageData}
-            className="w-full h-auto"
-            alt="MINT-Stimmungsbarometer 2022"
-          />
-        ),
-        */
+      logo: (
+        <GatsbyImage
+          image={data?.TippsLogoLittleLab?.childImageSharp?.gatsbyImageData}
+          className="w-full h-auto"
+          alt="Little Lab"
+        />
+      ),      
       title: `Little Lab`,
       projectinfo: (
         <p>
@@ -107,6 +106,13 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
       projectlink: `https://www.little-lab.de/verein/`,
     },
     {
+      logo: (
+        <GatsbyImage
+          image={data?.TippsLogoSFZnh?.childImageSharp?.gatsbyImageData}
+          className="w-full h-auto"
+          alt="Schülerforschungszentrum Nordhausen"
+        />
+      ),
       title: `Schülerforschungszentrum Nordhausen`,
       projectinfo: (
         <p>
@@ -143,7 +149,14 @@ export function Diversity({ data }: { data: GatsbyTypes.DiversityPageQuery }) {
       networklink: `https://community.mint-vernetzt.de/profile/josephineroehner`,
       projectlink: `https://www.hs-nordhausen.de/forschung/schuelerforschungszentrum/`,
     },
-    {
+    {      
+      logo: (
+        <GatsbyImage
+          image={data?.TippsLogoMeerMint?.childImageSharp?.gatsbyImageData}
+          className="w-full h-auto"
+          alt="meerMINT"
+        />
+      ),
       title: `meerMINT`,
       projectinfo: (
         <p>
@@ -550,6 +563,15 @@ export const pageQuery = graphql`
       childImageSharp {
         gatsbyImageData(width: 480)
       }
+    }
+    TippsLogoLittleLab: file( relativePath: { eq: "topic-diversity/Tipps_Logo_LittleLab_640x640.png" }) {
+      childImageSharp { gatsbyImageData(width: 640)}
+    }
+    TippsLogoMeerMint: file( relativePath: { eq: "topic-diversity/Tipps_Logo_meerMINT_640x640.png" }) {
+      childImageSharp { gatsbyImageData(width: 640)}
+    }
+    TippsLogoSFZnh: file( relativePath: { eq: "topic-diversity/Tipps_Logo_SFZ-Nordhausen_640x640.png" }) {
+      childImageSharp { gatsbyImageData(width: 640)}
     }
     news: allWpNewsItem(
       limit: 9
