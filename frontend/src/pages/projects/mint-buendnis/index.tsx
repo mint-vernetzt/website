@@ -204,7 +204,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               Ein gemeinsames Ziel
             </H2>
             <p className="text-3xl leading-snug text-primary font-semibold">
-              Mehr Frauen und Mädchen in MINT! Das Bündnis für Frauen in
+              Mehr Mädchen und Frauen in MINT! Das Bündnis für Frauen in
               MINT-Berufen ist ein{" "}
               <span className="bg-lilac-200">
                 Zusammenschluss von mehr als 300 Organisationen
@@ -240,8 +240,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               </H2>
               <p className="md:text-xl leading-snug text-neutral-700">
                 Auf einen Klick zeigt unser Film vom Netzwerktreffen 2023, was 
-                sich hinter dem Bündnis verbirgt und warum ein gemeinsames Engagement 
-                wichtig ist.
+                sich hinter dem Bündnis verbirgt, und warum ein gemeinsames 
+                Engagement wichtig ist.
               </p>
             </div>
             <div className="md:w-8/12 xl:w-6/12 px-4">
@@ -599,7 +599,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                           className="text-lilac-500 hover:underline"
                         >
                           Hier
-                        </a>
+                        </a>{" "}
                         sind zudem immer unsere aktuellen Events zu finden.
                       </>
                     )}
