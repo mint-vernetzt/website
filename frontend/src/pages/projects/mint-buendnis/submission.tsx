@@ -544,7 +544,7 @@ export function Submission({
                       />
 
                       <span className="label-text">
-                        Ich stimme der Verwendung meiner eingegebnenen Daten
+                        Ich stimme der Verwendung meiner eingegebenen Daten                        
                         entsprechend der{" "}
                         <a className="underline" href="/privacy" target="_blank">
                           Datenschutzerklärung
