@@ -421,26 +421,24 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
               </div>
               
               <H2 className="mb-6 font-bold text-white">
-                empowerGirl: Eine Initiative für mehr Praktika 
-                für Schülerinnen und Schüler
+                Unsere Praktikumsoffensive #empowerGirl
               </H2>
               <p className="md:text-xl leading-snug text-white">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-                ultricies nec, pellentesque eu, pretium quis, sem.
+                Das Bündnis für Frauen in MINT-Berufen startet mit Unterstützung der Charta der Vielfalt die 
+                Praktikumsoffensive #empowerGirl: 1.000 Praktikumsplätze wollen wir ab Januar 2024 zur Verfügung 
+                stellen – insbesondere für Mädchen. Denn das Potenzial von Schüler:innen-Praktika wird im 
+                MINT-Bereich nicht ausreichend genutzt. Mehrere große Unternehmen, darunter BMW, Bayer und 
+                Siemens Energy, haben sich bereits der Initiative angeschlossen und stellen Praktikumsplätze 
+                zur Verfügung.
               </p>  
-              <p className="md:text-xl leading-snug text-white mb-8">
-                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
-                Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
-                 leo ligula, porttitor eu.
-              </p>
-              <p>
-                <Link to={"list"} className="btn-primary btn-icon">
-                  <Icon type={IconType.ExternalLink} />
-                  Zur empowerGirl Website
-                </Link>
-              </p>
+              {/*  
+                <p>
+                  <Link to={"list"} className="btn-primary btn-icon">
+                    <Icon type={IconType.ExternalLink} />
+                    Zur empowerGirl Website
+                  </Link>
+                </p>
+              */}  
             </div>
             <div className="lg:w-1/12 px-4"> </div>
             <div className="md:w-6/12 lg:w-5/12 px-4">
