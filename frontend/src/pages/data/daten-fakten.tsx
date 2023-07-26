@@ -17,9 +17,9 @@ export function Datenfakten({
       <SEO
         title="Daten und Fakten"
         slug="/data/daten-fakten/"
-        description="Vom MINT-DataLab bis zum Stimmungs-barometer: Hier findet Ihr Analysen, Statistiken und Studien rund um MINT"
+        description="Das MINT-DataLab ist eine interaktive Plattform, die MINT-Daten zu Schule, Studium, Ausbildung und Beruf darstellt, z. B. Statistiken zu Frauen in MINT oder regionalen und ausländischen Fachkräften."
         image={data?.heroImage?.publicURL}
-        children=""
+        children="" keywords={""}        
       />
       <section className="container my-8 md:my-10 lg:my-20">
         <div className="hero hero-news flex items-end rounded-3xl relative overflow-hidden">

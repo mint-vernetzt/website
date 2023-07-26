@@ -8,6 +8,7 @@ module.exports = {
     description:
       "MINTvernetzt ist die Service- und Anlaufstelle für die Community der MINT-Akteur:innen in Deutschland.",
     siteUrl: `${process.env.SITE_URL}`,
+    keywords: `mint, mint schule, mint-bildung, mint fachkräfte, mint frauen, mint bildung, frauen in mint, studium mint, frauen mint, mint kompetenzen, mint-kompetenzen, mint-fachkräfte, ausbildung mint, mint statistiken, studierende mint, mint-ausbildung`,
   },
   plugins: [
     {
