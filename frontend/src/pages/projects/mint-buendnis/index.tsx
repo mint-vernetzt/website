@@ -427,9 +427,8 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                 Das Bündnis für Frauen in MINT-Berufen startet mit Unterstützung der Charta der Vielfalt die 
                 Praktikumsoffensive #empowerGirl: 1.000 Praktikumsplätze wollen wir ab Januar 2024 zur Verfügung 
                 stellen – insbesondere für Mädchen. Denn das Potenzial von Schüler:innen-Praktika wird im 
-                MINT-Bereich nicht ausreichend genutzt. Mehrere große Unternehmen, darunter BMW, Bayer und 
-                Siemens Energy, haben sich bereits der Initiative angeschlossen und stellen Praktikumsplätze 
-                zur Verfügung.
+                MINT-Bereich nicht ausreichend genutzt. Mehrere Unternehmen, darunter auch große Wirtschaftsunternehmen, 
+                haben sich bereits der Initiative angeschlossen und stellen Praktikumsplätze zur Verfügung.
               </p>  
               {/*  
                 <p>
