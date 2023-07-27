@@ -109,7 +109,9 @@ export function Datenfakten({
         <H2 like="h1" className="text-center mb-14">
           <span className="font-bold">MINT</span>vernetzt-Studien
         </H2>
-        <div className="flex flex-wrap content-center items-center md:-mx-4">
+        <div className="flex flex-wrap content-center items-center md:-mx-4"
+          id="mint-studie-didaktik"
+        >
           <div className="w-full md:w-1/2 flex-initial mb-6 md:mb-0 md:px-4 md:order-2">
             <div className="overflow-hidden rounded-lg">
               <GatsbyImage
@@ -133,17 +135,32 @@ export function Datenfakten({
                 und ermittelt konkrete Bedarfe an didaktischer Weiterbildung.
                 Eine Langfassung wird in Kürze verfügbar sein.
               </p>
-              <p className="mb-2">
-                <a
-                  href={data.PdfDidaktik?.publicURL}
-                  target="_blank"
-                  className="btn-primary btn-icon"
-                >
-                  <Icon type={IconType.DownloadIcon} width="12" height="15" />
-                  <span>Download Kurzfassung</span>
-                </a>
-              </p>
-              <p className="text-xs">PDF, ca. 235KB</p>
+              <div className="flex flex-row justify-start flex-wrap">
+                <div className="my-2 ml-0 mr-4">
+                  <p className="mb-2">
+                    <a
+                      href={data.PdfDidaktik?.publicURL}
+                      target="_blank"
+                      className="btn-primary btn-icon"
+                    >
+                      <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                      <span>Download Kurzfassung</span>
+                    </a>
+                  </p>
+                  <p className="text-xs">PDF, ca. 235KB</p>                  
+                </div>
+                <div className="m-2 ml-0">
+                  <a
+                    href={data.PdfDidaktikLang?.publicURL}
+                    target="_blank"
+                    className="btn-outline-primary btn-icon mb-2"
+                  >
+                    <Icon type={IconType.DownloadIcon} width="12" height="15" />
+                    <span>Download Langfassung</span>
+                  </a>
+                  <p className="mb-2 text-xs">PDF, ca. 630KB</p>
+                </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -304,6 +321,11 @@ export const pageQuery = graphql`
     }
     PdfDidaktik: file(
       relativePath: { eq: "Kurzfassung_Studie_Didaktik-an-MINT-Lernorten.pdf" }
+    ) {
+      publicURL
+    }
+    PdfDidaktikLang: file(
+      relativePath: { eq: "Langfassung_Studie__Didaktik_MINT-Lernorte.pdf" }
     ) {
       publicURL
     }
