@@ -5,19 +5,21 @@ import { useStaticQuery, graphql } from "gatsby";
 export interface SEOProps {
   title: string;
   description: string;
+  keywords: string;
   image?: string;
   slug: string;
   children: React.ReactNode;
 }
 
-const SEO = ({ title, description, image, slug, children }: SEOProps) => {
+const SEO = ({ title, description, image, slug, keywords, children }: SEOProps) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
-          description
+          description          
           siteUrl
+          keywords
         }
       }
       favicon: file(name: { eq: "favicon" }) {
@@ -39,6 +41,7 @@ const SEO = ({ title, description, image, slug, children }: SEOProps) => {
         name="description"
         content={description || data.site.siteMetadata.description}
       />
+      <meta name="keywords" content={keywords || data.site.siteMetadata.keywords} />
       <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${slug}`} />
       <link rel="shortcut icon" href={data.favicon.publicURL} />
       <meta name="twitter:card" content="summary_large_image" />
