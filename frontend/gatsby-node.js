@@ -780,6 +780,30 @@ exports.createPages = async (props) => {
     redirectInBrowser: true,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: "/projects/mint-buendnis/bundesamt-fuer-gueterverkehr",
+    toPath: "/projects/mint-buendnis/bundesamt-fuer-logistik-und-mobilitaet",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/projects/mint-buendnis/wissenschaftsgemeinschaft-gottfried-wilhelm-leibniz-e-v-wgl",
+    toPath: "/projects/mint-buendnis/leibniz-gemeinschaft",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/projects/mint-buendnis/brandenburg",
+    toPath: "/projects/mint-buendnis/mwfk-brandenburg",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/projects/mint-buendnis/fachhochschule-muenster",
+    toPath: "/projects/mint-buendnis/fh-muenster",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
