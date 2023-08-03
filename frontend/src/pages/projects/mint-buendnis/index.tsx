@@ -10,8 +10,17 @@ import TestimonialSwiper from "../../../components/Swiper/TestimonialSwiper";
 import EventCards from "../../../components/EventCards/EventCards";
 import Icon, { IconType } from "../../../components/Icon/Icon";
 import { ReactComponent as HeaderImage } from "../../../images/buendnis/MINTvernetzt_Key_Visual_Buendnisseite.svg";
+import { getNewsItems } from "../../../utils/dataTransformer";
+import NewsSwiper from "../../../components/NewsSwiper/NewsSwiper";
 
 export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
+  const newsItems = getNewsItems(data.news).map((item) => {
+    item.body = (
+      <span dangerouslySetInnerHTML={{ __html: item.body as string }} />
+    );
+    return item;
+  });
+
   const now = new Date();
 
   const events = data.events.nodes
@@ -403,6 +412,51 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
         </div>
       </section>
 
+      <section className="bg-green-500 pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <div className="container">
+          <div className="md:flex md:items-center -mx-4">
+            <div className="md:w-6/12 px-4 mb-16 md:mb-0">
+              <div className="mb-6">
+                <span className="inline-block py-2 px-4 rounded bg-yellow-500 text-primary md:text-xl leading-snug">NEU</span>
+              </div>
+              
+              <H2 className="mb-6 font-bold text-white">
+                Unsere Praktikumsoffensive #empowerGirl
+              </H2>
+              <p className="md:text-xl leading-snug text-white">
+                Das Bündnis für Frauen in MINT-Berufen startet mit Unterstützung der Charta der Vielfalt die 
+                Praktikumsoffensive #empowerGirl: 1.000 Praktikumsplätze wollen wir ab Januar 2024 zur Verfügung 
+                stellen – insbesondere für Mädchen. Denn das Potenzial von Schüler:innen-Praktika wird im 
+                MINT-Bereich nicht ausreichend genutzt. Mehrere Unternehmen, darunter auch große Wirtschaftsunternehmen, 
+                haben sich bereits der Initiative angeschlossen und stellen Praktikumsplätze zur Verfügung.
+              </p>  
+              {/*  
+                <p>
+                  <Link to={"list"} className="btn-primary btn-icon">
+                    <Icon type={IconType.ExternalLink} />
+                    Zur empowerGirl Website
+                  </Link>
+                </p>
+              */}  
+            </div>
+            <div className="lg:w-1/12 px-4"> </div>
+            <div className="md:w-6/12 lg:w-5/12 px-4">
+            {data.news.nodes.length > 0 && (
+        
+              <NewsSwiper
+                newsSwiperItemsProps={newsItems}
+                onChipClick={(slug) => {
+                  if (window) {
+                    document.location.href = `/news/?tags=${slug}`;
+                  }
+                }}
+              />
+            )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {events.length > 0 && (
         <section
           className="bg-yellow-100 pt-16 pb-20 lg:pt-24 lg:pb-28"
@@ -772,6 +826,31 @@ export const pageQuery = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(width: 480)
+      }
+    }
+    news: allWpNewsItem(
+      filter: {id: {eq: "cG9zdDo0NTE2"}}
+    ) {
+      nodes {
+        title
+        slug
+        excerpt
+        date
+        tags {
+          nodes {
+            name
+            slug
+          }
+        }
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 1200, placeholder: BLURRED)
+              }
+            }
+          }
+        }
       }
     }
     events: allWpEvent(      
