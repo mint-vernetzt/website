@@ -787,7 +787,8 @@ exports.createPages = async (props) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPath: "/projects/mint-buendnis/wissenschaftsgemeinschaft-gottfried-wilhelm-leibniz-e-v-wgl",
+    fromPath:
+      "/projects/mint-buendnis/wissenschaftsgemeinschaft-gottfried-wilhelm-leibniz-e-v-wgl",
     toPath: "/projects/mint-buendnis/leibniz-gemeinschaft",
     redirectInBrowser: true,
     isPermanent: true,
@@ -801,6 +802,12 @@ exports.createPages = async (props) => {
   createRedirect({
     fromPath: "/projects/mint-buendnis/fachhochschule-muenster",
     toPath: "/projects/mint-buendnis/fh-muenster",
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: "/wirfuermint/",
+    toPath: "/",
     redirectInBrowser: true,
     isPermanent: true,
   });
