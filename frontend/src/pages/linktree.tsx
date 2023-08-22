@@ -315,7 +315,7 @@ export function LinkTree({ data }) {
                       title: `Impressum`,
                     },
                     {
-                      route: `/privacy/`,
+                      route: `/privacy-policy/`,
                       title: `Datenschutz`,
                     },
                     {
