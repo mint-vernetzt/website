@@ -5,106 +5,112 @@ import MoodCarousel from "./MoodCarousel";
 export function Mood2022() { 
   const data = useStaticQuery(graphql`
     query {
-      Slide1Image: file(relativePath: { eq: "stimmungsbarometer/2022/1.png" }) {
+      Slide1Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_01.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide2Image: file(relativePath: { eq: "stimmungsbarometer/2022/2.png" }) {
+    Slide2Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_03.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide3Image: file(relativePath: { eq: "stimmungsbarometer/2022/3.png" }) {
+    Slide3Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_05.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide4Image: file(relativePath: { eq: "stimmungsbarometer/2022/4.png" }) {
+    Slide4Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_06.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide5Image: file(relativePath: { eq: "stimmungsbarometer/2022/5.png" }) {
+    Slide5Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_07.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide6Image: file(relativePath: { eq: "stimmungsbarometer/2022/6.png" }) {
+    Slide6Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_08.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide7Image: file(relativePath: { eq: "stimmungsbarometer/2022/7.png" }) {
+    Slide7Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_09.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide8Image: file(relativePath: { eq: "stimmungsbarometer/2022/8.png" }) {
+    Slide8Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_10.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide9Image: file(relativePath: { eq: "stimmungsbarometer/2022/9.png" }) {
+    Slide9Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_11.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide10Image: file(relativePath: { eq: "stimmungsbarometer/2022/10.png" }) {
+    Slide10Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_12.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide11Image: file(relativePath: { eq: "stimmungsbarometer/2022/11.png" }) {
+    Slide11Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_13.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide12Image: file(relativePath: { eq: "stimmungsbarometer/2022/12.png" }) {
+    Slide12Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_14.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide13Image: file(relativePath: { eq: "stimmungsbarometer/2022/13.png" }) {
+    Slide13Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_15.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide14Image: file(relativePath: { eq: "stimmungsbarometer/2022/14.png" }) {
+    Slide14Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_16.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide15Image: file(relativePath: { eq: "stimmungsbarometer/2022/15.png" }) {
+    Slide15Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_17.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide16Image: file(relativePath: { eq: "stimmungsbarometer/2022/16.png" }) {
+    Slide16Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_18.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
-    Slide17Image: file(relativePath: { eq: "stimmungsbarometer/2022/17.png" }) {
+    Slide17Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_19.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
+      }
+    } 
+    Slide18Image: file(relativePath: { eq: "stimmungsbarometer/2022/MINT_Stimmungsbarometer2022_Seite_20.jpg" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     }
@@ -329,6 +335,16 @@ export function Mood2022() {
         ),
         headline: `MINT-Stimmungsbarometer 2022 `,
       },      
+      {
+        image: (
+          <GatsbyImage
+            image={data.Slide18Image.childImageSharp.gatsbyImageData}
+            className="w-full h-auto"
+            alt="MINT-Stimmungsbarometer 2022"
+          />
+        ),
+        headline: `MINT-Stimmungsbarometer 2022 `,        
+      },
   ];
   return (
     <>
