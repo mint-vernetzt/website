@@ -585,6 +585,7 @@ export function Alliance({ data }: { data: GatsbyTypes.AlliancePageQuery }) {
                     Durch die Einbettung des Bündnisses in die MINT-Community in
                     Deutschland und die damit verbundenen Aktivitäten von
                     MINTvernetzt entstehen Synergien und Kooperationen.
+                    Die Mitgliedschaft im Bündnis ist kostenfrei.
                   </div>
                 </div>
               </li>
