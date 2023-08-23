@@ -1,5 +1,5 @@
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import MoodCarousel from "./MoodCarousel";
 
 export function Mood2023() { 
@@ -8,103 +8,103 @@ export function Mood2023() {
       Slide1Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_01.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide2Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_02.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide3Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_03.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide4Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_04.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide5Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_05.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide6Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_06.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide7Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_07.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide8Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_08.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide9Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_09.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide10Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_10.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide11Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_11.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide12Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_12.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide13Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_13.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide14Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_14.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide15Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_15.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide16Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_16.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     Slide17Image: file(relativePath: { eq: "stimmungsbarometer/2023/MINT_Stimmungsbarometer2023_Seite_17.jpg" }) {
       publicURL
       childImageSharp {
-        gatsbyImageData(width: 1488)
+        gatsbyImageData(width: 900, placeholder: BLURRED)
       }
     } 
     }
