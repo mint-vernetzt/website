@@ -415,19 +415,21 @@ export function Submission({ data }: { data: GatsbyTypes.SubmissionQuery }) {
                       </span>
                     </a>
                   </p>
-                  <p className="text-md text-neutral-800 mb-2">
-                    <a
-                      href={`tel:${data?.PageContact?.contactInformations?.phone}`}
-                      className="flex items-center px-4 py-3 bg-neutral-100"
-                    >
-                      <span className="icon w-4 h-4 mr-3">
-                        <Icon type={IconType.Telephone} />
-                      </span>
-                      <span>
-                        {data?.PageContact?.contactInformations?.phone}
-                      </span>
-                    </a>
-                  </p>
+                  {data?.PageContact?.contactInformations?.phone !== null && (
+                    <p className="text-md text-neutral-800 mb-2">
+                      <a
+                        href={`tel:${data?.PageContact?.contactInformations?.phone}`}
+                        className="flex items-center px-4 py-3 bg-neutral-100"
+                      >
+                        <span className="icon w-4 h-4 mr-3">
+                          <Icon type={IconType.Telephone} />
+                        </span>
+                        <span>
+                          {data?.PageContact?.contactInformations?.phone}
+                        </span>
+                      </a>
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -446,7 +448,7 @@ export const pageQuery = graphql`
       }
     }
     PageContact: wpContact(
-      contactInformations: { lastName: { eq: "Kellner" } }
+      contactInformations: { lastName: { eq: "Martin" } }
     ) {
       contactInformations {
         firstName
