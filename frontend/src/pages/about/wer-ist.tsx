@@ -17,7 +17,7 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
   const caseInsensitiveSortedOrganization = organisations.sort((a, b) => {
     return a.name.toLocaleLowerCase().localeCompare(b.name.toLocaleLowerCase());
   });
-  
+
   return (
     <Layout>
       <SEO
@@ -94,9 +94,9 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
             },
             {
               title: `Kommunikation`,
-              text: `Den Blick nach außen hat bei uns Anna Kellner. Für Presse- und Öffentlichkeitsarbeit, Kooperationen und Kampagnen ist sie die richtige Adresse.`,
-              phone: `0175 8411669`,
-              mail: `anna.kellner@mint-vernetzt.de`,
+              text: `Den Blick nach außen hat bei uns Nike Michel-Soth. Für Presse- und Öffentlichkeitsarbeit, Kooperationen und Kampagnen ist sie die richtige Adresse.`,
+              phone: undefined,
+              mail: `berenike.michel-soth@mint-vernetzt.de`,
             },
           ].map((contactbox, index) => (
             <div
@@ -111,18 +111,21 @@ export function WerIst({ data }: { data: GatsbyTypes.WerIstPageQuery }) {
                     {contactbox.text}
                   </p>
                 </div>
+
                 <div>
-                  <p className="text-xs text-neutral-800 font-semibold mb-4">
-                    <a
-                      href={`tel:${contactbox.phone}`}
-                      className="flex items-center"
-                    >
-                      <span className="icon w-4 h-4 mr-2">
-                        <Icon type={IconType.Telephone} />
-                      </span>
-                      <span>{contactbox.phone}</span>
-                    </a>
-                  </p>
+                  {contactbox.phone !== undefined && (
+                    <p className="text-xs text-neutral-800 font-semibold mb-4">
+                      <a
+                        href={`tel:${contactbox.phone}`}
+                        className="flex items-center"
+                      >
+                        <span className="icon w-4 h-4 mr-2">
+                          <Icon type={IconType.Telephone} />
+                        </span>
+                        <span>{contactbox.phone}</span>
+                      </a>
+                    </p>
+                  )}
                   <p className="text-xs text-neutral-800 font-semibold">
                     <a
                       href={`mailto:${contactbox.mail}`}
