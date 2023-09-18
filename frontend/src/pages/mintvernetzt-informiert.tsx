@@ -44,14 +44,14 @@ export function MintVernetztInformiert({
             <div className="lg:-mx-8">
               <ContactCard
                 headline=""
-                name={`${pageContact.firstName} ${pageContact.lastName}`}
-                position={pageContact.position}
-                phone={pageContact.phone}
-                email={pageContact.email}
+                name={`${pageContact?.firstName} ${pageContact?.lastName}`}
+                position={pageContact?.position ?? ""}
+                phone={pageContact?.phone ?? null}
+                email={pageContact?.email}
                 avatar={{
                   src: pageContact?.photo?.localFile?.childImageSharp
                     ?.gatsbyImageData,
-                  alt: `${pageContact.firstName} ${pageContact.lastName}`,
+                  alt: `${pageContact?.firstName} ${pageContact?.lastName}`,
                 }}
               />
             </div>
@@ -80,7 +80,7 @@ export function MintVernetztInformiert({
                 Alle vier Wochen schicken wir Euch digitale Grüße mit
                 Veranstaltungstipps, Neuigkeiten und Einblicken in die
                 Community. Ihr habt Themen, die wir dort teilen sollten? Dann
-                schickt eine Mail an Anna Kellner.
+                schickt eine Mail an Marion Martin.
               </p>
               <div className="">
                 <iframe
@@ -391,7 +391,7 @@ export default MintVernetztInformiert;
 export const pageQuery = graphql`
   query MintvernetztInformiertPage {
     pageContact: wpContact(
-      contactInformations: { lastName: { eq: "Kellner" } }
+      contactInformations: { lastName: { eq: "Michel-Soth" } }
     ) {
       contactInformations {
         firstName
