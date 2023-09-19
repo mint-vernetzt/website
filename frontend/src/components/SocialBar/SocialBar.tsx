@@ -44,7 +44,7 @@ export function SocialBar(props: SocialBarProps) {
                   />
                 </svg>
               ),
-              route: `/mintmachen#survey`,
+              route: `/mintvernetzt-informiert/#verteiler`,
               title: `MINTVerteiler`,
             },
           ].map((link, index) => (
