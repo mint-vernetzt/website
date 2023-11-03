@@ -322,7 +322,7 @@ function Event({ data }: { data: GatsbyTypes.EventQuery }) {
               />
             )}
 
-            {contactPerson && (
+            {contactPerson[0] !== undefined && (
               <ContactCard
                 headline="Ansprechpartner:in"
                 name={`${contactPerson[0].contactInformations.firstName} ${contactPerson[0].contactInformations.lastName}`}
